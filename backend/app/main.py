@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes import capture, entries, health, tags
 from app.db.base import Base
@@ -9,6 +10,17 @@ app = FastAPI(title="Atlas")
 # MVP: create tables directly from models. Switch to Alembic migrations
 # once the schema needs to evolve without dropping data.
 Base.metadata.create_all(bind=engine)
+
+# Frontend is hosted separately on Vercel, so the API needs to accept
+# cross-origin requests from it. Wide open for now (personal single-user
+# tool, no auth gate yet) — tighten to the exact Vercel domain once it's
+# known, or add real auth before this is anything but personal.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(health.router, prefix="/api")
 app.include_router(entries.router, prefix="/api")
