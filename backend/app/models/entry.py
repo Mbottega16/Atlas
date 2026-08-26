@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from sqlalchemy import Column, DateTime, ForeignKey, String, Table, Text
+from sqlalchemy import Boolean, Column, DateTime, ForeignKey, String, Table, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
@@ -29,6 +29,8 @@ class Entry(Base):
     use_case: Mapped[str | None] = mapped_column(Text, nullable=True)
     # 'manual' (typed in directly) or 'capture' (via the quick-capture flow)
     source: Mapped[str] = mapped_column(String, default="manual")
+    is_favorite: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    visited_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_utcnow)
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=_utcnow, onupdate=_utcnow

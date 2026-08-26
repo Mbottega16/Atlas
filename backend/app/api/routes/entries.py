@@ -19,6 +19,8 @@ def _to_out(entry: Entry) -> EntryOut:
         use_case=entry.use_case,
         tags=[t.name for t in entry.tags],
         source=entry.source,
+        is_favorite=entry.is_favorite,
+        visited_at=entry.visited_at,
         created_at=entry.created_at,
         updated_at=entry.updated_at,
     )
@@ -30,11 +32,14 @@ def search_entries(
     category: str | None = None,
     tag: str | None = None,
     use_case: str | None = None,
+    favorite: bool | None = None,
     limit: int = 50,
     offset: int = 0,
     db: Session = Depends(get_db),
 ):
-    total, items = entry_service.list_entries(db, q, category, tag, use_case, limit, offset)
+    total, items = entry_service.list_entries(
+        db, q, category, tag, use_case, favorite, limit, offset
+    )
     return EntryListOut(total=total, items=[_to_out(e) for e in items])
 
 
@@ -69,3 +74,24 @@ def delete_entry(entry_id: int, db: Session = Depends(get_db)):
     if entry is None:
         raise HTTPException(status_code=404, detail="Entry not found")
     entry_service.delete_entry(db, entry)
+
+
+@router.post("/entries/{entry_id}/visit", response_model=EntryOut)
+def visit_entry(entry_id: int, db: Session = Depends(get_db)):
+    """Call this when the user actually opens the link (not on hover/search) —
+    marks visited_at so the UI can show a 'visited' badge."""
+    entry = entry_service.get_entry(db, entry_id)
+    if entry is None:
+        raise HTTPException(status_code=404, detail="Entry not found")
+    entry = entry_service.mark_visited(db, entry)
+    return _to_out(entry)
+
+
+@router.post("/entries/{entry_id}/favorite", response_model=EntryOut)
+def favorite_entry(entry_id: int, favorite: bool = True, db: Session = Depends(get_db)):
+    """Toggle favorite status. `favorite=false` un-favorites."""
+    entry = entry_service.get_entry(db, entry_id)
+    if entry is None:
+        raise HTTPException(status_code=404, detail="Entry not found")
+    entry = entry_service.set_favorite(db, entry, favorite)
+    return _to_out(entry)

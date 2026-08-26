@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 2rem;
-  max-width: 960px;
+  max-width: 1400px;
   margin-inline: auto;
 }
 
@@ -23,21 +23,71 @@ body {
   font-size: 1rem;
 }
 
+.entries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
 .entry-card {
+  position: relative;
   border: 1px solid #8884;
   border-radius: 8px;
   padding: 1rem;
-  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-card.visited {
+  border-color: #4a90e299;
+  background: #4a90e20d;
 }
 
 .entry-card h3 {
-  margin: 0 0 0.25rem;
+  margin: 0 1.75rem 0.25rem 0;
+  font-size: 1.05rem;
 }
 
 .entry-card .meta {
   font-size: 0.85rem;
   opacity: 0.7;
   margin-bottom: 0.5rem;
+}
+
+.entry-card p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #8888;
+  padding: 0;
+}
+
+.favorite-btn.active {
+  color: #e2a03f;
+}
+
+.visited-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #4a90e2;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.tag-row {
+  margin-top: auto;
 }
 
 .tag-pill {
@@ -51,6 +101,7 @@ body {
 
 nav {
   display: flex;
+  align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -58,4 +109,58 @@ nav {
 nav a {
   text-decoration: none;
   font-weight: 600;
+}
+
+.favorites-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(340px, 90vw);
+  background: canvas;
+  border-left: 1px solid #8884;
+  box-shadow: -4px 0 16px #0002;
+  padding: 1.25rem;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.2s ease;
+  z-index: 20;
+}
+
+.favorites-panel.open {
+  transform: translateX(0);
+}
+
+.favorites-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.favorites-panel-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.favorites-panel-header button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.favorites-panel-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #8882;
+  text-decoration: none;
+  color: inherit;
+}
+
+.favorites-panel-item span {
+  font-size: 0.8rem;
+  opacity: 0.7;
 }

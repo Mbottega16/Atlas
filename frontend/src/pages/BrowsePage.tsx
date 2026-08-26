@@ -4,7 +4,13 @@ import { Entry, TagCount, fetchCategories, fetchTags, searchEntries } from "../a
 import EntryCard from "../components/EntryCard";
 import FilterBar, { Filters } from "../components/FilterBar";
 
-export default function BrowsePage() {
+export default function BrowsePage({
+  onVisit,
+  onFavoriteToggle,
+}: {
+  onVisit: () => void;
+  onFavoriteToggle: () => void;
+}) {
   const [filters, setFilters] = useState<Filters>({ q: "", category: "", tag: "" });
   const [entries, setEntries] = useState<Entry[]>([]);
   const [total, setTotal] = useState(0);
@@ -40,9 +46,11 @@ export default function BrowsePage() {
       {!error && (
         <>
           <p>{loading ? "Loading…" : `${total} result${total === 1 ? "" : "s"}`}</p>
-          {entries.map((e) => (
-            <EntryCard key={e.id} entry={e} />
-          ))}
+          <div className="entries-grid">
+            {entries.map((e) => (
+              <EntryCard key={e.id} entry={e} onVisit={onVisit} onFavoriteToggle={onFavoriteToggle} />
+            ))}
+          </div>
           {!loading && entries.length === 0 && <p>No entries yet — try Capture to add some.</p>}
         </>
       )}

@@ -1,3 +1,5 @@
+from datetime import datetime, timezone
+
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
@@ -26,6 +28,7 @@ def list_entries(
     category: str | None = None,
     tag: str | None = None,
     use_case: str | None = None,
+    favorite: bool | None = None,
     limit: int = 50,
     offset: int = 0,
 ) -> tuple[int, list[Entry]]:
@@ -43,6 +46,8 @@ def list_entries(
         stmt = stmt.where(Entry.use_case.ilike(f"%{use_case}%"))
     if tag:
         stmt = stmt.join(Entry.tags).where(Tag.name == tag.strip().lower())
+    if favorite is not None:
+        stmt = stmt.where(Entry.is_favorite == favorite)
 
     total = db.execute(select(func.count()).select_from(stmt.subquery())).scalar_one()
     stmt = stmt.order_by(Entry.created_at.desc()).limit(limit).offset(offset)
@@ -88,6 +93,20 @@ def update_entry(db: Session, entry: Entry, data) -> Entry:
 def delete_entry(db: Session, entry: Entry) -> None:
     db.delete(entry)
     db.commit()
+
+
+def mark_visited(db: Session, entry: Entry) -> Entry:
+    entry.visited_at = datetime.now(timezone.utc)
+    db.commit()
+    db.refresh(entry)
+    return entry
+
+
+def set_favorite(db: Session, entry: Entry, is_favorite: bool) -> Entry:
+    entry.is_favorite = is_favorite
+    db.commit()
+    db.refresh(entry)
+    return entry
 
 
 def upsert_entry(db: Session, data, source: str = "capture") -> tuple[Entry, bool]:

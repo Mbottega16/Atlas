@@ -87,6 +87,46 @@ def test_tags_and_categories_endpoints(client):
     assert any(c["name"] == "design" for c in resp.json())
 
 
+def test_visit_marks_visited_at(client):
+    resp = client.post(
+        "/api/entries", json={"link": "https://visit-me.com", "category": "x", "tags": []}
+    )
+    entry_id = resp.json()["id"]
+    assert resp.json()["visited_at"] is None
+
+    resp = client.post(f"/api/entries/{entry_id}/visit")
+    assert resp.status_code == 200
+    assert resp.json()["visited_at"] is not None
+
+
+def test_favorite_toggle(client):
+    resp = client.post(
+        "/api/entries", json={"link": "https://fav-me.com", "category": "x", "tags": []}
+    )
+    entry_id = resp.json()["id"]
+    assert resp.json()["is_favorite"] is False
+
+    resp = client.post(f"/api/entries/{entry_id}/favorite")
+    assert resp.json()["is_favorite"] is True
+
+    resp = client.post(f"/api/entries/{entry_id}/favorite", params={"favorite": False})
+    assert resp.json()["is_favorite"] is False
+
+
+def test_favorite_filter(client):
+    a = client.post(
+        "/api/entries", json={"link": "https://fa.com", "category": "x", "tags": []}
+    ).json()
+    client.post(
+        "/api/entries", json={"link": "https://fb.com", "category": "x", "tags": []}
+    )
+    client.post(f"/api/entries/{a['id']}/favorite")
+
+    resp = client.get("/api/entries", params={"favorite": True})
+    assert resp.json()["total"] == 1
+    assert resp.json()["items"][0]["link"] == "https://fa.com"
+
+
 def test_batch_import_upserts_on_link(client):
     batch = [
         {"link": "https://batch1.com", "category": "cat1", "tags": ["a"]},

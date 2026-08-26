@@ -6,10 +6,19 @@ reusable links, backed by FastAPI + SQLAlchemy + SQLite, with a Vite + React
 for the quickstart.
 
 ## Current state (2026-08-26)
-- Backend: data model + full CRUD + search/filter + batch-upsert endpoint
-  built and tested (`backend/tests/test_entries.py`, 8 passing).
-- Frontend: Browse/search page (real, wired to the backend) and a Capture
-  page (currently read-only — see below) built and type-checked.
+- Backend: data model + full CRUD + search/filter + batch-upsert endpoint,
+  plus visit-tracking (`POST /entries/{id}/visit`) and favoriting
+  (`POST /entries/{id}/favorite`, `?favorite=` filter on search) — built
+  and tested (`backend/tests/test_entries.py`, 11 passing).
+- Frontend: Browse/search page in a responsive grid (real, wired to the
+  backend), a "visited" badge that lights up when you actually open a
+  link (not on hover/search), a favorite star per entry, and a slide-in
+  Favorites panel that auto-opens the first time you open a link each
+  session (also toggleable via the nav). Capture page still read-only —
+  see below. All type-checked and build clean.
+- First real batch import done: 373 entries from technastic.com +
+  thegeekpage.com (see `projects/atlas/context.md` in the vault for
+  what did/didn't work as sources).
 - Not yet built: auth gate, deployment, live Claude-assisted capture.
 
 ## Decisions already made
@@ -43,7 +52,7 @@ for the quickstart.
   with the link.
 
 ## What happens next
-1. Do a first real batch-capture pass on existing saved links (session-assisted, per the pattern above).
+1. More capture passes as the user supplies sources — this is meant to become a bank that pulls from anywhere, not just the first few sources tried. Categorization is currently a rough keyword heuristic (~20% lands in "misc") — left as-is deliberately until there's more volume to justify a real cleanup pass.
 2. Build the auth gate.
 3. Deploy to Render — **needs explicit user sign-off first**, even on the free tier (going public, not just spend, is the gate).
 4. Once deployed and a real `ANTHROPIC_API_KEY` is approved: build live Claude-assisted capture.

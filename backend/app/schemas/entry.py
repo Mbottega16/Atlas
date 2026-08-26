@@ -30,6 +30,8 @@ class EntryOut(EntryBase):
 
     id: int
     source: str
+    is_favorite: bool
+    visited_at: datetime | None
     created_at: datetime
     updated_at: datetime
 

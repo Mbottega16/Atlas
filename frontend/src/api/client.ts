@@ -7,6 +7,8 @@ export interface Entry {
   use_case: string | null;
   tags: string[];
   source: string;
+  is_favorite: boolean;
+  visited_at: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -29,14 +31,23 @@ async function apiGet<T>(path: string): Promise<T> {
   return resp.json();
 }
 
+async function apiPost<T>(path: string): Promise<T> {
+  const resp = await fetch(`${BASE}${path}`, { method: "POST" });
+  if (!resp.ok) throw new Error(`Request to ${path} failed: ${resp.status}`);
+  return resp.json();
+}
+
 export function searchEntries(params: {
   q?: string;
   category?: string;
   tag?: string;
   use_case?: string;
+  favorite?: boolean;
 }): Promise<EntryListResponse> {
   const qs = new URLSearchParams(
-    Object.entries(params).filter(([, v]) => !!v) as [string, string][]
+    Object.entries(params)
+      .filter(([, v]) => v !== undefined && v !== "" && v !== false)
+      .map(([k, v]) => [k, String(v)])
   );
   return apiGet(`/api/entries?${qs.toString()}`);
 }
@@ -47,4 +58,12 @@ export function fetchTags(): Promise<TagCount[]> {
 
 export function fetchCategories(): Promise<TagCount[]> {
   return apiGet("/api/categories");
+}
+
+export function markVisited(id: number): Promise<Entry> {
+  return apiPost(`/api/entries/${id}/visit`);
+}
+
+export function setFavorite(id: number, favorite: boolean): Promise<Entry> {
+  return apiPost(`/api/entries/${id}/favorite?favorite=${favorite}`);
 }
