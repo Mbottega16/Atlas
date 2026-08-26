@@ -58,13 +58,14 @@ def get_entry_by_link(db: Session, link: str) -> Entry | None:
     return db.execute(select(Entry).where(Entry.link == link)).scalar_one_or_none()
 
 
-def create_entry(db: Session, data) -> Entry:
+def create_entry(db: Session, data, source: str = "manual") -> Entry:
     entry = Entry(
         link=data.link,
         title=data.title,
         category=data.category,
         description=data.description,
         use_case=data.use_case,
+        source=source,
     )
     entry.tags = _get_or_create_tags(db, data.tags)
     db.add(entry)
@@ -89,11 +90,12 @@ def delete_entry(db: Session, entry: Entry) -> None:
     db.commit()
 
 
-def upsert_entry(db: Session, data) -> tuple[Entry, bool]:
-    """Create, or update-in-place if `link` already exists. Returns (entry, created)."""
+def upsert_entry(db: Session, data, source: str = "capture") -> tuple[Entry, bool]:
+    """Create, or update-in-place if `link` already exists. Returns (entry, created).
+    Defaults to source='capture' — this is what the batch/import endpoint calls."""
     existing = get_entry_by_link(db, data.link)
     if existing is None:
-        return create_entry(db, data), True
+        return create_entry(db, data, source=source), True
     existing.title = data.title
     existing.category = data.category
     existing.description = data.description
