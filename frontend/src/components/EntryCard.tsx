@@ -2,12 +2,23 @@ import { useState } from "react";
 
 import { Entry, markVisited, setFavorite } from "../api/client";
 
+function faviconUrl(link: string): string | null {
+  try {
+    const { hostname } = new URL(link);
+    return `https://www.google.com/s2/favicons?sz=64&domain=${hostname}`;
+  } catch {
+    return null;
+  }
+}
+
 export default function EntryCard({
   entry,
+  view = "grid",
   onVisit,
   onFavoriteToggle,
 }: {
   entry: Entry;
+  view?: "grid" | "list" | "large";
   onVisit?: () => void;
   onFavoriteToggle?: () => void;
 }) {
@@ -37,8 +48,10 @@ export default function EntryCard({
     }
   };
 
+  const favicon = faviconUrl(entry.link);
+
   return (
-    <div className={`entry-card${visited ? " visited" : ""}`}>
+    <div className={`entry-card view-${view}${visited ? " visited" : ""}`}>
       <button
         className={`favorite-btn${favorite ? " active" : ""}`}
         onClick={handleFavoriteClick}
@@ -47,27 +60,36 @@ export default function EntryCard({
       >
         {favorite ? "★" : "☆"}
       </button>
-      {visited && (
-        <span className="visited-badge" title="You've opened this before">
-          ✓ visited
-        </span>
-      )}
-      <h3>
-        <a href={entry.link} target="_blank" rel="noreferrer" onClick={handleOpen}>
-          {entry.title || entry.link}
-        </a>
-      </h3>
-      <div className="meta">
-        {entry.category}
-        {entry.use_case ? ` · ${entry.use_case}` : ""}
+      <div className="entry-card-logo">
+        {favicon ? (
+          <img src={favicon} alt="" loading="lazy" />
+        ) : (
+          <span className="entry-card-logo-fallback">{(entry.title || entry.link)[0]?.toUpperCase()}</span>
+        )}
       </div>
-      {entry.description && <p>{entry.description}</p>}
-      <div className="tag-row">
-        {entry.tags.map((t) => (
-          <span key={t} className="tag-pill">
-            {t}
+      <div className="entry-card-body">
+        {visited && (
+          <span className="visited-badge" title="You've opened this before">
+            ✓ visited
           </span>
-        ))}
+        )}
+        <h3>
+          <a href={entry.link} target="_blank" rel="noreferrer" onClick={handleOpen}>
+            {entry.title || entry.link}
+          </a>
+        </h3>
+        <div className="meta">
+          {entry.category}
+          {entry.use_case ? ` · ${entry.use_case}` : ""}
+        </div>
+        {entry.description && <p>{entry.description}</p>}
+        <div className="tag-row">
+          {entry.tags.map((t) => (
+            <span key={t} className="tag-pill">
+              {t}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );

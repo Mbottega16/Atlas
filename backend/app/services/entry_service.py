@@ -39,6 +39,7 @@ def list_entries(
             (Entry.title.ilike(like))
             | (Entry.description.ilike(like))
             | (Entry.link.ilike(like))
+            | (Entry.use_case.ilike(like))
         )
     if category:
         stmt = stmt.where(Entry.category == category)
@@ -57,6 +58,16 @@ def list_entries(
 
 def get_entry(db: Session, entry_id: int) -> Entry | None:
     return db.get(Entry, entry_id)
+
+
+def random_entry(db: Session, category: str | None = None, tag: str | None = None) -> Entry | None:
+    stmt = select(Entry)
+    if category:
+        stmt = stmt.where(Entry.category == category)
+    if tag:
+        stmt = stmt.join(Entry.tags).where(Tag.name == tag.strip().lower())
+    stmt = stmt.order_by(func.random()).limit(1)
+    return db.execute(stmt).scalars().unique().first()
 
 
 def get_entry_by_link(db: Session, link: str) -> Entry | None:

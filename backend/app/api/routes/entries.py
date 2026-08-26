@@ -51,6 +51,20 @@ def create_entry(data: EntryCreate, db: Session = Depends(get_db)):
     return _to_out(entry)
 
 
+@router.get("/entries/random", response_model=EntryOut)
+def random_entry(
+    category: str | None = None,
+    tag: str | None = None,
+    db: Session = Depends(get_db),
+):
+    """Picks one random entry — powers the 'Surprise me' button. Optionally
+    scoped to a category or tag so 'surprise me, but from game dev' works too."""
+    entry = entry_service.random_entry(db, category, tag)
+    if entry is None:
+        raise HTTPException(status_code=404, detail="No entries match")
+    return _to_out(entry)
+
+
 @router.get("/entries/{entry_id}", response_model=EntryOut)
 def get_entry(entry_id: int, db: Session = Depends(get_db)):
     entry = entry_service.get_entry(db, entry_id)

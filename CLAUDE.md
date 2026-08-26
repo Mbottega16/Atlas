@@ -19,6 +19,20 @@ for the quickstart.
 - First real batch import done: 373 entries from technastic.com +
   thegeekpage.com (see `projects/atlas/context.md` in the vault for
   what did/didn't work as sources).
+- Browse page now has real "juice" and a view-mode toggle (2026-08-26):
+  entry cards show a site favicon (via Google's public favicon service,
+  derived from the link's hostname — no backend change needed) and a
+  small wiggle/lift animation on hover; a list / grid / large-panel
+  toggle (like a file explorer's view modes) is in `BrowsePage.tsx`,
+  persisted per-browser in `localStorage`. `EntryCard.tsx` takes an
+  optional `view` prop consumed by `index.css`'s `.view-list`/
+  `.view-grid`/`.view-large` rules.
+- Second batch import done (2026-08-26): 183 hand-curated entries added
+  (373 → 556), covering game dev (new `game dev` category, for
+  PixelRoom), children's-book publishing (new `publishing` category,
+  for Little Sprout Stories), education/tutoring tools (for Chegga),
+  and general productivity/dev/AI tooling. See `projects/atlas/context.md`
+  in the vault for the full breakdown.
 - Not yet built: auth gate, deployment, live Claude-assisted capture.
 
 ## Decisions already made

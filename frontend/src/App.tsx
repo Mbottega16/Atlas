@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { markVisited, randomEntry } from "./api/client";
 import FavoritesPanel from "./components/FavoritesPanel";
 import BrowsePage from "./pages/BrowsePage";
 import CapturePage from "./pages/CapturePage";
@@ -11,6 +12,21 @@ export default function App() {
   const [favoritesOpen, setFavoritesOpen] = useState(false);
   const [favoritesRefreshKey, setFavoritesRefreshKey] = useState(0);
   const [hasAutoOpenedFavorites, setHasAutoOpenedFavorites] = useState(false);
+  const [rolling, setRolling] = useState(false);
+
+  const handleSurpriseMe = async () => {
+    setRolling(true);
+    try {
+      const entry = await randomEntry();
+      window.open(entry.link, "_blank", "noopener,noreferrer");
+      markVisited(entry.id).catch(() => {});
+      handleVisit();
+    } catch {
+      // Silent — a failed roll just means "try again", not worth a modal.
+    } finally {
+      setRolling(false);
+    }
+  };
 
   const handleVisit = () => {
     // First time this session someone opens a link, surface the
@@ -53,9 +69,20 @@ export default function App() {
           href="#"
           onClick={(e) => {
             e.preventDefault();
+            if (!rolling) handleSurpriseMe();
+          }}
+          style={{ marginLeft: "auto", opacity: rolling ? 0.5 : 1 }}
+          title="Open a random entry from the whole library"
+        >
+          🎲 Surprise me
+        </a>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
             setFavoritesOpen((v) => !v);
           }}
-          style={{ marginLeft: "auto", opacity: favoritesOpen ? 1 : 0.5 }}
+          style={{ opacity: favoritesOpen ? 1 : 0.5 }}
         >
           ★ Favorites
         </a>

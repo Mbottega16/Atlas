@@ -60,6 +60,14 @@ export function fetchCategories(): Promise<TagCount[]> {
   return apiGet("/api/categories");
 }
 
+export function randomEntry(params: { category?: string; tag?: string } = {}): Promise<Entry> {
+  const qs = new URLSearchParams(
+    Object.entries(params).filter(([, v]) => v !== undefined && v !== "") as [string, string][]
+  );
+  const suffix = qs.toString() ? `?${qs.toString()}` : "";
+  return apiGet(`/api/entries/random${suffix}`);
+}
+
 export function markVisited(id: number): Promise<Entry> {
   return apiPost(`/api/entries/${id}/visit`);
 }
