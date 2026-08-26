@@ -1,0 +1,61 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+}
+
+.entry-card {
+  border: 1px solid #8884;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.entry-card h3 {
+  margin: 0 0 0.25rem;
+}
+
+.entry-card .meta {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.tag-pill {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.75rem;
+  background: #8882;
+  margin-right: 0.35rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+}
