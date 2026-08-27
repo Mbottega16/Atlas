@@ -375,3 +375,246 @@ nav a {
   font-size: 0.8rem;
   opacity: 0.7;
 }
+
+/* ---------- Find (guide) ---------- */
+.guide {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.guide-freetext {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.guide-freetext input {
+  flex: 1;
+  padding: 0.55rem 0.8rem;
+  font-size: 1rem;
+}
+
+.guide-freetext button {
+  padding: 0.55rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid #8884;
+  border-radius: 6px;
+  background: none;
+}
+
+.guide-or {
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.55;
+  margin: 1rem 0 1.25rem;
+}
+
+.guide-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.9rem;
+}
+
+.guide-crumb {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: #8882;
+  opacity: 0.8;
+}
+
+.guide-question h2,
+.guide-results-head h2 {
+  font-size: 1.15rem;
+  margin: 0 0 0.9rem;
+}
+
+.guide-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.guide-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: left;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #8884;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+
+.guide-option:hover {
+  border-color: #4a90e2;
+  background: #4a90e20d;
+}
+
+.guide-option-label {
+  font-weight: 600;
+}
+
+.guide-option-hint {
+  font-size: 0.82rem;
+  opacity: 0.6;
+}
+
+.guide-option-arrow {
+  margin-left: auto;
+  opacity: 0.4;
+}
+
+.guide-back {
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  opacity: 0.7;
+  padding: 0;
+}
+
+.guide-back:hover {
+  opacity: 1;
+}
+
+.guide-results-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.guide-results-actions {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.guide-results-actions .guide-back {
+  margin-top: 0;
+}
+
+.guide-results-count {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin: 0 0 0.9rem;
+}
+
+.guide-seeall {
+  margin-top: 1.25rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid #4a90e2;
+  border-radius: 8px;
+  background: none;
+  color: #4a90e2;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.guide-seeall:hover {
+  background: #4a90e214;
+}
+
+.guide-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: #4a90e2;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ---------- Browse landing (group cards) ---------- */
+.browse-landing-lead {
+  opacity: 0.7;
+  margin-top: 0;
+}
+
+.group-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.group-card {
+  border: 1px solid #8884;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.group-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.group-card-head h3 {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.group-card-total {
+  font-size: 0.8rem;
+  opacity: 0.55;
+}
+
+.group-card-cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.group-card-cat {
+  border: 1px solid #8884;
+  border-radius: 999px;
+  background: none;
+  font: inherit;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.65rem;
+  cursor: pointer;
+}
+
+.group-card-cat:hover {
+  border-color: #4a90e2;
+  color: #4a90e2;
+}
+
+.group-card-cat span {
+  opacity: 0.5;
+}
+
+.browse-grandtotal {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.55;
+}
+
+.results-row-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.clear-filters {
+  border: 1px solid #8884;
+  background: none;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.clear-filters:hover {
+  opacity: 1;
+}

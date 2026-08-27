@@ -1,14 +1,19 @@
 import { useState } from "react";
 
 import { markVisited, randomEntry } from "./api/client";
+import type { Filters } from "./components/FilterBar";
 import FavoritesPanel from "./components/FavoritesPanel";
 import BrowsePage from "./pages/BrowsePage";
 import CapturePage from "./pages/CapturePage";
+import GuidePage, { BrowseFilters } from "./pages/GuidePage";
 
-type Tab = "browse" | "capture";
+type Tab = "find" | "browse" | "capture";
+
+const EMPTY_FILTERS: Filters = { q: "", category: "", tag: "" };
 
 export default function App() {
-  const [tab, setTab] = useState<Tab>("browse");
+  const [tab, setTab] = useState<Tab>("find");
+  const [browseFilters, setBrowseFilters] = useState<Filters>(EMPTY_FILTERS);
   const [favoritesOpen, setFavoritesOpen] = useState(false);
   const [favoritesRefreshKey, setFavoritesRefreshKey] = useState(0);
   const [hasAutoOpenedFavorites, setHasAutoOpenedFavorites] = useState(false);
@@ -41,30 +46,32 @@ export default function App() {
     setFavoritesRefreshKey((k) => k + 1);
   };
 
+  // The guide hands Browse a preset filter and switches tabs to it.
+  const handleSeeAll = (filters: BrowseFilters) => {
+    setBrowseFilters(filters);
+    setTab("browse");
+  };
+
+  const navLink = (t: Tab, label: string) => (
+    <a
+      href="#"
+      onClick={(e) => {
+        e.preventDefault();
+        setTab(t);
+      }}
+      style={{ opacity: tab === t ? 1 : 0.5 }}
+    >
+      {label}
+    </a>
+  );
+
   return (
     <div>
       <h1>Atlas</h1>
       <nav>
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            setTab("browse");
-          }}
-          style={{ opacity: tab === "browse" ? 1 : 0.5 }}
-        >
-          Browse
-        </a>
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            setTab("capture");
-          }}
-          style={{ opacity: tab === "capture" ? 1 : 0.5 }}
-        >
-          Capture
-        </a>
+        {navLink("find", "Find")}
+        {navLink("browse", "Browse")}
+        {navLink("capture", "Capture")}
         <a
           href="#"
           onClick={(e) => {
@@ -87,11 +94,24 @@ export default function App() {
           ★ Favorites
         </a>
       </nav>
-      {tab === "browse" ? (
-        <BrowsePage onVisit={handleVisit} onFavoriteToggle={handleFavoriteToggle} />
-      ) : (
-        <CapturePage />
+
+      {tab === "find" && (
+        <GuidePage
+          onSeeAll={handleSeeAll}
+          onVisit={handleVisit}
+          onFavoriteToggle={handleFavoriteToggle}
+        />
       )}
+      {tab === "browse" && (
+        <BrowsePage
+          filters={browseFilters}
+          onFilters={setBrowseFilters}
+          onVisit={handleVisit}
+          onFavoriteToggle={handleFavoriteToggle}
+        />
+      )}
+      {tab === "capture" && <CapturePage />}
+
       <FavoritesPanel
         open={favoritesOpen}
         onClose={() => setFavoritesOpen(false)}

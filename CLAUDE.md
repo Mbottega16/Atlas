@@ -66,6 +66,20 @@ for the quickstart.
   Also ran a dedupe pass: 50 http/https/www/trailing-slash duplicate
   rows from the earlier bulk imports were merged (tags unioned onto the
   survivor; all had no favorite/visit state). Net total 748 -> 792.
+- Guided discovery layer added (2026-08-27): with ~800 entries a flat list
+  was unusable, so there's now a **Find** tab (the default landing) —
+  `src/pages/GuidePage.tsx` drives a 2-step question tree from
+  `src/guidedPaths.ts` (pure config; every leaf is a preset
+  `{category?, tag?, q?}` handed to the existing search — no backend
+  change) plus a free-text "describe what you need" box that jumps to
+  Browse with a `q`. **Browse** no longer dumps everything: with no
+  filter active it shows the 7 `categoryGroups` as cards with per-category
+  counts; results only render once a search term / category / tag is set.
+  Every narrowed view (Find previews and Browse) is re-ordered by
+  `src/ranking.ts`: favorites first, then entries tagged `essential`
+  (hand-applied in the batch imports), then the rest. `App.tsx` now owns
+  the Browse filter state so Find can hand off into it. Type-checks and
+  builds clean.
 - Not yet built: auth gate, deployment, live Claude-assisted capture.
 
 ## Decisions already made
