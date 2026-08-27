@@ -51,6 +51,21 @@ for the quickstart.
   and web utilities (Squoosh, Mockaroo, ngrok, webhook.site). One new
   category: `vfx & 3d`. Freshness spot-checks on the volatile ones
   (Fab/Quixel Megascans now mostly paid, noted as such).
+- Fifth batch + dedupe done (2026-08-27): 94 entries added covering the
+  gaps around *shipping and running* the products — hosting/deploy
+  (Vercel, Netlify, Render, Fly, Cloudflare, Supabase), ops/monitoring
+  (Sentry, UptimeRobot, Clarity, PostHog, Plausible), web security
+  (SSL Labs, securityheaders, OWASP ZAP/cheat sheets, Snyk, Gitleaks),
+  accessibility (WAVE, axe, WCAG quickref, NVDA), solo-founder legal/tax
+  (USPTO trademark search, IRS self-employed, SBA guide, policy
+  generators, Common Paper contracts), marketing/growth (Search Console,
+  keyword tools, Product Hunt, Indie Hackers, Tally, Buttondown, Canny,
+  presskit(), Steamworks docs), and data/research (data.gov, Kaggle,
+  HF Datasets, FRED, Our World in Data). New categories: `hosting & ops`,
+  `business & legal`, `marketing & growth`, `data & research`.
+  Also ran a dedupe pass: 50 http/https/www/trailing-slash duplicate
+  rows from the earlier bulk imports were merged (tags unioned onto the
+  survivor; all had no favorite/visit state). Net total 748 -> 792.
 - Not yet built: auth gate, deployment, live Claude-assisted capture.
 
 ## Decisions already made
