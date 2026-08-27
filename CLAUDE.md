@@ -33,6 +33,14 @@ for the quickstart.
   for Little Sprout Stories), education/tutoring tools (for Chegga),
   and general productivity/dev/AI tooling. See `projects/atlas/context.md`
   in the vault for the full breakdown.
+- Third batch import done (2026-08-27): 65 hand-curated college-student
+  resources added (556 → 631) — financial aid (FAFSA, federal grants,
+  scholarship search, national fellowships), club/volunteering finders,
+  internships/early career, undergrad research, OER textbooks,
+  research/writing tools, student mental-health resources, and student
+  software/discounts. Two new categories: `financial aid`, `college &
+  students`. Curated from knowledge + a few freshness spot-checks
+  (dropped Going Merry / Scholly as defunct-or-shaky); no bulk scrape.
 - Not yet built: auth gate, deployment, live Claude-assisted capture.
 
 ## Decisions already made
