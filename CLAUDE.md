@@ -41,6 +41,16 @@ for the quickstart.
   software/discounts. Two new categories: `financial aid`, `college &
   students`. Curated from knowledge + a few freshness spot-checks
   (dropped Going Merry / Scholly as defunct-or-shaky); no bulk scrape.
+- Fourth batch import done (2026-08-27): 117 hand-curated dev / VFX / 3D
+  / design resources added (631 -> 748) — VFX & 3D (Poly Haven, ambientCG,
+  Blender, DaVinci Resolve/Fusion, Houdini, Mixamo, photogrammetry,
+  shaders), game-dev assets & references, coding docs/cheat sheets
+  (MDN, DevDocs, roadmap.sh), online playgrounds & tools (regex101,
+  Compiler Explorer, CyberChef, Excalidraw), practice/learning sites,
+  design systems & inspiration (shadcn/ui, Coolors, Lucide, Mobbin),
+  and web utilities (Squoosh, Mockaroo, ngrok, webhook.site). One new
+  category: `vfx & 3d`. Freshness spot-checks on the volatile ones
+  (Fab/Quixel Megascans now mostly paid, noted as such).
 - Not yet built: auth gate, deployment, live Claude-assisted capture.
 
 ## Decisions already made
