@@ -62,6 +62,15 @@ body {
   opacity: 0.7;
 }
 
+.essential-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
 .results-row {
   display: flex;
   align-items: center;
@@ -596,6 +605,36 @@ nav a {
   margin-top: 1.5rem;
   font-size: 0.85rem;
   opacity: 0.55;
+}
+
+.browse-showall-btn,
+.load-more {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid #8884;
+  border-radius: 8px;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.load-more {
+  display: block;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.browse-showall-btn:hover,
+.load-more:hover:not(:disabled) {
+  border-color: #4a90e2;
+  color: #4a90e2;
+  opacity: 1;
+}
+
+.load-more:disabled {
+  cursor: default;
+  opacity: 0.5;
 }
 
 .results-row-right {

@@ -73,7 +73,7 @@ const make: GuideNode = {
     { label: "Textures & materials", filter: { label: "Textures & materials", q: "texture" } },
     {
       label: "Video editing, compositing, VFX",
-      filter: { label: "Video & compositing", q: "compositing" },
+      filter: { label: "Video & compositing", tag: "video" },
     },
     { label: "Audio & sound effects", filter: { label: "Audio & sound", category: "audio & video" } },
     { label: "Icons & SVG", filter: { label: "Icons & SVG", tag: "icons" } },
@@ -96,7 +96,7 @@ const design: GuideNode = {
     },
     {
       label: "Backgrounds, gradients, effects",
-      filter: { label: "Backgrounds & effects", q: "gradient" },
+      filter: { label: "Backgrounds & effects", q: "background" },
     },
   ],
 };

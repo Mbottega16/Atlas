@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import { Entry, searchEntries } from "../api/client";
 import EntryCard from "../components/EntryCard";
@@ -39,6 +39,28 @@ export default function GuidePage({
   const [error, setError] = useState<string | null>(null);
 
   const node = stack[stack.length - 1];
+  const optionsRef = useRef<HTMLDivElement>(null);
+
+  // Autofocus the first option each time a new question renders, so the
+  // whole tree is answerable from the keyboard.
+  useEffect(() => {
+    if (!leaf) {
+      optionsRef.current?.querySelector<HTMLButtonElement>("button")?.focus();
+    }
+  }, [node, leaf]);
+
+  const onOptionsKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+    const btns = Array.from(
+      optionsRef.current?.querySelectorAll<HTMLButtonElement>("button.guide-option") ?? []
+    );
+    const i = btns.indexOf(document.activeElement as HTMLButtonElement);
+    const next = e.key === "ArrowDown" ? i + 1 : i - 1;
+    if (btns[next]) {
+      e.preventDefault();
+      btns[next].focus();
+    }
+  };
 
   const reset = () => {
     setStack([GUIDE_ROOT]);
@@ -118,7 +140,7 @@ export default function GuidePage({
       {!leaf && (
         <div className="guide-question">
           <h2>{node.question}</h2>
-          <div className="guide-options">
+          <div className="guide-options" ref={optionsRef} onKeyDown={onOptionsKeyDown}>
             {node.options.map((opt) => (
               <button
                 key={opt.label}

@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 
 from app.models.entry import Entry
 from app.models.tag import Tag
+from app.services.links import canonical_link
 
 
 def _get_or_create_tags(db: Session, names: list[str]) -> list[Tag]:
@@ -71,12 +72,14 @@ def random_entry(db: Session, category: str | None = None, tag: str | None = Non
 
 
 def get_entry_by_link(db: Session, link: str) -> Entry | None:
-    return db.execute(select(Entry).where(Entry.link == link)).scalar_one_or_none()
+    return db.execute(
+        select(Entry).where(Entry.link == canonical_link(link))
+    ).scalar_one_or_none()
 
 
 def create_entry(db: Session, data, source: str = "manual") -> Entry:
     entry = Entry(
-        link=data.link,
+        link=canonical_link(data.link),
         title=data.title,
         category=data.category,
         description=data.description,
@@ -92,6 +95,8 @@ def create_entry(db: Session, data, source: str = "manual") -> Entry:
 
 def update_entry(db: Session, entry: Entry, data) -> Entry:
     updates = data.model_dump(exclude_unset=True, exclude={"tags"})
+    if "link" in updates and updates["link"]:
+        updates["link"] = canonical_link(updates["link"])
     for field, value in updates.items():
         setattr(entry, field, value)
     if data.tags is not None:

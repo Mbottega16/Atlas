@@ -69,7 +69,11 @@ export default function FilterBar({
             </option>
           ))}
         </select>
-        <select value={filters.tag} onChange={(e) => onChange({ ...filters, tag: e.target.value })}>
+        <select
+          value={filters.tag}
+          onChange={(e) => onChange({ ...filters, tag: e.target.value })}
+          disabled={filters.tag === "essential"}
+        >
           <option value="">All tags</option>
           {tags.map((t) => (
             <option key={t.name} value={t.name}>
@@ -77,6 +81,14 @@ export default function FilterBar({
             </option>
           ))}
         </select>
+        <label className="essential-toggle" title="Only the hand-picked first-choice entries">
+          <input
+            type="checkbox"
+            checked={filters.tag === "essential"}
+            onChange={(e) => onChange({ ...filters, tag: e.target.checked ? "essential" : "" })}
+          />
+          ★ Essentials only
+        </label>
       </div>
       {filters.category && (
         <p className="filter-hint">

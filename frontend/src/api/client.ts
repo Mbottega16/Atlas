@@ -43,6 +43,8 @@ export function searchEntries(params: {
   tag?: string;
   use_case?: string;
   favorite?: boolean;
+  limit?: number;
+  offset?: number;
 }): Promise<EntryListResponse> {
   const qs = new URLSearchParams(
     Object.entries(params)

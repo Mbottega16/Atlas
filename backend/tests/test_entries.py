@@ -150,3 +150,75 @@ def test_batch_import_upserts_on_link(client):
 
     resp = client.get("/api/entries")
     assert resp.json()["total"] == 2  # still just 2 rows, not 3
+
+
+def test_search_by_query_and_category_combined(client):
+    client.post(
+        "/api/entries",
+        json={
+            "link": "https://deploy-a.com",
+            "category": "hosting & ops",
+            "description": "Deploy a frontend with preview builds",
+            "tags": [],
+        },
+    )
+    client.post(
+        "/api/entries",
+        json={
+            "link": "https://deploy-b.com",
+            "category": "developer tools",
+            "description": "Deploy previews for pull requests",
+            "tags": [],
+        },
+    )
+
+    # q alone matches both; q + category narrows to one (the Find tree relies
+    # on category AND q being applied together server-side)
+    assert client.get("/api/entries", params={"q": "deploy"}).json()["total"] == 2
+    resp = client.get(
+        "/api/entries", params={"q": "deploy", "category": "hosting & ops"}
+    )
+    assert resp.json()["total"] == 1
+    assert resp.json()["items"][0]["link"] == "https://deploy-a.com"
+
+
+def test_link_is_canonicalized_on_create():
+    from app.services.links import canonical_link
+
+    assert canonical_link("http://www.Example.com/") == "https://example.com"
+    assert canonical_link("https://example.com/path/") == "https://example.com/path"
+    assert canonical_link("example.com") == "https://example.com"
+    assert (
+        canonical_link("https://example.com/a?b=2#frag") == "https://example.com/a?b=2"
+    )
+
+
+def test_duplicate_link_variants_rejected(client):
+    payload = {"link": "https://www.canon-test.com/", "category": "x", "tags": []}
+    assert client.post("/api/entries", json=payload).status_code == 201
+
+    # same site, different surface form -> treated as the existing entry
+    for variant in (
+        "http://canon-test.com",
+        "https://canon-test.com/",
+        "https://www.canon-test.com",
+    ):
+        resp = client.post(
+            "/api/entries", json={"link": variant, "category": "x", "tags": []}
+        )
+        assert resp.status_code == 409
+
+    assert client.get("/api/entries").json()["total"] == 1
+
+
+def test_batch_import_dedupes_link_variants(client):
+    client.post(
+        "/api/entries/batch",
+        json=[
+            {"link": "https://variant.com", "category": "a", "tags": []},
+            {"link": "http://www.variant.com/", "category": "a-updated", "tags": []},
+        ],
+    )
+    resp = client.get("/api/entries")
+    assert resp.json()["total"] == 1
+    assert resp.json()["items"][0]["category"] == "a-updated"

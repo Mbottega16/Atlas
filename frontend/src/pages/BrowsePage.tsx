@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { Entry, TagCount, fetchCategories, fetchTags, searchEntries } from "../api/client";
 import { CATEGORY_GROUPS } from "../categoryGroups";
@@ -8,6 +8,7 @@ import { rankEntries } from "../ranking";
 
 type ViewMode = "grid" | "list" | "large";
 const VIEW_STORAGE_KEY = "atlas.viewMode";
+const PAGE_SIZE = 60;
 
 function loadViewMode(): ViewMode {
   try {
@@ -38,8 +39,12 @@ export default function BrowsePage({
   const [categories, setCategories] = useState<TagCount[]>([]);
   const [tags, setTags] = useState<TagCount[]>([]);
   const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [view, setView] = useState<ViewMode>(loadViewMode);
+  // Set when the user explicitly asks to see the whole library from the
+  // landing state (no filter). Cleared as soon as a real filter is chosen.
+  const [showAll, setShowAll] = useState(false);
 
   const changeView = (next: ViewMode) => {
     setView(next);
@@ -53,16 +58,22 @@ export default function BrowsePage({
   useEffect(() => {
     fetchCategories().then(setCategories).catch(() => {});
     fetchTags().then(setTags).catch(() => {});
-    // Grand total for the "how big is Atlas" line on the landing state.
-    searchEntries({})
+    searchEntries({ limit: 1 })
       .then((res) => setGrandTotal(res.total))
       .catch(() => {});
   }, []);
 
-  const landing = isBlank(filters);
+  const blank = isBlank(filters);
+  const landing = blank && !showAll;
+  const listing = !blank || showAll;
 
   useEffect(() => {
-    if (landing) {
+    if (!blank) setShowAll(false);
+  }, [blank]);
+
+  // First page whenever the query changes.
+  useEffect(() => {
+    if (!listing) {
       setEntries([]);
       setLoading(false);
       return;
@@ -70,7 +81,7 @@ export default function BrowsePage({
     setLoading(true);
     setError(null);
     const handle = setTimeout(() => {
-      searchEntries(filters)
+      searchEntries({ ...filters, limit: PAGE_SIZE, offset: 0 })
         .then((res) => {
           setEntries(rankEntries(res.items));
           setTotal(res.total);
@@ -79,10 +90,22 @@ export default function BrowsePage({
         .finally(() => setLoading(false));
     }, 200); // debounce typing in the search box
     return () => clearTimeout(handle);
-  }, [filters, landing]);
+  }, [filters, listing]);
+
+  const loadMore = useCallback(() => {
+    setLoadingMore(true);
+    searchEntries({ ...filters, limit: PAGE_SIZE, offset: entries.length })
+      .then((res) => {
+        setEntries((prev) => rankEntries([...prev, ...res.items]));
+        setTotal(res.total);
+      })
+      .catch(() => setError("Couldn't load more — is the backend still running?"))
+      .finally(() => setLoadingMore(false));
+  }, [filters, entries.length]);
 
   const countFor = (name: string) => categories.find((c) => c.name === name)?.count ?? 0;
   const knownCats = new Set(categories.map((c) => c.name));
+  const hasMore = entries.length < total;
 
   return (
     <div>
@@ -124,22 +147,29 @@ export default function BrowsePage({
               );
             })}
           </div>
-          {grandTotal !== null && (
-            <p className="browse-grandtotal">{grandTotal} entries in Atlas</p>
-          )}
+          <button className="browse-showall-btn" onClick={() => setShowAll(true)}>
+            Show the full list{grandTotal !== null ? ` (${grandTotal})` : ""} →
+          </button>
         </div>
       )}
 
-      {!error && !landing && (
+      {!error && listing && (
         <>
           <div className="results-row">
-            <p>{loading ? "Loading…" : `${total} result${total === 1 ? "" : "s"}`}</p>
+            <p>
+              {loading
+                ? "Loading…"
+                : `${entries.length} of ${total} shown`}
+            </p>
             <div className="results-row-right">
               <button
                 className="clear-filters"
-                onClick={() => onFilters({ q: "", category: "", tag: "" })}
+                onClick={() => {
+                  setShowAll(false);
+                  onFilters({ q: "", category: "", tag: "" });
+                }}
               >
-                Clear
+                {blank ? "Back to areas" : "Clear"}
               </button>
               <div className="view-toggle" role="group" aria-label="View">
                 <button
@@ -182,6 +212,11 @@ export default function BrowsePage({
           </div>
           {!loading && entries.length === 0 && (
             <p>No matches — try a broader search or Clear.</p>
+          )}
+          {hasMore && (
+            <button className="load-more" onClick={loadMore} disabled={loadingMore}>
+              {loadingMore ? "Loading…" : `Load ${Math.min(PAGE_SIZE, total - entries.length)} more`}
+            </button>
           )}
         </>
       )}

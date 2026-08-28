@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { markVisited, randomEntry } from "./api/client";
 import type { Filters } from "./components/FilterBar";
@@ -10,10 +10,37 @@ import GuidePage, { BrowseFilters } from "./pages/GuidePage";
 type Tab = "find" | "browse" | "capture";
 
 const EMPTY_FILTERS: Filters = { q: "", category: "", tag: "" };
+const FILTERS_KEY = "atlas.browseFilters";
+
+function loadFilters(): Filters {
+  try {
+    const raw = localStorage.getItem(FILTERS_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      return {
+        q: String(parsed.q ?? ""),
+        category: String(parsed.category ?? ""),
+        tag: String(parsed.tag ?? ""),
+      };
+    }
+  } catch {
+    // ignore — per-viewer convenience only
+  }
+  return EMPTY_FILTERS;
+}
 
 export default function App() {
   const [tab, setTab] = useState<Tab>("find");
-  const [browseFilters, setBrowseFilters] = useState<Filters>(EMPTY_FILTERS);
+  const [browseFilters, setBrowseFilters] = useState<Filters>(loadFilters);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(FILTERS_KEY, JSON.stringify(browseFilters));
+    } catch {
+      // ignore
+    }
+  }, [browseFilters]);
+
   const [favoritesOpen, setFavoritesOpen] = useState(false);
   const [favoritesRefreshKey, setFavoritesRefreshKey] = useState(0);
   const [hasAutoOpenedFavorites, setHasAutoOpenedFavorites] = useState(false);
