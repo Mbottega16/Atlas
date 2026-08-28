@@ -231,9 +231,41 @@ const student: GuideNode = {
   ],
 };
 
+const project: GuideNode = {
+  question: "Which project?",
+  options: [
+    {
+      label: "PixelRoom",
+      hint: "Godot game — pixel art, audio, Steam",
+      filter: { label: "PixelRoom resources", tag: "pixelroom" },
+    },
+    {
+      label: "Little Sprout Stories",
+      hint: "Phonics / SEL storybooks, PWA, kids publishing",
+      filter: { label: "Little Sprout Stories resources", tag: "little-sprout" },
+    },
+    {
+      label: "Chegga / Chegga Web",
+      hint: "Chess analyzer — Stockfish, FastAPI + React stack",
+      filter: { label: "Chegga resources", tag: "chegga" },
+    },
+    {
+      label: "trading-bot",
+      hint: "Alpaca, backtesting, market data",
+      filter: { label: "trading-bot resources", tag: "trading-bot" },
+    },
+    {
+      label: "Almanac",
+      hint: "Teaching-content library — UDL, OER, lesson planning",
+      filter: { label: "Almanac resources", tag: "almanac" },
+    },
+  ],
+};
+
 export const GUIDE_ROOT: GuideNode = {
   question: "What are you trying to do right now?",
   options: [
+    { label: "Something for a specific project", next: project },
     { label: "Build or ship software", next: build },
     { label: "Make art, 3D, video, or sound", next: make },
     { label: "Design a UI or a web page", next: design },

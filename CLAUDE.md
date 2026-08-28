@@ -80,6 +80,20 @@ for the quickstart.
   (hand-applied in the batch imports), then the rest. `App.tsx` now owns
   the Browse filter state so Find can hand off into it. Type-checks and
   builds clean.
+- Project-targeted batch (2026-08-27): 135 entries added (792 -> 927) aimed
+  at the user's six projects, each tagged with a project slug —
+  `pixelroom` (Godot docs/asset library/shaders, pixel-art editors, Tiled/
+  LDtk, retro audio tools, Steam marketing), `little-sprout` (phonics/SEL
+  research, decodable readers, PWA packaging, literacy fonts, kids
+  publishing), `chegga` (Chess.com/Lichess APIs, Stockfish + wasm builds,
+  chess.js/chessground, the shared FastAPI+SQLAlchemy+Vite+React stack
+  docs, SQLite tooling, IndexedDB/WASM), `trading-bot` (Alpaca, backtesting.py
+  /vectorbt/backtrader, market-data APIs, SEC EDGAR, Telegram bot),
+  `almanac` (CAST UDL guidelines, OER Commons, PhET, primary-source
+  libraries, lesson-planning and formative-assessment tools). New category
+  `trading & markets`. The Find wizard gained a "Something for a specific
+  project" branch (routes to the project tag). Project-tag counts:
+  pixelroom 30, little-sprout 25, chegga 37, trading-bot 22, almanac 34.
 - Not yet built: auth gate, deployment, live Claude-assisted capture.
 
 ## Decisions already made
