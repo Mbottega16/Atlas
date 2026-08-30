@@ -84,6 +84,20 @@ export function fetchTags(): Promise<TagCount[]> {
   return apiGet("/api/tags");
 }
 
+export interface TagOpResult {
+  tag: string;
+  entries_touched: number;
+  merged: boolean;
+}
+
+export function renameTag(name: string, newName: string): Promise<TagOpResult> {
+  return apiSend("PUT", `/api/tags/${encodeURIComponent(name)}`, { new_name: newName });
+}
+
+export function mergeTags(sources: string[], into: string): Promise<TagOpResult> {
+  return apiPost("/api/tags/merge", { sources, into });
+}
+
 export function fetchCategories(): Promise<TagCount[]> {
   return apiGet("/api/categories");
 }

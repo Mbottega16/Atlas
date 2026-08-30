@@ -12,6 +12,7 @@ import {
   searchEntries,
 } from "../api/client";
 import EntryCard from "../components/EntryCard";
+import TagManager from "../components/TagManager";
 
 const BLANK: EntryInput = {
   link: "",
@@ -74,6 +75,8 @@ export default function CapturePage() {
           </p>
         </details>
       )}
+
+      <TagManager />
 
       <div className="capture-block">
         <h3>Backup</h3>

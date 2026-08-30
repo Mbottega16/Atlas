@@ -781,3 +781,32 @@ nav a {
   margin: 0.3rem 0;
   font-size: 0.88rem;
 }
+
+.tag-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.88rem;
+}
+
+.tag-table td {
+  padding: 0.2rem 0.4rem;
+  border-bottom: 1px solid #8882;
+}
+
+.tag-table-count {
+  opacity: 0.55;
+  text-align: right;
+  width: 3rem;
+}
+
+.tag-table button {
+  align-self: auto;
+  border-color: #8884;
+  color: inherit;
+  font-size: 0.78rem;
+  padding: 0.15rem 0.5rem;
+}
+
+.tag-table .capture-row input {
+  width: 8rem;
+}

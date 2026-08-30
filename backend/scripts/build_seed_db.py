@@ -54,12 +54,18 @@ def _build_db() -> tuple[int, int]:
         SEED_DB.unlink()
     os.environ["DATABASE_URL"] = f"sqlite:///{SEED_DB.as_posix()}"
 
+    from alembic import command
+    from alembic.config import Config
+
     from app.db.base import Base
     from app.db.seed import load_seed_rows
     from app.db.session import SessionLocal, engine
     from app.models.entry import Entry
 
     Base.metadata.create_all(bind=engine)
+    # Mark the freshly built seed DB as being at the current migration head,
+    # so a persistent deploy that later runs `alembic upgrade` starts clean.
+    command.stamp(Config(str(BACKEND / "alembic.ini")), "head")
     with SessionLocal() as db:
         n = load_seed_rows(db)
         total = db.query(Entry).count()

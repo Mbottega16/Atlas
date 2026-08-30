@@ -22,8 +22,10 @@ app = FastAPI(title="Atlas")
 # create_all or any query. No-op for a normal local/persistent DB.
 ensure_seed_db_file()
 
-# MVP: create tables directly from models. Switch to Alembic migrations
-# once the schema needs to evolve without dropping data.
+# Tables are still created straight from the models here — fine for the
+# current schema and the ephemeral seed flow. Alembic (see alembic/README.md)
+# is wired up and owns every schema change from now on; a persistent deploy
+# runs `alembic upgrade head` instead of relying on this line.
 Base.metadata.create_all(bind=engine)
 
 
