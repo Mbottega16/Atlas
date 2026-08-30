@@ -45,6 +45,8 @@ export default function BrowsePage({
   // Set when the user explicitly asks to see the whole library from the
   // landing state (no filter). Cleared as soon as a real filter is chosen.
   const [showAll, setShowAll] = useState(false);
+  // Bumped after an inline edit/delete so the current page refetches.
+  const [reloadKey, setReloadKey] = useState(0);
 
   const changeView = (next: ViewMode) => {
     setView(next);
@@ -90,7 +92,7 @@ export default function BrowsePage({
         .finally(() => setLoading(false));
     }, 200); // debounce typing in the search box
     return () => clearTimeout(handle);
-  }, [filters, listing]);
+  }, [filters, listing, reloadKey]);
 
   const loadMore = useCallback(() => {
     setLoadingMore(true);
@@ -207,6 +209,7 @@ export default function BrowsePage({
                 view={view}
                 onVisit={onVisit}
                 onFavoriteToggle={onFavoriteToggle}
+                onChanged={() => setReloadKey((k) => k + 1)}
               />
             ))}
           </div>

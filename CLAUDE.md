@@ -94,7 +94,60 @@ for the quickstart.
   `trading & markets`. The Find wizard gained a "Something for a specific
   project" branch (routes to the project tag). Project-tag counts:
   pixelroom 30, little-sprout 25, chegga 37, trading-bot 22, almanac 34.
-- Not yet built: auth gate, deployment, live Claude-assisted capture.
+- Auth gate built (2026-08-29): single `ADMIN_PASSWORD` + `itsdangerous`-signed
+  session cookie (`app/services/auth.py`, `app/api/routes/auth.py`,
+  `require_auth` in `app/api/deps.py`). Gate is a **no-op when `ADMIN_PASSWORD`
+  is unset**, so local dev + tests are unchanged; when set, every `/api`
+  data route (entries, tags, capture, backup) returns 401 without a valid
+  session. Endpoints: `GET /api/auth/status`, `POST /api/auth/login`,
+  `POST /api/auth/logout`. Failed logins are throttled in-process
+  (`app/services/ratelimit.py` — 5 per 15 min per IP, then 429). Frontend
+  wraps `<App>` in `LoginGate` (password screen + "Log out" nav link);
+  `api/client.ts` sends `credentials:"include"`. CORS is now credentialed +
+  explicit-origin (`settings.cors_origins`, default the Vite dev port).
+- Deploy prep done, NOT pushed (2026-08-30). **Target chosen: Vercel**, the
+  Almanac pattern (only Vercel is connected on this machine; Render stays as
+  a fallback via `render.yaml`). What's in place:
+  - `app/main.py` serves the built frontend at `/` via `SPAStaticFiles`
+    (`app/static_spa.py` — index.html fallback for extensionless routes,
+    404 for missing files).
+  - Vercel entrypoint `backend/api/index.py` + `backend/vercel.json` +
+    `backend/.vercelignore`; `scripts/build_frontend.py` → `backend/static/`
+    (git-ignored, still uploaded — `.vercelignore` doesn't exclude it).
+  - Ephemeral-DB seeding (`app/db/seed.py`): on a cold `/tmp` SQLite the app
+    copies committed `seed/atlas-seed.db` (927 rows, ~424 KB) into place,
+    JSON fallback `seed/atlas-seed.json`. Rebuild both with
+    `scripts/build_seed_db.py`. **Favorites/visits do not survive a cold
+    start** on this setup — same tradeoff as Almanac; the fix is a real DB.
+  - `entry_service.create_entry/upsert_entry` gained `commit=False` for the
+    single-transaction seed load.
+  - Deploy command (mirrors Almanac), run from `backend/` once the env vars
+    are set: `npx vercel --prod -e DATABASE_URL="sqlite:////tmp/atlas.db"
+    -e ADMIN_PASSWORD=… -e ADMIN_SESSION_SECRET=… -e COOKIE_SECURE=true`,
+    project `atlas-api`, CheggaWeb team.
+  - **Blocked on:** an `ADMIN_PASSWORD` value from the user (Atlas is
+    read-write to anyone with the link, so unlike Almanac it must ship with
+    the gate ON), and the first-time interactive `vercel` project link.
+  - Stale `frontend/.vercel/` (project literally named "frontend") is a
+    botched earlier attempt — ignore it; deploy is from `backend/`.
+- Capture page rebuilt (2026-08-30): `CapturePage.tsx` is no longer read-only
+  — an "Add one" form, a "Paste a list" bulk-URL box (→ `POST /api/entries/batch`),
+  a JSON backup download link, and a Claude-assisted panel that only renders
+  when `GET /api/capture/enabled` is true. Entry cards in Browse now have
+  inline Edit / Delete (`EntryCard` gained an `onChanged` prop).
+- Live Claude-assisted capture SCAFFOLDED, dormant (2026-08-30):
+  `app/services/capture_service.py` + `POST /api/capture/research` +
+  `GET /api/capture/enabled`, mirroring Almanac. Raises 503 until
+  `ANTHROPIC_API_KEY` is set; returns draft unsaved entries, committed via
+  the batch endpoint. `anthropic` added to requirements (imported lazily).
+- Backup added (2026-08-30): `GET /api/export` (full record incl.
+  favorite/visit state) and `POST /api/import` (upsert on link, restores that
+  state) — `app/api/routes/backup.py`.
+- Tests: 25 passing (`test_auth.py`, `test_backup.py`, `test_capture.py` new).
+  Frontend type-checks + builds clean.
+- Not yet built: the deploy itself (needs a target decision), a real
+  recategorization pass (~20% still `misc`), tag merge/rename tooling,
+  Alembic migrations.
 
 ## Decisions already made
 - **Tags are a real many-to-many table** (`tags` + `entry_tags`), not a
@@ -128,8 +181,8 @@ for the quickstart.
 
 ## What happens next
 1. More capture passes as the user supplies sources — this is meant to become a bank that pulls from anywhere, not just the first few sources tried. Categorization is currently a rough keyword heuristic (~20% lands in "misc") — left as-is deliberately until there's more volume to justify a real cleanup pass.
-2. Build the auth gate.
-3. Deploy to Render — **needs explicit user sign-off first**, even on the free tier (going public, not just spend, is the gate).
+2. ~~Build the auth gate.~~ Done 2026-08-29.
+3. Deploy to Render — **needs explicit user sign-off first**, even on the free tier (going public, not just spend, is the gate). Before deploying: set `ADMIN_PASSWORD` + `ADMIN_SESSION_SECRET` in the Render dashboard, confirm the free plan's build image has Node for the frontend build step, and verify SPA deep-links (StaticFiles `html=True` 404s unknown paths — add a catch-all `index.html` fallback if the frontend ever uses real routes).
 4. Once deployed and a real `ANTHROPIC_API_KEY` is approved: build live Claude-assisted capture.
 
 ## Why this file exists

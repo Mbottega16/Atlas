@@ -1,10 +1,13 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
+from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
 from app.api.routes.entries import _to_out
+from app.config import settings
 from app.schemas.capture import BatchImportRequest, BatchImportResult
-from app.services import entry_service
+from app.schemas.entry import EntryCreate
+from app.services import capture_service, entry_service
 
 router = APIRouter()
 
@@ -12,9 +15,8 @@ router = APIRouter()
 @router.post("/entries/batch", response_model=BatchImportResult)
 def batch_import(items: list[BatchImportRequest], db: Session = Depends(get_db)):
     """Upserts each entry on `link` — re-importing an existing link updates
-    it in place instead of duplicating it. Both capture paths (the Phase 4
-    session-assisted flow and, later, Phase 7's live Claude research) call
-    this one endpoint."""
+    it in place instead of duplicating it. Every capture path (the session-
+    assisted flow, the paste form, and live research below) commits here."""
     created, updated = [], []
     for item in items:
         entry, was_created = entry_service.upsert_entry(db, item)
@@ -22,8 +24,30 @@ def batch_import(items: list[BatchImportRequest], db: Session = Depends(get_db))
     return BatchImportResult(created=created, updated=updated)
 
 
-# Phase 7 (live Claude-assisted capture) adds a POST /capture/research route
-# here that fetches each link's real content and returns *draft, unsaved*
-# entries for review — committed via the batch endpoint above, not directly.
-# Not built yet: requires ANTHROPIC_API_KEY, which is intentionally blank
-# until the user explicitly approves the spend (see backend/.env.example).
+class ResearchRequest(BaseModel):
+    links: list[str]
+    notes: str | None = None
+
+
+class ResearchResponse(BaseModel):
+    # Draft, UNSAVED entries — review, then POST the keepers to /api/entries/batch.
+    drafts: list[EntryCreate]
+
+
+@router.get("/capture/enabled")
+def capture_enabled():
+    """Frontend uses this to decide whether to show the live-research UI."""
+    return {"enabled": bool(settings.anthropic_api_key)}
+
+
+@router.post("/capture/research", response_model=ResearchResponse)
+def research(body: ResearchRequest):
+    """Live Claude-assisted capture. 503 until ANTHROPIC_API_KEY is set — see
+    app/services/capture_service.py. Returns drafts only; nothing is written."""
+    if not body.links:
+        raise HTTPException(status_code=422, detail="Provide at least one link")
+    try:
+        drafts = capture_service.research_links(body.links, body.notes)
+    except RuntimeError as e:
+        raise HTTPException(status_code=503, detail=str(e))
+    return ResearchResponse(drafts=drafts)

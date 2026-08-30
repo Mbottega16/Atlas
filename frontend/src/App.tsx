@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { markVisited, randomEntry } from "./api/client";
+import { authStatus, logout, markVisited, randomEntry } from "./api/client";
 import type { Filters } from "./components/FilterBar";
 import FavoritesPanel from "./components/FavoritesPanel";
 import BrowsePage from "./pages/BrowsePage";
@@ -40,6 +40,13 @@ export default function App() {
       // ignore
     }
   }, [browseFilters]);
+
+  const [authRequired, setAuthRequired] = useState(false);
+  useEffect(() => {
+    authStatus()
+      .then((s) => setAuthRequired(s.required))
+      .catch(() => {});
+  }, []);
 
   const [favoritesOpen, setFavoritesOpen] = useState(false);
   const [favoritesRefreshKey, setFavoritesRefreshKey] = useState(0);
@@ -120,6 +127,18 @@ export default function App() {
         >
           ★ Favorites
         </a>
+        {authRequired && (
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              logout().finally(() => window.location.reload());
+            }}
+            style={{ opacity: 0.5 }}
+          >
+            Log out
+          </a>
+        )}
       </nav>
 
       {tab === "find" && (

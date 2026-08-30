@@ -77,7 +77,7 @@ def get_entry_by_link(db: Session, link: str) -> Entry | None:
     ).scalar_one_or_none()
 
 
-def create_entry(db: Session, data, source: str = "manual") -> Entry:
+def create_entry(db: Session, data, source: str = "manual", commit: bool = True) -> Entry:
     entry = Entry(
         link=canonical_link(data.link),
         title=data.title,
@@ -88,8 +88,11 @@ def create_entry(db: Session, data, source: str = "manual") -> Entry:
     )
     entry.tags = _get_or_create_tags(db, data.tags)
     db.add(entry)
-    db.commit()
-    db.refresh(entry)
+    if commit:
+        db.commit()
+        db.refresh(entry)
+    else:
+        db.flush()
     return entry
 
 
@@ -125,19 +128,21 @@ def set_favorite(db: Session, entry: Entry, is_favorite: bool) -> Entry:
     return entry
 
 
-def upsert_entry(db: Session, data, source: str = "capture") -> tuple[Entry, bool]:
+def upsert_entry(db: Session, data, source: str = "capture", commit: bool = True) -> tuple[Entry, bool]:
     """Create, or update-in-place if `link` already exists. Returns (entry, created).
-    Defaults to source='capture' — this is what the batch/import endpoint calls."""
+    Defaults to source='capture' — this is what the batch/import endpoint calls.
+    `commit=False` (used by the seed loader) batches everything into one txn."""
     existing = get_entry_by_link(db, data.link)
     if existing is None:
-        return create_entry(db, data, source=source), True
+        return create_entry(db, data, source=source, commit=commit), True
     existing.title = data.title
     existing.category = data.category
     existing.description = data.description
     existing.use_case = data.use_case
     existing.tags = _get_or_create_tags(db, data.tags)
-    db.commit()
-    db.refresh(existing)
+    if commit:
+        db.commit()
+        db.refresh(existing)
     return existing, False
 
 

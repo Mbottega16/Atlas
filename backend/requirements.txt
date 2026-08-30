@@ -4,5 +4,7 @@ sqlalchemy
 alembic
 pydantic
 pydantic-settings
+itsdangerous
+anthropic
 pytest
 httpx

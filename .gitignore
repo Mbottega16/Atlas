@@ -18,6 +18,14 @@ node_modules/
 frontend/dist/
 frontend/*.tsbuildinfo
 
+# Built frontend copied in for a one-service deploy (scripts/build_frontend.py).
+# Still uploaded to Vercel — see backend/.vercelignore, which does NOT exclude it.
+backend/static/
+
+# Vercel
+.vercel/
+.env*.local
+
 # Editor
 .vscode/
 .idea/

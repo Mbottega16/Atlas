@@ -657,3 +657,127 @@ nav a {
 .clear-filters:hover {
   opacity: 1;
 }
+
+/* ---------- Entry card admin (edit / delete) ---------- */
+.entry-card-admin {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.entry-card-admin button {
+  border: 1px solid #8884;
+  background: none;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.78rem;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.entry-card-admin button:hover:not(:disabled) {
+  opacity: 1;
+  border-color: #4a90e2;
+  color: #4a90e2;
+}
+
+.entry-card-edit {
+  gap: 0.4rem;
+}
+
+.entry-card-edit input,
+.entry-card-edit textarea {
+  font: inherit;
+  padding: 0.35rem 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---------- Capture page ---------- */
+.capture-page {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.capture-block {
+  border: 1px solid #8884;
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.capture-block h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.capture-block input,
+.capture-block textarea {
+  font: inherit;
+  padding: 0.4rem 0.55rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.capture-block button {
+  align-self: flex-start;
+  border: 1px solid #4a90e2;
+  color: #4a90e2;
+  background: none;
+  border-radius: 6px;
+  font: inherit;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+}
+
+.capture-block button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.capture-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.capture-row button {
+  align-self: auto;
+  white-space: nowrap;
+}
+
+.capture-hint {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.capture-flash {
+  background: #4a90e214;
+  border: 1px solid #4a90e2;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.capture-drafts {
+  border-top: 1px solid #8883;
+  padding-top: 0.6rem;
+  margin-top: 0.3rem;
+}
+
+.capture-draft {
+  border: 1px solid #8883;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.capture-draft p {
+  margin: 0.3rem 0;
+  font-size: 0.88rem;
+}
