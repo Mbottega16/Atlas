@@ -12063,5 +12063,613 @@
    "auth"
   ],
   "source": "capture"
+ },
+ {
+  "link": "https://temp-mail.org/en",
+  "title": "Temp Mail",
+  "category": "communication",
+  "description": "Free disposable email inbox for sign-ups you do not want tied to your real address.",
+  "use_case": "Throwaway email for a one-off signup",
+  "tags": [
+   "privacy",
+   "email",
+   "disposable"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://mcbroken.com",
+  "title": "McBroken",
+  "category": "entertainment",
+  "description": "Live map tracking which McDonald's locations have a broken ice cream machine.",
+  "use_case": "A quick laugh, or actually checking before you go",
+  "tags": [
+   "fun",
+   "map"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://wornontv.net",
+  "title": "WornOnTV",
+  "category": "shopping",
+  "description": "Identifies clothing and outfits worn by characters on popular TV shows and where to buy them.",
+  "use_case": "Tracking down an outfit you saw on a show",
+  "tags": [
+   "shopping",
+   "tv",
+   "fashion"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://hotpot.ai",
+  "title": "Hotpot.ai",
+  "category": "ai tools",
+  "description": "AI image tools — background removal, photo restoration, object removal, upscaling, and simple graphic templates.",
+  "use_case": "Quick one-off image edits without Photoshop",
+  "tags": [
+   "ai",
+   "image editing",
+   "background removal"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://makemeacocktail.com",
+  "title": "Make Me a Cocktail",
+  "category": "cooking",
+  "description": "Cocktail recipe search that can work backwards from the bottles you already have.",
+  "use_case": "Figuring out what you can make with what is in the cabinet",
+  "tags": [
+   "cocktails",
+   "recipes"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://tunefind.com",
+  "title": "Tunefind",
+  "category": "entertainment",
+  "description": "Community database of songs featured in TV shows, movies, and games, scene by scene.",
+  "use_case": "Identifying a track from a show or film",
+  "tags": [
+   "music",
+   "tv",
+   "soundtracks"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://playretrogames.online",
+  "title": "Play Retro Games",
+  "category": "entertainment",
+  "description": "In-browser emulator library for retro console and arcade games — no install.",
+  "use_case": "A quick nostalgia hit or game-design reference",
+  "tags": [
+   "retro",
+   "games",
+   "emulator"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://planyourroom.com",
+  "title": "PlanYourRoom",
+  "category": "design & media",
+  "description": "Free browser floor-planning tool for arranging furniture in a scaled room layout.",
+  "use_case": "Sketching a room layout before moving furniture",
+  "tags": [
+   "floor plan",
+   "interior",
+   "layout"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://python.langchain.com",
+  "title": "LangChain (Python docs)",
+  "category": "ai engineering",
+  "description": "Framework for chaining LLM calls, tools, memory, and retrieval into applications.",
+  "use_case": "Building a multi-step LLM app",
+  "tags": [
+   "framework",
+   "orchestration",
+   "rag"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://llamaindex.ai",
+  "title": "LlamaIndex",
+  "category": "ai engineering",
+  "description": "Data framework for connecting LLMs to your own documents and databases (indexing, retrieval, agents).",
+  "use_case": "RAG over your own data",
+  "tags": [
+   "framework",
+   "rag",
+   "retrieval"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://ai.pydantic.dev",
+  "title": "Pydantic AI",
+  "category": "ai engineering",
+  "description": "Agent framework from the Pydantic team — typed inputs/outputs, model-agnostic, built for production.",
+  "use_case": "Type-safe LLM agents in Python",
+  "tags": [
+   "python",
+   "framework",
+   "agents"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://dspy.ai",
+  "title": "DSPy",
+  "category": "ai engineering",
+  "description": "Programming model that compiles/optimizes prompts from typed signatures and a metric instead of hand-tuning.",
+  "use_case": "Optimizing prompts systematically",
+  "tags": [
+   "framework",
+   "prompt optimization",
+   "stanford"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://crewai.com",
+  "title": "CrewAI",
+  "category": "ai engineering",
+  "description": "Framework for orchestrating role-playing autonomous agents that collaborate on a task.",
+  "use_case": "Multi-agent workflows",
+  "tags": [
+   "framework",
+   "agents",
+   "multi-agent"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://python.useinstructor.com",
+  "title": "Instructor",
+  "category": "ai engineering",
+  "description": "Library that coerces LLM output into validated Pydantic models via function calling.",
+  "use_case": "Reliable structured output",
+  "tags": [
+   "python",
+   "pydantic",
+   "structured output"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://dottxt-ai.github.io/outlines",
+  "title": "Outlines",
+  "category": "ai engineering",
+  "description": "Constrained/structured text generation — force model output to match a regex, JSON schema, or grammar.",
+  "use_case": "Guaranteed-valid JSON from a local model",
+  "tags": [
+   "structured output",
+   "constrained decoding"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://haystack.deepset.ai",
+  "title": "Haystack",
+  "category": "ai engineering",
+  "description": "Open-source framework by deepset for building production RAG and search pipelines.",
+  "use_case": "Production RAG pipelines",
+  "tags": [
+   "search",
+   "framework",
+   "rag"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://litellm.ai",
+  "title": "LiteLLM",
+  "category": "ai engineering",
+  "description": "Call 100+ LLM APIs with one OpenAI-format interface; also a self-hostable proxy with logging and budgets.",
+  "use_case": "Swapping providers without rewriting call sites",
+  "tags": [
+   "gateway",
+   "proxy",
+   "multi-provider"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://openrouter.ai",
+  "title": "OpenRouter",
+  "category": "ai engineering",
+  "description": "Single API and account to route across models from many providers, with price/latency comparison.",
+  "use_case": "Trying many models through one key",
+  "tags": [
+   "gateway",
+   "multi-provider",
+   "routing"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://portkey.ai",
+  "title": "Portkey",
+  "category": "ai engineering",
+  "description": "AI gateway with retries, fallbacks, caching, and observability in front of provider APIs.",
+  "use_case": "Production reliability layer over LLM APIs",
+  "tags": [
+   "observability",
+   "gateway",
+   "reliability"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://trychroma.com",
+  "title": "Chroma",
+  "category": "ai engineering",
+  "description": "Lightweight open-source embedding database that runs in-process — common default for RAG prototypes.",
+  "use_case": "Local vector store for a RAG prototype",
+  "tags": [
+   "rag",
+   "vector database",
+   "embeddings"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://qdrant.tech",
+  "title": "Qdrant",
+  "category": "ai engineering",
+  "description": "Open-source vector database in Rust with filtering, hybrid search, and a managed cloud.",
+  "use_case": "Production vector search with metadata filters",
+  "tags": [
+   "search",
+   "vector database"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://weaviate.io",
+  "title": "Weaviate",
+  "category": "ai engineering",
+  "description": "Open-source vector database with built-in hybrid search and modules for common embedding models.",
+  "use_case": "Hybrid keyword + vector search",
+  "tags": [
+   "vector database",
+   "hybrid search"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://github.com/pgvector/pgvector",
+  "title": "pgvector",
+  "category": "ai engineering",
+  "description": "Postgres extension adding a vector type and ANN indexes — keep embeddings in the DB you already run.",
+  "use_case": "Adding vector search to an existing Postgres",
+  "tags": [
+   "postgres",
+   "vector database",
+   "extension"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://lancedb.com",
+  "title": "LanceDB",
+  "category": "ai engineering",
+  "description": "Embedded, serverless vector database on the Lance columnar format — no server to run.",
+  "use_case": "File-based vector store, no infra",
+  "tags": [
+   "serverless",
+   "vector database",
+   "embedded"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://langfuse.com",
+  "title": "Langfuse",
+  "category": "ai engineering",
+  "description": "Open-source LLM observability — traces, prompt management, evals, and cost tracking; self-hostable.",
+  "use_case": "Seeing what your LLM app actually did",
+  "tags": [
+   "open source",
+   "observability",
+   "tracing",
+   "evals"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://braintrust.dev",
+  "title": "Braintrust",
+  "category": "ai engineering",
+  "description": "Eval and observability platform for iterating on prompts with datasets, scorers, and diffs.",
+  "use_case": "Systematic prompt iteration with evals",
+  "tags": [
+   "observability",
+   "datasets",
+   "evals"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://phoenix.arize.com",
+  "title": "Phoenix (Arize)",
+  "category": "ai engineering",
+  "description": "Open-source LLM tracing and evaluation with an OpenTelemetry-based instrumentation layer.",
+  "use_case": "Local tracing + eval notebook",
+  "tags": [
+   "open source",
+   "observability",
+   "tracing",
+   "evals"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://promptfoo.dev",
+  "title": "promptfoo",
+  "category": "ai engineering",
+  "description": "CLI/library for testing and comparing prompts and models with assertions and red-team scans.",
+  "use_case": "Regression-testing prompts in CI",
+  "tags": [
+   "testing",
+   "cli",
+   "evals"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://docs.ragas.io",
+  "title": "Ragas",
+  "category": "ai engineering",
+  "description": "Metrics library for evaluating RAG pipelines (faithfulness, context precision/recall, answer relevancy).",
+  "use_case": "Scoring a RAG system's quality",
+  "tags": [
+   "rag",
+   "evals",
+   "metrics"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://helicone.ai",
+  "title": "Helicone",
+  "category": "ai engineering",
+  "description": "Drop-in proxy that logs every LLM request with cost, latency, and caching; open source.",
+  "use_case": "One-line request logging",
+  "tags": [
+   "observability",
+   "proxy",
+   "logging"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://inspect.aisi.org.uk",
+  "title": "Inspect (UK AISI)",
+  "category": "ai engineering",
+  "description": "Framework for large-model evaluations from the UK AI Security Institute — datasets, solvers, scorers.",
+  "use_case": "Rigorous model/agent evaluations",
+  "tags": [
+   "framework",
+   "evals",
+   "safety"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://ollama.com",
+  "title": "Ollama",
+  "category": "ai engineering",
+  "description": "Run open-weight models locally with one command and an OpenAI-compatible local API.",
+  "use_case": "Local model for dev without API spend",
+  "tags": [
+   "cli",
+   "local inference",
+   "open weights"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://lmstudio.ai",
+  "title": "LM Studio",
+  "category": "ai engineering",
+  "description": "Desktop app for discovering, downloading, and chatting with local models; serves a local API.",
+  "use_case": "GUI for running local models",
+  "tags": [
+   "local inference",
+   "desktop",
+   "gguf"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://github.com/ggml-org/llama.cpp",
+  "title": "llama.cpp",
+  "category": "ai engineering",
+  "description": "C/C++ inference engine for LLaMA-family models — the backend most local runners are built on.",
+  "use_case": "Squeezing a model onto modest hardware",
+  "tags": [
+   "local inference",
+   "cpp",
+   "quantization"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://docs.vllm.ai",
+  "title": "vLLM",
+  "category": "ai engineering",
+  "description": "High-throughput inference/serving engine with paged attention and an OpenAI-compatible server.",
+  "use_case": "Self-hosting a model under real load",
+  "tags": [
+   "inference server",
+   "throughput",
+   "serving"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://modal.com",
+  "title": "Modal",
+  "category": "ai engineering",
+  "description": "Serverless platform for running Python (incl. GPU jobs) from code — batch inference, fine-tuning, cron.",
+  "use_case": "On-demand GPU without managing a box",
+  "tags": [
+   "serverless",
+   "gpu",
+   "infra"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://unsloth.ai",
+  "title": "Unsloth",
+  "category": "ai engineering",
+  "description": "Library that makes LoRA/QLoRA fine-tuning of open models 2x+ faster with less memory.",
+  "use_case": "Fine-tuning an open model on one GPU",
+  "tags": [
+   "optimization",
+   "fine-tuning",
+   "lora"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://replicate.com",
+  "title": "Replicate",
+  "category": "ai engineering",
+  "description": "Run and fine-tune open models via API; package your own with Cog.",
+  "use_case": "Calling an open model without hosting it",
+  "tags": [
+   "fine-tuning",
+   "inference api",
+   "open models"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://unstructured.io",
+  "title": "Unstructured",
+  "category": "ai engineering",
+  "description": "Libraries and API for turning PDFs, HTML, docs, and images into clean chunks for RAG.",
+  "use_case": "Ingesting messy documents for RAG",
+  "tags": [
+   "rag",
+   "parsing",
+   "ingestion"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://firecrawl.dev",
+  "title": "Firecrawl",
+  "category": "ai engineering",
+  "description": "API that crawls a site and returns clean markdown/structured data ready for an LLM.",
+  "use_case": "Feeding a website to an LLM",
+  "tags": [
+   "markdown",
+   "scraping",
+   "crawler"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://jina.ai/reader",
+  "title": "Jina Reader",
+  "category": "ai engineering",
+  "description": "Prepend r.jina.ai to any URL to get back LLM-ready markdown of the page.",
+  "use_case": "Quick clean extract of one page",
+  "tags": [
+   "markdown",
+   "api",
+   "scraping"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://promptingguide.ai",
+  "title": "Prompt Engineering Guide",
+  "category": "ai engineering",
+  "description": "Comprehensive, vendor-neutral reference on prompting techniques with papers and examples.",
+  "use_case": "Looking up a prompting technique",
+  "tags": [
+   "reference",
+   "guide",
+   "prompting"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://llm.datasette.io",
+  "title": "LLM (CLI)",
+  "category": "ai engineering",
+  "description": "Simon Willison's command-line tool and Python library for running prompts, with plugins and SQLite logging.",
+  "use_case": "Scripting LLM calls from the shell",
+  "tags": [
+   "python",
+   "cli",
+   "tooling"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://modelcontextprotocol.io",
+  "title": "Model Context Protocol",
+  "category": "ai engineering",
+  "description": "Open standard (and SDKs) for connecting LLM apps to tools and data sources over a common protocol.",
+  "use_case": "Giving an assistant access to tools/data",
+  "tags": [
+   "tools",
+   "mcp",
+   "standard"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://e2b.dev",
+  "title": "E2B",
+  "category": "ai engineering",
+  "description": "Open-source secure sandboxes for running LLM-generated code, with SDKs for agent use.",
+  "use_case": "Letting an agent execute code safely",
+  "tags": [
+   "agents",
+   "sandbox",
+   "code execution"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://composio.dev",
+  "title": "Composio",
+  "category": "ai engineering",
+  "description": "Managed catalog of authenticated tool integrations (GitHub, Slack, Gmail…) for agents and MCP.",
+  "use_case": "Wiring an agent into real SaaS tools",
+  "tags": [
+   "agents",
+   "mcp",
+   "integrations"
+  ],
+  "source": "capture"
+ },
+ {
+  "link": "https://guardrailsai.com",
+  "title": "Guardrails AI",
+  "category": "ai engineering",
+  "description": "Framework for adding input/output validation and structured-output guarantees around LLM calls.",
+  "use_case": "Validating and correcting model output",
+  "tags": [
+   "validation",
+   "safety",
+   "guardrails"
+  ],
+  "source": "capture"
  }
 ]

@@ -143,11 +143,38 @@ for the quickstart.
 - Backup added (2026-08-30): `GET /api/export` (full record incl.
   favorite/visit state) and `POST /api/import` (upsert on link, restores that
   state) — `app/api/routes/backup.py`.
-- Tests: 25 passing (`test_auth.py`, `test_backup.py`, `test_capture.py` new).
-  Frontend type-checks + builds clean.
-- Not yet built: the deploy itself (needs a target decision), a real
-  recategorization pass (~20% still `misc`), tag merge/rename tooling,
-  Alembic migrations.
+- Alembic wired up (2026-08-30): `alembic.ini` + `alembic/` with a `0001`
+  baseline matching the current models (`alembic check` clean). `create_all`
+  still runs on startup; Alembic owns schema changes from here — see
+  `alembic/README.md`. `build_seed_db.py` stamps head.
+- Tag rename / merge (2026-08-30): `app/services/tag_service.py` +
+  `PUT /api/tags/{name}` (rename, or merge when the target name exists) +
+  `POST /api/tags/merge`. "Manage tags" panel on the Capture page.
+- Data-quality pass applied (2026-08-30, `scripts/cleanup_2026_08_30.py`):
+  cleared 338 "When you need: …" boilerplate `use_case` values, stripped 74
+  `misc` tags (51 backfilled with their category), folded 3 junk categories
+  (`archives`, `search & reference`, `software`) — 36→34 categories. The
+  earlier "~20% in `misc` category" worry was already false (0 such rows);
+  `scripts/inspect_quality.py` is the diagnostic. Still open: ~30 non-AI
+  entries carry a stray `ai` tag from the first bulk import — needs a judged
+  pass, not a heuristic.
+- Capture batches (2026-08-30), 927 → 974:
+  - SetupSpawn follow-up (#4): shouldseethis.com still redirect-only,
+    powerfulwebsites.io still 403 — both confirmed dead ends. SetupSpawn's
+    public list (`mcstumble.com/powerful`, 15 items; the rest is paywalled)
+    yielded **8 net-new** (temp-mail, McBroken, WornOnTV, Hotpot.ai, Make Me
+    a Cocktail, Tunefind, Play Retro Games, PlanYourRoom); 7 were dupes or
+    dead/expired-cert.
+  - AI-engineering batch (#5): **39 entries**, new category `ai engineering`
+    — LLM app-builder infra the consumer-facing `ai tools` category was
+    missing (LangChain/LlamaIndex/DSPy/Pydantic AI, LiteLLM/OpenRouter,
+    Chroma/Qdrant/pgvector, Langfuse/Braintrust/promptfoo/Ragas, Ollama/
+    vLLM/llama.cpp, Firecrawl/Unstructured, MCP/E2B/Composio, Guardrails).
+    All reachability-checked.
+- Tests: 30 passing (`test_auth.py`, `test_backup.py`, `test_capture.py`,
+  `test_tags.py` new). Frontend type-checks + builds clean.
+- Not yet built: the deploy itself (blocked on an `ADMIN_PASSWORD` value +
+  the first-time `vercel` project link).
 
 ## Decisions already made
 - **Tags are a real many-to-many table** (`tags` + `entry_tags`), not a
