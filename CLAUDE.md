@@ -175,6 +175,27 @@ for the quickstart.
   `test_tags.py` new). Frontend type-checks + builds clean.
 - Not yet built: the deploy itself (blocked on an `ADMIN_PASSWORD` value +
   the first-time `vercel` project link).
+- **Discovered 2026-09-15, not done by a Claude session:** Render's GitHub
+  App is already installed on this repo and has been auto-deploying `main`
+  to a `render.yaml`-defined service (`atlas`, free plan) since at least
+  2026-08-26, most recently 2026-09-07 at `7f82661` — **live now** at
+  https://atlas-umyj.onrender.com. `GET /api/auth/status` there currently
+  returns `{"required":false,...}`: **`ADMIN_PASSWORD` was never set in the
+  Render dashboard, so the live app is wide open** (read-write, no gate) —
+  `ADMIN_SESSION_SECRET` is fine (`generateValue: true` in `render.yaml`
+  means Render made one at service creation). This was outstanding when
+  this file was last written 2026-08-30/09-03 and nothing here recorded it
+  turning on. Until `ADMIN_PASSWORD` is set by hand in that dashboard, this
+  is a public unauthenticated read-write database.
+- **Decided 2026-09-15:** given Render was already live and working, the
+  user chose to keep it as the real deploy instead of also standing up
+  Vercel (whose CLI turned out logged out on the machine anyway, with no
+  token available — that's what surfaced the Render discovery above). The
+  Vercel staging below (`backend/api/index.py`, `backend/vercel.json`,
+  `scripts/build_frontend.py`) stays in the repo unused, not deleted, in
+  case Render ever needs replacing. **Only remaining step: set
+  `ADMIN_PASSWORD` in the Render dashboard by hand** — everything else
+  (tests, frontend build, seed DB) was re-verified clean the same day.
 
 ## Decisions already made
 - **Tags are a real many-to-many table** (`tags` + `entry_tags`), not a
