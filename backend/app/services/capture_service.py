@@ -47,19 +47,25 @@ def _require_key() -> str:
 
 def research_links(links: list[str], notes: str | None = None) -> list[EntryCreate]:
     key = _require_key()
-    from anthropic import Anthropic  # lazy so the dep stays optional until used
+    from anthropic import Anthropic, APIError  # lazy so the dep stays optional until used
 
     client = Anthropic(api_key=key)
     user = "URLs:\n" + "\n".join(links)
     if notes:
         user += f"\n\nExtra context from the librarian:\n{notes}"
 
-    msg = client.messages.create(
-        model=MODEL,
-        max_tokens=4096,
-        system=_SYSTEM,
-        messages=[{"role": "user", "content": user}],
-    )
+    try:
+        msg = client.messages.create(
+            model=MODEL,
+            max_tokens=4096,
+            system=_SYSTEM,
+            messages=[{"role": "user", "content": user}],
+        )
+    except APIError as e:
+        # Surfaces as a clean 503 (see the route) instead of an unhandled
+        # 500 — covers a bad/rejected key, no credit balance, rate limits,
+        # or Anthropic-side outages, none of which are this app's fault.
+        raise RuntimeError(f"Anthropic API error: {e}") from e
     text = "".join(b.text for b in msg.content if b.type == "text").strip()
     if text.startswith("```"):
         text = text.split("```")[1].removeprefix("json").strip()
