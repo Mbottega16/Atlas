@@ -199,7 +199,6 @@
   "use_case": null,
   "tags": [
    "design",
-   "ai",
    "browser"
   ],
   "source": "capture"
@@ -255,7 +254,6 @@
   "description": "Web-based whiteboard for collaborative brainstorming.",
   "use_case": null,
   "tags": [
-   "ai",
    "productivity"
   ],
   "source": "capture"
@@ -718,7 +716,6 @@
   "description": "Sets email reminders easily.",
   "use_case": null,
   "tags": [
-   "ai",
    "communication"
   ],
   "source": "capture"
@@ -1009,9 +1006,7 @@
   "category": "entertainment",
   "description": "Interactive tools for relaxation and entertainment.",
   "use_case": null,
-  "tags": [
-   "ai"
-  ],
+  "tags": [],
   "source": "capture"
  },
  {
@@ -1068,7 +1063,6 @@
   "description": "Sends emails to your future self.",
   "use_case": null,
   "tags": [
-   "ai",
    "communication"
   ],
   "source": "capture"
@@ -1091,8 +1085,7 @@
   "description": "Hacker prank simulator for entertainment.",
   "use_case": null,
   "tags": [
-   "entertainment",
-   "ai"
+   "entertainment"
   ],
   "source": "capture"
  },
@@ -1229,8 +1222,7 @@
   "description": "Brain training game for memory and skills.",
   "use_case": null,
   "tags": [
-   "entertainment",
-   "ai"
+   "entertainment"
   ],
   "source": "capture"
  },
@@ -1286,7 +1278,6 @@
   "use_case": null,
   "tags": [
    "online",
-   "ai",
    "audio"
   ],
   "source": "capture"
@@ -1697,8 +1688,7 @@
   "description": "Delivers daily 5-minute lessons by email.",
   "use_case": null,
   "tags": [
-   "education",
-   "ai"
+   "education"
   ],
   "source": "capture"
  },
@@ -1888,7 +1878,6 @@
   "description": "Explains how things work.",
   "use_case": null,
   "tags": [
-   "ai",
    "reference"
   ],
   "source": "capture"
@@ -1969,7 +1958,6 @@
   "description": "Recipe search by available ingredients.",
   "use_case": null,
   "tags": [
-   "ai",
    "search",
    "cooking"
   ],
@@ -2183,7 +2171,6 @@
   "description": "Animation video creation with AI.",
   "use_case": null,
   "tags": [
-   "ai",
    "audio"
   ],
   "source": "capture"
@@ -2422,7 +2409,7 @@
   "source": "capture"
  },
  {
-  "link": "https://tome.app",
+  "link": "https://tomeapp.ai",
   "title": "Tome",
   "category": "ai tools",
   "description": "AI-powered presentation creation.",
@@ -2565,7 +2552,6 @@
   "description": "Email address finder for websites.",
   "use_case": null,
   "tags": [
-   "ai",
    "communication"
   ],
   "source": "capture"
@@ -2667,7 +2653,6 @@
   "description": "Temporary email address service.",
   "use_case": null,
   "tags": [
-   "ai",
    "communication"
   ],
   "source": "capture"
@@ -2702,7 +2687,6 @@
   "description": "Email spam unsubscribe tool.",
   "use_case": null,
   "tags": [
-   "ai",
    "communication"
   ],
   "source": "capture"
@@ -2793,7 +2777,6 @@
   "description": "Username and domain availability checker.",
   "use_case": null,
   "tags": [
-   "ai",
    "web"
   ],
   "source": "capture"
@@ -2917,7 +2900,6 @@
   "description": "Device repair guides and manuals.",
   "use_case": null,
   "tags": [
-   "ai",
    "diy"
   ],
   "source": "capture"
@@ -2984,7 +2966,6 @@
   "description": "Appliance repair guides and parts.",
   "use_case": null,
   "tags": [
-   "ai",
    "diy"
   ],
   "source": "capture"
@@ -3042,7 +3023,6 @@
   "use_case": null,
   "tags": [
    "online",
-   "ai",
    "news"
   ],
   "source": "capture"
@@ -3121,7 +3101,6 @@
   "description": "Creates disposable email inboxes to avoid spam.",
   "use_case": null,
   "tags": [
-   "ai",
    "communication"
   ],
   "source": "capture"
@@ -3335,7 +3314,6 @@
   "description": "Bargain deals on local shops, restaurants, and activities.",
   "use_case": null,
   "tags": [
-   "ai",
    "shopping"
   ],
   "source": "capture"
@@ -3385,7 +3363,7 @@
   "source": "capture"
  },
  {
-  "link": "https://amazon.com/Prime-Instant-Video",
+  "link": "https://watch.amazon.com",
   "title": "Amazon Prime Video",
   "category": "audio & video",
   "description": "Streaming service offering shows, movies, and content.",
@@ -3564,7 +3542,7 @@
   "source": "capture"
  },
  {
-  "link": "https://in.reuters.com",
+  "link": "https://www.reuters.com",
   "title": "Reuters",
   "category": "news & reading",
   "description": "Multimedia news agency with objective reporting.",
@@ -3807,7 +3785,6 @@
   "use_case": null,
   "tags": [
    "online",
-   "ai",
    "shopping"
   ],
   "source": "capture"
@@ -3819,7 +3796,6 @@
   "description": "Specialty retailer for gadgets, gifts, and tech accessories.",
   "use_case": null,
   "tags": [
-   "ai",
    "shopping"
   ],
   "source": "capture"
@@ -3831,7 +3807,6 @@
   "description": "Electronics retailer offering consumer products at good prices.",
   "use_case": null,
   "tags": [
-   "ai",
    "shopping"
   ],
   "source": "capture"
@@ -5792,7 +5767,6 @@
   "use_case": "Alternative solver for verifying tutoring content.",
   "tags": [
    "education",
-   "ai",
    "reference",
    "math"
   ],
@@ -6330,7 +6304,7 @@
   "source": "capture"
  },
  {
-  "link": "https://chegg.com/scholarships",
+  "link": "https://www.chegg.org",
   "title": "Chegg Scholarships",
   "category": "financial aid",
   "description": "Free scholarship search with monthly Chegg-funded awards; no account required to browse.",
@@ -7573,7 +7547,7 @@
   "source": "capture"
  },
  {
-  "link": "https://poki.com/developers",
+  "link": "https://developers.poki.com",
   "title": "Poki for Developers",
   "category": "game dev",
   "description": "Web-game publishing platform with revenue share, playtesting, and analytics for HTML5 games.",
@@ -9483,7 +9457,7 @@
   "source": "capture"
  },
  {
-  "link": "https://rocketlawyer.com/business-and-contracts/business-operations/business-forms",
+  "link": "https://www.rocketlawyer.com/start-a-business",
   "title": "Rocket Lawyer Business Forms",
   "category": "business & legal",
   "description": "Guided templates for common business documents — NDAs, service agreements, contractor agreements, LLC operating agreements (some free, most gated).",
@@ -9582,7 +9556,7 @@
   "source": "capture"
  },
  {
-  "link": "https://freshbooks.com/hub/estimates/quarterly-taxes",
+  "link": "https://www.freshbooks.com/hub/taxes/guide-quarterly-taxes",
   "title": "Quarterly Estimated Taxes (guide)",
   "category": "business & legal",
   "description": "Explainer on who owes US quarterly estimated taxes, how to calculate them, the payment dates, and the underpayment penalty.",
@@ -9848,7 +9822,7 @@
   "source": "capture"
  },
  {
-  "link": "https://itch.io/docs/creators",
+  "link": "https://itch.io/docs/creators/faq",
   "title": "itch.io Creator Docs",
   "category": "marketing & growth",
   "description": "How to sell games, art, and tools on itch.io — pages, pricing (including pay-what-you-want), payouts, and jams.",
@@ -10064,7 +10038,6 @@
   "use_case": "Get a computed answer or reference figure fast",
   "tags": [
    "education",
-   "ai",
    "reference",
    "data",
    "math",
@@ -10525,7 +10498,7 @@
   "source": "capture"
  },
  {
-  "link": "https://flyleafpublishing.com/free-resources",
+  "link": "https://flyleafpublishing.com/community",
   "title": "Flyleaf Free Decodable Readers",
   "category": "education",
   "description": "Free online decodable books and comprehension supports, organized by phonics scope, from a decodable-text publisher.",
@@ -11231,7 +11204,7 @@
   "source": "capture"
  },
  {
-  "link": "https://recharts.org/en-US",
+  "link": "https://recharts.org",
   "title": "Recharts",
   "category": "developer tools",
   "description": "Composable React charting on SVG — line, area, bar, radar, scatter — good default for dashboards.",
@@ -11445,20 +11418,6 @@
    "trading",
    "trading-bot",
    "reporting"
-  ],
-  "source": "capture"
- },
- {
-  "link": "https://github.com/twopirllc/pandas-ta",
-  "title": "pandas-ta",
-  "category": "trading & markets",
-  "description": "150+ technical indicators as pandas extensions (RSI, MACD, Bollinger, etc.) — pure Python, no TA-Lib C build needed.",
-  "use_case": "Compute RSI/MACD/Bollinger signals on a DataFrame",
-  "tags": [
-   "python",
-   "trading",
-   "trading-bot",
-   "indicators"
   ],
   "source": "capture"
  },
@@ -11977,21 +11936,6 @@
    "teaching",
    "almanac",
    "edtech"
-  ],
-  "source": "capture"
- },
- {
-  "link": "https://oercommons.org/hubs/opennc",
-  "title": "MERLOT / OER search hubs",
-  "category": "education",
-  "description": "Cross-repository search for peer-reviewed open educational resources — pairs with OER Commons for coverage.",
-  "use_case": "Widen an OER search beyond one library",
-  "tags": [
-   "free",
-   "search",
-   "oer",
-   "teaching",
-   "almanac"
   ],
   "source": "capture"
  },
