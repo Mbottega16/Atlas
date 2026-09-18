@@ -2,15 +2,13 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import { Entry, searchEntries } from "../api/client";
 import EntryCard from "../components/EntryCard";
+import { EMPTY_FILTERS, Filters } from "../components/FilterBar";
 import { GUIDE_ROOT, GuideFilter, GuideNode } from "../guidedPaths";
-import { rankEntries } from "../ranking";
 
 const PREVIEW_COUNT = 8;
 
-export type BrowseFilters = { q: string; category: string; tag: string };
-
-function filterToBrowse(f: GuideFilter): BrowseFilters {
-  return { q: f.q ?? "", category: f.category ?? "", tag: f.tag ?? "" };
+function filterToBrowse(f: GuideFilter): Filters {
+  return { ...EMPTY_FILTERS, q: f.q ?? "", category: f.category ?? "", tag: f.tag ?? "" };
 }
 
 function isEmpty(f: GuideFilter): boolean {
@@ -23,7 +21,7 @@ export default function GuidePage({
   onFavoriteToggle,
 }: {
   /** Hand a filter to the Browse tab and switch to it. */
-  onSeeAll: (filters: BrowseFilters) => void;
+  onSeeAll: (filters: Filters) => void;
   onVisit: () => void;
   onFavoriteToggle: () => void;
 }) {
@@ -83,7 +81,7 @@ export default function GuidePage({
 
   const choose = (label: string, next?: GuideNode, filter?: GuideFilter) => {
     if (filter && isEmpty(filter)) {
-      onSeeAll({ q: "", category: "", tag: "" });
+      onSeeAll(EMPTY_FILTERS);
       return;
     }
     setCrumbs((c) => [...c, label]);
@@ -95,9 +93,9 @@ export default function GuidePage({
     if (!leaf) return;
     setLoading(true);
     setError(null);
-    searchEntries({ category: leaf.category, tag: leaf.tag, q: leaf.q })
+    searchEntries({ category: leaf.category, tag: leaf.tag, q: leaf.q, limit: PREVIEW_COUNT })
       .then((res) => {
-        setResults(rankEntries(res.items));
+        setResults(res.items);
         setTotal(res.total);
       })
       .catch(() => setError("Couldn't reach the Atlas backend — is it running?"))
@@ -109,7 +107,7 @@ export default function GuidePage({
   const submitFreeText = (e: React.FormEvent) => {
     e.preventDefault();
     const q = freeText.trim();
-    if (q) onSeeAll({ q, category: "", tag: "" });
+    if (q) onSeeAll({ ...EMPTY_FILTERS, q });
   };
 
   return (
@@ -187,10 +185,7 @@ export default function GuidePage({
                     Try another path
                   </button>{" "}
                   or{" "}
-                  <button
-                    className="guide-link"
-                    onClick={() => onSeeAll({ q: "", category: "", tag: "" })}
-                  >
+                  <button className="guide-link" onClick={() => onSeeAll(EMPTY_FILTERS)}>
                     browse everything
                   </button>
                   .
@@ -199,7 +194,7 @@ export default function GuidePage({
                 <>
                   <p className="guide-results-count">
                     Top {Math.min(PREVIEW_COUNT, results.length)}
-                    {total > PREVIEW_COUNT ? ` of ${total}` : ""} — favorites and
+                    {total > PREVIEW_COUNT ? ` of ${total}` : ""} — best matches and
                     first-picks first
                   </p>
                   <div className="entries-grid view-grid">
@@ -210,6 +205,8 @@ export default function GuidePage({
                         view="grid"
                         onVisit={onVisit}
                         onFavoriteToggle={onFavoriteToggle}
+                        onTagClick={(tag) => onSeeAll({ ...EMPTY_FILTERS, tag })}
+                        onCategoryClick={(category) => onSeeAll({ ...EMPTY_FILTERS, category })}
                       />
                     ))}
                   </div>

@@ -4,7 +4,7 @@
   "title": "Aeon",
   "category": "news & reading",
   "description": "Publishes in-depth articles by experts on science, philosophy, history, arts, and nature.",
-  "use_case": null,
+  "use_case": "Read long-form essays by experts",
   "tags": [
    "news & reading"
   ],
@@ -15,7 +15,7 @@
   "title": "ASCII Flow",
   "category": "reference & calculators",
   "description": "Web application for creating ASCII diagrams.",
-  "use_case": null,
+  "use_case": "Create ASCII diagrams",
   "tags": [
    "reference"
   ],
@@ -26,7 +26,7 @@
   "title": "Auto Draw",
   "category": "design & media",
   "description": "Google's drawing tool using machine learning to suggest shapes.",
-  "use_case": null,
+  "use_case": "Sketch rough ideas and get suggestions",
   "tags": [
    "design",
    "google"
@@ -38,7 +38,7 @@
   "title": "Bored Button",
   "category": "entertainment",
   "description": "Surprises users with random funny and creative websites.",
-  "use_case": null,
+  "use_case": "Find a random interesting website",
   "tags": [
    "entertainment"
   ],
@@ -49,7 +49,7 @@
   "title": "Calculator Soup",
   "category": "reference & calculators",
   "description": "Comprehensive online calculator for mortgages, taxes, conversions, and more.",
-  "use_case": null,
+  "use_case": "Calculate mortgages, taxes, conversions",
   "tags": [
    "calculator",
    "online",
@@ -62,7 +62,7 @@
   "title": "Class Central",
   "category": "education",
   "description": "Aggregator of free online courses from universities worldwide.",
-  "use_case": null,
+  "use_case": "Find a free online course",
   "tags": [
    "online",
    "free"
@@ -74,7 +74,7 @@
   "title": "Cool Math Games",
   "category": "entertainment",
   "description": "HTML and Flash games for children and young adults.",
-  "use_case": null,
+  "use_case": "Play educational math games",
   "tags": [
    "entertainment"
   ],
@@ -85,7 +85,7 @@
   "title": "Digital History",
   "category": "education",
   "description": "Primary source for U.S. history with lessons and quizzes.",
-  "use_case": null,
+  "use_case": "Research U.S. history with sources",
   "tags": [
    "education"
   ],
@@ -96,7 +96,7 @@
   "title": "Engineering ToolBox",
   "category": "reference & calculators",
   "description": "Provides engineering tools, formulas, and equations.",
-  "use_case": null,
+  "use_case": "Look up engineering formulas",
   "tags": [
    "reference & calculators"
   ],
@@ -107,7 +107,7 @@
   "title": "Etym Online",
   "category": "reference & calculators",
   "description": "Online dictionary showing word origins and evolution.",
-  "use_case": null,
+  "use_case": "Trace a word's origin",
   "tags": [
    "online",
    "reference"
@@ -119,7 +119,7 @@
   "title": "Explorabl.es",
   "category": "education",
   "description": "Interactive educational games teaching art, biology, chemistry, and more.",
-  "use_case": null,
+  "use_case": "Explore science interactively",
   "tags": [
    "education"
   ],
@@ -130,7 +130,7 @@
   "title": "Geogebra",
   "category": "reference & calculators",
   "description": "Mathematics tool for graphing and geometric visualization.",
-  "use_case": null,
+  "use_case": "Graph equations and visualize geometry",
   "tags": [
    "reference & calculators"
   ],
@@ -141,7 +141,7 @@
   "title": "Good Tricks",
   "category": "entertainment",
   "description": "Teaches magic tricks and magician techniques.",
-  "use_case": null,
+  "use_case": "Learn magic tricks",
   "tags": [
    "entertainment"
   ],
@@ -152,7 +152,7 @@
   "title": "Project Gutenberg",
   "category": "books & reading",
   "description": "Repository of over 60,000 free ebooks.",
-  "use_case": null,
+  "use_case": "Find a free ebook",
   "tags": [
    "free"
   ],
@@ -163,7 +163,7 @@
   "title": "Hyper Physics",
   "category": "education",
   "description": "Makes physics concepts understandable through interactive explanations.",
-  "use_case": null,
+  "use_case": "Understand physics visually",
   "tags": [
    "education"
   ],
@@ -174,7 +174,7 @@
   "title": "Internet Encyclopedia of Philosophy",
   "category": "education",
   "description": "Encyclopedia of philosophy covering philosophers and ideas.",
-  "use_case": null,
+  "use_case": "Research philosophical ideas",
   "tags": [
    "education"
   ],
@@ -185,7 +185,7 @@
   "title": "LibraryThing",
   "category": "books & reading",
   "description": "Social platform for readers to share and discover books.",
-  "use_case": null,
+  "use_case": "Track and discover books",
   "tags": [
    "books & reading"
   ],
@@ -196,7 +196,7 @@
   "title": "Magma",
   "category": "design & media",
   "description": "Browser-based drawing and painting tool.",
-  "use_case": null,
+  "use_case": "Paint or draw digitally",
   "tags": [
    "design",
    "browser"
@@ -208,7 +208,7 @@
   "title": "Mathway",
   "category": "education",
   "description": "Solves math problems with step-by-step solutions.",
-  "use_case": null,
+  "use_case": "Get step-by-step math solutions",
   "tags": [
    "education"
   ],
@@ -219,7 +219,7 @@
   "title": "Maths is Fun",
   "category": "education",
   "description": "Makes mathematics engaging through interactive lessons.",
-  "use_case": null,
+  "use_case": "Learn math through interactive games",
   "tags": [
    "education"
   ],
@@ -230,7 +230,7 @@
   "title": "Memrise",
   "category": "education",
   "description": "Language learning platform with courses in 15+ languages.",
-  "use_case": null,
+  "use_case": "Learn a new language",
   "tags": [
    "education"
   ],
@@ -241,7 +241,7 @@
   "title": "Microsoft Math Solver",
   "category": "education",
   "description": "Educational tool for step-by-step math problem solutions.",
-  "use_case": null,
+  "use_case": "Solve math problems step-by-step",
   "tags": [
    "education"
   ],
@@ -252,7 +252,7 @@
   "title": "Miro",
   "category": "productivity",
   "description": "Web-based whiteboard for collaborative brainstorming.",
-  "use_case": null,
+  "use_case": "Brainstorm visually with a team",
   "tags": [
    "productivity"
   ],
@@ -263,7 +263,7 @@
   "title": "Omni Calculator",
   "category": "reference & calculators",
   "description": "Universal online calculator for any computation.",
-  "use_case": null,
+  "use_case": "Calculate anything instantly",
   "tags": [
    "calculator",
    "online",
@@ -276,7 +276,7 @@
   "title": "OneLook",
   "category": "reference & calculators",
   "description": "Reverse dictionary finding words based on descriptions.",
-  "use_case": null,
+  "use_case": "Find a word by its meaning",
   "tags": [
    "reference"
   ],
@@ -287,7 +287,7 @@
   "title": "Online Conversion",
   "category": "reference & calculators",
   "description": "Converts measurements between virtually any units.",
-  "use_case": null,
+  "use_case": "Convert between any units",
   "tags": [
    "reference & calculators"
   ],
@@ -298,7 +298,7 @@
   "title": "Open Culture",
   "category": "education",
   "description": "Curated collection of free courses, ebooks, and lectures.",
-  "use_case": null,
+  "use_case": "Find free courses",
   "tags": [
    "free"
   ],
@@ -309,7 +309,7 @@
   "title": "Pixton",
   "category": "education",
   "description": "Comic creation tool for educational storytelling.",
-  "use_case": null,
+  "use_case": "Create a comic or graphic story",
   "tags": [
    "education"
   ],
@@ -320,7 +320,7 @@
   "title": "Ptable",
   "category": "education",
   "description": "Interactive periodic table showing element properties.",
-  "use_case": null,
+  "use_case": "Look up element properties",
   "tags": [
    "education"
   ],
@@ -331,7 +331,7 @@
   "title": "Python for Everybody",
   "category": "education",
   "description": "Free Python programming lessons for beginners.",
-  "use_case": null,
+  "use_case": "Learn Python from scratch",
   "tags": [
    "free"
   ],
@@ -342,7 +342,7 @@
   "title": "Scale of Universe",
   "category": "education",
   "description": "Visualizes size comparisons from subatomic to cosmic.",
-  "use_case": null,
+  "use_case": "Compare sizes across the universe",
   "tags": [
    "education"
   ],
@@ -353,7 +353,7 @@
   "title": "Socratic",
   "category": "ai tools",
   "description": "AI tool by Google finding learning resources for academic problems.",
-  "use_case": null,
+  "use_case": "Find homework help resources",
   "tags": [
    "google",
    "ai"
@@ -365,7 +365,7 @@
   "title": "Space.com",
   "category": "news & reading",
   "description": "News and updates on space exploration and astronomy.",
-  "use_case": null,
+  "use_case": "Follow space exploration news",
   "tags": [
    "news"
   ],
@@ -376,7 +376,7 @@
   "title": "Stellarium Web",
   "category": "entertainment",
   "description": "Online planetarium showing stars and constellations.",
-  "use_case": null,
+  "use_case": "Explore the night sky",
   "tags": [
    "online"
   ],
@@ -387,7 +387,7 @@
   "title": "Student.com",
   "category": "education",
   "description": "Finds affordable accommodations for international students.",
-  "use_case": null,
+  "use_case": "Find student housing abroad",
   "tags": [
    "education"
   ],
@@ -398,7 +398,7 @@
   "title": "Talk to Books",
   "category": "ai tools",
   "description": "AI-powered tool discovering books through natural queries.",
-  "use_case": null,
+  "use_case": "Discover books by asking questions",
   "tags": [
    "ai"
   ],
@@ -409,7 +409,7 @@
   "title": "The Sky Live",
   "category": "entertainment",
   "description": "Interactive sky viewer for observing celestial objects.",
-  "use_case": null,
+  "use_case": "Locate stars and planets tonight",
   "tags": [
    "entertainment"
   ],
@@ -420,7 +420,7 @@
   "title": "ThriftBooks",
   "category": "shopping",
   "description": "Marketplace for discounted used books.",
-  "use_case": null,
+  "use_case": "Buy discounted used books",
   "tags": [
    "shopping"
   ],
@@ -431,7 +431,7 @@
   "title": "Tutor AI",
   "category": "ai tools",
   "description": "AI assistant creating educational content on any topic.",
-  "use_case": null,
+  "use_case": "Get tutored on any subject",
   "tags": [
    "ai"
   ],
@@ -442,7 +442,7 @@
   "title": "Typing.com",
   "category": "education",
   "description": "Practice platform for improving typing speed and accuracy.",
-  "use_case": null,
+  "use_case": "Practice and improve typing speed",
   "tags": [
    "education"
   ],
@@ -453,7 +453,7 @@
   "title": "W3Schools",
   "category": "developer tools",
   "description": "Educational resource for coding and web development.",
-  "use_case": null,
+  "use_case": "Learn web development basics",
   "tags": [
    "developer"
   ],
@@ -464,7 +464,7 @@
   "title": "Wikibooks",
   "category": "education",
   "description": "Collection of free online textbooks anyone can edit.",
-  "use_case": null,
+  "use_case": "Find free online textbooks",
   "tags": [
    "online",
    "free"
@@ -476,7 +476,7 @@
   "title": "123apps",
   "category": "file tools",
   "description": "Collection of 50+ online tools for media creation and conversion.",
-  "use_case": null,
+  "use_case": "Convert or edit media files",
   "tags": [
    "online"
   ],
@@ -487,7 +487,7 @@
   "title": "AmCharts",
   "category": "design & media",
   "description": "Creates professional charts, maps, and timelines.",
-  "use_case": null,
+  "use_case": "Create interactive visualizations",
   "tags": [
    "design & media"
   ],
@@ -498,7 +498,7 @@
   "title": "Axiom AI",
   "category": "developer tools",
   "description": "Browser automation tool requiring no coding knowledge.",
-  "use_case": null,
+  "use_case": "Automate browser tasks without code",
   "tags": [
    "browser",
    "developer"
@@ -510,7 +510,7 @@
   "title": "Browse AI",
   "category": "ai tools",
   "description": "Extracts website data and exports to documents.",
-  "use_case": null,
+  "use_case": "Extract website data",
   "tags": [
    "ai tools"
   ],
@@ -521,7 +521,7 @@
   "title": "Bubbl.us",
   "category": "productivity",
   "description": "Mind mapping tool for organizing thoughts visually.",
-  "use_case": null,
+  "use_case": "Create a mind map",
   "tags": [
    "productivity"
   ],
@@ -532,7 +532,7 @@
   "title": "Beautifier.io",
   "category": "developer tools",
   "description": "Formats and beautifies code for readability.",
-  "use_case": null,
+  "use_case": "Format code for readability",
   "tags": [
    "developer"
   ],
@@ -543,7 +543,7 @@
   "title": "Beautiful.AI",
   "category": "ai tools",
   "description": "Creates presentations using AI-powered templates.",
-  "use_case": null,
+  "use_case": "Build presentations with AI",
   "tags": [
    "ai"
   ],
@@ -554,7 +554,7 @@
   "title": "AlternativeTo",
   "category": "developer tools",
   "description": "Finds alternatives to expensive software.",
-  "use_case": null,
+  "use_case": "Find cheaper software alternatives",
   "tags": [
    "software"
   ],
@@ -579,7 +579,7 @@
   "title": "Adioma",
   "category": "design & media",
   "description": "Creates infographics with icons and templates.",
-  "use_case": null,
+  "use_case": "Turn data into an infographic",
   "tags": [
    "design"
   ],
@@ -590,7 +590,7 @@
   "title": "BugMeNot",
   "category": "web utilities",
   "description": "Provides shared login credentials bypassing registration.",
-  "use_case": null,
+  "use_case": "Skip website registration walls",
   "tags": [
    "web utilities"
   ],
@@ -601,7 +601,7 @@
   "title": "Calligraphr",
   "category": "design & media",
   "description": "Creates custom fonts from handwriting.",
-  "use_case": null,
+  "use_case": "Turn handwriting into a font",
   "tags": [
    "design & media"
   ],
@@ -627,7 +627,7 @@
   "title": "DeepL Translator",
   "category": "ai tools",
   "description": "AI translation tool for texts and documents.",
-  "use_case": null,
+  "use_case": "Translate between languages",
   "tags": [
    "ai"
   ],
@@ -667,7 +667,7 @@
   "title": "Eesel",
   "category": "productivity",
   "description": "Chrome extension organizing workflows for productivity.",
-  "use_case": null,
+  "use_case": "Organize your workflow tools",
   "tags": [
    "chrome"
   ],
@@ -692,7 +692,7 @@
   "title": "Excel Formula Bot",
   "category": "productivity",
   "description": "Converts text to spreadsheet formulas.",
-  "use_case": null,
+  "use_case": "Generate spreadsheet formulas",
   "tags": [
    "productivity"
   ],
@@ -703,7 +703,7 @@
   "title": "Flourish",
   "category": "design & media",
   "description": "Transforms data into interactive charts and maps.",
-  "use_case": null,
+  "use_case": "Visualize data interactively",
   "tags": [
    "design & media"
   ],
@@ -714,7 +714,7 @@
   "title": "Follow Up Then",
   "category": "communication",
   "description": "Sets email reminders easily.",
-  "use_case": null,
+  "use_case": "Set email reminders",
   "tags": [
    "communication"
   ],
@@ -725,7 +725,7 @@
   "title": "Fuelly",
   "category": "productivity",
   "description": "Tracks fuel mileage and expenses.",
-  "use_case": null,
+  "use_case": "Track fuel mileage and expenses",
   "tags": [
    "productivity"
   ],
@@ -736,7 +736,7 @@
   "title": "IFTTT",
   "category": "productivity",
   "description": "Automates web tasks and device interactions.",
-  "use_case": null,
+  "use_case": "Automate apps and device tasks",
   "tags": [
    "productivity"
   ],
@@ -747,7 +747,7 @@
   "title": "Infogram",
   "category": "design & media",
   "description": "Creates infographics and visual reports.",
-  "use_case": null,
+  "use_case": "Design interactive infographics",
   "tags": [
    "design & media"
   ],
@@ -758,7 +758,7 @@
   "title": "JotForm",
   "category": "developer tools",
   "description": "Builds complex forms without coding.",
-  "use_case": null,
+  "use_case": "Build complex forms without code",
   "tags": [
    "developer"
   ],
@@ -769,7 +769,7 @@
   "title": "Kleki",
   "category": "design & media",
   "description": "Online drawing tool with brushes and layers.",
-  "use_case": null,
+  "use_case": "Draw digitally with layers",
   "tags": [
    "design",
    "online"
@@ -781,7 +781,7 @@
   "title": "Livestream",
   "category": "audio & video",
   "description": "Broadcasts desktop screens and events live.",
-  "use_case": null,
+  "use_case": "Broadcast live video and events",
   "tags": [
    "audio & video"
   ],
@@ -792,7 +792,7 @@
   "title": "Match Color",
   "category": "design & media",
   "description": "Extracts colors from images.",
-  "use_case": null,
+  "use_case": "Extract colors from images",
   "tags": [
    "design"
   ],
@@ -803,7 +803,7 @@
   "title": "MeetEdgar",
   "category": "social media",
   "description": "Social media management automating post scheduling.",
-  "use_case": null,
+  "use_case": "Schedule social media posts",
   "tags": [
    "social"
   ],
@@ -814,7 +814,7 @@
   "title": "Mint",
   "category": "finance",
   "description": "Budgeting app tracking expenses and financial goals.",
-  "use_case": null,
+  "use_case": "Track spending and set budgets",
   "tags": [
    "finance"
   ],
@@ -825,7 +825,7 @@
   "title": "Minutes.io",
   "category": "productivity",
   "description": "Quick note-taking tool for meetings.",
-  "use_case": null,
+  "use_case": "Take quick meeting notes",
   "tags": [
    "productivity"
   ],
@@ -836,7 +836,7 @@
   "title": "Google My Maps",
   "category": "maps & travel",
   "description": "Creates custom Google Maps with annotations.",
-  "use_case": null,
+  "use_case": "Create custom maps with labels",
   "tags": [
    "google"
   ],
@@ -847,7 +847,7 @@
   "title": "Narakeet",
   "category": "audio & video",
   "description": "Converts presentations to audio and video.",
-  "use_case": null,
+  "use_case": "Turn presentations into video",
   "tags": [
    "audio"
   ],
@@ -858,7 +858,7 @@
   "title": "PDF Candy",
   "category": "file tools",
   "description": "47 online tools for PDF editing and conversion.",
-  "use_case": null,
+  "use_case": "Edit and convert PDFs",
   "tags": [
    "online",
    "file"
@@ -870,7 +870,7 @@
   "title": "Print Friendly",
   "category": "writing",
   "description": "Makes web content printer-friendly.",
-  "use_case": null,
+  "use_case": "Make web pages printer-friendly",
   "tags": [
    "writing"
   ],
@@ -881,7 +881,7 @@
   "title": "Privnote",
   "category": "security & privacy",
   "description": "Creates self-destructing notes.",
-  "use_case": null,
+  "use_case": "Share notes that auto-delete",
   "tags": [
    "security & privacy"
   ],
@@ -892,7 +892,7 @@
   "title": "Rewind AI",
   "category": "ai tools",
   "description": "Records computer activity in searchable timeline.",
-  "use_case": null,
+  "use_case": "Search your computer activity",
   "tags": [
    "search"
   ],
@@ -903,7 +903,7 @@
   "title": "Saltify",
   "category": "security & privacy",
   "description": "Shares sensitive information via encrypted links.",
-  "use_case": null,
+  "use_case": "Share secrets securely",
   "tags": [
    "security & privacy"
   ],
@@ -914,7 +914,7 @@
   "title": "Sembly",
   "category": "ai tools",
   "description": "AI-powered meeting note-taking tool.",
-  "use_case": null,
+  "use_case": "Take meeting notes with AI",
   "tags": [
    "ai"
   ],
@@ -925,7 +925,7 @@
   "title": "SMMRY",
   "category": "ai tools",
   "description": "Summarizes articles and texts automatically.",
-  "use_case": null,
+  "use_case": "Summarize articles automatically",
   "tags": [
    "ai tools"
   ],
@@ -936,7 +936,7 @@
   "title": "Speechify",
   "category": "productivity",
   "description": "Text-to-speech engine for documents.",
-  "use_case": null,
+  "use_case": "Convert documents to audio",
   "tags": [
    "productivity"
   ],
@@ -947,7 +947,7 @@
   "title": "Start.me",
   "category": "productivity",
   "description": "Creates customizable browser start pages.",
-  "use_case": null,
+  "use_case": "Create a custom start page",
   "tags": [
    "browser"
   ],
@@ -958,7 +958,7 @@
   "title": "TinEye",
   "category": "design & media",
   "description": "Reverse image search finding similar images.",
-  "use_case": null,
+  "use_case": "Find where an image came from",
   "tags": [
    "design",
    "search"
@@ -970,7 +970,7 @@
   "title": "TinyWow",
   "category": "writing",
   "description": "Collection of productivity tools for media and content.",
-  "use_case": null,
+  "use_case": "Convert media or create content",
   "tags": [
    "writing"
   ],
@@ -981,7 +981,7 @@
   "title": "Use The Keyboard",
   "category": "productivity",
   "description": "Collection of keyboard shortcuts.",
-  "use_case": null,
+  "use_case": "Look up keyboard shortcuts",
   "tags": [
    "productivity"
   ],
@@ -992,7 +992,7 @@
   "title": "Zamzar",
   "category": "file tools",
   "description": "Online file converter supporting all formats.",
-  "use_case": null,
+  "use_case": "Convert between any file formats",
   "tags": [
    "online",
    "file",
@@ -1005,7 +1005,7 @@
   "title": "29a.ch Experiments",
   "category": "entertainment",
   "description": "Interactive tools for relaxation and entertainment.",
-  "use_case": null,
+  "use_case": "Relax with interactive experiments",
   "tags": [],
   "source": "capture"
  },
@@ -1028,7 +1028,7 @@
   "title": "AppyPie Meme Maker",
   "category": "social media",
   "description": "Meme creation tool.",
-  "use_case": null,
+  "use_case": "Create memes",
   "tags": [
    "social"
   ],
@@ -1039,7 +1039,7 @@
   "title": "Animated Drawings",
   "category": "ai tools",
   "description": "Animates uploaded drawings and sketches.",
-  "use_case": null,
+  "use_case": "Bring a sketch to life with animation",
   "tags": [
    "ai tools"
   ],
@@ -1050,7 +1050,7 @@
   "title": "Experiments with Google",
   "category": "entertainment",
   "description": "Collection of 1600+ art and technology experiments.",
-  "use_case": null,
+  "use_case": "Explore interactive art and experiments",
   "tags": [
    "entertainment"
   ],
@@ -1061,7 +1061,7 @@
   "title": "FutureMe",
   "category": "communication",
   "description": "Sends emails to your future self.",
-  "use_case": null,
+  "use_case": "Send yourself a message for the future",
   "tags": [
    "communication"
   ],
@@ -1072,7 +1072,7 @@
   "title": "Future Timeline",
   "category": "entertainment",
   "description": "Predictions of future technology developments.",
-  "use_case": null,
+  "use_case": "Explore tech advancement predictions",
   "tags": [
    "entertainment"
   ],
@@ -1083,7 +1083,7 @@
   "title": "Hacker Typer",
   "category": "entertainment",
   "description": "Hacker prank simulator for entertainment.",
-  "use_case": null,
+  "use_case": "Fake a hacker terminal for pranks",
   "tags": [
    "entertainment"
   ],
@@ -1094,7 +1094,7 @@
   "title": "elgooG",
   "category": "entertainment",
   "description": "Google mirror featuring Easter eggs.",
-  "use_case": null,
+  "use_case": "Play with reversed-Google Easter eggs",
   "tags": [
    "google"
   ],
@@ -1105,7 +1105,7 @@
   "title": "Know Your Meme",
   "category": "entertainment",
   "description": "Database of viral memes and catchphrases.",
-  "use_case": null,
+  "use_case": "Look up where a meme or catchphrase started",
   "tags": [
    "entertainment"
   ],
@@ -1116,7 +1116,7 @@
   "title": "MapCrunch",
   "category": "entertainment",
   "description": "Random Google Street View locations worldwide.",
-  "use_case": null,
+  "use_case": "Teleport to random Earth locations",
   "tags": [
    "google",
    "entertainment"
@@ -1128,7 +1128,7 @@
   "title": "Quick, Draw!",
   "category": "ai tools",
   "description": "Neural network guesses your drawings.",
-  "use_case": null,
+  "use_case": "See if AI can identify your drawings",
   "tags": [
    "ai"
   ],
@@ -1139,7 +1139,7 @@
   "title": "Random.org",
   "category": "entertainment",
   "description": "Generates random numbers and simulations.",
-  "use_case": null,
+  "use_case": "Generate random numbers or simulations",
   "tags": [
    "entertainment"
   ],
@@ -1150,7 +1150,7 @@
   "title": "The Useless Web",
   "category": "entertainment",
   "description": "Takes you to random silly websites.",
-  "use_case": null,
+  "use_case": "Visit absurd random websites for laughs",
   "tags": [
    "entertainment"
   ],
@@ -1161,7 +1161,7 @@
   "title": "This is Sand",
   "category": "design & media",
   "description": "Digital sand art drawing application.",
-  "use_case": null,
+  "use_case": "Create art by drawing with digital sand",
   "tags": [
    "design"
   ],
@@ -1172,7 +1172,7 @@
   "title": "Google Arts & Culture: What Came First",
   "category": "entertainment",
   "description": "Chronological comparison game by Google.",
-  "use_case": null,
+  "use_case": "Play guess-the-chronological-order games",
   "tags": [
    "google",
    "entertainment"
@@ -1184,7 +1184,7 @@
   "title": "Agar.io",
   "category": "entertainment",
   "description": "Multiplayer online action game.",
-  "use_case": null,
+  "use_case": "Play a multiplayer blob-eating game",
   "tags": [
    "entertainment",
    "online"
@@ -1196,7 +1196,7 @@
   "title": "CrazyGames",
   "category": "entertainment",
   "description": "Platform for ad-free online games.",
-  "use_case": null,
+  "use_case": "Play browser games without ads",
   "tags": [
    "online",
    "free"
@@ -1208,7 +1208,7 @@
   "title": "Escape Team",
   "category": "entertainment",
   "description": "Online escape room games.",
-  "use_case": null,
+  "use_case": "Solve puzzles in online escape rooms",
   "tags": [
    "entertainment",
    "online"
@@ -1220,7 +1220,7 @@
   "title": "Lumosity",
   "category": "entertainment",
   "description": "Brain training game for memory and skills.",
-  "use_case": null,
+  "use_case": "Train your memory with brain games",
   "tags": [
    "entertainment"
   ],
@@ -1231,7 +1231,7 @@
   "title": "Money Simulator",
   "category": "entertainment",
   "description": "Financial decision simulator game.",
-  "use_case": null,
+  "use_case": "Simulate financial decision consequences",
   "tags": [
    "entertainment"
   ],
@@ -1242,7 +1242,7 @@
   "title": "Neal.fun",
   "category": "entertainment",
   "description": "Collection of interactive games and visualizations.",
-  "use_case": null,
+  "use_case": "Play interactive games and visualizations",
   "tags": [
    "entertainment"
   ],
@@ -1253,7 +1253,7 @@
   "title": "Sandspiel",
   "category": "education",
   "description": "Falling sand physics simulation game.",
-  "use_case": null,
+  "use_case": "Play with falling sand physics",
   "tags": [
    "education"
   ],
@@ -1264,7 +1264,7 @@
   "title": "Skribbl.io",
   "category": "design & media",
   "description": "Multiplayer drawing and guessing game.",
-  "use_case": null,
+  "use_case": "Play multiplayer drawing and guessing",
   "tags": [
    "design"
   ],
@@ -1275,7 +1275,7 @@
   "title": "JustWatch",
   "category": "audio & video",
   "description": "Finds where movies and shows are available online.",
-  "use_case": null,
+  "use_case": "Find where to stream a movie or show",
   "tags": [
    "online",
    "audio"
@@ -1287,7 +1287,7 @@
   "title": "Midomi",
   "category": "audio & video",
   "description": "Identifies songs by humming.",
-  "use_case": null,
+  "use_case": "Identify a song by singing or humming",
   "tags": [
    "audio"
   ],
@@ -1298,7 +1298,7 @@
   "title": "Music Map",
   "category": "audio & video",
   "description": "Charts similar artists by relationship.",
-  "use_case": null,
+  "use_case": "Explore relationships between artists",
   "tags": [
    "audio & video"
   ],
@@ -1309,7 +1309,7 @@
   "title": "Noteflight",
   "category": "audio & video",
   "description": "Online music notation and editing tool.",
-  "use_case": null,
+  "use_case": "Write and edit music notation online",
   "tags": [
    "online",
    "audio"
@@ -1321,7 +1321,7 @@
   "title": "Podcastle",
   "category": "ai tools",
   "description": "AI podcast creation and editing platform.",
-  "use_case": null,
+  "use_case": "Create and edit podcasts with AI",
   "tags": [
    "ai"
   ],
@@ -1332,7 +1332,7 @@
   "title": "Radio Garden",
   "category": "audio & video",
   "description": "Listens to radio stations from any location.",
-  "use_case": null,
+  "use_case": "Listen to radio stations worldwide",
   "tags": [
    "audio"
   ],
@@ -1343,7 +1343,7 @@
   "title": "Adobe Express",
   "category": "design & media",
   "description": "Image, video, and PDF editing hub.",
-  "use_case": null,
+  "use_case": "Edit images, videos, or PDFs online",
   "tags": [
    "design"
   ],
@@ -1354,7 +1354,7 @@
   "title": "AI Image Enlarger",
   "category": "design & media",
   "description": "Increases image resolution without quality loss.",
-  "use_case": null,
+  "use_case": "Upscale images without quality loss",
   "tags": [
    "design"
   ],
@@ -1365,7 +1365,7 @@
   "title": "Cleanup.pictures",
   "category": "design & media",
   "description": "Removes unwanted objects from photos.",
-  "use_case": null,
+  "use_case": "Remove unwanted objects from photos",
   "tags": [
    "design"
   ],
@@ -1389,7 +1389,7 @@
   "title": "Cutout.Pro",
   "category": "ai tools",
   "description": "AI tool removing backgrounds and enhancing media.",
-  "use_case": null,
+  "use_case": "Remove backgrounds or enhance media",
   "tags": [
    "ai"
   ],
@@ -1400,7 +1400,7 @@
   "title": "Extract.pics",
   "category": "design & media",
   "description": "Extracts images from websites.",
-  "use_case": null,
+  "use_case": "Extract images from websites",
   "tags": [
    "design"
   ],
@@ -1411,7 +1411,7 @@
   "title": "FreeImages",
   "category": "design & media",
   "description": "Downloads millions of royalty-free images.",
-  "use_case": null,
+  "use_case": "Find millions of royalty-free images",
   "tags": [
    "design",
    "free"
@@ -1423,7 +1423,7 @@
   "title": "Generated Photos",
   "category": "ai tools",
   "description": "Generates AI-created human faces.",
-  "use_case": null,
+  "use_case": "Generate AI-created portrait headshots",
   "tags": [
    "ai"
   ],
@@ -1434,7 +1434,7 @@
   "title": "IconFinder",
   "category": "design & media",
   "description": "Searches icons in all sizes.",
-  "use_case": null,
+  "use_case": "Find and search icons in all sizes",
   "tags": [
    "design",
    "search"
@@ -1446,7 +1446,7 @@
   "title": "Icons8",
   "category": "design & media",
   "description": "Design elements including icons and illustrations.",
-  "use_case": null,
+  "use_case": "Find design elements and illustrations",
   "tags": [
    "design"
   ],
@@ -1457,7 +1457,7 @@
   "title": "Magic Studio",
   "category": "ai tools",
   "description": "AI tool removing objects and backgrounds.",
-  "use_case": null,
+  "use_case": "Remove objects and backgrounds with AI",
   "tags": [
    "ai"
   ],
@@ -1468,7 +1468,7 @@
   "title": "Media.io",
   "category": "design & media",
   "description": "One-stop image and video editing platform.",
-  "use_case": null,
+  "use_case": "Edit images and videos in one place",
   "tags": [
    "design"
   ],
@@ -1479,7 +1479,7 @@
   "title": "MyHeritage",
   "category": "design & media",
   "description": "Colorizes photos and creates family trees.",
-  "use_case": null,
+  "use_case": "Colorize old photos or build family trees",
   "tags": [
    "design"
   ],
@@ -1490,7 +1490,7 @@
   "title": "NightCafe",
   "category": "ai tools",
   "description": "AI image generation using text input.",
-  "use_case": null,
+  "use_case": "Generate images from text descriptions",
   "tags": [
    "ai"
   ],
@@ -1501,7 +1501,7 @@
   "title": "Palette.fm",
   "category": "design & media",
   "description": "Automatically colorizes black and white images.",
-  "use_case": null,
+  "use_case": "Add color to black and white photos",
   "tags": [
    "design"
   ],
@@ -1512,7 +1512,7 @@
   "title": "Pexels",
   "category": "design & media",
   "description": "Thousands of royalty-free high-quality images.",
-  "use_case": null,
+  "use_case": "Find high-quality royalty-free images",
   "tags": [
    "design",
    "free"
@@ -1538,7 +1538,7 @@
   "title": "PhotoRoom",
   "category": "design & media",
   "description": "Removes photo backgrounds and creates designs.",
-  "use_case": null,
+  "use_case": "Remove photo backgrounds or create mockups",
   "tags": [
    "design"
   ],
@@ -1549,7 +1549,7 @@
   "title": "Pika",
   "category": "design & media",
   "description": "Creates beautiful screenshots and mockups.",
-  "use_case": null,
+  "use_case": "Turn screenshots into polished mockups",
   "tags": [
    "design"
   ],
@@ -1560,7 +1560,7 @@
   "title": "Pixlr",
   "category": "design & media",
   "description": "Online photo editor and template designer.",
-  "use_case": null,
+  "use_case": "Edit photos and design with templates",
   "tags": [
    "design",
    "online",
@@ -1573,7 +1573,7 @@
   "title": "pfpmaker",
   "category": "ai tools",
   "description": "AI tool creating professional profile pictures.",
-  "use_case": null,
+  "use_case": "Create professional profile pictures",
   "tags": [
    "ai"
   ],
@@ -1584,7 +1584,7 @@
   "title": "RestorePhotos.io",
   "category": "design & media",
   "description": "Restores old and blurry face photos.",
-  "use_case": null,
+  "use_case": "Restore clarity to blurry old photos",
   "tags": [
    "design"
   ],
@@ -1595,7 +1595,7 @@
   "title": "StockImg.AI",
   "category": "ai tools",
   "description": "AI generator for book covers and illustrations.",
-  "use_case": null,
+  "use_case": "Generate book covers and illustrations",
   "tags": [
    "ai",
    "generator"
@@ -1607,7 +1607,7 @@
   "title": "Unscreen",
   "category": "audio & video",
   "description": "Removes video backgrounds.",
-  "use_case": null,
+  "use_case": "Remove backgrounds from video clips",
   "tags": [
    "audio"
   ],
@@ -1618,7 +1618,7 @@
   "title": "Veed.io AI Video Editor",
   "category": "ai tools",
   "description": "Browser-based AI video editor.",
-  "use_case": null,
+  "use_case": "Edit videos in your browser with AI",
   "tags": [
    "ai",
    "browser",
@@ -1631,7 +1631,7 @@
   "title": "Videvo",
   "category": "audio & video",
   "description": "Downloads stock videos and music.",
-  "use_case": null,
+  "use_case": "Download stock videos and music",
   "tags": [
    "audio"
   ],
@@ -1642,7 +1642,7 @@
   "title": "Zoomscape",
   "category": "ai tools",
   "description": "AI-generated backgrounds for Zoom meetings.",
-  "use_case": null,
+  "use_case": "Generate AI backgrounds for video calls",
   "tags": [
    "ai"
   ],
@@ -1653,7 +1653,7 @@
   "title": "Atlas Obscura",
   "category": "entertainment",
   "description": "Finds hidden places and curiosities worldwide.",
-  "use_case": null,
+  "use_case": "Discover hidden and unusual places",
   "tags": [
    "entertainment"
   ],
@@ -1664,7 +1664,7 @@
   "title": "DAREBEE",
   "category": "health & fitness",
   "description": "Workout and diet programs for fitness goals.",
-  "use_case": null,
+  "use_case": "Find workouts or meal plans for goals",
   "tags": [
    "health"
   ],
@@ -1675,7 +1675,7 @@
   "title": "Eat This Much",
   "category": "health & fitness",
   "description": "Generates personalized meal plans.",
-  "use_case": null,
+  "use_case": "Generate personalized meal plans",
   "tags": [
    "health"
   ],
@@ -1686,7 +1686,7 @@
   "title": "Highbrow",
   "category": "education",
   "description": "Delivers daily 5-minute lessons by email.",
-  "use_case": null,
+  "use_case": "Learn something with daily 5-min lessons",
   "tags": [
    "education"
   ],
@@ -1697,7 +1697,7 @@
   "title": "InnerBody",
   "category": "health & fitness",
   "description": "Health product recommendations based on science.",
-  "use_case": null,
+  "use_case": "Find science-backed health product picks",
   "tags": [
    "health"
   ],
@@ -1708,7 +1708,7 @@
   "title": "Insight Timer",
   "category": "health & fitness",
   "description": "150k+ guided meditation tracks.",
-  "use_case": null,
+  "use_case": "Find and play guided meditations",
   "tags": [
    "health"
   ],
@@ -1719,7 +1719,7 @@
   "title": "MuscleWiki",
   "category": "health & fitness",
   "description": "Targeted muscle-toning exercise finder.",
-  "use_case": null,
+  "use_case": "Find exercises for specific muscles",
   "tags": [
    "health"
   ],
@@ -1730,7 +1730,7 @@
   "title": "MyFitnessPal",
   "category": "health & fitness",
   "description": "Tracks meals and fitness goals.",
-  "use_case": null,
+  "use_case": "Track meals and fitness progress",
   "tags": [
    "health"
   ],
@@ -1741,7 +1741,7 @@
   "title": "myNoise",
   "category": "audio & video",
   "description": "Archive of sounds for focus and relaxation.",
-  "use_case": null,
+  "use_case": "Find sounds for focus and relaxation",
   "tags": [
    "archives"
   ],
@@ -1752,7 +1752,7 @@
   "title": "Noisli",
   "category": "audio & video",
   "description": "Creates sound environments for productivity.",
-  "use_case": null,
+  "use_case": "Create sound environments for focus",
   "tags": [
    "audio"
   ],
@@ -1763,7 +1763,7 @@
   "title": "The Real Food Dietitians",
   "category": "health & fitness",
   "description": "Healthy meal recipes and diet information.",
-  "use_case": null,
+  "use_case": "Find healthy recipes and nutrition info",
   "tags": [
    "health"
   ],
@@ -1774,7 +1774,7 @@
   "title": "StickK",
   "category": "health & fitness",
   "description": "Accountability tool with monetary stakes.",
-  "use_case": null,
+  "use_case": "Commit to goals with real stakes",
   "tags": [
    "health"
   ],
@@ -1799,7 +1799,7 @@
   "title": "Wayback Machine",
   "category": "reference & calculators",
   "description": "Accesses historical snapshots of web pages.",
-  "use_case": null,
+  "use_case": "View historical snapshots of websites",
   "tags": [
    "archives"
   ],
@@ -1810,7 +1810,7 @@
   "title": "CNN Lite",
   "category": "design & media",
   "description": "Text-only CNN without ads or images.",
-  "use_case": null,
+  "use_case": "Read news without ads or photos",
   "tags": [
    "design"
   ],
@@ -1821,7 +1821,7 @@
   "title": "Drugs.com",
   "category": "health & fitness",
   "description": "Drug information and pill identification.",
-  "use_case": null,
+  "use_case": "Look up drugs or identify pills",
   "tags": [
    "health & fitness"
   ],
@@ -1832,7 +1832,7 @@
   "title": "earth.nullschool.net",
   "category": "maps & travel",
   "description": "Interactive weather and pollution maps.",
-  "use_case": null,
+  "use_case": "Explore live weather and air pollution",
   "tags": [
    "maps"
   ],
@@ -1843,7 +1843,7 @@
   "title": "Every Time Zone",
   "category": "maps & travel",
   "description": "Time zone difference checker.",
-  "use_case": null,
+  "use_case": "Check time zone differences quickly",
   "tags": [
    "maps"
   ],
@@ -1854,7 +1854,7 @@
   "title": "GetHuman",
   "category": "productivity",
   "description": "Finds company phone numbers for support.",
-  "use_case": null,
+  "use_case": "Find company phone numbers fast",
   "tags": [
    "productivity"
   ],
@@ -1865,7 +1865,7 @@
   "title": "Google Earth",
   "category": "maps & travel",
   "description": "3D satellite view of Earth locations.",
-  "use_case": null,
+  "use_case": "View Earth from satellite perspective",
   "tags": [
    "maps & travel"
   ],
@@ -1876,7 +1876,7 @@
   "title": "HowStuffWorks",
   "category": "reference & calculators",
   "description": "Explains how things work.",
-  "use_case": null,
+  "use_case": "Learn how things work with explanations",
   "tags": [
    "reference"
   ],
@@ -1887,7 +1887,7 @@
   "title": "Information is Beautiful",
   "category": "reference & calculators",
   "description": "Presents information as visual diagrams.",
-  "use_case": null,
+  "use_case": "See complex information as diagrams",
   "tags": [
    "reference"
   ],
@@ -1898,7 +1898,7 @@
   "title": "JustTheRecipe",
   "category": "cooking",
   "description": "Extracts recipes without clutter.",
-  "use_case": null,
+  "use_case": "Get a recipe without the blog story",
   "tags": [
    "cooking"
   ],
@@ -1909,7 +1909,7 @@
   "title": "ManualsLib",
   "category": "diy & repair",
   "description": "Downloads product manuals.",
-  "use_case": null,
+  "use_case": "Download product manuals and guides",
   "tags": [
    "diy"
   ],
@@ -1920,7 +1920,7 @@
   "title": "MedlinePlus",
   "category": "books & reading",
   "description": "Medical knowledge by U.S. National Library.",
-  "use_case": null,
+  "use_case": "Look up medical conditions and treatments",
   "tags": [
    "books"
   ],
@@ -1945,7 +1945,7 @@
   "title": "Simple English Wikipedia",
   "category": "education",
   "description": "Wikipedia in simplified English.",
-  "use_case": null,
+  "use_case": "Read Wikipedia in simpler language",
   "tags": [
    "education"
   ],
@@ -1956,7 +1956,7 @@
   "title": "SuperCook",
   "category": "cooking",
   "description": "Recipe search by available ingredients.",
-  "use_case": null,
+  "use_case": "Find recipes from what you have",
   "tags": [
    "search",
    "cooking"
@@ -1968,7 +1968,7 @@
   "title": "This to That",
   "category": "diy & repair",
   "description": "Identifies correct adhesive for materials.",
-  "use_case": null,
+  "use_case": "Find the right adhesive for materials",
   "tags": [
    "diy"
   ],
@@ -1979,7 +1979,7 @@
   "title": "CamelCamelCamel",
   "category": "shopping",
   "description": "Tracks Amazon price history.",
-  "use_case": null,
+  "use_case": "Track price history of Amazon products",
   "tags": [
    "shopping"
   ],
@@ -1990,7 +1990,7 @@
   "title": "Fakespot",
   "category": "shopping",
   "description": "Detects fake reviews on shopping sites.",
-  "use_case": null,
+  "use_case": "Spot fake reviews before purchasing",
   "tags": [
    "shopping"
   ],
@@ -2001,7 +2001,7 @@
   "title": "Keepa",
   "category": "shopping",
   "description": "Tracks Amazon product prices over time.",
-  "use_case": null,
+  "use_case": "Monitor Amazon price changes over time",
   "tags": [
    "shopping"
   ],
@@ -2012,7 +2012,7 @@
   "title": "McMaster-Carr",
   "category": "shopping",
   "description": "Comprehensive mechanical hardware catalog.",
-  "use_case": null,
+  "use_case": "Find mechanical hardware and parts",
   "tags": [
    "shopping"
   ],
@@ -2023,7 +2023,7 @@
   "title": "PCPartPicker",
   "category": "shopping",
   "description": "Selects PC components with price tracking.",
-  "use_case": null,
+  "use_case": "Build PCs with price comparison",
   "tags": [
    "shopping"
   ],
@@ -2034,7 +2034,7 @@
   "title": "RetailMeNot",
   "category": "shopping",
   "description": "Coupon website for online and in-store.",
-  "use_case": null,
+  "use_case": "Find coupons for online or in-store",
   "tags": [
    "online",
    "shopping"
@@ -2046,7 +2046,7 @@
   "title": "Woot",
   "category": "shopping",
   "description": "Deals website featuring heavy discounts.",
-  "use_case": null,
+  "use_case": "Find heavy discounts on everyday items",
   "tags": [
    "shopping"
   ],
@@ -2057,7 +2057,7 @@
   "title": "Adobe Color",
   "category": "design & media",
   "description": "Color palette and code extraction tool.",
-  "use_case": null,
+  "use_case": "Build color palettes and export as code",
   "tags": [
    "design"
   ],
@@ -2068,7 +2068,7 @@
   "title": "Animoto",
   "category": "design & media",
   "description": "Creates professional videos from images.",
-  "use_case": null,
+  "use_case": "Turn a photo gallery into a video",
   "tags": [
    "design"
   ],
@@ -2079,7 +2079,7 @@
   "title": "Beatoven.ai",
   "category": "ai tools",
   "description": "AI royalty-free music creation tool.",
-  "use_case": null,
+  "use_case": "Generate royalty-free background music",
   "tags": [
    "free",
    "ai"
@@ -2091,7 +2091,7 @@
   "title": "Biteable",
   "category": "audio & video",
   "description": "Video maker with templates and animations.",
-  "use_case": null,
+  "use_case": "Build a video with templates and animations",
   "tags": [
    "audio"
   ],
@@ -2102,7 +2102,7 @@
   "title": "Blush",
   "category": "design & media",
   "description": "Hand-drawn illustration customization tool.",
-  "use_case": null,
+  "use_case": "Customize hand-drawn illustrations for designs",
   "tags": [
    "design"
   ],
@@ -2113,7 +2113,7 @@
   "title": "Clipchamp",
   "category": "audio & video",
   "description": "Screen recorder and video editor.",
-  "use_case": null,
+  "use_case": "Record your screen and edit the video",
   "tags": [
    "editor",
    "audio"
@@ -2125,7 +2125,7 @@
   "title": "Compose AI",
   "category": "ai tools",
   "description": "AI writing assistant.",
-  "use_case": null,
+  "use_case": "Get AI suggestions while writing",
   "tags": [
    "ai"
   ],
@@ -2136,7 +2136,7 @@
   "title": "Copy.ai",
   "category": "ai tools",
   "description": "AI copywriting tool for content creation.",
-  "use_case": null,
+  "use_case": "Generate marketing copy with AI",
   "tags": [
    "ai"
   ],
@@ -2147,7 +2147,7 @@
   "title": "CopyChar",
   "category": "web utilities",
   "description": "Types special characters and symbols.",
-  "use_case": null,
+  "use_case": "Copy a special character or symbol",
   "tags": [
    "web utilities"
   ],
@@ -2158,7 +2158,7 @@
   "title": "Descript",
   "category": "audio & video",
   "description": "Voice cloning and video transcription tool.",
-  "use_case": null,
+  "use_case": "Transcribe audio or clone a voice",
   "tags": [
    "audio"
   ],
@@ -2169,7 +2169,7 @@
   "title": "Doratoon",
   "category": "audio & video",
   "description": "Animation video creation with AI.",
-  "use_case": null,
+  "use_case": "Create animated videos from scripts with AI",
   "tags": [
    "audio"
   ],
@@ -2180,7 +2180,7 @@
   "title": "D-ID",
   "category": "design & media",
   "description": "Creates talking avatars from photos.",
-  "use_case": null,
+  "use_case": "Turn a photo into a talking avatar",
   "tags": [
    "design"
   ],
@@ -2191,7 +2191,7 @@
   "title": "Dictation.io",
   "category": "productivity",
   "description": "Speech-to-text transcription tool.",
-  "use_case": null,
+  "use_case": "Convert speech to text quickly",
   "tags": [
    "productivity"
   ],
@@ -2202,7 +2202,7 @@
   "title": "Easy-Peasy.ai",
   "category": "ai tools",
   "description": "AI content generation platform.",
-  "use_case": null,
+  "use_case": "Generate blog posts and marketing content",
   "tags": [
    "ai"
   ],
@@ -2213,7 +2213,7 @@
   "title": "FontStruct",
   "category": "design & media",
   "description": "Creates fonts using geometric shapes.",
-  "use_case": null,
+  "use_case": "Design custom fonts from geometric shapes",
   "tags": [
    "design & media"
   ],
@@ -2224,7 +2224,7 @@
   "title": "Huemint",
   "category": "design & media",
   "description": "Generates unique color schemes.",
-  "use_case": null,
+  "use_case": "Generate color schemes for a design",
   "tags": [
    "design"
   ],
@@ -2235,7 +2235,7 @@
   "title": "InVideo",
   "category": "audio & video",
   "description": "Video creation with templates and effects.",
-  "use_case": null,
+  "use_case": "Build a video from templates and effects",
   "tags": [
    "audio"
   ],
@@ -2246,7 +2246,7 @@
   "title": "Midjourney",
   "category": "ai tools",
   "description": "AI image generation from text.",
-  "use_case": null,
+  "use_case": "Generate images from text descriptions",
   "tags": [
    "ai"
   ],
@@ -2257,7 +2257,7 @@
   "title": "Murf.ai",
   "category": "audio & video",
   "description": "Text-to-speech and voice cloning tool.",
-  "use_case": null,
+  "use_case": "Convert text to speech or clone a voice",
   "tags": [
    "audio"
   ],
@@ -2268,7 +2268,7 @@
   "title": "Panzoid",
   "category": "audio & video",
   "description": "Video intro and outro creator.",
-  "use_case": null,
+  "use_case": "Create animated intros and outros",
   "tags": [
    "audio"
   ],
@@ -2279,7 +2279,7 @@
   "title": "PaperRater",
   "category": "writing",
   "description": "Essay plagiarism and grammar checker.",
-  "use_case": null,
+  "use_case": "Check essays for plagiarism and grammar",
   "tags": [
    "writing"
   ],
@@ -2290,7 +2290,7 @@
   "title": "Pictory.ai",
   "category": "ai tools",
   "description": "Converts text to videos with AI.",
-  "use_case": null,
+  "use_case": "Turn articles or scripts into videos",
   "tags": [
    "ai"
   ],
@@ -2315,7 +2315,7 @@
   "title": "Rytr",
   "category": "ai tools",
   "description": "AI writing assistant for content creation.",
-  "use_case": null,
+  "use_case": "Generate blog posts and sales copy with AI",
   "tags": [
    "ai"
   ],
@@ -2326,7 +2326,7 @@
   "title": "Scalenut",
   "category": "ai tools",
   "description": "AI content and SEO platform.",
-  "use_case": null,
+  "use_case": "Plan and optimize content for SEO",
   "tags": [
    "ai"
   ],
@@ -2337,7 +2337,7 @@
   "title": "Simplified",
   "category": "ai tools",
   "description": "Multi-purpose AI tool for creators.",
-  "use_case": null,
+  "use_case": "Create designs, videos, and copy with AI",
   "tags": [
    "ai"
   ],
@@ -2380,7 +2380,7 @@
   "title": "Tango",
   "category": "productivity",
   "description": "Step-by-step guide creation tool.",
-  "use_case": null,
+  "use_case": "Build step-by-step setup or onboarding guides",
   "tags": [
    "productivity"
   ],
@@ -2391,7 +2391,7 @@
   "title": "The Noun Project",
   "category": "design & media",
   "description": "Icons and photos repository.",
-  "use_case": null,
+  "use_case": "Find icons and stock photos",
   "tags": [
    "design"
   ],
@@ -2402,7 +2402,7 @@
   "title": "The Oatmeal",
   "category": "writing",
   "description": "Educational comics and content.",
-  "use_case": null,
+  "use_case": "Read clever educational comics",
   "tags": [
    "writing"
   ],
@@ -2413,7 +2413,7 @@
   "title": "Tome",
   "category": "ai tools",
   "description": "AI-powered presentation creation.",
-  "use_case": null,
+  "use_case": "Build AI-powered presentations quickly",
   "tags": [
    "ai"
   ],
@@ -2424,7 +2424,7 @@
   "title": "VideoScribe",
   "category": "audio & video",
   "description": "Animated GIF and video creator.",
-  "use_case": null,
+  "use_case": "Create animated explainer videos and GIFs",
   "tags": [
    "audio"
   ],
@@ -2435,7 +2435,7 @@
   "title": "WellSaid Labs",
   "category": "ai tools",
   "description": "AI voice-over creation tool.",
-  "use_case": null,
+  "use_case": "Create natural-sounding voice-overs with AI",
   "tags": [
    "ai"
   ],
@@ -2446,7 +2446,7 @@
   "title": "WhatRuns",
   "category": "web utilities",
   "description": "Identifies website technologies.",
-  "use_case": null,
+  "use_case": "See what technologies power a website",
   "tags": [
    "web"
   ],
@@ -2457,7 +2457,7 @@
   "title": "WhatTheFont",
   "category": "design & media",
   "description": "Font identification using deep learning.",
-  "use_case": null,
+  "use_case": "Identify a font from an image",
   "tags": [
    "design"
   ],
@@ -2468,7 +2468,7 @@
   "title": "Wordtune",
   "category": "ai tools",
   "description": "AI writing improvement tool.",
-  "use_case": null,
+  "use_case": "Improve your writing with AI suggestions",
   "tags": [
    "ai"
   ],
@@ -2479,7 +2479,7 @@
   "title": "Writesonic",
   "category": "writing",
   "description": "SEO-friendly content generation tool.",
-  "use_case": null,
+  "use_case": "Generate SEO-optimized web content",
   "tags": [
    "writing"
   ],
@@ -2490,7 +2490,7 @@
   "title": "BuiltWith",
   "category": "web utilities",
   "description": "Website technology stack identifier.",
-  "use_case": null,
+  "use_case": "Discover the tech stack of any website",
   "tags": [
    "web"
   ],
@@ -2501,7 +2501,7 @@
   "title": "Carrd",
   "category": "web utilities",
   "description": "One-page website builder.",
-  "use_case": null,
+  "use_case": "Build a single-page website quickly",
   "tags": [
    "web"
   ],
@@ -2512,7 +2512,7 @@
   "title": "Codecademy",
   "category": "developer tools",
   "description": "Interactive coding classes.",
-  "use_case": null,
+  "use_case": "Learn to code with interactive lessons",
   "tags": [
    "developer"
   ],
@@ -2538,7 +2538,7 @@
   "title": "Dillinger",
   "category": "file tools",
   "description": "Cloud Markdown editor.",
-  "use_case": null,
+  "use_case": "Write and preview Markdown online",
   "tags": [
    "file",
    "editor"
@@ -2550,7 +2550,7 @@
   "title": "Hunter.io",
   "category": "communication",
   "description": "Email address finder for websites.",
-  "use_case": null,
+  "use_case": "Find email addresses for business contacts",
   "tags": [
    "communication"
   ],
@@ -2561,7 +2561,7 @@
   "title": "Poised",
   "category": "communication",
   "description": "Communication skills improvement tool.",
-  "use_case": null,
+  "use_case": "Improve your speaking and presentation skills",
   "tags": [
    "communication"
   ],
@@ -2572,7 +2572,7 @@
   "title": "Spokeo",
   "category": "security & privacy",
   "description": "People search and contact finder.",
-  "use_case": null,
+  "use_case": "Look up someone's contact information",
   "tags": [
    "search"
   ],
@@ -2583,7 +2583,7 @@
   "title": "FlightStats",
   "category": "maps & travel",
   "description": "Real-time flight tracking.",
-  "use_case": null,
+  "use_case": "Track a flight in real time",
   "tags": [
    "maps"
   ],
@@ -2594,7 +2594,7 @@
   "title": "Rome2Rio",
   "category": "maps & travel",
   "description": "Travel route and transportation finder.",
-  "use_case": null,
+  "use_case": "Plan routes and compare transportation options",
   "tags": [
    "maps"
   ],
@@ -2605,7 +2605,7 @@
   "title": "Scribble Maps",
   "category": "maps & travel",
   "description": "Custom map annotation tool.",
-  "use_case": null,
+  "use_case": "Draw routes and notes on a custom map",
   "tags": [
    "maps"
   ],
@@ -2616,7 +2616,7 @@
   "title": "CareerBuilder",
   "category": "career",
   "description": "Job search platform.",
-  "use_case": null,
+  "use_case": "Search for job openings and apply",
   "tags": [
    "search",
    "career"
@@ -2628,7 +2628,7 @@
   "title": "Glassdoor",
   "category": "career",
   "description": "Job search with company reviews.",
-  "use_case": null,
+  "use_case": "Find jobs and read company reviews",
   "tags": [
    "search",
    "career"
@@ -2640,7 +2640,7 @@
   "title": "ZipRecruiter",
   "category": "career",
   "description": "Job board for seekers and employers.",
-  "use_case": null,
+  "use_case": "Search for jobs or post open positions",
   "tags": [
    "career"
   ],
@@ -2651,7 +2651,7 @@
   "title": "10 Minute Mail",
   "category": "communication",
   "description": "Temporary email address service.",
-  "use_case": null,
+  "use_case": "Get a temporary email address for signups",
   "tags": [
    "communication"
   ],
@@ -2662,7 +2662,7 @@
   "title": "Ecosia",
   "category": "security & privacy",
   "description": "Privacy-focused search engine supporting environment.",
-  "use_case": null,
+  "use_case": "Search privately while supporting the environment",
   "tags": [
    "search",
    "security"
@@ -2674,7 +2674,7 @@
   "title": "Scam Detector",
   "category": "security & privacy",
   "description": "Fraud prevention resource.",
-  "use_case": null,
+  "use_case": "Check if a website or company is a scam",
   "tags": [
    "security"
   ],
@@ -2685,7 +2685,7 @@
   "title": "Unroll.me",
   "category": "communication",
   "description": "Email spam unsubscribe tool.",
-  "use_case": null,
+  "use_case": "Unsubscribe from unwanted mailing lists",
   "tags": [
    "communication"
   ],
@@ -2696,7 +2696,7 @@
   "title": "VirusTotal",
   "category": "file tools",
   "description": "Multi-antivirus file scanning.",
-  "use_case": null,
+  "use_case": "Scan a file or URL with multiple antivirus engines",
   "tags": [
    "file"
   ],
@@ -2707,7 +2707,7 @@
   "title": "DWService",
   "category": "communication",
   "description": "Remote computer access service.",
-  "use_case": null,
+  "use_case": "Control a computer remotely",
   "tags": [
    "communication"
   ],
@@ -2718,7 +2718,7 @@
   "title": "Fast.com",
   "category": "web utilities",
   "description": "Netflix internet speed test.",
-  "use_case": null,
+  "use_case": "Test your internet connection speed",
   "tags": [
    "web"
   ],
@@ -2729,7 +2729,7 @@
   "title": "FaxZero",
   "category": "file tools",
   "description": "Free online fax service.",
-  "use_case": null,
+  "use_case": "Send a fax without a fax machine",
   "tags": [
    "online",
    "free",
@@ -2742,7 +2742,7 @@
   "title": "File.pizza",
   "category": "file tools",
   "description": "Peer-to-peer file transfer tool.",
-  "use_case": null,
+  "use_case": "Transfer files directly to someone else",
   "tags": [
    "file"
   ],
@@ -2753,7 +2753,7 @@
   "title": "GoFile",
   "category": "file tools",
   "description": "File sharing with unlimited storage.",
-  "use_case": null,
+  "use_case": "Share files with unlimited cloud storage",
   "tags": [
    "file"
   ],
@@ -2764,7 +2764,7 @@
   "title": "LibreSpeed",
   "category": "web utilities",
   "description": "Open-source speed test tool.",
-  "use_case": null,
+  "use_case": "Test internet speed on your own server",
   "tags": [
    "web"
   ],
@@ -2775,7 +2775,7 @@
   "title": "Namechk",
   "category": "web utilities",
   "description": "Username and domain availability checker.",
-  "use_case": null,
+  "use_case": "Check if a username or domain is available",
   "tags": [
    "web"
   ],
@@ -2786,7 +2786,7 @@
   "title": "OpenAI Playground",
   "category": "ai tools",
   "description": "AI text generation tool by OpenAI.",
-  "use_case": null,
+  "use_case": "Experiment with AI text generation",
   "tags": [
    "ai"
   ],
@@ -2797,7 +2797,7 @@
   "title": "SimilarSites",
   "category": "web utilities",
   "description": "Finds websites similar to your favorites.",
-  "use_case": null,
+  "use_case": "Discover websites similar to your favorites",
   "tags": [
    "web utilities"
   ],
@@ -2808,7 +2808,7 @@
   "title": "Snapdrop",
   "category": "file tools",
   "description": "Peer-to-peer local file sharing.",
-  "use_case": null,
+  "use_case": "Share files between nearby computers",
   "tags": [
    "file"
   ],
@@ -2819,7 +2819,7 @@
   "title": "ToffeeShare",
   "category": "file tools",
   "description": "Secure file sharing with expiring links.",
-  "use_case": null,
+  "use_case": "Share files securely with expiring links",
   "tags": [
    "file"
   ],
@@ -2830,7 +2830,7 @@
   "title": "ToS;DR",
   "category": "security & privacy",
   "description": "Summarizes website terms of service.",
-  "use_case": null,
+  "use_case": "Understand a website's terms of service",
   "tags": [
    "security"
   ],
@@ -2841,7 +2841,7 @@
   "title": "You.com",
   "category": "ai tools",
   "description": "Privacy-focused AI search engine.",
-  "use_case": null,
+  "use_case": "Search the web with privacy and AI",
   "tags": [
    "ai",
    "search"
@@ -2853,7 +2853,7 @@
   "title": "DoNotPay",
   "category": "ai tools",
   "description": "AI legal robot for disputes.",
-  "use_case": null,
+  "use_case": "Get AI help drafting a consumer dispute",
   "tags": [
    "ai"
   ],
@@ -2864,7 +2864,7 @@
   "title": "Down For Everyone Or Just Me",
   "category": "web utilities",
   "description": "Website status checker.",
-  "use_case": null,
+  "use_case": "Check if a website is down for everyone",
   "tags": [
    "web"
   ],
@@ -2875,7 +2875,7 @@
   "title": "FoodSubs",
   "category": "cooking",
   "description": "Food ingredient substitution guide.",
-  "use_case": null,
+  "use_case": "Find substitutes for cooking ingredients",
   "tags": [
    "cooking"
   ],
@@ -2886,7 +2886,7 @@
   "title": "Homestyler",
   "category": "design & media",
   "description": "Online interior design tool.",
-  "use_case": null,
+  "use_case": "Plan and visualize interior design changes",
   "tags": [
    "design",
    "online"
@@ -2898,7 +2898,7 @@
   "title": "iFixit",
   "category": "diy & repair",
   "description": "Device repair guides and manuals.",
-  "use_case": null,
+  "use_case": "Follow step-by-step device repair guides",
   "tags": [
    "diy"
   ],
@@ -2909,7 +2909,7 @@
   "title": "Instructables",
   "category": "diy & repair",
   "description": "DIY project instructions.",
-  "use_case": null,
+  "use_case": "Find instructions for DIY projects",
   "tags": [
    "diy"
   ],
@@ -2920,7 +2920,7 @@
   "title": "Interior AI",
   "category": "ai tools",
   "description": "AI interior design suggestions.",
-  "use_case": null,
+  "use_case": "Get AI-powered interior design suggestions",
   "tags": [
    "ai"
   ],
@@ -2931,7 +2931,7 @@
   "title": "Ninite",
   "category": "developer tools",
   "description": "Batch installer for open-source software.",
-  "use_case": null,
+  "use_case": "Install multiple open-source apps at once",
   "tags": [
    "software"
   ],
@@ -2942,7 +2942,7 @@
   "title": "Online OCR",
   "category": "design & media",
   "description": "Text extraction from images.",
-  "use_case": null,
+  "use_case": "Extract text from an image or scanned document",
   "tags": [
    "design"
   ],
@@ -2953,7 +2953,7 @@
   "title": "Open Source Alternative",
   "category": "developer tools",
   "description": "Open source software alternatives.",
-  "use_case": null,
+  "use_case": "Find open-source alternatives to paid software",
   "tags": [
    "software"
   ],
@@ -2964,7 +2964,7 @@
   "title": "RepairClinic",
   "category": "diy & repair",
   "description": "Appliance repair guides and parts.",
-  "use_case": null,
+  "use_case": "Find appliance repair guides and replacement parts",
   "tags": [
    "diy"
   ],
@@ -2975,7 +2975,7 @@
   "title": "Upwork",
   "category": "career",
   "description": "Freelance job platform.",
-  "use_case": null,
+  "use_case": "Find or post freelance jobs",
   "tags": [
    "free",
    "career"
@@ -2987,7 +2987,7 @@
   "title": "GoodReads",
   "category": "books & reading",
   "description": "World's largest community of book lovers for tracking and discovering books.",
-  "use_case": null,
+  "use_case": "Discover books and track what you're reading",
   "tags": [
    "books"
   ],
@@ -2998,7 +2998,7 @@
   "title": "Audible",
   "category": "audio & video",
   "description": "Collection of audiobooks and quality audio courses.",
-  "use_case": null,
+  "use_case": "Listen to audiobooks and audio courses",
   "tags": [
    "audio"
   ],
@@ -3009,7 +3009,7 @@
   "title": "Blinkist",
   "category": "books & reading",
   "description": "Quick summaries of 2500+ bestselling books in 15-minute formats.",
-  "use_case": null,
+  "use_case": "Get 15-minute summaries of bestselling books",
   "tags": [
    "books & reading"
   ],
@@ -3020,7 +3020,7 @@
   "title": "Book Riot",
   "category": "news & reading",
   "description": "Online publication with entertaining news and book reviews.",
-  "use_case": null,
+  "use_case": "Read entertaining book news and reviews",
   "tags": [
    "online",
    "news"
@@ -3032,7 +3032,7 @@
   "title": "Pixel of Ink",
   "category": "books & reading",
   "description": "Tracks free and discounted Kindle eBooks.",
-  "use_case": null,
+  "use_case": "Find free or discounted Kindle ebooks",
   "tags": [
    "free",
    "books"
@@ -3044,7 +3044,7 @@
   "title": "WhichBook",
   "category": "books & reading",
   "description": "Provides quality book recommendations based on preferences.",
-  "use_case": null,
+  "use_case": "Get personalized book recommendations",
   "tags": [
    "books"
   ],
@@ -3055,7 +3055,7 @@
   "title": "Instapaper",
   "category": "books & reading",
   "description": "Save articles for later reading with highlighting and notes.",
-  "use_case": null,
+  "use_case": "Save articles to read when you have time",
   "tags": [
    "books"
   ],
@@ -3066,7 +3066,7 @@
   "title": "Pocket",
   "category": "news & reading",
   "description": "Read-later application for saving articles and videos.",
-  "use_case": null,
+  "use_case": "Bookmark articles and videos for later reading",
   "tags": [
    "news & reading"
   ],
@@ -3077,7 +3077,7 @@
   "title": "Google Translate",
   "category": "web utilities",
   "description": "Converts text between languages with browser extension.",
-  "use_case": null,
+  "use_case": "Get an English translation of foreign text",
   "tags": [
    "browser"
   ],
@@ -3088,7 +3088,7 @@
   "title": "JustPaste.it",
   "category": "web utilities",
   "description": "Lightweight service for sharing formatted text at unique URLs.",
-  "use_case": null,
+  "use_case": "Share formatted text at a temporary unique URL",
   "tags": [
    "web utilities"
   ],
@@ -3099,7 +3099,7 @@
   "title": "Mailinator",
   "category": "communication",
   "description": "Creates disposable email inboxes to avoid spam.",
-  "use_case": null,
+  "use_case": "Get a throwaway email for one-time signups",
   "tags": [
    "communication"
   ],
@@ -3110,7 +3110,7 @@
   "title": "Mega",
   "category": "file tools",
   "description": "File hosting with 50GB free space and local encryption.",
-  "use_case": null,
+  "use_case": "Store files securely with 50GB free space",
   "tags": [
    "free",
    "file"
@@ -3122,7 +3122,7 @@
   "title": "Dropbox",
   "category": "file tools",
   "description": "Cloud storage synced across devices.",
-  "use_case": null,
+  "use_case": "Keep files synced across your devices",
   "tags": [
    "file"
   ],
@@ -3133,7 +3133,7 @@
   "title": "OneDrive",
   "category": "file tools",
   "description": "Microsoft's cloud storage for sharing and editing files.",
-  "use_case": null,
+  "use_case": "Share and edit documents online",
   "tags": [
    "file"
   ],
@@ -3144,7 +3144,7 @@
   "title": "Google Drive",
   "category": "file tools",
   "description": "Virtual drive for hosting and editing files online.",
-  "use_case": null,
+  "use_case": "Create and edit documents online with others",
   "tags": [
    "online"
   ],
@@ -3155,7 +3155,7 @@
   "title": "Hightail",
   "category": "file tools",
   "description": "Solution for sending large files and team collaboration.",
-  "use_case": null,
+  "use_case": "Send large files to colleagues or clients",
   "tags": [
    "file"
   ],
@@ -3166,7 +3166,7 @@
   "title": "TransferWise (Wise)",
   "category": "finance",
   "description": "Fast money transfers in multiple currencies at real rates.",
-  "use_case": null,
+  "use_case": "Send money internationally at real rates",
   "tags": [
    "finance"
   ],
@@ -3177,7 +3177,7 @@
   "title": "MoneySavingExpert",
   "category": "shopping",
   "description": "Resource for credit card deals, coupons, and savings tips.",
-  "use_case": null,
+  "use_case": "Find cashback deals and money-saving coupons",
   "tags": [
    "shopping"
   ],
@@ -3188,7 +3188,7 @@
   "title": "Expensify",
   "category": "finance",
   "description": "Tracks spending and generates expense reports.",
-  "use_case": null,
+  "use_case": "Track business expenses and create reports",
   "tags": [
    "finance"
   ],
@@ -3199,7 +3199,7 @@
   "title": "TaxAct",
   "category": "finance",
   "description": "Platform for preparing and filing taxes online.",
-  "use_case": null,
+  "use_case": "File your taxes online affordably",
   "tags": [
    "online",
    "finance"
@@ -3211,7 +3211,7 @@
   "title": "TED",
   "category": "audio & video",
   "description": "Short video lectures with educational lessons and inspirational talks.",
-  "use_case": null,
+  "use_case": "Learn from short talks on any topic",
   "tags": [
    "audio"
   ],
@@ -3222,7 +3222,7 @@
   "title": "Kialo",
   "category": "news & reading",
   "description": "Debate platform listing pros and cons of topics.",
-  "use_case": null,
+  "use_case": "Explore pros and cons of any debate topic",
   "tags": [
    "news"
   ],
@@ -3233,7 +3233,7 @@
   "title": "Quora",
   "category": "reference & calculators",
   "description": "Question and answer website for sharing knowledge.",
-  "use_case": null,
+  "use_case": "Find answers to niche or specific questions",
   "tags": [
    "search"
   ],
@@ -3244,7 +3244,7 @@
   "title": "Coursera",
   "category": "education",
   "description": "Online learning from world's top universities and organizations.",
-  "use_case": null,
+  "use_case": "Take courses from top universities online",
   "tags": [
    "online",
    "education",
@@ -3257,7 +3257,7 @@
   "title": "LinkedIn Learning",
   "category": "audio & video",
   "description": "Video courses on diverse topics by subscription.",
-  "use_case": null,
+  "use_case": "Learn job skills from video courses",
   "tags": [
    "audio"
   ],
@@ -3268,7 +3268,7 @@
   "title": "MAKE",
   "category": "diy & repair",
   "description": "DIY culture website with tutorials and projects.",
-  "use_case": null,
+  "use_case": "Learn how to build or fix things",
   "tags": [
    "diy"
   ],
@@ -3279,7 +3279,7 @@
   "title": "StackOverflow",
   "category": "developer tools",
   "description": "Website for programmers learning and discussing concepts.",
-  "use_case": null,
+  "use_case": "Search answers to programming questions",
   "tags": [
    "developer tools"
   ],
@@ -3290,7 +3290,7 @@
   "title": "Yelp",
   "category": "shopping",
   "description": "Local review site covering restaurants, services, and professionals.",
-  "use_case": null,
+  "use_case": "Read reviews of restaurants and local services",
   "tags": [
    "shopping"
   ],
@@ -3301,7 +3301,7 @@
   "title": "Like a Local Guide",
   "category": "maps & travel",
   "description": "Insider tips and information from local perspectives.",
-  "use_case": null,
+  "use_case": "Get local travel tips from residents",
   "tags": [
    "maps & travel"
   ],
@@ -3312,7 +3312,7 @@
   "title": "LivingSocial",
   "category": "shopping",
   "description": "Bargain deals on local shops, restaurants, and activities.",
-  "use_case": null,
+  "use_case": "Find discount deals on restaurants and activities",
   "tags": [
    "shopping"
   ],
@@ -3323,7 +3323,7 @@
   "title": "Groupon",
   "category": "shopping",
   "description": "Local offers and deals on meals, vacations, and services.",
-  "use_case": null,
+  "use_case": "Find deals on local restaurants and experiences",
   "tags": [
    "shopping"
   ],
@@ -3334,7 +3334,7 @@
   "title": "TripAdvisor",
   "category": "maps & travel",
   "description": "Flights and hotel directory with attractions information.",
-  "use_case": null,
+  "use_case": "Search flights and hotels for your trip",
   "tags": [
    "maps"
   ],
@@ -3345,7 +3345,7 @@
   "title": "Weather Underground",
   "category": "maps & travel",
   "description": "Weather website providing updates for any location.",
-  "use_case": null,
+  "use_case": "Check the weather forecast for any location",
   "tags": [
    "maps"
   ],
@@ -3356,7 +3356,7 @@
   "title": "Netflix",
   "category": "audio & video",
   "description": "Streaming service with TV shows and original productions.",
-  "use_case": null,
+  "use_case": "Find something to watch tonight",
   "tags": [
    "audio"
   ],
@@ -3367,7 +3367,7 @@
   "title": "Amazon Prime Video",
   "category": "audio & video",
   "description": "Streaming service offering shows, movies, and content.",
-  "use_case": null,
+  "use_case": "Find a movie or show to watch",
   "tags": [
    "audio"
   ],
@@ -3378,7 +3378,7 @@
   "title": "Rotten Tomatoes",
   "category": "shopping",
   "description": "Collection of unbiased reviews on TV shows and movies.",
-  "use_case": null,
+  "use_case": "Check reviews before watching a movie",
   "tags": [
    "shopping"
   ],
@@ -3389,7 +3389,7 @@
   "title": "IMDb",
   "category": "audio & video",
   "description": "Database with movie facts, ratings, and trivia.",
-  "use_case": null,
+  "use_case": "Look up cast and trivia for a movie",
   "tags": [
    "audio"
   ],
@@ -3400,7 +3400,7 @@
   "title": "YouTube Movies",
   "category": "audio & video",
   "description": "Decent collection of free movies to watch.",
-  "use_case": null,
+  "use_case": "Watch free movies online",
   "tags": [
    "free",
    "audio"
@@ -3412,7 +3412,7 @@
   "title": "ScreenRant",
   "category": "audio & video",
   "description": "Latest and insightful TV and movie news.",
-  "use_case": null,
+  "use_case": "Read the latest movie and TV news",
   "tags": [
    "audio"
   ],
@@ -3423,7 +3423,7 @@
   "title": "Short of The Week",
   "category": "audio & video",
   "description": "Hand-picked independent short films updated weekly.",
-  "use_case": null,
+  "use_case": "Discover independent short films",
   "tags": [
    "audio"
   ],
@@ -3434,7 +3434,7 @@
   "title": "Vimeo",
   "category": "audio & video",
   "description": "Video platform featuring independent film industry content.",
-  "use_case": null,
+  "use_case": "Watch independent films and artist projects",
   "tags": [
    "audio"
   ],
@@ -3445,7 +3445,7 @@
   "title": "Spotify",
   "category": "audio & video",
   "description": "Music streaming accessible from mobile and PC.",
-  "use_case": null,
+  "use_case": "Stream music across your devices",
   "tags": [
    "audio"
   ],
@@ -3456,7 +3456,7 @@
   "title": "TuneIn",
   "category": "audio & video",
   "description": "Free internet radio service streaming 100,000+ stations.",
-  "use_case": null,
+  "use_case": "Find and listen to radio stations worldwide",
   "tags": [
    "free",
    "audio"
@@ -3468,7 +3468,7 @@
   "title": "SoundCloud",
   "category": "audio & video",
   "description": "Platform for downloading and uploading licensed music.",
-  "use_case": null,
+  "use_case": "Listen to emerging artists and remixes",
   "tags": [
    "audio"
   ],
@@ -3479,7 +3479,7 @@
   "title": "Songkick",
   "category": "social media",
   "description": "Artist concert notifications linked to social media accounts.",
-  "use_case": null,
+  "use_case": "Get notified when favorite artists tour",
   "tags": [
    "social"
   ],
@@ -3490,7 +3490,7 @@
   "title": "Last.fm",
   "category": "audio & video",
   "description": "Music platform with listening habit analysis and recommendations.",
-  "use_case": null,
+  "use_case": "Track your music taste and discover recommendations",
   "tags": [
    "audio"
   ],
@@ -3501,7 +3501,7 @@
   "title": "Pandora",
   "category": "audio & video",
   "description": "Free personalized internet radio based on favorite artists.",
-  "use_case": null,
+  "use_case": "Listen to personalized radio stations free",
   "tags": [
    "free",
    "audio"
@@ -3513,7 +3513,7 @@
   "title": "Genius",
   "category": "audio & video",
   "description": "Community platform for deconstructing and discussing songs.",
-  "use_case": null,
+  "use_case": "Look up song lyrics and meanings",
   "tags": [
    "audio"
   ],
@@ -3524,7 +3524,7 @@
   "title": "Mixcloud",
   "category": "audio & video",
   "description": "Listen to radio stations and upload your own shows.",
-  "use_case": null,
+  "use_case": "Listen to DJ mixes and radio shows",
   "tags": [
    "audio"
   ],
@@ -3535,7 +3535,7 @@
   "title": "The Conversation",
   "category": "news & reading",
   "description": "In-depth analysis and news on diverse topics.",
-  "use_case": null,
+  "use_case": "Read in-depth analysis on current events",
   "tags": [
    "news"
   ],
@@ -3546,7 +3546,7 @@
   "title": "Reuters",
   "category": "news & reading",
   "description": "Multimedia news agency with objective reporting.",
-  "use_case": null,
+  "use_case": "Read objective news from around the world",
   "tags": [
    "news"
   ],
@@ -3557,7 +3557,7 @@
   "title": "Reddit",
   "category": "news & reading",
   "description": "International platform covering serious and absurd news.",
-  "use_case": null,
+  "use_case": "Find niche communities and discussions",
   "tags": [
    "news"
   ],
@@ -3568,7 +3568,7 @@
   "title": "Google News",
   "category": "news & reading",
   "description": "Aggregates top stories globally with personalized recommendations.",
-  "use_case": null,
+  "use_case": "Get personalized news headlines daily",
   "tags": [
    "news & reading"
   ],
@@ -3579,7 +3579,7 @@
   "title": "Quartz",
   "category": "news & reading",
   "description": "Global-centric news platform with unique story angles.",
-  "use_case": null,
+  "use_case": "Read business and tech news",
   "tags": [
    "news"
   ],
@@ -3590,7 +3590,7 @@
   "title": "Hacker News",
   "category": "news & reading",
   "description": "Tech news site offering unique insider perspective.",
-  "use_case": null,
+  "use_case": "Follow tech and startup news",
   "tags": [
    "news"
   ],
@@ -3601,7 +3601,7 @@
   "title": "FiveThirtyEight",
   "category": "news & reading",
   "description": "Data-centric news blog providing statistical perspective.",
-  "use_case": null,
+  "use_case": "Read news explained with data and analysis",
   "tags": [
    "news"
   ],
@@ -3612,7 +3612,7 @@
   "title": "Tor Project",
   "category": "security & privacy",
   "description": "Browser enabling safe anonymous web browsing.",
-  "use_case": null,
+  "use_case": "Access the internet anonymously",
   "tags": [
    "browser",
    "security"
@@ -3624,7 +3624,7 @@
   "title": "LastPass",
   "category": "security & privacy",
   "description": "Password manager protecting credentials with encryption.",
-  "use_case": null,
+  "use_case": "Manage and secure all your passwords",
   "tags": [
    "security"
   ],
@@ -3635,7 +3635,7 @@
   "title": "BleepingComputer",
   "category": "security & privacy",
   "description": "Security news and malware removal guides.",
-  "use_case": null,
+  "use_case": "Read security news and malware removal tips",
   "tags": [
    "security"
   ],
@@ -3646,7 +3646,7 @@
   "title": "DuckDuckGo",
   "category": "reference & calculators",
   "description": "Search engine anonymizing searches without keeping logs.",
-  "use_case": null,
+  "use_case": "Search the web privately without tracking",
   "tags": [
    "search"
   ],
@@ -3657,7 +3657,7 @@
   "title": "JustDelete.Me",
   "category": "social media",
   "description": "Collection of links for quickly deleting social media accounts.",
-  "use_case": null,
+  "use_case": "Find instructions to delete a social media account",
   "tags": [
    "social"
   ],
@@ -3668,7 +3668,7 @@
   "title": "Microsoft Office Online",
   "category": "communication",
   "description": "Free browser-based access to edit MS Office files.",
-  "use_case": null,
+  "use_case": "Edit Word documents and spreadsheets in your browser",
   "tags": [
    "free",
    "browser",
@@ -3681,7 +3681,7 @@
   "title": "OneNote",
   "category": "productivity",
   "description": "Note-taking app with customizable layout options.",
-  "use_case": null,
+  "use_case": "Take and organize notes across devices",
   "tags": [
    "productivity"
   ],
@@ -3692,7 +3692,7 @@
   "title": "Google Hangouts",
   "category": "communication",
   "description": "Communication application for staying in touch globally.",
-  "use_case": null,
+  "use_case": "Message and video call contacts",
   "tags": [
    "communication"
   ],
@@ -3703,7 +3703,7 @@
   "title": "Join.me",
   "category": "communication",
   "description": "Screen-sharing application for remote collaboration.",
-  "use_case": null,
+  "use_case": "Share your screen with others remotely",
   "tags": [
    "communication"
   ],
@@ -3714,7 +3714,7 @@
   "title": "A Soft Murmur",
   "category": "design & media",
   "description": "Ambient background sounds for working or studying.",
-  "use_case": null,
+  "use_case": "Play ambient sounds while working",
   "tags": [
    "design"
   ],
@@ -3725,7 +3725,7 @@
   "title": "Wikipedia",
   "category": "reference & calculators",
   "description": "Most popular collection of knowledge online.",
-  "use_case": null,
+  "use_case": "Look up information on any topic",
   "tags": [
    "online"
   ],
@@ -3736,7 +3736,7 @@
   "title": "SkyScanner",
   "category": "maps & travel",
   "description": "Flight search engine for domestic and international travel.",
-  "use_case": null,
+  "use_case": "Find the cheapest flights for your trip",
   "tags": [
    "search",
    "maps"
@@ -3748,7 +3748,7 @@
   "title": "Etsy",
   "category": "shopping",
   "description": "Online store for makers and artists to sell products.",
-  "use_case": null,
+  "use_case": "Buy handmade and vintage items",
   "tags": [
    "online",
    "shopping"
@@ -3760,7 +3760,7 @@
   "title": "eBay",
   "category": "shopping",
   "description": "Global marketplace for buying and selling items.",
-  "use_case": null,
+  "use_case": "Bid on or buy items from sellers worldwide",
   "tags": [
    "shopping"
   ],
@@ -3771,7 +3771,7 @@
   "title": "Craigslist",
   "category": "shopping",
   "description": "Minimalist classified ads site for buying and selling.",
-  "use_case": null,
+  "use_case": "Find used items or sell locally",
   "tags": [
    "shopping"
   ],
@@ -3782,7 +3782,7 @@
   "title": "Overstock",
   "category": "shopping",
   "description": "Online retail outlet with deals and international shipping.",
-  "use_case": null,
+  "use_case": "Buy home goods at a discount",
   "tags": [
    "online",
    "shopping"
@@ -3794,7 +3794,7 @@
   "title": "ThinkGeek",
   "category": "shopping",
   "description": "Specialty retailer for gadgets, gifts, and tech accessories.",
-  "use_case": null,
+  "use_case": "Find unique gifts and tech gadgets",
   "tags": [
    "shopping"
   ],
@@ -3805,7 +3805,7 @@
   "title": "Newegg",
   "category": "shopping",
   "description": "Electronics retailer offering consumer products at good prices.",
-  "use_case": null,
+  "use_case": "Buy computer and electronics parts",
   "tags": [
    "shopping"
   ],
@@ -3816,7 +3816,7 @@
   "title": "ViaBox",
   "category": "shopping",
   "description": "Package forwarding service for international shoppers.",
-  "use_case": null,
+  "use_case": "Get international items shipped to your country",
   "tags": [
    "shopping"
   ],
@@ -3827,7 +3827,7 @@
   "title": "Canopy",
   "category": "shopping",
   "description": "Amazon curated marketplace for beautifully designed items.",
-  "use_case": null,
+  "use_case": "Find beautifully designed products",
   "tags": [
    "shopping"
   ],
@@ -3838,7 +3838,7 @@
   "title": "Facebook",
   "category": "social media",
   "description": "Leading social network for events, sharing, and connections.",
-  "use_case": null,
+  "use_case": "Connect with friends and family",
   "tags": [
    "social"
   ],
@@ -3849,7 +3849,7 @@
   "title": "Twitter (X)",
   "category": "social media",
   "description": "Time-saving social media platform.",
-  "use_case": null,
+  "use_case": "Follow news and conversations",
   "tags": [
    "social"
   ],
@@ -3860,7 +3860,7 @@
   "title": "Instagram",
   "category": "design & media",
   "description": "Visual communication platform for sharing images and videos.",
-  "use_case": null,
+  "use_case": "Share photos and videos with friends",
   "tags": [
    "design"
   ],
@@ -3871,7 +3871,7 @@
   "title": "Pinterest",
   "category": "writing",
   "description": "Platform for sharing and collecting visual content albums.",
-  "use_case": null,
+  "use_case": "Collect and share visual inspiration",
   "tags": [
    "writing"
   ],
@@ -3882,7 +3882,7 @@
   "title": "WhatsApp Web",
   "category": "social media",
   "description": "Messaging app with web and desktop versions.",
-  "use_case": null,
+  "use_case": "Send messages to contacts from your browser",
   "tags": [
    "social"
   ],
@@ -3907,7 +3907,7 @@
   "title": "Imgur",
   "category": "design & media",
   "description": "Photo-hosting platform for sharing and viewing images.",
-  "use_case": null,
+  "use_case": "Share and view images online",
   "tags": [
    "design"
   ],
@@ -3918,7 +3918,7 @@
   "title": "Tumblr",
   "category": "writing",
   "description": "Blogging platform for creating and sharing original content.",
-  "use_case": null,
+  "use_case": "Create a blog or share original content",
   "tags": [
    "writing"
   ],
@@ -3929,7 +3929,7 @@
   "title": "MakeUseOf",
   "category": "news & reading",
   "description": "Tech blog teaching gadget use and internet discovery.",
-  "use_case": null,
+  "use_case": "Learn how to use gadgets and tools",
   "tags": [
    "news"
   ],
@@ -3940,7 +3940,7 @@
   "title": "SourceForge",
   "category": "developer tools",
   "description": "Open-source software collection and publishing platform.",
-  "use_case": null,
+  "use_case": "Find open-source software projects",
   "tags": [
    "software"
   ],
@@ -6082,7 +6082,7 @@
   "title": "GameAnalytics",
   "category": "game dev",
   "description": "Free game telemetry and player-behavior analytics SDK.",
-  "use_case": null,
+  "use_case": "Track player behavior and game metrics",
   "tags": [
    "playtesting",
    "analytics"
@@ -6094,7 +6094,7 @@
   "title": "Diversion",
   "category": "game dev",
   "description": "Version control built for game teams — handles large binary assets natively.",
-  "use_case": null,
+  "use_case": "Manage game files with version control",
   "tags": [
    "tools",
    "version-control"
@@ -6106,7 +6106,7 @@
   "title": "Unity Asset Store",
   "category": "game dev",
   "description": "Marketplace for Unity-ready assets, tools, and plugins.",
-  "use_case": null,
+  "use_case": "Find assets and plugins for Unity games",
   "tags": [
    "assets",
    "unity"
@@ -6133,7 +6133,7 @@
   "title": "POEditor",
   "category": "game dev",
   "description": "Localization management platform for translating apps and games.",
-  "use_case": null,
+  "use_case": "Translate your app into multiple languages",
   "tags": [
    "localization"
   ],

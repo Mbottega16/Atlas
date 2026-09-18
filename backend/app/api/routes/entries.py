@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
@@ -35,10 +35,11 @@ def search_entries(
     favorite: bool | None = None,
     limit: int = 50,
     offset: int = 0,
+    categories: list[str] | None = Query(None),
     db: Session = Depends(get_db),
 ):
     total, items = entry_service.list_entries(
-        db, q, category, tag, use_case, favorite, limit, offset
+        db, q, category, tag, use_case, favorite, limit, offset, categories
     )
     return EntryListOut(total=total, items=[_to_out(e) for e in items])
 

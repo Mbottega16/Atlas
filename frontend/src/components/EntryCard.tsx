@@ -17,11 +17,15 @@ export default function EntryCard({
   onVisit,
   onFavoriteToggle,
   onChanged,
+  onTagClick,
+  onCategoryClick,
 }: {
   entry: Entry;
   view?: "grid" | "list" | "large";
   onVisit?: () => void;
   onFavoriteToggle?: () => void;
+  onTagClick?: (tag: string) => void;
+  onCategoryClick?: (category: string) => void;
   // Passing this in turns on the Edit / Delete controls and is called after
   // either succeeds, so the parent can refresh its list.
   onChanged?: () => void;
@@ -107,16 +111,39 @@ export default function EntryCard({
           </a>
         </h3>
         <div className="meta">
-          {entry.category}
+          {onCategoryClick ? (
+            <button
+              type="button"
+              className="meta-category"
+              title={`Show everything in ${entry.category}`}
+              onClick={() => onCategoryClick(entry.category)}
+            >
+              {entry.category}
+            </button>
+          ) : (
+            entry.category
+          )}
           {entry.use_case ? ` · ${entry.use_case}` : ""}
         </div>
         {entry.description && <p>{entry.description}</p>}
         <div className="tag-row">
-          {entry.tags.map((t) => (
-            <span key={t} className="tag-pill">
-              {t}
-            </span>
-          ))}
+          {entry.tags.map((t) =>
+            onTagClick ? (
+              <button
+                key={t}
+                type="button"
+                className="tag-pill"
+                title={`Show everything tagged ${t}`}
+                onClick={() => onTagClick(t)}
+              >
+                {t}
+              </button>
+            ) : (
+              <span key={t} className="tag-pill">
+                {t}
+              </span>
+            )
+          )}
         </div>
         {onChanged && (
           <div className="entry-card-admin">

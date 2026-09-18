@@ -1,45 +1,72 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { authStatus, logout, markVisited, randomEntry } from "./api/client";
-import type { Filters } from "./components/FilterBar";
 import FavoritesPanel from "./components/FavoritesPanel";
+import { EMPTY_FILTERS, Filters } from "./components/FilterBar";
 import BrowsePage from "./pages/BrowsePage";
 import CapturePage from "./pages/CapturePage";
-import GuidePage, { BrowseFilters } from "./pages/GuidePage";
+import GuidePage from "./pages/GuidePage";
 
 type Tab = "find" | "browse" | "capture";
 
-const EMPTY_FILTERS: Filters = { q: "", category: "", tag: "" };
-const FILTERS_KEY = "atlas.browseFilters";
+const TABS: Tab[] = ["find", "browse", "capture"];
+const FILTER_KEYS = ["group", "category", "tag", "q"] as const;
 
-function loadFilters(): Filters {
-  try {
-    const raw = localStorage.getItem(FILTERS_KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw);
-      return {
-        q: String(parsed.q ?? ""),
-        category: String(parsed.category ?? ""),
-        tag: String(parsed.tag ?? ""),
-      };
-    }
-  } catch {
-    // ignore — per-viewer convenience only
+interface View {
+  tab: Tab;
+  filters: Filters;
+}
+
+function readUrl(): View {
+  const params = new URLSearchParams(window.location.search);
+  const tab = params.get("tab") as Tab | null;
+  const filters = { ...EMPTY_FILTERS };
+  for (const key of FILTER_KEYS) filters[key] = params.get(key) ?? "";
+  return { tab: tab && TABS.includes(tab) ? tab : "find", filters };
+}
+
+function toSearch({ tab, filters }: View): string {
+  const params = new URLSearchParams();
+  if (tab !== "find") params.set("tab", tab);
+  if (tab === "browse") {
+    for (const key of FILTER_KEYS) if (filters[key]) params.set(key, filters[key]);
   }
-  return EMPTY_FILTERS;
+  const search = params.toString();
+  return search ? `?${search}` : "";
 }
 
 export default function App() {
-  const [tab, setTab] = useState<Tab>("find");
-  const [browseFilters, setBrowseFilters] = useState<Filters>(loadFilters);
+  // The URL is the view: every filter is bookmarkable and Back undoes it.
+  const [view, setView] = useState<View>(readUrl);
+  const { tab, filters } = view;
+  const lastView = useRef<View>(view);
 
   useEffect(() => {
-    try {
-      localStorage.setItem(FILTERS_KEY, JSON.stringify(browseFilters));
-    } catch {
-      // ignore
-    }
-  }, [browseFilters]);
+    const search = toSearch(view);
+    const previous = lastView.current;
+    lastView.current = view;
+    if (search === window.location.search) return;
+
+    // Refining a search replaces its entry instead of stacking one per keystroke.
+    const refiningSearch =
+      previous.tab === view.tab &&
+      previous.filters.q !== "" &&
+      view.filters.q !== "" &&
+      FILTER_KEYS.every((key) => key === "q" || previous.filters[key] === view.filters[key]);
+
+    const url = `${window.location.pathname}${search}`;
+    if (refiningSearch) window.history.replaceState(null, "", url);
+    else window.history.pushState(null, "", url);
+  }, [view]);
+
+  useEffect(() => {
+    const onPopState = () => setView(readUrl());
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  const setTab = (next: Tab) => setView((v) => ({ ...v, tab: next }));
+  const setFilters = (next: Filters) => setView((v) => ({ ...v, filters: next }));
 
   const [authRequired, setAuthRequired] = useState(false);
   useEffect(() => {
@@ -81,10 +108,7 @@ export default function App() {
   };
 
   // The guide hands Browse a preset filter and switches tabs to it.
-  const handleSeeAll = (filters: BrowseFilters) => {
-    setBrowseFilters(filters);
-    setTab("browse");
-  };
+  const handleSeeAll = (next: Filters) => setView({ tab: "browse", filters: next });
 
   const navLink = (t: Tab, label: string) => (
     <a
@@ -150,8 +174,8 @@ export default function App() {
       )}
       {tab === "browse" && (
         <BrowsePage
-          filters={browseFilters}
-          onFilters={setBrowseFilters}
+          filters={filters}
+          onFilters={setFilters}
           onVisit={handleVisit}
           onFavoriteToggle={handleFavoriteToggle}
         />

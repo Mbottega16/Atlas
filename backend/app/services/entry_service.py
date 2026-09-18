@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from sqlalchemy import func, select
+from sqlalchemy import case, func, select
 from sqlalchemy.orm import Session
 
 from app.models.entry import Entry
@@ -23,6 +23,9 @@ def _get_or_create_tags(db: Session, names: list[str]) -> list[Tag]:
     return tags
 
 
+ESSENTIAL_TAG = "essential"
+
+
 def list_entries(
     db: Session,
     q: str | None = None,
@@ -32,27 +35,50 @@ def list_entries(
     favorite: bool | None = None,
     limit: int = 50,
     offset: int = 0,
+    categories: list[str] | None = None,
 ) -> tuple[int, list[Entry]]:
     stmt = select(Entry)
+    relevance = None
     if q:
-        like = f"%{q}%"
+        like = f"%{q.strip()}%"
+        tag_match = Entry.tags.any(Tag.name.ilike(like))
         stmt = stmt.where(
-            (Entry.title.ilike(like))
-            | (Entry.description.ilike(like))
-            | (Entry.link.ilike(like))
-            | (Entry.use_case.ilike(like))
+            Entry.title.ilike(like)
+            | Entry.description.ilike(like)
+            | Entry.link.ilike(like)
+            | Entry.use_case.ilike(like)
+            | tag_match
+        )
+        relevance = case(
+            (Entry.title.ilike(like), 0),
+            (Entry.use_case.ilike(like), 1),
+            (tag_match, 2),
+            else_=3,
         )
     if category:
         stmt = stmt.where(Entry.category == category)
+    if categories:
+        stmt = stmt.where(Entry.category.in_(categories))
     if use_case:
         stmt = stmt.where(Entry.use_case.ilike(f"%{use_case}%"))
     if tag:
-        stmt = stmt.join(Entry.tags).where(Tag.name == tag.strip().lower())
+        stmt = stmt.where(Entry.tags.any(Tag.name == tag.strip().lower()))
     if favorite is not None:
         stmt = stmt.where(Entry.is_favorite == favorite)
 
     total = db.execute(select(func.count()).select_from(stmt.subquery())).scalar_one()
-    stmt = stmt.order_by(Entry.created_at.desc()).limit(limit).offset(offset)
+
+    # Ranking lives here, not in the client: ranking each loaded page on the
+    # client reshuffled rows already on screen whenever "Load more" appended
+    # one. Favorites are deliberately left out — they don't survive a
+    # redeploy on the current host, so they can't carry a ranking.
+    order = [] if relevance is None else [relevance]
+    order += [
+        case((Entry.tags.any(Tag.name == ESSENTIAL_TAG), 0), else_=1),
+        Entry.created_at.desc(),
+        Entry.id.desc(),  # total order, so offset paging never repeats or skips a row
+    ]
+    stmt = stmt.order_by(*order).limit(limit).offset(offset)
     items = list(db.execute(stmt).scalars().unique())
     return total, items
 

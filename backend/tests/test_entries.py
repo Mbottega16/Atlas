@@ -222,3 +222,60 @@ def test_batch_import_dedupes_link_variants(client):
     resp = client.get("/api/entries")
     assert resp.json()["total"] == 1
     assert resp.json()["items"][0]["category"] == "a-updated"
+
+
+def _add(client, link, **fields):
+    body = {"link": link, "category": "misc", "tags": [], **fields}
+    assert client.post("/api/entries", json=body).status_code == 201
+
+
+def _links(resp):
+    return [item["link"] for item in resp.json()["items"]]
+
+
+def test_search_matches_a_word_that_only_lives_in_a_tag(client):
+    _add(client, "https://splat.com", title="Splat viewer", tags=["gaussian splatting"])
+    _add(client, "https://other.com", title="Unrelated")
+
+    resp = client.get("/api/entries", params={"q": "gaussian"})
+    assert _links(resp) == ["https://splat.com"]
+
+
+def test_search_ranks_a_title_match_above_a_description_match(client):
+    # Created first, so plain newest-first ordering would put it last.
+    _add(client, "https://title-hit.com", title="Regex tester")
+    _add(client, "https://desc-hit.com", title="Toolbox", description="Includes a regex helper")
+
+    resp = client.get("/api/entries", params={"q": "regex"})
+    assert _links(resp) == ["https://title-hit.com", "https://desc-hit.com"]
+
+
+def test_essential_entries_rank_first_without_a_query(client):
+    _add(client, "https://older-essential.com", tags=["essential"])
+    _add(client, "https://newer-plain.com")
+
+    resp = client.get("/api/entries")
+    assert _links(resp)[0] == "https://older-essential.com"
+
+
+def test_categories_filter_matches_any_listed_category(client):
+    _add(client, "https://a.com", category="game dev")
+    _add(client, "https://b.com", category="vfx & 3d")
+    _add(client, "https://c.com", category="cooking")
+
+    resp = client.get(
+        "/api/entries", params=[("categories", "game dev"), ("categories", "vfx & 3d")]
+    )
+    assert sorted(_links(resp)) == ["https://a.com", "https://b.com"]
+
+
+def test_offset_paging_never_repeats_or_skips_a_row(client):
+    links = [f"https://page-{i}.com" for i in range(7)]
+    for i, link in enumerate(links):
+        _add(client, link, tags=["essential"] if i % 3 == 0 else [])
+
+    seen = []
+    for offset in range(0, 7, 3):
+        resp = client.get("/api/entries", params={"limit": 3, "offset": offset})
+        seen += _links(resp)
+    assert sorted(seen) == sorted(links)

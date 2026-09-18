@@ -1,10 +1,9 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { Entry, TagCount, fetchCategories, fetchTags, searchEntries } from "../api/client";
-import { CATEGORY_GROUPS } from "../categoryGroups";
+import { resolveGroups } from "../categoryGroups";
 import EntryCard from "../components/EntryCard";
-import FilterBar, { Filters } from "../components/FilterBar";
-import { rankEntries } from "../ranking";
+import FilterBar, { EMPTY_FILTERS, Filters } from "../components/FilterBar";
 
 type ViewMode = "grid" | "list" | "large";
 const VIEW_STORAGE_KEY = "atlas.viewMode";
@@ -20,7 +19,7 @@ function loadViewMode(): ViewMode {
   return "grid";
 }
 
-const isBlank = (f: Filters) => !f.q && !f.category && !f.tag;
+const isBlank = (f: Filters) => !f.q && !f.group && !f.category && !f.tag;
 
 export default function BrowsePage({
   filters,
@@ -73,6 +72,23 @@ export default function BrowsePage({
     if (!blank) setShowAll(false);
   }, [blank]);
 
+  const groups = useMemo(() => resolveGroups(categories.map((c) => c.name)), [categories]);
+  const groupCategories = groups.find((g) => g.name === filters.group)?.categories;
+  // A deep link to ?group=… arrives before the category list does; querying now
+  // would flash the whole library before the real filter lands.
+  const groupPending = !!filters.group && categories.length === 0;
+  const groupKey = groupCategories?.join("|") ?? "";
+
+  const query = useMemo(
+    () => ({
+      q: filters.q,
+      category: filters.category,
+      tag: filters.tag,
+      categories: groupKey ? groupKey.split("|") : undefined,
+    }),
+    [filters.q, filters.category, filters.tag, groupKey]
+  );
+
   // First page whenever the query changes.
   useEffect(() => {
     if (!listing) {
@@ -80,38 +96,74 @@ export default function BrowsePage({
       setLoading(false);
       return;
     }
+    if (groupPending) {
+      setLoading(true);
+      return;
+    }
     setLoading(true);
     setError(null);
+    let stale = false;
     const handle = setTimeout(() => {
-      searchEntries({ ...filters, limit: PAGE_SIZE, offset: 0 })
+      searchEntries({ ...query, limit: PAGE_SIZE, offset: 0 })
         .then((res) => {
-          setEntries(rankEntries(res.items));
+          if (stale) return;
+          setEntries(res.items);
           setTotal(res.total);
         })
-        .catch(() => setError("Couldn't reach the Atlas backend — is it running?"))
-        .finally(() => setLoading(false));
+        .catch(() => {
+          if (!stale) setError("Couldn't reach the Atlas backend — is it running?");
+        })
+        .finally(() => {
+          if (!stale) setLoading(false);
+        });
     }, 200); // debounce typing in the search box
-    return () => clearTimeout(handle);
-  }, [filters, listing, reloadKey]);
+    return () => {
+      stale = true;
+      clearTimeout(handle);
+    };
+  }, [query, listing, groupPending, reloadKey]);
 
-  const loadMore = useCallback(() => {
+  // Order comes from the server, so an appended page never reshuffles the rows
+  // already on screen.
+  const loadMore = () => {
     setLoadingMore(true);
-    searchEntries({ ...filters, limit: PAGE_SIZE, offset: entries.length })
+    searchEntries({ ...query, limit: PAGE_SIZE, offset: entries.length })
       .then((res) => {
-        setEntries((prev) => rankEntries([...prev, ...res.items]));
+        setEntries((prev) => [...prev, ...res.items]);
         setTotal(res.total);
       })
       .catch(() => setError("Couldn't load more — is the backend still running?"))
       .finally(() => setLoadingMore(false));
-  }, [filters, entries.length]);
+  };
+
+  const scopedTags = useMemo<TagCount[]>(() => {
+    if (blank || entries.length === 0) return [];
+    const counts = new Map<string, number>();
+    for (const entry of entries) {
+      for (const tag of entry.tags) counts.set(tag, (counts.get(tag) ?? 0) + 1);
+    }
+    return [...counts.entries()]
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+  }, [entries, blank]);
+
+  const tagsScoped = scopedTags.length > 0;
+  const showTag = (tag: string) => onFilters({ ...EMPTY_FILTERS, tag });
+  const showCategory = (category: string) => onFilters({ ...EMPTY_FILTERS, category });
 
   const countFor = (name: string) => categories.find((c) => c.name === name)?.count ?? 0;
-  const knownCats = new Set(categories.map((c) => c.name));
   const hasMore = entries.length < total;
 
   return (
     <div>
-      <FilterBar filters={filters} onChange={onFilters} categories={categories} tags={tags} />
+      <FilterBar
+        filters={filters}
+        onChange={onFilters}
+        groups={groups}
+        categories={categories}
+        tagOptions={tagsScoped ? scopedTags : tags}
+        tagsScoped={tagsScoped}
+      />
 
       {error && <p style={{ color: "crimson" }}>{error}</p>}
 
@@ -121,25 +173,32 @@ export default function BrowsePage({
             Pick an area to dig into, or use the search box above.
           </p>
           <div className="group-cards">
-            {CATEGORY_GROUPS.map((group) => {
-              const cats = group.categories.filter((c) => knownCats.has(c));
-              if (cats.length === 0) return null;
-              const groupTotal = cats.reduce((sum, c) => sum + countFor(c), 0);
+            {groups.map((group) => {
+              const groupTotal = group.categories.reduce((sum, c) => sum + countFor(c), 0);
               return (
                 <div key={group.name} className="group-card">
                   <div className="group-card-head">
-                    <h3>{group.name}</h3>
+                    <h3>
+                      <button
+                        type="button"
+                        className="group-card-title"
+                        title={`Show all ${groupTotal} in ${group.name}`}
+                        onClick={() => onFilters({ ...EMPTY_FILTERS, group: group.name })}
+                      >
+                        {group.name}
+                      </button>
+                    </h3>
                     <span className="group-card-total">{groupTotal}</span>
                   </div>
                   <div className="group-card-cats">
-                    {cats
+                    {group.categories
                       .slice()
                       .sort((a, b) => countFor(b) - countFor(a))
                       .map((c) => (
                         <button
                           key={c}
                           className="group-card-cat"
-                          onClick={() => onFilters({ q: "", category: c, tag: "" })}
+                          onClick={() => showCategory(c)}
                         >
                           {c} <span>{countFor(c)}</span>
                         </button>
@@ -158,17 +217,13 @@ export default function BrowsePage({
       {!error && listing && (
         <>
           <div className="results-row">
-            <p>
-              {loading
-                ? "Loading…"
-                : `${entries.length} of ${total} shown`}
-            </p>
+            <p>{loading ? "Loading…" : `${entries.length} of ${total} shown`}</p>
             <div className="results-row-right">
               <button
                 className="clear-filters"
                 onClick={() => {
                   setShowAll(false);
-                  onFilters({ q: "", category: "", tag: "" });
+                  onFilters(EMPTY_FILTERS);
                 }}
               >
                 {blank ? "Back to areas" : "Clear"}
@@ -210,6 +265,8 @@ export default function BrowsePage({
                 onVisit={onVisit}
                 onFavoriteToggle={onFavoriteToggle}
                 onChanged={() => setReloadKey((k) => k + 1)}
+                onTagClick={showTag}
+                onCategoryClick={showCategory}
               />
             ))}
           </div>

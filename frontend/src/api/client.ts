@@ -66,17 +66,18 @@ export function logout(): Promise<AuthStatus> {
 export function searchEntries(params: {
   q?: string;
   category?: string;
+  categories?: string[];
   tag?: string;
   use_case?: string;
   favorite?: boolean;
   limit?: number;
   offset?: number;
 }): Promise<EntryListResponse> {
-  const qs = new URLSearchParams(
-    Object.entries(params)
-      .filter(([, v]) => v !== undefined && v !== "" && v !== false)
-      .map(([k, v]) => [k, String(v)])
-  );
+  const qs = new URLSearchParams();
+  for (const [key, value] of Object.entries(params)) {
+    if (Array.isArray(value)) value.forEach((item) => qs.append(key, item));
+    else if (value !== undefined && value !== "" && value !== false) qs.append(key, String(value));
+  }
   return apiGet(`/api/entries?${qs.toString()}`);
 }
 

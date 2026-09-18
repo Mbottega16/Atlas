@@ -30,6 +30,10 @@ export default function FavoritesPanel({
           ✕
         </button>
       </div>
+      <p className="favorites-note">
+        Stars reset whenever the site redeploys — the free host keeps no permanent
+        storage, so treat these as a scratch list, not a saved one.
+      </p>
       {loading && <p>Loading…</p>}
       {!loading && favorites.length === 0 && (
         <p>No favorites yet — click the star on any entry to save it here.</p>

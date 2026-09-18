@@ -810,3 +810,148 @@ nav a {
 .tag-table .capture-row input {
   width: 8rem;
 }
+
+/* ---------- Pivot controls (tag / category / group are all filters) ------- */
+button.tag-pill {
+  border: none;
+  font: inherit;
+  font-size: 0.75rem;
+  color: inherit;
+  cursor: pointer;
+}
+
+.meta-category,
+.group-card-title {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.meta-category {
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+}
+
+button.tag-pill:hover,
+.meta-category:hover,
+.group-card-title:hover {
+  color: #4a90e2;
+}
+
+.active-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 1px solid #4a90e2;
+  color: #4a90e2;
+  border-radius: 999px;
+  padding: 0.25rem 0.4rem 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.active-tag button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0 0.25rem;
+}
+
+.favorites-note {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin: -0.5rem 0 1rem;
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 640px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 0.75rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+
+  .filter-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-row select,
+  .filter-row input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Areas scroll sideways instead of stacking into a wall of pills */
+  .category-groups {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+
+  .category-groups button {
+    flex-shrink: 0;
+    padding: 0.45rem 0.9rem;
+  }
+
+  .entries-grid.view-grid,
+  .entries-grid.view-large,
+  .group-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-card.view-list .entry-card-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .entry-card.view-list .tag-row {
+    margin-left: 0;
+  }
+
+  .results-row {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .favorite-btn {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.25rem;
+  }
+
+  .tag-pill,
+  .group-card-cat {
+    padding: 0.35rem 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .guide-freetext {
+    flex-direction: column;
+  }
+
+  .guide-results-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .capture-row {
+    flex-wrap: wrap;
+  }
+}
