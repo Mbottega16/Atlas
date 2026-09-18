@@ -187,6 +187,22 @@ for the quickstart.
   this file was last written 2026-08-30/09-03 and nothing here recorded it
   turning on. Until `ADMIN_PASSWORD` is set by hand in that dashboard, this
   is a public unauthenticated read-write database.
+- **Findability pass shipped 2026-09-17 (all 10 items of the UX critique,
+  `my-brain/memory/critiques/atlas-2026-09-17.md`).** The load-bearing one:
+  `categoryGroups.ts` had drifted out of sync with the real category list, so
+  209 entries (21.5%) had no path from the Browse landing page. Groups now
+  resolve against the live categories and unclaimed ones fall into an
+  "Everything else" bucket, so a capture batch can't introduce an invisible
+  category again. Also: `q` searches tags (`Entry.tags.any`); ranking moved
+  server-side (relevance → `essential` → recency → id) which both fixed
+  import-date ordering and stopped "Load more" reshuffling loaded rows;
+  `categories` is a repeatable query param so a group pill filters its whole
+  group; tab + filters live in the URL (bookmarkable, Back works,
+  `localStorage` filter memory dropped); tag pills and the card category are
+  pivot buttons and the 633-option tag `<select>` is a scoped type-ahead;
+  one phone breakpoint; favorites dropped from ranking with the panel saying
+  they reset on redeploy; and all 338 empty `use_case` values written.
+  `frontend/src/ranking.ts` deleted — the server ranks now.
 - **Decided 2026-09-15:** given Render was already live and working, the
   user chose to keep it as the real deploy instead of also standing up
   Vercel (whose CLI turned out logged out on the machine anyway, with no
