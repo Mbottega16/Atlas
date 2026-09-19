@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import { authStatus, logout, markVisited, randomEntry } from "./api/client";
+import { READ_ONLY, authStatus, logout, markVisited, randomEntry } from "./api/client";
 import FavoritesPanel from "./components/FavoritesPanel";
 import { EMPTY_FILTERS, Filters } from "./components/FilterBar";
 import BrowsePage from "./pages/BrowsePage";
@@ -9,7 +9,8 @@ import GuidePage from "./pages/GuidePage";
 
 type Tab = "find" | "browse" | "capture";
 
-const TABS: Tab[] = ["find", "browse", "capture"];
+// The public site is read-only, so it has no Capture tab.
+const TABS: Tab[] = READ_ONLY ? ["find", "browse"] : ["find", "browse", "capture"];
 const FILTER_KEYS = ["group", "category", "tag", "q"] as const;
 
 interface View {
@@ -85,7 +86,7 @@ export default function App() {
     try {
       const entry = await randomEntry();
       window.open(entry.link, "_blank", "noopener,noreferrer");
-      markVisited(entry.id).catch(() => {});
+      markVisited(entry.link);
       handleVisit();
     } catch {
       // Silent — a failed roll just means "try again", not worth a modal.
@@ -129,7 +130,7 @@ export default function App() {
       <nav>
         {navLink("find", "Find")}
         {navLink("browse", "Browse")}
-        {navLink("capture", "Capture")}
+        {!READ_ONLY && navLink("capture", "Capture")}
         <a
           href="#"
           onClick={(e) => {
@@ -180,7 +181,7 @@ export default function App() {
           onFavoriteToggle={handleFavoriteToggle}
         />
       )}
-      {tab === "capture" && <CapturePage />}
+      {tab === "capture" && !READ_ONLY && <CapturePage />}
 
       <FavoritesPanel
         open={favoritesOpen}

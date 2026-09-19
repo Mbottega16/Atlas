@@ -2,10 +2,11 @@
 
 A personal website/tool-library database — search, filter, and quick-capture
 for links worth reusing across projects (link, category, description, use
-case, tags). Solo-use, not a public product.
+case, tags).
 
-Full plan and phasing: see `CLAUDE.md`, or the vault-side summary at
-`projects/atlas/context.md` in the `my-brain` repo.
+The public site is a read-only static build on Render (`render.yaml`). The
+library itself is `backend/seed/atlas-seed.json`; you change it locally. How
+it all fits, and the edit workflow: see `CLAUDE.md`.
 
 ## Quickstart (local dev)
 
@@ -25,7 +26,11 @@ npm run dev
 ```
 
 `vite.config.ts` proxies `/api` to `localhost:8000` in dev, so open the
-Vite dev server URL directly — no CORS setup needed.
+Vite dev server URL directly — no CORS setup needed. A fresh checkout has no
+`backend/data/atlas.db`; the backend builds it from the seed on first start.
+
+To preview the public read-only build: `VITE_STATIC=1 npm run build` then
+`npx vite preview`.
 
 ## Tests
 

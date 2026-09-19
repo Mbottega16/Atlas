@@ -1,6 +1,15 @@
 import { FormEvent, useState } from "react";
 
-import { Entry, deleteEntry, markVisited, setFavorite, updateEntry } from "../api/client";
+import {
+  Entry,
+  READ_ONLY,
+  deleteEntry,
+  isFavorite,
+  isVisited,
+  markVisited,
+  setFavorite,
+  updateEntry,
+} from "../api/client";
 
 function faviconUrl(link: string): string | null {
   try {
@@ -26,34 +35,26 @@ export default function EntryCard({
   onFavoriteToggle?: () => void;
   onTagClick?: (tag: string) => void;
   onCategoryClick?: (category: string) => void;
-  // Passing this in turns on the Edit / Delete controls and is called after
-  // either succeeds, so the parent can refresh its list.
+  // Passing this in turns on the Edit / Delete controls (never on the read-only
+  // public site) and is called after either succeeds, so the parent can refresh.
   onChanged?: () => void;
 }) {
-  const [visited, setVisited] = useState(!!entry.visited_at);
-  const [favorite, setFavoriteState] = useState(entry.is_favorite);
+  const [visited, setVisited] = useState(() => isVisited(entry.link));
+  const [favorite, setFavoriteState] = useState(() => isFavorite(entry.link));
   const [busy, setBusy] = useState(false);
   const [editing, setEditing] = useState(false);
 
   const handleOpen = () => {
-    markVisited(entry.id).catch(() => {});
+    markVisited(entry.link);
     setVisited(true);
     onVisit?.();
   };
 
-  const handleFavoriteClick = async () => {
-    if (busy) return;
-    setBusy(true);
+  const handleFavoriteClick = () => {
     const next = !favorite;
-    try {
-      await setFavorite(entry.id, next);
-      setFavoriteState(next);
-      onFavoriteToggle?.();
-    } catch {
-      // leave state as-is on failure
-    } finally {
-      setBusy(false);
-    }
+    setFavorite(entry.link, next);
+    setFavoriteState(next);
+    onFavoriteToggle?.();
   };
 
   const handleDelete = async () => {
@@ -105,6 +106,16 @@ export default function EntryCard({
             ✓ visited
           </span>
         )}
+        {entry.flag && (
+          <span
+            className="flag-badge"
+            title={`Failed the weekly link check twice in a row (last: ${entry.flag.checked}${
+              entry.flag.detail ? `, ${entry.flag.detail}` : ""
+            })`}
+          >
+            ⚠ may be dead
+          </span>
+        )}
         <h3>
           <a href={entry.link} target="_blank" rel="noreferrer" onClick={handleOpen}>
             {entry.title || entry.link}
@@ -145,7 +156,7 @@ export default function EntryCard({
             )
           )}
         </div>
-        {onChanged && (
+        {onChanged && !READ_ONLY && (
           <div className="entry-card-admin">
             <button type="button" onClick={() => setEditing(true)} disabled={busy}>
               Edit

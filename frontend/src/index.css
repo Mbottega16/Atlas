@@ -306,6 +306,17 @@ body {
   margin-bottom: 0.35rem;
 }
 
+.flag-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #b45309;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.35rem 0.5rem;
+  cursor: help;
+}
+
 .tag-row {
   margin-top: auto;
 }

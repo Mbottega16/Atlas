@@ -1,3 +1,6 @@
+import { CATEGORY_MOVES } from "../categoryGroups";
+import { ESSENTIAL_TAG, Indexed, indexEntry, rank } from "../lib/searchCore";
+
 export interface Entry {
   id: number;
   link: string;
@@ -6,16 +9,17 @@ export interface Entry {
   description: string | null;
   use_case: string | null;
   tags: string[];
-  source: string;
-  is_favorite: boolean;
-  visited_at: string | null;
-  created_at: string;
-  updated_at: string;
+  added?: string;
+  source?: string;
+  // Set when the weekly link check has failed twice in a row.
+  flag?: { status: string; detail: string; checked: string };
 }
 
 export interface EntryListResponse {
   total: number;
   items: Entry[];
+  // True when nothing matched every search word, so these are the closest partial matches.
+  relaxed?: boolean;
 }
 
 export interface TagCount {
@@ -23,10 +27,14 @@ export interface TagCount {
   count: number;
 }
 
+// The public site is a static build (VITE_STATIC=1): the whole library ships as
+// /atlas.json and nothing can be written. Run locally against the FastAPI
+// backend, the same UI can also add, edit and delete.
+export const READ_ONLY = import.meta.env.VITE_STATIC === "1";
+
 const BASE = import.meta.env.VITE_API_BASE_URL || "";
 
-// credentials: "include" so the auth-gate session cookie rides along in dev
-// (cross-origin to :8000) and in the same-origin deploy alike.
+// credentials: "include" so the auth-gate session cookie rides along in dev.
 async function apiGet<T>(path: string): Promise<T> {
   const resp = await fetch(`${BASE}${path}`, { credentials: "include" });
   if (!resp.ok) throw new Error(`Request to ${path} failed: ${resp.status}`);
@@ -41,10 +49,153 @@ async function apiSend<T>(method: string, path: string, body?: unknown): Promise
     body: body !== undefined ? JSON.stringify(body) : undefined,
   });
   if (!resp.ok) throw new Error(`Request to ${path} failed: ${resp.status}`);
-  return resp.status === 204 ? (undefined as T) : resp.json();
+  const result = resp.status === 204 ? (undefined as T) : await resp.json();
+  invalidateLibrary();
+  return result;
 }
 
 const apiPost = <T>(path: string, body?: unknown) => apiSend<T>("POST", path, body);
+
+// --- the library, loaded once and searched in the browser -----------------
+// ~1,000 entries is a few hundred KB: loading it all once makes every search
+// instant and lets the site be plain static files.
+
+interface ApiEntry extends Omit<Entry, "added"> {
+  created_at: string;
+}
+
+let libraryPromise: Promise<Indexed<Entry>[]> | null = null;
+
+async function fetchFlags(): Promise<Record<string, Entry["flag"]>> {
+  try {
+    const resp = await fetch("/link-flags.json");
+    return resp.ok ? await resp.json() : {};
+  } catch {
+    return {};
+  }
+}
+
+async function fetchEntries(): Promise<Entry[]> {
+  if (READ_ONLY) {
+    const resp = await fetch("/atlas.json");
+    if (!resp.ok) throw new Error(`Couldn't load the library: ${resp.status}`);
+    return resp.json();
+  }
+  const res = await apiGet<{ items: ApiEntry[] }>("/api/entries?limit=100000");
+  return res.items.map(({ created_at, ...e }) => ({ ...e, added: created_at.slice(0, 10) }));
+}
+
+function library(): Promise<Indexed<Entry>[]> {
+  if (!libraryPromise) {
+    const loading = Promise.all([fetchEntries(), fetchFlags()]).then(([entries, flags]) =>
+      entries.map((e) => indexEntry({ ...e, flag: flags[e.link] }))
+    );
+    loading.catch(() => {
+      if (libraryPromise === loading) libraryPromise = null; // let the next call retry
+    });
+    libraryPromise = loading;
+  }
+  return libraryPromise;
+}
+
+export function invalidateLibrary() {
+  libraryPromise = null;
+}
+
+export async function searchEntries(params: {
+  q?: string;
+  category?: string;
+  categories?: string[];
+  tag?: string;
+  favorite?: boolean;
+  limit?: number;
+  offset?: number;
+}): Promise<EntryListResponse> {
+  const all = await library();
+  // An old category from before the 2026-09-19 merge (?category=cooking) is now
+  // a tag on exactly the entries it used to hold, so filter by that tag.
+  const retired = !!params.category && params.category in CATEGORY_MOVES;
+  const category = retired ? "" : params.category;
+  const tag = (retired ? params.category : params.tag)?.trim().toLowerCase();
+  const favorites = params.favorite ? favoriteLinks() : null;
+  const pool = all.filter(
+    ({ entry: e }) =>
+      (!category || e.category === category) &&
+      (!params.categories?.length || params.categories.includes(e.category)) &&
+      // A tag that names a category matches that category too: tags that only
+      // repeated an entry's own category were stripped as noise.
+      (!tag || e.tags.includes(tag) || (tag !== ESSENTIAL_TAG && e.category === tag)) &&
+      (!favorites || favorites.has(e.link))
+  );
+  const { items, relaxed } = rank(pool, params.q ?? "");
+  const offset = params.offset ?? 0;
+  const limit = params.limit ?? 50;
+  return { total: items.length, items: items.slice(offset, offset + limit), relaxed };
+}
+
+function countBy(values: string[]): TagCount[] {
+  const counts = new Map<string, number>();
+  for (const v of values) counts.set(v, (counts.get(v) ?? 0) + 1);
+  return [...counts.entries()]
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+export async function fetchTags(): Promise<TagCount[]> {
+  return countBy((await library()).flatMap((x) => x.entry.tags));
+}
+
+export async function fetchCategories(): Promise<TagCount[]> {
+  return countBy((await library()).map((x) => x.entry.category));
+}
+
+export async function randomEntry(): Promise<Entry> {
+  const all = await library();
+  if (all.length === 0) throw new Error("The library is empty");
+  return all[Math.floor(Math.random() * all.length)].entry;
+}
+
+// --- favorites and visits: kept in this browser -----------------------------
+// Per viewer, keyed by link so they survive the library being rebuilt.
+
+const FAVORITES_KEY = "atlas.favorites";
+const VISITED_KEY = "atlas.visited";
+
+function readSet(key: string): Set<string> {
+  try {
+    const raw = localStorage.getItem(key);
+    return new Set(raw ? (JSON.parse(raw) as string[]) : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function writeSet(key: string, set: Set<string>) {
+  try {
+    localStorage.setItem(key, JSON.stringify([...set]));
+  } catch {
+    // storage blocked (private window) — the star just won't stick
+  }
+}
+
+export const favoriteLinks = () => readSet(FAVORITES_KEY);
+export const isFavorite = (link: string) => favoriteLinks().has(link);
+export const isVisited = (link: string) => readSet(VISITED_KEY).has(link);
+
+export function setFavorite(link: string, favorite: boolean) {
+  const set = favoriteLinks();
+  if (favorite) set.add(link);
+  else set.delete(link);
+  writeSet(FAVORITES_KEY, set);
+}
+
+export function markVisited(link: string) {
+  const set = readSet(VISITED_KEY);
+  set.add(link);
+  writeSet(VISITED_KEY, set);
+}
+
+// --- auth (local backend only) ----------------------------------------------
 
 export interface AuthStatus {
   required: boolean;
@@ -52,6 +203,7 @@ export interface AuthStatus {
 }
 
 export function authStatus(): Promise<AuthStatus> {
+  if (READ_ONLY) return Promise.resolve({ required: false, authenticated: true });
   return apiGet("/api/auth/status");
 }
 
@@ -63,26 +215,15 @@ export function logout(): Promise<AuthStatus> {
   return apiPost("/api/auth/logout");
 }
 
-export function searchEntries(params: {
-  q?: string;
-  category?: string;
-  categories?: string[];
-  tag?: string;
-  use_case?: string;
-  favorite?: boolean;
-  limit?: number;
-  offset?: number;
-}): Promise<EntryListResponse> {
-  const qs = new URLSearchParams();
-  for (const [key, value] of Object.entries(params)) {
-    if (Array.isArray(value)) value.forEach((item) => qs.append(key, item));
-    else if (value !== undefined && value !== "" && value !== false) qs.append(key, String(value));
-  }
-  return apiGet(`/api/entries?${qs.toString()}`);
-}
+// --- writing entries (local backend only) -----------------------------------
 
-export function fetchTags(): Promise<TagCount[]> {
-  return apiGet("/api/tags");
+export interface EntryInput {
+  link: string;
+  title?: string | null;
+  category: string;
+  description?: string | null;
+  use_case?: string | null;
+  tags: string[];
 }
 
 export interface TagOpResult {
@@ -97,37 +238,6 @@ export function renameTag(name: string, newName: string): Promise<TagOpResult> {
 
 export function mergeTags(sources: string[], into: string): Promise<TagOpResult> {
   return apiPost("/api/tags/merge", { sources, into });
-}
-
-export function fetchCategories(): Promise<TagCount[]> {
-  return apiGet("/api/categories");
-}
-
-export function randomEntry(params: { category?: string; tag?: string } = {}): Promise<Entry> {
-  const qs = new URLSearchParams(
-    Object.entries(params).filter(([, v]) => v !== undefined && v !== "") as [string, string][]
-  );
-  const suffix = qs.toString() ? `?${qs.toString()}` : "";
-  return apiGet(`/api/entries/random${suffix}`);
-}
-
-export function markVisited(id: number): Promise<Entry> {
-  return apiPost(`/api/entries/${id}/visit`);
-}
-
-export function setFavorite(id: number, favorite: boolean): Promise<Entry> {
-  return apiPost(`/api/entries/${id}/favorite?favorite=${favorite}`);
-}
-
-// --- writing entries -------------------------------------------------------
-
-export interface EntryInput {
-  link: string;
-  title?: string | null;
-  category: string;
-  description?: string | null;
-  use_case?: string | null;
-  tags: string[];
 }
 
 export function createEntry(data: EntryInput): Promise<Entry> {
@@ -145,6 +255,8 @@ export function deleteEntry(id: number): Promise<void> {
 export interface BatchResult {
   created: Entry[];
   updated: Entry[];
+  new_categories: string[];
+  new_tags: string[];
 }
 
 export function batchImport(items: EntryInput[]): Promise<BatchResult> {

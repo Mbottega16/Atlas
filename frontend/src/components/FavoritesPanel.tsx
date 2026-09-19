@@ -17,8 +17,9 @@ export default function FavoritesPanel({
   useEffect(() => {
     if (!open) return;
     setLoading(true);
-    searchEntries({ favorite: true })
+    searchEntries({ favorite: true, limit: 1000 })
       .then((res) => setFavorites(res.items))
+      .catch(() => setFavorites([]))
       .finally(() => setLoading(false));
   }, [open, refreshKey]);
 
@@ -31,8 +32,8 @@ export default function FavoritesPanel({
         </button>
       </div>
       <p className="favorites-note">
-        Stars reset whenever the site redeploys — the free host keeps no permanent
-        storage, so treat these as a scratch list, not a saved one.
+        Stars are saved in this browser only. They stay put across visits, but
+        don't follow you to another device.
       </p>
       {loading && <p>Loading…</p>}
       {!loading && favorites.length === 0 && (

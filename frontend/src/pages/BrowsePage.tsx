@@ -34,6 +34,7 @@ export default function BrowsePage({
 }) {
   const [entries, setEntries] = useState<Entry[]>([]);
   const [total, setTotal] = useState(0);
+  const [relaxed, setRelaxed] = useState(false);
   const [grandTotal, setGrandTotal] = useState<number | null>(null);
   const [categories, setCategories] = useState<TagCount[]>([]);
   const [tags, setTags] = useState<TagCount[]>([]);
@@ -109,14 +110,15 @@ export default function BrowsePage({
           if (stale) return;
           setEntries(res.items);
           setTotal(res.total);
+          setRelaxed(!!res.relaxed);
         })
         .catch(() => {
-          if (!stale) setError("Couldn't reach the Atlas backend — is it running?");
+          if (!stale) setError("Couldn't load the library — try reloading the page.");
         })
         .finally(() => {
           if (!stale) setLoading(false);
         });
-    }, 200); // debounce typing in the search box
+    }, 120); // debounce typing in the search box
     return () => {
       stale = true;
       clearTimeout(handle);
@@ -132,7 +134,7 @@ export default function BrowsePage({
         setEntries((prev) => [...prev, ...res.items]);
         setTotal(res.total);
       })
-      .catch(() => setError("Couldn't load more — is the backend still running?"))
+      .catch(() => setError("Couldn't load more — try reloading the page."))
       .finally(() => setLoadingMore(false));
   };
 
@@ -217,7 +219,13 @@ export default function BrowsePage({
       {!error && listing && (
         <>
           <div className="results-row">
-            <p>{loading ? "Loading…" : `${entries.length} of ${total} shown`}</p>
+            <p>
+              {loading
+                ? "Loading…"
+                : relaxed
+                  ? `Nothing matched every word — ${total} close matches`
+                  : `${entries.length} of ${total} shown`}
+            </p>
             <div className="results-row-right">
               <button
                 className="clear-filters"

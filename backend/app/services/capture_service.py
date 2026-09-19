@@ -14,22 +14,17 @@ import json
 
 from app.config import settings
 from app.schemas.entry import EntryCreate
+from app.taxonomy import CATEGORIES
 
 MODEL = "claude-sonnet-5"
 
-# Kept loose on purpose — the library's categories grow with each import and
-# a rigid enum here would fight that. Claude is told to prefer an existing one.
-_CATEGORY_HINT = (
-    "e.g. productivity, dev tools, design, ai, vfx & 3d, game dev, hosting & ops, "
-    "business & legal, marketing & growth, data & research, financial aid, "
-    "college & students, publishing, trading & markets, reference, misc"
-)
+_CATEGORY_HINT = ", ".join(CATEGORIES)
 
 _SYSTEM = f"""You catalog useful websites and tools for a personal reference library.
 For each URL you are given, produce one JSON object with keys:
 link (echo the URL back),
 title (the site/tool name),
-category (one short lowercase label — reuse an existing one where it fits: {_CATEGORY_HINT}),
+category (exactly one of: {_CATEGORY_HINT}),
 description (1-2 factual sentences you write yourself — what the tool is),
 use_case (one short phrase: when you'd reach for this),
 tags (2-5 lowercase theme strings).

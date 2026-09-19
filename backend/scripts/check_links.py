@@ -2,19 +2,27 @@
 
 Status values: 'ok', 'dead' (4xx/5xx or gone), 'redirect' (off-host bounce),
 'bounced' (deep link -> a bare homepage), 'unreachable' (DNS/timeout from
-the checker — NOT proof it's dead; this build environment can't resolve a
-lot of live domains). Read-only — it never edits the DB; use the output to
-fix entries by hand or with the update endpoint.
+the checker — NOT proof it's dead on its own).
 
-Run from backend/ with the venv:
+It reads seed/atlas-seed.json — the library itself, no database needed — and
+never edits entries. With --write-status it records each result in
+seed/link-status.json, counting consecutive failed checks per link. The site
+shows a "may be dead" badge once a link has failed twice in a row, so one bad
+night on the checker's side never flags a live site. A weekly GitHub Action
+(.github/workflows/link-check.yml) runs this with --write-status.
+
+Run from backend/:
   PYTHONPATH=. .venv/Scripts/python scripts/check_links.py
 Options:
-  --timeout N   per-request timeout in seconds (default 12)
-  --limit N     only check the first N entries (for a quick sample)
-  --json        emit a JSON array [{id, link, title, status, detail}]
+  --timeout N      per-request timeout in seconds (default 12)
+  --limit N        only check the first N entries (for a quick sample)
+  --json           emit a JSON array [{link, title, status, detail}]
+  --write-status   update seed/link-status.json
 """
 import concurrent.futures
+import datetime
 import json
+import pathlib
 import ssl
 import sys
 import time
@@ -23,9 +31,6 @@ import urllib.request
 from urllib.parse import urlsplit
 
 import certifi
-
-from app.db.session import SessionLocal
-from app.models.entry import Entry
 
 UA = "Mozilla/5.0 (compatible; AtlasLinkCheck/1.0)"
 _ANTIBOT = {403, 405, 429, 999}  # a response, but a bot-block — not "dead"
@@ -78,13 +83,29 @@ def classify(link: str, timeout: int) -> tuple[str, str]:
     return "unreachable", last_exc_name
 
 
-def _rows(limit: int) -> list[tuple[int, str, str | None]]:
-    db = SessionLocal()
-    try:
-        q = db.query(Entry.id, Entry.link, Entry.title).order_by(Entry.id)
-        return [tuple(r) for r in (q.limit(limit).all() if limit else q.all())]
-    finally:
-        db.close()
+SEED_DIR = pathlib.Path(__file__).resolve().parent.parent / "seed"
+STATUS_FILE = SEED_DIR / "link-status.json"
+_FAILING = {"dead", "unreachable"}
+
+
+def _rows(limit: int) -> list[tuple[str, str | None]]:
+    rows = json.loads((SEED_DIR / "atlas-seed.json").read_text(encoding="utf-8"))
+    pairs = [(r["link"], r.get("title")) for r in rows]
+    return pairs[:limit] if limit else pairs
+
+
+def write_status(results: list[dict]) -> None:
+    """Merge results into link-status.json. `fails` counts consecutive failing
+    checks; a passing check resets it. Links no longer in the library drop out."""
+    old = json.loads(STATUS_FILE.read_text(encoding="utf-8")) if STATUS_FILE.exists() else {}
+    today = datetime.date.today().isoformat()
+    new = {}
+    for r in results:
+        fails = old.get(r["link"], {}).get("fails", 0) + 1 if r["status"] in _FAILING else 0
+        new[r["link"]] = {"status": r["status"], "detail": r["detail"], "checked": today, "fails": fails}
+    STATUS_FILE.write_text(json.dumps(dict(sorted(new.items())), indent=1) + "\n", encoding="utf-8")
+    flagged = sum(1 for v in new.values() if v["fails"] >= 2)
+    print(f"{STATUS_FILE.name}: {len(new)} links, {flagged} failing twice or more")
 
 
 def main() -> None:
@@ -95,10 +116,12 @@ def main() -> None:
     rows = _rows(limit)
     results: list[dict] = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=16) as pool:
-        statuses = pool.map(lambda r: classify(r[1], timeout), rows)
-        for (rid, link, title), (status, detail) in zip(rows, statuses):
-            results.append({"id": rid, "link": link, "title": title,
-                            "status": status, "detail": detail})
+        statuses = pool.map(lambda r: classify(r[0], timeout), rows)
+        for (link, title), (status, detail) in zip(rows, statuses):
+            results.append({"link": link, "title": title, "status": status, "detail": detail})
+
+    if "--write-status" in sys.argv:
+        write_status(results)
 
     if as_json:
         print(json.dumps(results, indent=1))
@@ -106,7 +129,7 @@ def main() -> None:
 
     bad = [r for r in results if r["status"] != "ok"]
     for r in bad:
-        print(f'[{r["status"]}] #{r["id"]} {r["title"] or ""}\n    {r["link"]}  {r["detail"]}')
+        print(f'[{r["status"]}] {r["title"] or ""}\n    {r["link"]}  {r["detail"]}')
     counts: dict[str, int] = {}
     for r in results:
         counts[r["status"]] = counts.get(r["status"], 0) + 1

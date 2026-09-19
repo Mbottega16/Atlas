@@ -5,53 +5,45 @@ export interface CategoryGroup {
 }
 
 const GROUP_DEFINITIONS: CategoryGroup[] = [
+  { name: "Build & Code", categories: ["developer tools", "game dev", "hosting & ops", "file & web utilities"] },
+  { name: "Make (Art & Sound)", categories: ["design & media", "audio & video", "vfx & 3d"] },
+  { name: "AI", categories: ["ai tools", "ai engineering"] },
+  { name: "Learn & Reference", categories: ["education", "reference & data", "college & career"] },
+  { name: "Write & Read", categories: ["writing & publishing", "reading & news"] },
+  { name: "Business & Money", categories: ["business & marketing", "money & markets"] },
   {
-    name: "Build & Code",
-    categories: ["developer tools", "game dev", "hosting & ops", "web utilities"],
-  },
-  {
-    name: "Make (Art & Sound)",
-    categories: ["design & media", "audio & video", "vfx & 3d"],
-  },
-  {
-    name: "AI",
-    categories: ["ai tools", "ai engineering"],
-  },
-  {
-    name: "Learn & Reference",
-    categories: ["education", "reference & calculators", "data & research", "books & reading", "career"],
-  },
-  {
-    name: "School & Students",
-    categories: ["college & students", "financial aid"],
-  },
-  {
-    name: "Write & Publish",
-    categories: ["writing", "publishing"],
-  },
-  {
-    name: "Business & Money",
-    categories: ["business & legal", "marketing & growth", "trading & markets", "finance"],
-  },
-  {
-    name: "Run Life & Work",
-    categories: [
-      "productivity",
-      "file tools",
-      "communication",
-      "health & fitness",
-      "security & privacy",
-      "shopping",
-      "maps & travel",
-      "diy & repair",
-      "cooking",
-    ],
-  },
-  {
-    name: "Explore & Unwind",
-    categories: ["entertainment", "news & reading", "social media"],
+    name: "Life & Play",
+    categories: ["productivity", "security & privacy", "everyday life", "entertainment & social"],
   },
 ];
+
+// The 2026-09-19 consolidation (34 categories -> 20), mirrored from
+// backend/app/taxonomy.py so old bookmarks like ?category=cooking still land.
+export const CATEGORY_MOVES: Record<string, string> = {
+  "web utilities": "file & web utilities",
+  "file tools": "file & web utilities",
+  "data & research": "reference & data",
+  "reference & calculators": "reference & data",
+  "books & reading": "reading & news",
+  "news & reading": "reading & news",
+  writing: "writing & publishing",
+  publishing: "writing & publishing",
+  "college & students": "college & career",
+  "financial aid": "college & career",
+  career: "college & career",
+  "business & legal": "business & marketing",
+  "marketing & growth": "business & marketing",
+  finance: "money & markets",
+  "trading & markets": "money & markets",
+  communication: "productivity",
+  entertainment: "entertainment & social",
+  "social media": "entertainment & social",
+  "health & fitness": "everyday life",
+  cooking: "everyday life",
+  "diy & repair": "everyday life",
+  shopping: "everyday life",
+  "maps & travel": "everyday life",
+};
 
 export const OTHER_GROUP = "Everything else";
 

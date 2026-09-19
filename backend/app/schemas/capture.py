@@ -10,3 +10,7 @@ class BatchImportRequest(EntryCreate):
 class BatchImportResult(BaseModel):
     created: list[EntryOut]
     updated: list[EntryOut]
+    # Saved anyway, but worth a second look: a category outside
+    # app/taxonomy.py, or a tag no other entry uses yet.
+    new_categories: list[str] = []
+    new_tags: list[str] = []

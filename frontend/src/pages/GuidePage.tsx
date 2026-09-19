@@ -98,7 +98,7 @@ export default function GuidePage({
         setResults(res.items);
         setTotal(res.total);
       })
-      .catch(() => setError("Couldn't reach the Atlas backend — is it running?"))
+      .catch(() => setError("Couldn't load the library — try reloading the page."))
       .finally(() => setLoading(false));
   }, [leaf]);
 

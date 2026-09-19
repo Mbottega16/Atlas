@@ -104,10 +104,10 @@ const design: GuideNode = {
 const writePublish: GuideNode = {
   question: "Writing or publishing?",
   options: [
-    { label: "Writing & editing tools", filter: { label: "Writing tools", category: "writing" } },
+    { label: "Writing & editing tools", filter: { label: "Writing tools", tag: "writing" } },
     {
       label: "Self-publishing a book",
-      filter: { label: "Self-publishing", category: "publishing" },
+      filter: { label: "Self-publishing", tag: "publishing" },
     },
     {
       label: "Citations & research writing",
@@ -133,7 +133,7 @@ const learn: GuideNode = {
     },
     {
       label: "Datasets",
-      filter: { label: "Datasets", category: "data & research", tag: "datasets" },
+      filter: { label: "Datasets", category: "reference & data", tag: "datasets" },
     },
     {
       label: "Academic research & papers",
@@ -153,11 +153,11 @@ const market: GuideNode = {
     { label: "Email & newsletters", filter: { label: "Email & newsletters", tag: "email" } },
     {
       label: "Forms, surveys, user feedback",
-      filter: { label: "Forms & feedback", category: "marketing & growth", q: "feedback" },
+      filter: { label: "Forms & feedback", category: "business & marketing", q: "feedback" },
     },
     {
       label: "Scheduling social posts",
-      filter: { label: "Social scheduling", category: "marketing & growth", tag: "social media" },
+      filter: { label: "Social scheduling", category: "business & marketing", tag: "social media" },
     },
     {
       label: "Game / app store distribution",
@@ -180,7 +180,7 @@ const businessLegal: GuideNode = {
       filter: { label: "Policies & compliance", tag: "compliance" },
     },
     { label: "Trademark & copyright", filter: { label: "Trademark & copyright", tag: "ip" } },
-    { label: "Bookkeeping & payments", filter: { label: "Bookkeeping & payments", category: "finance" } },
+    { label: "Bookkeeping & payments", filter: { label: "Bookkeeping & payments", tag: "finance" } },
   ],
 };
 
@@ -193,15 +193,15 @@ const runLife: GuideNode = {
     },
     {
       label: "File conversion & PDF tools",
-      filter: { label: "File tools", category: "file tools" },
+      filter: { label: "File tools", category: "file & web utilities" },
     },
     {
       label: "Passwords & privacy",
       filter: { label: "Passwords & privacy", category: "security & privacy", tag: "passwords" },
     },
-    { label: "Health & fitness", filter: { label: "Health & fitness", category: "health & fitness" } },
-    { label: "Money & budgeting", filter: { label: "Personal finance", category: "finance" } },
-    { label: "Shopping & deals", filter: { label: "Shopping", category: "shopping" } },
+    { label: "Health & fitness", filter: { label: "Health & fitness", tag: "health & fitness" } },
+    { label: "Money & budgeting", filter: { label: "Personal finance", tag: "finance" } },
+    { label: "Shopping & deals", filter: { label: "Shopping", tag: "shopping" } },
   ],
 };
 
@@ -210,7 +210,7 @@ const student: GuideNode = {
   options: [
     {
       label: "Scholarships & grants",
-      filter: { label: "Scholarships & grants", category: "financial aid" },
+      filter: { label: "Scholarships & grants", tag: "financial aid" },
     },
     {
       label: "Clubs & volunteering",
@@ -235,9 +235,9 @@ const project: GuideNode = {
   question: "Which project?",
   options: [
     {
-      label: "PixelRoom",
+      label: "EduSystem",
       hint: "Godot game — pixel art, audio, Steam",
-      filter: { label: "PixelRoom resources", tag: "pixelroom" },
+      filter: { label: "EduSystem resources", tag: "edusystem" },
     },
     {
       label: "Little Sprout Stories",

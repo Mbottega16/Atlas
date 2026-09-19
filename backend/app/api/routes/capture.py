@@ -5,6 +5,8 @@ from sqlalchemy.orm import Session
 from app.api.deps import get_db
 from app.api.routes.entries import _to_out
 from app.config import settings
+from app.models.tag import Tag
+from app.taxonomy import CATEGORIES
 from app.schemas.capture import BatchImportRequest, BatchImportResult
 from app.schemas.entry import EntryCreate
 from app.services import capture_service, entry_service
@@ -17,11 +19,17 @@ def batch_import(items: list[BatchImportRequest], db: Session = Depends(get_db))
     """Upserts each entry on `link` — re-importing an existing link updates
     it in place instead of duplicating it. Every capture path (the session-
     assisted flow, the paste form, and live research below) commits here."""
+    known_tags = {name for (name,) in db.query(Tag.name).all()}
     created, updated = [], []
     for item in items:
         entry, was_created = entry_service.upsert_entry(db, item)
         (created if was_created else updated).append(_to_out(entry))
-    return BatchImportResult(created=created, updated=updated)
+    return BatchImportResult(
+        created=created,
+        updated=updated,
+        new_categories=sorted({i.category for i in items} - set(CATEGORIES)),
+        new_tags=sorted({t.strip().lower() for i in items for t in i.tags} - known_tags - {""}),
+    )
 
 
 class ResearchRequest(BaseModel):

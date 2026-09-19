@@ -2,8 +2,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 // Proxies /api to the FastAPI backend during local dev (`npm run dev`).
-// In production, Phase 6 serves both from one Render Web Service, so no
-// proxy/CORS setup is needed there.
+// The public build (VITE_STATIC=1) never calls /api — it reads /atlas.json.
 export default defineConfig({
   plugins: [react()],
   server: {

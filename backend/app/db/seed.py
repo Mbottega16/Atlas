@@ -1,63 +1,38 @@
-"""Seeding for ephemeral deploys.
+"""The library's source of truth: `seed/atlas-seed.json`.
 
-On Vercel the SQLite file lives in `/tmp` and is wiped on every cold start,
-so the app would otherwise boot with an empty library. Two speed-ups:
-
-1. `ensure_seed_db_file()` — if a committed, pre-built `seed/atlas-seed.db`
-   exists and the target SQLite file is missing, copy the file. Milliseconds
-   instead of re-inserting ~900 rows. Build it with `scripts/build_seed_db.py`.
-2. `load_seed_rows()` — the JSON fallback, as ONE transaction.
-
-The real fix is a persistent database (Render paid disk / Postgres); this
-keeps the serverless deploy usable until then. Note: favorites and visit
-timestamps do NOT survive a cold start on this setup.
+That file is what git tracks, what the public static site is built from
+(`frontend/scripts/build-data.mjs`), and what a fresh local database is
+loaded from. The local SQLite file (`data/atlas.db`) is only a working copy
+for editing — see `scripts/export_seed.py` and `scripts/load_seed.py`.
 """
 
 import json
 import pathlib
-import shutil
+from datetime import datetime, timezone
 
 from sqlalchemy.orm import Session
 
-from app.config import settings
-
 _BACKEND_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 SEED_JSON = _BACKEND_ROOT / "seed" / "atlas-seed.json"
-SEED_DB = _BACKEND_ROOT / "seed" / "atlas-seed.db"
 
 
-def _sqlite_path() -> pathlib.Path | None:
-    url = settings.database_url
-    if not url.startswith("sqlite"):
-        return None
-    return pathlib.Path(url.split("sqlite:///", 1)[1])
-
-
-def ensure_seed_db_file() -> bool:
-    """If the target SQLite file doesn't exist yet and a pre-built seed DB is
-    committed, copy it into place. Returns True if it did."""
-    target = _sqlite_path()
-    if target is None or target.exists() or not SEED_DB.exists():
-        return False
-    try:
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(SEED_DB, target)
-        return True
-    except OSError:
-        return False
+def read_seed() -> list[dict]:
+    if not SEED_JSON.exists():
+        return []
+    return json.loads(SEED_JSON.read_text(encoding="utf-8"))
 
 
 def load_seed_rows(db: Session) -> int:
-    """Fallback: load the JSON seed in a single transaction. Returns row count."""
+    """Load the JSON seed in a single transaction. Returns row count."""
     from app.schemas.entry import EntryCreate
     from app.services import entry_service
 
-    if not SEED_JSON.exists():
-        return 0
-    rows = json.loads(SEED_JSON.read_text(encoding="utf-8"))
+    rows = read_seed()
     for row in rows:
-        entry_service.upsert_entry(
+        entry, _ = entry_service.upsert_entry(
             db, EntryCreate(**row), source=row.get("source", "capture"), commit=False
         )
+        if row.get("added"):
+            entry.created_at = datetime.fromisoformat(row["added"]).replace(tzinfo=timezone.utc)
     db.commit()
     return len(rows)

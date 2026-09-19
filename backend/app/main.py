@@ -8,7 +8,7 @@ from app.api.deps import require_auth
 from app.api.routes import auth, backup, capture, entries, health, tags
 from app.config import settings
 from app.db.base import Base
-from app.db.seed import ensure_seed_db_file, load_seed_rows
+from app.db.seed import load_seed_rows
 from app.db.session import SessionLocal, engine
 from app.models.entry import Entry
 from app.static_spa import SPAStaticFiles
@@ -17,15 +17,8 @@ log = logging.getLogger("atlas.bootstrap")
 
 app = FastAPI(title="Atlas")
 
-# On an ephemeral serverless filesystem the SQLite file in /tmp is gone on
-# every cold start — copy a committed, pre-built seed DB into place before
-# create_all or any query. No-op for a normal local/persistent DB.
-ensure_seed_db_file()
-
-# Tables are still created straight from the models here — fine for the
-# current schema and the ephemeral seed flow. Alembic (see alembic/README.md)
-# is wired up and owns every schema change from now on; a persistent deploy
-# runs `alembic upgrade head` instead of relying on this line.
+# Tables are still created straight from the models here. Alembic (see
+# alembic/README.md) owns every schema change from now on.
 Base.metadata.create_all(bind=engine)
 
 
@@ -36,7 +29,7 @@ def _bootstrap() -> None:
             if db.query(Entry).count() == 0:
                 n = load_seed_rows(db)
                 if n:
-                    log.warning("empty DB: loaded %d seed rows via JSON fallback", n)
+                    log.warning("empty DB: loaded %d rows from seed/atlas-seed.json", n)
     except Exception:  # noqa: BLE001
         log.exception("bootstrap seeding failed; continuing with current DB state")
 
@@ -67,12 +60,9 @@ app.include_router(tags.router, prefix="/api", dependencies=_gated)
 app.include_router(capture.router, prefix="/api", dependencies=_gated)
 app.include_router(backup.router, prefix="/api", dependencies=_gated)
 
-# One-service deployment: serve the built frontend at / so the whole app is
-# one origin (and /api calls need no CORS). `backend/static/` is produced by
-# `scripts/build_frontend.py`; a plain `frontend/dist/` is also honored for a
-# local `npm run build` without the copy step. No-op when neither exists.
-_here = Path(__file__).resolve().parent
-for _static in (_here.parent / "static", _here.parent.parent / "frontend" / "dist"):
-    if (_static / "index.html").exists():
-        app.mount("/", SPAStaticFiles(directory=str(_static), html=True), name="frontend")
-        break
+# Serve a local `npm run build` of the frontend at / so the full read-write
+# app runs as one origin on this machine. The public site is the static build
+# instead (see render.yaml). No-op when there is no build.
+_dist = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+if (_dist / "index.html").exists():
+    app.mount("/", SPAStaticFiles(directory=str(_dist), html=True), name="frontend")

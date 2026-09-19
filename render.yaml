@@ -1,23 +1,32 @@
-# One combined Render Web Service: FastAPI serves /api/* and also the built
-# frontend/dist/ (mounted in app/main.py). NOT deployed yet — needs explicit
-# sign-off. ADMIN_PASSWORD must be set in the Render dashboard before first
-# boot or the app is wide open.
+# The public Atlas site: a static build of the frontend with the whole library
+# baked in as atlas.json. No server, so no cold start and nothing to write to.
+# Managed by the "AtlasBlue" Render blueprint (auto-syncs this file from main).
+#
+# The library comes from backend/seed/atlas-seed.json. Change it locally (see
+# CLAUDE.md, "Changing the library"), commit, push — Render rebuilds the site.
+#
+# The old `atlas` Python web service (atlas-umyj.onrender.com) was dropped from
+# this file on 2026-09-19 and suspended: it copied the seed into a throwaway
+# SQLite file on every boot, so anything written there was lost.
 services:
   - type: web
-    name: atlas
-    runtime: python
-    plan: free
-    buildCommand: >-
-      pip install -r backend/requirements.txt &&
-      npm --prefix frontend ci &&
-      npm --prefix frontend run build
-    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    name: atlas-library
+    runtime: static
+    buildCommand: npm --prefix frontend ci && npm --prefix frontend run build
+    staticPublishPath: frontend/dist
+    pullRequestPreviewsEnabled: false
     envVars:
-      - key: DATABASE_URL
-        value: sqlite:///./data/atlas.db
-      - key: COOKIE_SECURE
-        value: "true"
-      - key: ADMIN_PASSWORD
-        sync: false          # set by hand in the dashboard
-      - key: ADMIN_SESSION_SECRET
-        generateValue: true
+      - key: VITE_STATIC
+        value: "1"
+    routes:
+      # Real files (atlas.json, assets) are served first; any other path is the app.
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      - path: /atlas.json
+        name: Cache-Control
+        value: no-cache
+      - path: /link-flags.json
+        name: Cache-Control
+        value: no-cache

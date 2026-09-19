@@ -1,0 +1,56 @@
+# Weekly dead-link check. Records each link's result in
+# backend/seed/link-status.json and commits it; the push redeploys the site,
+# which shows "may be dead" on any link that has failed twice in a row.
+# Also keeps one open issue listing those links.
+name: link-check
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Mondays 09:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install certifi
+      - name: Check every link
+        working-directory: backend
+        run: python scripts/check_links.py --write-status > ../link-report.txt || true
+      - name: Commit the results
+        run: |
+          git config user.name "atlas-link-check"
+          git config user.email "actions@users.noreply.github.com"
+          git add backend/seed/link-status.json
+          git diff --cached --quiet || git commit -m "data: weekly link check" && git push
+      - name: Update the dead-links issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > issue.md
+          import json
+          status = json.load(open("backend/seed/link-status.json"))
+          bad = sorted((k, v) for k, v in status.items() if v["fails"] >= 2)
+          print(f"{len(bad)} link(s) failed the check at least twice in a row.\n")
+          for link, v in bad:
+              print(f"- [ ] {link} — {v['status']} {v['detail']} (failed {v['fails']}x, last {v['checked']})")
+          print("\nFix or remove them locally (see CLAUDE.md), then push.")
+          PY
+          count=$(python -c "import json;print(sum(v['fails']>=2 for v in json.load(open('backend/seed/link-status.json')).values()))")
+          num=$(gh issue list --label dead-links --state open --json number -q '.[0].number')
+          if [ "$count" -gt 0 ]; then
+            gh label create dead-links --color B45309 2>/dev/null || true
+            if [ -n "$num" ]; then gh issue edit "$num" --body-file issue.md
+            else gh issue create --title "Dead links" --label dead-links --body-file issue.md; fi
+          elif [ -n "$num" ]; then
+            gh issue close "$num" --comment "All links passed this week's check."
+          fi

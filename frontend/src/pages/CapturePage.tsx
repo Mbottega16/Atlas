@@ -3,6 +3,7 @@ import { FormEvent, useEffect, useState } from "react";
 import {
   Entry,
   EntryInput,
+  BatchResult,
   batchImport,
   captureEnabled,
   createEntry,
@@ -23,6 +24,14 @@ const BLANK: EntryInput = {
   tags: [],
 };
 
+// The backend saves these anyway; they're flagged so a new category is a choice, not drift.
+function batchWarnings(res: BatchResult): string {
+  const parts = [];
+  if (res.new_categories.length) parts.push(`new category: ${res.new_categories.join(", ")}`);
+  if (res.new_tags.length) parts.push(`new tags: ${res.new_tags.join(", ")}`);
+  return parts.length ? ` Check — ${parts.join("; ")}.` : "";
+}
+
 function parseLinks(text: string): string[] {
   return text
     .split(/[\s,]+/)
@@ -37,8 +46,8 @@ export default function CapturePage() {
   const [flash, setFlash] = useState<string | null>(null);
 
   const refreshRecent = () =>
-    searchEntries({ limit: 20 }).then((res) =>
-      setRecent(res.items.filter((e) => e.source === "capture").slice(0, 20))
+    searchEntries({ limit: 100000 }).then((res) =>
+      setRecent([...res.items].sort((a, b) => b.id - a.id).slice(0, 20))
     );
 
   useEffect(() => {
@@ -201,7 +210,7 @@ function QuickPasteForm({ cats, onSaved }: { cats: string[]; onSaved: (m: string
     try {
       const items: EntryInput[] = links.map((link) => ({ link, category, tags: [] }));
       const res = await batchImport(items);
-      onSaved(`${res.created.length} added, ${res.updated.length} already known.`);
+      onSaved(`${res.created.length} added, ${res.updated.length} already known.${batchWarnings(res)}`);
       setText("");
     } catch {
       onSaved("Bulk add failed — is the backend running?");
@@ -260,7 +269,7 @@ function LiveResearchForm({ onSaved }: { onSaved: (m: string) => void }) {
     setBusy(true);
     try {
       const res = await batchImport(drafts);
-      onSaved(`${res.created.length} added, ${res.updated.length} updated.`);
+      onSaved(`${res.created.length} added, ${res.updated.length} updated.${batchWarnings(res)}`);
       setDrafts(null);
       setText("");
       setNotes("");
