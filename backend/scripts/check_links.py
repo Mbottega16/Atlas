@@ -33,7 +33,10 @@ from urllib.parse import urlsplit
 import certifi
 
 UA = "Mozilla/5.0 (compatible; AtlasLinkCheck/1.0)"
-_ANTIBOT = {403, 405, 429, 999}  # a response, but a bot-block — not "dead"
+_ANTIBOT = {401, 403, 405, 429, 999}  # a response, but a bot-block — not "dead"
+# Hosts that bot-wall every automated check, whatever status they return.
+# Only add one after checking the link by hand in a real browser.
+_ANTIBOT_HOSTS = {"amazon.com"}
 # Default Windows Python has no CA bundle wired into `ssl`, so every site
 # needing chain validation was falsely flagged "unreachable"
 # (CERTIFICATE_VERIFY_FAILED) — use certifi's bundle explicitly. Ported from
@@ -71,7 +74,7 @@ def classify(link: str, timeout: int) -> tuple[str, str]:
                     return "bounced", f"-> {final}"
                 return "ok", ""
         except urllib.error.HTTPError as e:
-            if e.code in _ANTIBOT:
+            if e.code in _ANTIBOT or _domain(link) in _ANTIBOT_HOSTS:
                 return "ok", f"HTTP {e.code} (anti-bot, treated as ok)"
             if e.code >= 500:
                 return "unreachable", f"HTTP {e.code}"
@@ -85,7 +88,10 @@ def classify(link: str, timeout: int) -> tuple[str, str]:
 
 SEED_DIR = pathlib.Path(__file__).resolve().parent.parent / "seed"
 STATUS_FILE = SEED_DIR / "link-status.json"
-_FAILING = {"dead", "unreachable"}
+# Only a real 4xx counts against a link. "unreachable" (DNS, timeout, reset)
+# says as much about the checker's network as about the site — it goes in the
+# weekly issue, but it never puts a "may be dead" badge on a live site.
+_FAILING = {"dead"}
 
 
 def _rows(limit: int) -> list[tuple[str, str | None]]:
