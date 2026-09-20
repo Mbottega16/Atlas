@@ -40,10 +40,14 @@ jobs:
           import json
           status = json.load(open("backend/seed/link-status.json"))
           bad = sorted((k, v) for k, v in status.items() if v["fails"] >= 2)
-          print(f"{len(bad)} link(s) failed the check at least twice in a row.\n")
+          print(f"{len(bad)} link(s) returned a real 4xx twice in a row. Those carry a 'may be dead' badge on the site.\n")
           for link, v in bad:
               print(f"- [ ] {link} — {v['status']} {v['detail']} (failed {v['fails']}x, last {v['checked']})")
-          print("\nFix or remove them locally (see CLAUDE.md), then push.")
+          slow = sorted(k for k, v in status.items() if v["status"] == "unreachable")
+          print(f"\n<details><summary>{len(slow)} unreachable from the runner (DNS/timeout — usually still alive, never badged)</summary>\n")
+          for link in slow:
+              print(f"- {link}")
+          print("\n</details>\n\nFix or remove the dead ones locally (see CLAUDE.md), then push.")
           PY
           count=$(python -c "import json;print(sum(v['fails']>=2 for v in json.load(open('backend/seed/link-status.json')).values()))")
           num=$(gh issue list --label dead-links --state open --json number -q '.[0].number')
