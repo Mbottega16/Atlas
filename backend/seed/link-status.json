@@ -2,5833 +2,5833 @@
  "https://10minutemail.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://123apps.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://1password.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://29a.ch/experiments": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://7cups.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://988lifeline.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://a11yproject.com/checklist": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://about.start.me": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://accessibilityinsights.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://achievethecore.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://activeminds.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://adioma.com": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://adobe.com/express": {
   "status": "unreachable",
   "detail": "TimeoutError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://adobe.com/products/express.html": {
   "status": "unreachable",
   "detail": "TimeoutError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://ads.google.com/home/tools/keyword-planner": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://adventofcode.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://aeon.co": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://agar.io": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ahrefs.com/free-seo-tools": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ai.pydantic.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://aiesec.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://airbnb.io/visx": {
   "status": "redirect",
   "detail": "-> https://visx.airbnb.tech/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://airtable.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://alembic.sqlalchemy.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://alfredapp.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://alicevision.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://alpaca.markets": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://alphavantage.co/documentation": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://alternativeto.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://amazon.com/prime/student": {
-  "status": "dead",
-  "detail": "HTTP 404",
-  "checked": "2026-09-19",
-  "fails": 2
+  "status": "ok",
+  "detail": "HTTP 404 (anti-bot, treated as ok)",
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://ambientcg.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://amcharts.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://animista.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://animoto.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://app.diagrams.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://app.formulabot.com/ai-tools/excel-formula-generator": {
   "status": "redirect",
   "detail": "-> https://betteranalyst.com/ai-excel-spreadsheet-generator",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://app.haikei.app": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://app.photoroom.com/create": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://app.termly.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://appily.com/scholarships": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://apps.ankiweb.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://appypie.com/design/meme/maker": {
   "status": "redirect",
   "detail": "-> https://www.pixazo.ai/meme/maker",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://apscheduler.readthedocs.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://archive.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://artsandculture.google.com/experiment/what-came-first/ZQGBUPErEE3bVg": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://artstation.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://asana.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://asciiflow.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://aseprite.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://asoftmurmur.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://assetstore.unity.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://atlasobscura.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://audible.in": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://autodesk.com/education/edu-software/overview": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://autodraw.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://awwwards.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://axiom.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://backgroundchecks.org/justdeleteme": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://backtrader.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://basecamp.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://beatoven.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://beautifier.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://beautiful.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://beepbox.co": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://better-auth.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://betterstack.com/uptime": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bfxr.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bigfuture.collegeboard.org/scholarship-search": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://biteable.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bitwarden.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://blackmagicdesign.com/products/davinciresolve": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bleepingcomputer.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://blender.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://blenderkit.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://blendswap.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://blinkist.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://blurb.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://blush.design": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://boardgamegeek.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bold.org": {
   "status": "ok",
   "detail": "HTTP 429 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bolt.new": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bookbaby.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bookbrush.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bookbub.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bookcreator.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bookfinder.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bookriot.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://books.google.com/talktobooks": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://boredbutton.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://borenawards.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://boscaceoil.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://braintrust.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://browse.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bubbl.us": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://buffer.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bugmenot.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://builtwith.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://bundlephobia.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://buttondown.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://calculator.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://calculatorsoup.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://calendly.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://calligraphr.com/en": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://calm.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://camelcamelcamel.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://caniemail.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://caniuse.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://canny.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://canopy.co": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://canva.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://canva.com/education": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://carbon.now.sh": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://careerbuilder.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://careeronestop.org/Toolkit/Training/find-scholarships.aspx": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://carrd.co": {
   "status": "redirect",
   "detail": "-> https://carrd.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://casel.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://cast.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://cgtrader.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://chat.openai.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://cheatsheetseries.owasp.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://chegg.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://chess.com/announcements/view/published-data-api": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://choosealicense.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://choosealicense.com/non-software": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ck12.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://clarity.microsoft.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://classcentral.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://classdojo.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://classroom.google.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://claude.ai": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://cleanup.pictures": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://clickup.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://clipchamp.com/en": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://clockify.me": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://cloudconvert.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://clscholarship.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://code.visualstudio.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://codeandweb.com/texturepacker": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://codecademy.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://codepen.io": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://codesandbox.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://codewars.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://color.adobe.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://colorincolorado.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://commonlit.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://commonpaper.com/standards": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://commonsense.org/education/reviews": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://commonsensemedia.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://compose.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://composio.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://connectedpapers.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://conventionalcommits.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://coolmathgames.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://coolors.co": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://copy.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://copychar.cc": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://copyright.gov/registration": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://core.ac.uk": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://core.telegram.org/bots/api": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://coursehero.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://coursera.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://coverr.co": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://craftpix.net/freebies": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://craigslist.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://crazygames.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://creator.nightcafe.studio/create": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://crewai.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://crisistextline.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://cron-job.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://crontab.guru": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://cs50.harvard.edu/x": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://csp-evaluator.withgoogle.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://css-tricks.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://cssgradient.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://curriculum.eleducation.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://cursor.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://cutout.pro/remove-background": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://d-id.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://daisyui.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://darebee.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://data.census.gov": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://data.gov": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://data.worldbank.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://database.lichess.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://datasetsearch.research.google.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://datasette.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://dbdiagram.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://dbeaver.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://deepl.com/en/translator": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://deque.com/axe/devtools": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://descript.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://desmos.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://devdocs.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://developer.chrome.com/docs/workbox": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://developer.mozilla.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://developers.poki.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://devhints.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://dexie.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://dictation.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://diffchecker.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://digitalhistory.uh.edu": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://dillinger.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://diversion.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://doaj.org": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://docker.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://docs.alpaca.markets": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://docs.astral.sh/ruff": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://docs.astral.sh/uv": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://docs.godotengine.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://docs.pmnd.rs/zustand": {
   "status": "redirect",
   "detail": "-> https://pmndrs.github.io/zustand/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://docs.pydantic.dev/latest": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://docs.python-telegram-bot.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://docs.ragas.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://docs.sqlalchemy.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://docs.vllm.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://docsteach.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://donotpay.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://doratoon.com": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://dottxt-ai.github.io/outlines": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://downforeveryoneorjustme.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://draft2digital.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://dribbble.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://dropbox.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://drugs.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://dspy.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://duckduckgo.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://duolingo.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://dwservice.net/en/home.html": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://e2b.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://earth.google.com/web": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://earth.nullschool.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://easings.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://easy-peasy.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://eatthismuch.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ebay.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ebsynth.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ecosia.org": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ed.ted.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://edpuzzle.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://education.github.com/pack": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://education.nationalgeographic.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://edx.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://eesel.app": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://elevenlabs.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://elgoog.im": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://elicit.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://emscripten.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://en.wikibooks.org/wiki/Main_Page": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://enactus.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://engineeringtoolbox.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://escape-team.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://etsy.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://etymonline.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://evernote.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://everytimezone.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://excalidraw.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://exercism.org": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://expensify.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://experiments.withgoogle.com/experiments": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://explainshell.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://explorabl.es": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://extract.pics": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fab.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://facebook.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fakespot.com": {
   "status": "redirect",
   "detail": "-> https://blog.mozilla.org/en/mozilla/building-whats-next/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://famistudio.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fast.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fastapi.tiangolo.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fastweb.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://faxzero.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fcrr.org/student-center-activities": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://featurebase.app": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://figma.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://figma.com/education": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://figma.com/figjam": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://file.pizza": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://finaid.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://firebase.google.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://firecrawl.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fiverr.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fivethirtyeight.com": {
   "status": "redirect",
   "detail": "-> https://abcnews.com/politics",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://flightstats.com/v2/flight-tracker/search": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://flourish.studio": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fly.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://flyleafpublishing.com/community": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://followupthen.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fontjoy.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fonts.google.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fontshare.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fontsquirrel.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fontstruct.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://foodsubs.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://forestapp.cc": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://forum.godotengine.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fred.stlouisfed.org": {
   "status": "unreachable",
   "detail": "TimeoutError",
-  "checked": "2026-09-19",
-  "fails": 1
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://freeimages.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://freepik.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://freesound.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://freshbooks.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://freshbooks.com/hub/taxes/guide-quarterly-taxes": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://frontendmentor.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://fuelly.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://futureme.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://futuretimeline.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://game-icons.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gameanalytics.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gamedeveloper.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gamediscover.co": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gamejolt.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gamemaker.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gameprogrammingpatterns.com": {
-  "status": "ok",
-  "detail": "",
-  "checked": "2026-09-19",
+  "status": "unreachable",
+  "detail": "URLError",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gamma.app": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gchq.github.io/CyberChef": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gdcvault.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gdcvault.com/free": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gdevelop.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gdquest.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gdquest.github.io/learn-gdscript": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://generated.photos/faces": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://genius.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://geogebra.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://geogebra.org/classic?lang=en": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://getepic.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://getharvest.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gethuman.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://getpocket.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ggie.berkeley.edu": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ggie.berkeley.edu/school-relationships": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gilmanscholarship.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gimp.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/Clariity/react-chessboard": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/EbookFoundation/free-programming-books": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/alpacahq/alpaca-py": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/awesomedata/awesome-public-datasets": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/donnemartin/system-design-primer": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/features/actions": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/features/copilot": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/features/security": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/ggml-org/llama.cpp": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/godotengine/awesome-godot": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/jhlywa/chess.js": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/lichess-org/chess-openings": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/lichess-org/chessground": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/lichess-org/stockfish.wasm": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/pgvector/pgvector": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/public-apis/public-apis": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/ranaroussi/quantstats": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/ranaroussi/yfinance": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/rsheftel/pandas_market_calendars": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://github.com/wilsonfreitas/awesome-quant": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gitlab.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gitleaks.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://glassdoor.com/index.htm": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://goalkicker.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://godbolt.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://godly.website": {
   "status": "redirect",
   "detail": "-> https://recent.design/?ref=godly",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://godotengine.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://godotengine.org/asset-library/asset": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://godotshaders.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://godotwildjam.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gofile.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gohighbrow.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://goldwaterscholarship.gov": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://goodreads.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://goodreads.com/author/program": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://goodtricks.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://google.com/drive": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://grammarly.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://grants.gov": {
-  "status": "redirect",
-  "detail": "-> https://grants-gov.blogspot.com:443/",
-  "checked": "2026-09-19",
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://groupon.com/local": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://guardrailsai.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://gutenberg.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://hackertyper.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://hangouts.google.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://happyhues.co": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://haveibeenpwned.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://haveibeenpwned.com/Passwords": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://haystack.deepset.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://headspace.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://healthcare.gov": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://healthchecks.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://helicone.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://help.pinterest.com/en/business/article/claim-your-website": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://hemingwayapp.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://heropatterns.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://hightail.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://homestyler.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://hope.temple.edu": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://hoppscotch.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://hotpot.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://howlongtobeat.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://howstuffworks.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://howtomarketagame.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://huemint.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://huggingface.co/datasets": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://humblebundle.com/games": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://hunter.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://hyperphysics.phy-astr.gsu.edu/hbase/index.html": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://icon-sets.iconify.design": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://iconfinder.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://icons8.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ictgames.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://idealist.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://iep.utm.edu": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ifixit.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ifttt.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://igdb.com/api": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://illustrativemathematics.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ilovepdf.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://imdb.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://imglarger.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://imgur.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://indiehackers.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://infogram.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://informationisbeautiful.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ingramspark.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://innerbody.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://insighttimer.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://insomnia.rest": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://inspect.aisi.org.uk": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://instagram.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://instapaper.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://instatus.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://instructables.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://instructure.com/canvas": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://interiorai.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://internships.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://invideo.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://irs.gov/businesses/small-businesses-self-employed": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://itch.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://itch.io/docs/creators/faq": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://itch.io/game-assets": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ixl.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://jakearchibald.github.io/svgomg": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://jedfoundation.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://jetbrains.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://jetbrains.com/community/education": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://jina.ai/reader": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://join.me": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://joinhandshake.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://jotform.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://jsoncrack.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://jsonplaceholder.typicode.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://jstor.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://justpaste.it": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://justtherecipe.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://justwatch.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://jwt.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://kaggle.com/datasets": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://kahoot.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://kdp.amazon.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://keepa.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://keepachangelog.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://kenney.nl/assets": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://kernc.github.io/backtesting.py": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://keymailer.co": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://khanacademy.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://kialo.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://kidscancode.org/godot_recipes/4.x": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://kleki.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://knowyourmeme.com/memes": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://krita.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://lancedb.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://land-book.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://langfuse.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://last.fm": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://lastpass.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://later.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ldjam.com": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://ldtk.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://learninglab.si.edu": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://librarything.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://librespeed.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://libresprite.github.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://libresprite.org": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://libretexts.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://lichess.org/api": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://likealocalguide.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://linear.app": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://linkedin.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://lite.cnn.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://litellm.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://litestream.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://livestream.com": {
   "status": "redirect",
   "detail": "-> https://vimeo.com/features/livestreaming",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://livingsocial.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://llamaindex.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://llm.datasette.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://lmms.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://lmstudio.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://loc.gov/programs/teachers": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://loom.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://lospec.com/palette-list": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://lospec.com/pixel-art-tutorials": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://lucide.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://lumalabs.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://lumosity.com/en": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://lynda.com": {
   "status": "redirect",
   "detail": "-> https://www.linkedin.com/learning/?trk=lynda_redirect_learning",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://magicstudio.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://magma.com/my/artworks": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mailerlite.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mailinator.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://make.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://makemeacocktail.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://makeuseof.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://makezine.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://manualslib.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mapcrunch.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mapeditor.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://maskable.app/editor": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://match.color.io": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://mathsisfun.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mathsolver.microsoft.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mathway.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mathway.com/Algebra": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mcbroken.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mcmaster.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://media.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://medlineplus.gov": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://meetedgar.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://meetup.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mega.co.nz": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://memrise.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://merlot.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mermaid.live": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://metatags.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://microsoft.com/en-us/education/products/office": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://midjourney.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://midjourney.com/home": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://midomi.com": {
   "status": "redirect",
   "detail": "-> https://music.soundhound.com/soundhound",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mint.intuit.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://minutes.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://miro.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://miro.com/online-whiteboard": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mixamo.com": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://mixcloud.com": {
   "status": "ok",
-  "detail": "",
-  "checked": "2026-09-19",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mixkit.co": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mobbin.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mockaroo.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://modal.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://modelcontextprotocol.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://modernfontstacks.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://modestneeds.org": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://monday.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://moneysavingexpert.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://murf.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://musclewiki.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://music-map.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://myfitnesspal.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://myfonts.com/pages/whatthefont": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://myheritage.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://myidentifiers.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mymaps.google.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mynoise.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://mysteryscience.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://myunidays.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://namechk.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://narakeet.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://nasa.gov/learning-resources": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://natrongithub.github.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://neal.fun": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://nearpod.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://neilpatel.com/ubersuggest": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://neon.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://netflix.com/browse": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://netlify.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://newegg.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://news.google.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://news.ycombinator.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://newsela.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ngrok.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://niche.com/colleges/scholarships": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ninite.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://noisli.com": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://nolo.com/legal-encyclopedia": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://noteflight.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://notion.com/product/notion-for-education": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://notion.so": {
   "status": "redirect",
   "detail": "-> https://www.notion.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://notion.so/product/ai": {
   "status": "redirect",
   "detail": "-> https://www.notion.com/product/ai",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://notion.so/product/calendar": {
   "status": "redirect",
   "detail": "-> https://www.notion.com/product/calendar",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://nsf.gov/crssprgm/reu": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://nsls.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ntfy.sh": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://nvaccess.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://observablehq.com/plot": {
   "status": "ok",
   "detail": "HTTP 429 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://observatory.mozilla.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://obsidian.md": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://obsproject.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://oercommons.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://office.com": {
   "status": "redirect",
   "detail": "-> https://m365.cloud.microsoft/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ogp.me": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ollama.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://omnicalculator.com/biology": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://onedrive.live.com/about/en-in": {
   "status": "redirect",
   "detail": "-> https://www.microsoft.com/en-in/microsoft-365/onedrive/online-cloud-storage",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://onelook.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://onlineconversion.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://onlineocr.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://open.umn.edu/opentextbooks": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://openculture.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://opendyslexic.org": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://opengameart.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://opengraph.xyz": {
   "status": "ok",
   "detail": "HTTP 429 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://openrouter.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://openscied.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://opensourcealternative.to": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://openstax.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://orama-interactive.github.io/Pixelorama": {
   "status": "redirect",
   "detail": "-> https://www.oramainteractive.com/Pixelorama/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://otter.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ourworldindata.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://overleaf.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://overstock.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://owasp.org/www-project-top-ten": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://owl.purdue.edu": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://oxfordowl.co.uk/for-home/find-a-book/library-page": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://padlet.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pages.cloudflare.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pages.github.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pagespeed.web.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://palette.fm": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pandora.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://panzoid.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://paperrater.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://parkerdewey.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://partner.steamgames.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://partner.steamgames.com/doc/home": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pathwaystoscience.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://patterns.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pbslearningmedia.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pcpartpicker.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pdfcandy.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pentest-tools.com/website-vulnerability-scanning/website-scanner": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://perplexity.ai": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pexels.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pfpmaker.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pgexe.com": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://pgnmentor.com/files.html": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://phet.colorado.edu": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://phoenix.arize.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://photopea.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://picsum.photos": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pictory.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pika.style": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pinterest.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://piskelapp.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pixabay.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pixelofink.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pixilart.com/draw": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pixlr.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pixton.com/welcome": {
   "status": "bounced",
   "detail": "-> https://www.pixton.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://placehold.co": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://planyourroom.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://platform.openai.com/playground": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://plausible.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://playretrogames.online": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://playtestcloud.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://playwright.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://podcastle.ai": {
   "status": "redirect",
   "detail": "-> https://async.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://poeditor.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://poised.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://poly.cam": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://polygon.io": {
   "status": "redirect",
   "detail": "-> https://massive.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://polyhaven.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://portkey.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://posthog.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://postman.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://presskit.partners": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://printfriendly.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://privacypolicies.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://privnote.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://prodigygame.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://producthunt.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://products.office.com/en-in/onenote/digital-note-taking-app": {
   "status": "redirect",
   "detail": "-> https://www.microsoft.com/en-in/microsoft-365/onenote/digital-note-taking-app",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://projecteuler.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://promptfoo.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://promptingguide.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://prowritingaid.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ptable.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://publisherrocket.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://pwabuilder.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://py4e.com/lessons": {
   "status": "bounced",
   "detail": "-> https://www.py4e.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://python-chess.readthedocs.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://python.langchain.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://python.useinstructor.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://qdrant.tech": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://quant.stackexchange.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://quantstart.com/articles": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://quickbooks.intuit.com": {
   "status": "unreachable",
   "detail": "TimeoutError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://quickdraw.withgoogle.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://quillbot.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://quixel.com/megascans": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://quizizz.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://quizlet.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://quora.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://qz.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://radio.garden/live": {
   "status": "bounced",
   "detail": "-> https://radio.garden/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://radix-ui.com/primitives": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://railway.app": {
   "status": "redirect",
   "detail": "-> https://railway.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://railway.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://raise.me": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://random.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://randomuser.me": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ray.so": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://raycast.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://react.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://readingrockets.org": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://readme.so": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://readworks.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://realfavicongenerator.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://realtimecolors.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://recharts.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://reclaim.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://redblobgames.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://reddit.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://reddit.com/r/IndieGaming": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://reddit.com/r/gamedev": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://reedsy.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://refactoring.guru": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://refero.design": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://regex101.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://remind.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://remove.bg": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://render.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://renderdoc.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://renpy.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://repairclinic.com": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://replicate.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://replit.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://report-uri.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://rescuetime.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://resend.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://restorephotos.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://retailmenot.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://reuters.com": {
-  "status": "dead",
-  "detail": "HTTP 401",
-  "checked": "2026-09-19",
-  "fails": 2
+  "status": "ok",
+  "detail": "HTTP 401 (anti-bot, treated as ok)",
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://rewind.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://rhymezone.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ripplematch.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://roadmap.sh": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://rocketlawyer.com/start-a-business": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://rome2rio.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://rottentomatoes.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://runwayml.com": {
   "status": "redirect",
   "detail": "-> https://runway.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://rytr.me": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://saltify.io": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sandspiel.club": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sba.gov/business-guide": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://scalenut.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://scaleofuniverse.com/en": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://scam-detector.com/find-scams": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://scbwi.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://scholar.google.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://scholarships.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://scikit-learn.org/stable": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://screenrant.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://screentogif.com": {
   "status": "redirect",
   "detail": "-> https://nicke.tech/n-studio?migrated=true",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://scribblemaps.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://scrivener.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://search.google.com/search-console/about": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sec.gov/edgar/search-and-access": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://secondstep.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://securityheaders.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://semanticscholar.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sembly.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://semrush.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sentry.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sfbgames.itch.io/chiptone": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sfxr.me": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://shadertoy.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://shields.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://shortoftheweek.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sidefx.com/products/houdini": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://similarsites.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://simple.wikipedia.org/wiki/Main_Page": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://simplified.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://simulator.money": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://site.financialmodelingprep.com/developer/docs": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sketch.metademolab.com/canvas": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sketchfab.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://skribbl.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://skyscanner.net": {
   "status": "redirect",
-  "detail": "-> https://www.skyscanner.com/?previousCultureSource=GEO_LOCATION&redirectedFrom=www.skyscanner.net&userSessionDataId=ed830541-6222-4cd6-9152-4304368ccc3d&session_handoff=eyJhbGciOiJFUzI1NiIsImtpZCI6InNlc3Npb24tc2VydmljZS1oYW5kb2ZmLWtleS0yMDI2LTA1IiwidHlwIjoiSldUIn0.eyJodHRwczovL3NreXNjYW5uZXIubmV0L3Nlc3Npb25faWQiOiIwMWEwYjk2Yy02YzJhLTgwMDEtOWJmNy03ZjliNjNjYmE0OGEiLCJleHAiOjE3ODk4MTcyOTV9.nHXTYa7fUM5UKrtNJ-9hVW5uQ39yxy4_5TXLU6pWH8CfNgX3uL8t2vGYiw0fIUfzyb4TjBTyLMK4GNRvQNI30Q",
-  "checked": "2026-09-19",
+  "detail": "-> https://www.skyscanner.com/?previousCultureSource=GEO_LOCATION&redirectedFrom=www.skyscanner.net&userSessionDataId=410e55b0-f3ab-4eb0-a175-d4e4050eed24&session_handoff=eyJhbGciOiJFUzI1NiIsImtpZCI6InNlc3Npb24tc2VydmljZS1oYW5kb2ZmLWtleS0yMDI2LTA1IiwidHlwIjoiSldUIn0.eyJodHRwczovL3NreXNjYW5uZXIubmV0L3Nlc3Npb25faWQiOiIwMWEwYmVjYy00NjI5LTgwMDQtOWE0ZS1iYmI5YzBhZTE1NDAiLCJleHAiOjE3ODk5MDc0NjN9.KUJJu6bJhuwYScG0Cvar0qy8W27QenYa7oFN9cndyhU0Whlxa_E0vjOx-HxkJHJI7T7hzlwWYxkU9855MeXUXg",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://slack.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://smallpdf.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://smmry.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://snapdrop.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://snyk.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://socratic.org": {
   "status": "redirect",
   "detail": "-> https://lens.google/#homework",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://software.sil.org/fonts": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://songkick.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sonniss.com/gameaudiogdc": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://soundcloud.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sourceforge.net": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://space.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://speechify.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://spokeo.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://spotify.com/us": {
   "status": "bounced",
   "detail": "-> https://open.spotify.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sqlalchemy.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sqlite.org/docs.html": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sqlitebrowser.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://squoosh.app": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ss64.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ssllabs.com/ssltest": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://stackblitz.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://stackoverflow.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://steamdb.info": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://stellarium-web.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://stickk.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://stockfishchess.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://stockimg.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://storyblocks.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://storyjumper.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://storylineonline.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://storyset.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://storyweaver.org.in": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://stripe.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://stripe.com/atlas": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://student.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://studentaid.gov/h/apply-for-aid/fafsa": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://studentaid.gov/understand-aid/types/grants": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://studentbeans.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://studocu.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://suno.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://sunsama.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://supabase.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://supercook.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://svgrepo.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://swipehunger.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://symbolab.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://syzygy-tables.info": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tableplus.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tabler.io/icons": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tailwindcss.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tally.so": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tango.us": {
   "status": "redirect",
   "detail": "-> https://www.tango.ai/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tanstack.com/query/latest": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tanstack.com/table/latest": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://taxact.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://teacher.desmos.com": {
   "status": "redirect",
   "detail": "-> https://classroom.amplify.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://teachyourmonstertoread.com": {
   "status": "redirect",
   "detail": "-> https://www.teachyourmonster.org/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://teachyourselfcs.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ted.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://temp-mail.org/en": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://termsfeed.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://testing-library.com/docs": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://textexpander.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://textures.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://thebookofshaders.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://theconversation.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://thecrashcourse.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://theforage.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://themeasuredmom.com": {
-  "status": "redirect",
-  "detail": "-> https://reachallreaders.com/",
-  "checked": "2026-09-19",
+  "status": "ok",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://thenounproject.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://theoatmeal.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://theodinproject.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://therealfooddietitians.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://theskylive.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://theuselessweb.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://thinkgeek.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://thisissand.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://thistothat.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://thriftbooks.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tiingo.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tineye.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tinypng.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tinywow.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tldr.sh": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tmsearch.uspto.gov": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://toastmasters.org/find-a-club": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://todoist.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://toffeeshare.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://toggl.com/track": {
   "status": "bounced",
   "detail": "-> https://toggl.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tomeapp.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://toptal.com/developers/gitignore": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://torproject.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tosdr.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://transferwise.com": {
   "status": "redirect",
   "detail": "-> https://wise.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://transform.tools": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://translate.google.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://trello.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://trends.google.com/trends": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tripadvisor.in": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://truman.gov": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://trychroma.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tumblr.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tunefind.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tunein.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://turbosquid.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://turnitin.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://turso.tech": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://tutorai.me": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://twinery.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://twitter.com": {
   "status": "redirect",
   "detail": "-> https://x.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://typescale.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://typing.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://udemy.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://udlguidelines.cast.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ufli.education.ufl.edu/foundations/toolbox": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ui.shadcn.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://umami.is": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://understood.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://undraw.co/illustrations": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://unigo.com/scholarships": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://uniteforliteracy.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://unroll.me": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://unscreen.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://unsloth.ai": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://unsplash.com": {
-  "status": "dead",
-  "detail": "HTTP 401",
-  "checked": "2026-09-19",
-  "fails": 2
+  "status": "ok",
+  "detail": "HTTP 401 (anti-bot, treated as ok)",
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://unstructured.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://upstash.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://uptimerobot.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://upwork.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://upwork.com/freelance-jobs": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://us.fulbrightonline.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://usajobs.gov": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://usemotion.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://usethekeyboard.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://uspto.gov/trademarks/basics": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://v0.dev": {
   "status": "redirect",
   "detail": "-> https://v0.app/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://vectorbt.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://veed.io/tools/ai-video/ai-video-editor": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://vellum.pub": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://vercel.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://viabox.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://videoscribe.co": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://videvo.net": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://vimeo.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://virustotal.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://virustotal.com/gui/home/upload": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://vite.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://vitejs.dev": {
   "status": "redirect",
   "detail": "-> https://vite.dev/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://vitest.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://volunteermatch.org": {
   "status": "redirect",
   "detail": "-> https://www.idealist.org/volunteermatch",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://w3.org/WAI/WCAG21/quickref": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://w3schools.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://warp.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://watch.amazon.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://wave.webaim.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://waveapps.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://wayup.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://weaviate.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://web.archive.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://web.dev": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://web.whatsapp.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://webaim.org/resources/contrastchecker": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://webassembly.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://webhook.site": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://wellsaidlabs.com": {
   "status": "redirect",
   "detail": "-> https://www.wellsaid.io/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://wetransfer.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://whatruns.com": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-09-19",
-  "fails": 2
+  "checked": "2026-09-20",
+  "fails": 0
  },
  "https://whichbook.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://whimsical.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://wikipedia.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://wolframalpha.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://woot.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://wordhippo.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://wordtune.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://workers.cloudflare.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://wornontv.net": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://writeforkids.org": {
   "status": "redirect",
   "detail": "-> https://writeforkids.online/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://writesonic.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://wunderground.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://yelp.com": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://you.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://youtube.com/movies": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://zamzar.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://zapier.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://zaproxy.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://zearn.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://zipline.ml4trading.io": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://ziprecruiter.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://zoom.us": {
   "status": "redirect",
   "detail": "-> https://www.zoom.com/",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://zoomscape.ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  },
  "https://zotero.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-09-19",
+  "checked": "2026-09-20",
   "fails": 0
  }
 }
