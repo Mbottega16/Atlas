@@ -31,7 +31,14 @@ jobs:
           git config user.name "atlas-link-check"
           git config user.email "actions@users.noreply.github.com"
           git add backend/seed/link-status.json
-          git diff --cached --quiet || git commit -m "data: weekly link check" && git push
+          if git diff --cached --quiet; then
+            echo "no change"
+          else
+            git commit -m "data: weekly link check"
+            # The checkout can be behind by the time a 10-minute check finishes.
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push
+          fi
       - name: Update the dead-links issue
         env:
           GH_TOKEN: ${{ github.token }}
