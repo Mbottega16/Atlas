@@ -712,7 +712,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://app.formulabot.com/ai-tools/excel-formula-generator",
+  "link": "https://betteranalyst.com/ai-excel-spreadsheet-generator",
   "title": "Excel Formula Bot",
   "category": "productivity",
   "description": "Converts text to spreadsheet formulas.",
@@ -798,7 +798,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://livestream.com",
+  "link": "https://vimeo.com/features/livestreaming",
   "title": "Livestream",
   "category": "audio & video",
   "description": "Broadcasts desktop screens and events live.",
@@ -1058,7 +1058,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://appypie.com/design/meme/maker",
+  "link": "https://pixazo.ai/meme/maker",
   "title": "AppyPie Meme Maker",
   "category": "entertainment & social",
   "description": "Meme creation tool.",
@@ -1335,7 +1335,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://midomi.com",
+  "link": "https://music.soundhound.com/soundhound",
   "title": "Midomi",
   "category": "audio & video",
   "description": "Identifies songs by humming.",
@@ -1369,7 +1369,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://podcastle.ai",
+  "link": "https://async.com",
   "title": "Podcastle",
   "category": "ai tools",
   "description": "AI podcast creation and editing platform.",
@@ -2527,7 +2527,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://tango.us",
+  "link": "https://tango.ai",
   "title": "Tango",
   "category": "productivity",
   "description": "Step-by-step guide creation tool.",
@@ -2585,7 +2585,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://wellsaidlabs.com",
+  "link": "https://wellsaid.io",
   "title": "WellSaid Labs",
   "category": "ai tools",
   "description": "AI voice-over creation tool.",
@@ -2659,7 +2659,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://carrd.co",
+  "link": "https://carrd.com",
   "title": "Carrd",
   "category": "file & web utilities",
   "description": "One-page website builder.",
@@ -3369,7 +3369,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://onedrive.live.com/about/en-in",
+  "link": "https://microsoft.com/en-in/microsoft-365/onedrive/online-cloud-storage",
   "title": "OneDrive",
   "category": "file & web utilities",
   "description": "Microsoft's cloud storage for sharing and editing files.",
@@ -3407,7 +3407,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://transferwise.com",
+  "link": "https://wise.com",
   "title": "TransferWise (Wise)",
   "category": "money & markets",
   "description": "Fast money transfers in multiple currencies at real rates.",
@@ -3505,7 +3505,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://lynda.com",
+  "link": "https://linkedin.com/learning",
   "title": "LinkedIn Learning",
   "category": "audio & video",
   "description": "Video courses on diverse topics by subscription.",
@@ -3963,7 +3963,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://office.com",
+  "link": "https://m365.cloud.microsoft",
   "title": "Microsoft Office Online",
   "category": "productivity",
   "description": "Free browser-based access to edit MS Office files.",
@@ -3977,7 +3977,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://products.office.com/en-in/onenote/digital-note-taking-app",
+  "link": "https://microsoft.com/en-in/microsoft-365/onenote/digital-note-taking-app",
   "title": "OneNote",
   "category": "productivity",
   "description": "Note-taking app with customizable layout options.",
@@ -4035,7 +4035,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://skyscanner.net",
+  "link": "https://skyscanner.com",
   "title": "SkyScanner",
   "category": "everyday life",
   "description": "Flight search engine for domestic and international travel.",
@@ -4158,7 +4158,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://twitter.com",
+  "link": "https://x.com",
   "title": "Twitter (X)",
   "category": "entertainment & social",
   "description": "Time-saving social media platform.",
@@ -5164,7 +5164,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://notion.so",
+  "link": "https://notion.com",
   "title": "Notion",
   "category": "productivity",
   "description": "All-in-one workspace for notes, docs, and databases.",
@@ -5484,7 +5484,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://zoom.us",
+  "link": "https://zoom.com",
   "title": "Zoom",
   "category": "productivity",
   "description": "Video conferencing platform.",
@@ -5652,19 +5652,6 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://railway.app",
-  "title": "Railway",
-  "category": "developer tools",
-  "description": "Simple cloud deployment platform for apps and databases.",
-  "use_case": "Alternative deploy target to Render for small FastAPI apps.",
-  "tags": [
-   "deployment",
-   "hosting"
-  ],
-  "source": "capture",
-  "added": "2026-08-26"
- },
- {
   "link": "https://firebase.google.com",
   "title": "Firebase",
   "category": "developer tools",
@@ -5798,19 +5785,6 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://vitejs.dev",
-  "title": "Vite",
-  "category": "developer tools",
-  "description": "Fast frontend build tool and dev server.",
-  "use_case": "Frontend build tooling already used across the project stack.",
-  "tags": [
-   "build tool",
-   "javascript"
-  ],
-  "source": "capture",
-  "added": "2026-08-26"
- },
- {
   "link": "https://react.dev",
   "title": "React Docs",
   "category": "developer tools",
@@ -5881,7 +5855,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://runwayml.com",
+  "link": "https://runway.com",
   "title": "Runway",
   "category": "ai tools",
   "description": "AI video generation and editing suite.",
@@ -5962,7 +5936,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://v0.dev",
+  "link": "https://v0.app",
   "title": "v0",
   "category": "ai tools",
   "description": "Vercel's AI tool for generating React UI from prompts.",
@@ -6072,7 +6046,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://notion.so/product/ai",
+  "link": "https://notion.com/product/ai",
   "title": "Notion AI",
   "category": "writing & publishing",
   "description": "AI writing assistant built into Notion.",
@@ -6406,7 +6380,7 @@
   "added": "2026-08-26"
  },
  {
-  "link": "https://notion.so/product/calendar",
+  "link": "https://notion.com/product/calendar",
   "title": "Notion Calendar",
   "category": "productivity",
   "description": "Calendar app integrated with Notion workspaces.",
@@ -6865,7 +6839,7 @@
   "added": "2026-08-27"
  },
  {
-  "link": "https://volunteermatch.org",
+  "link": "https://idealist.org/volunteermatch",
   "title": "VolunteerMatch",
   "category": "college & career",
   "description": "Large database matching you to local and virtual volunteer opportunities by cause area.",
@@ -9030,7 +9004,7 @@
   "added": "2026-08-27"
  },
  {
-  "link": "https://godly.website",
+  "link": "https://recent.design",
   "title": "Godly",
   "category": "design & media",
   "description": "Hand-picked gallery of exceptional website design, tagged by section (hero, pricing, footer) and vibe.",
@@ -10960,7 +10934,7 @@
   "added": "2026-08-28"
  },
  {
-  "link": "https://orama-interactive.github.io/Pixelorama",
+  "link": "https://oramainteractive.com/Pixelorama",
   "title": "Pixelorama",
   "category": "game dev",
   "description": "Free, open-source pixel-art editor (built in Godot) — animation timeline, tilemaps, custom brushes, palette tools.",
@@ -11104,7 +11078,7 @@
   "added": "2026-08-28"
  },
  {
-  "link": "https://screentogif.com",
+  "link": "https://nicke.tech/n-studio",
   "title": "ScreenToGif",
   "category": "audio & video",
   "description": "Free Windows tool to record the screen/webcam/sketchboard and edit frame-by-frame into optimized GIF/MP4/APNG.",
@@ -11283,7 +11257,7 @@
   "added": "2026-08-28"
  },
  {
-  "link": "https://teachyourmonstertoread.com",
+  "link": "https://teachyourmonster.org",
   "title": "Teach Your Monster to Read",
   "category": "education",
   "description": "Free (on web) research-backed phonics game covering first letters through fluent reading, aligned to systematic SP phonics.",
@@ -11427,7 +11401,7 @@
   "added": "2026-08-28"
  },
  {
-  "link": "https://writeforkids.org",
+  "link": "https://writeforkids.online",
   "title": "Write for Kids (CBI)",
   "category": "writing & publishing",
   "description": "Children's Book Insider's articles and courses on writing picture books, chapter books, and MG/YA, plus submission tips.",
@@ -11853,7 +11827,7 @@
   "added": "2026-08-28"
  },
  {
-  "link": "https://docs.pmnd.rs/zustand",
+  "link": "https://pmndrs.github.io/zustand",
   "title": "Zustand",
   "category": "developer tools",
   "description": "Tiny, unopinionated React state store — no context boilerplate, selective subscriptions, middleware.",
@@ -12086,7 +12060,7 @@
   "added": "2026-08-28"
  },
  {
-  "link": "https://airbnb.io/visx",
+  "link": "https://visx.airbnb.tech",
   "title": "visx",
   "category": "developer tools",
   "description": "Low-level React + D3 primitives from Airbnb — build exactly the chart you want without a charting framework's constraints.",
@@ -12379,7 +12353,7 @@
   "added": "2026-08-28"
  },
  {
-  "link": "https://polygon.io",
+  "link": "https://massive.com",
   "title": "Polygon.io",
   "category": "reference & data",
   "description": "Market data API — aggregates, trades, quotes, reference data, corporate actions; limited free tier, paid for real-time.",
@@ -12525,7 +12499,7 @@
   "added": "2026-08-28"
  },
  {
-  "link": "https://teacher.desmos.com",
+  "link": "https://classroom.amplify.com",
   "title": "Desmos Classroom",
   "category": "education",
   "description": "Free interactive math activities and the activity builder — students explore and respond, teacher sees thinking live.",
