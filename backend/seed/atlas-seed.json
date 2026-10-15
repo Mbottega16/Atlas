@@ -13583,5 +13583,3177 @@
   ],
   "source": "capture",
   "added": "2026-09-03"
+ },
+ {
+  "link": "https://hume.ai",
+  "title": "Hume AI",
+  "category": "ai tools",
+  "description": "An emotionally expressive voice AI API that reads tone and emotion in speech.",
+  "use_case": "Add emotion-aware voice AI to an app",
+  "tags": [
+   "api",
+   "voice"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://tldv.io",
+  "title": "tl;dv",
+  "category": "productivity",
+  "description": "Joins video calls to record, transcribe, and summarize meetings automatically.",
+  "use_case": "Get an automatic summary of a video call",
+  "tags": [
+   "meetings",
+   "transcription"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://downdetector.com",
+  "title": "Downdetector",
+  "category": "file & web utilities",
+  "description": "Tracks real-time, crowdsourced outage reports for websites and online services.",
+  "use_case": "Check whether a site is down for everyone else too",
+  "tags": [
+   "outages",
+   "status"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://10015.io",
+  "title": "10015.io",
+  "category": "file & web utilities",
+  "description": "A free toolbox bundling dozens of small text, image, and file utilities on one page.",
+  "use_case": "Find a quick one-off utility without installing anything",
+  "tags": [
+   "converters",
+   "toolbox"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://milanote.com",
+  "title": "Milanote",
+  "category": "productivity",
+  "description": "A visual board for organizing notes, images, and links into mood boards and project plans.",
+  "use_case": "Sketch out a creative project visually",
+  "tags": [
+   "mood-board",
+   "planning"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://regexr.com",
+  "title": "RegExr",
+  "category": "developer tools",
+  "description": "An online regex tester with live highlighting, a cheat sheet, and a pattern community.",
+  "use_case": "Build and debug a regular expression",
+  "tags": [
+   "regex",
+   "testing"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://sqliteonline.com",
+  "title": "SQLite Online",
+  "category": "developer tools",
+  "description": "Runs a SQLite, MySQL, or PostgreSQL database directly in the browser, no install needed.",
+  "use_case": "Try a SQL query without setting up a database",
+  "tags": [
+   "sandbox",
+   "sql"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://chatpdf.com",
+  "title": "ChatPDF",
+  "category": "ai tools",
+  "description": "Upload a PDF and chat with an AI about its contents.",
+  "use_case": "Ask questions about a long PDF instead of reading it",
+  "tags": [
+   "chat",
+   "pdf"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://affine.pro",
+  "title": "AFFiNE",
+  "category": "productivity",
+  "description": "An open-source workspace that merges docs, whiteboards, and tables into one canvas.",
+  "use_case": "Combine notes and a whiteboard in one workspace",
+  "tags": [
+   "notes",
+   "whiteboard"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://http.cat",
+  "title": "HTTP Cats",
+  "category": "developer tools",
+  "description": "Illustrates every HTTP status code with a matching cat photo.",
+  "use_case": "Look up what an HTTP status code means, memorably",
+  "tags": [
+   "http",
+   "reference"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://cryptii.com",
+  "title": "Cryptii",
+  "category": "security & privacy",
+  "description": "A modular encode/decode/encrypt playground for ciphers, hashes, and text formats.",
+  "use_case": "Decode or encrypt a string without writing code",
+  "tags": [
+   "ciphers",
+   "encoding"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://learngitbranching.js.org",
+  "title": "Learn Git Branching",
+  "category": "developer tools",
+  "description": "An interactive, visual sandbox for practicing Git branching and commands.",
+  "use_case": "Practice Git commands without risking a real repo",
+  "tags": [
+   "git",
+   "tutorial"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://grep.app",
+  "title": "grep.app",
+  "category": "developer tools",
+  "description": "Searches code across a huge index of public GitHub repositories.",
+  "use_case": "Find real-world examples of how a function is used",
+  "tags": [
+   "code-search",
+   "github"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://poe.com",
+  "title": "Poe",
+  "category": "ai tools",
+  "description": "A single chat interface that gives access to many different AI models side by side.",
+  "use_case": "Try several AI chatbots from one place",
+  "tags": [
+   "chatbot",
+   "multi-model"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://kimi.com",
+  "title": "Kimi",
+  "category": "ai tools",
+  "description": "Moonshot AI's chatbot, built for long-context reasoning and document analysis.",
+  "use_case": "Chat with an AI about a very long document",
+  "tags": [
+   "chatbot",
+   "long-context"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://genspark.ai",
+  "title": "Genspark",
+  "category": "ai tools",
+  "description": "An AI agent that researches a topic and assembles a custom results page.",
+  "use_case": "Get an AI-assembled summary page for a research question",
+  "tags": [
+   "agent",
+   "research"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://uicolors.app",
+  "title": "UI Colors",
+  "category": "design & media",
+  "description": "Generates a full Tailwind-style color shade palette from one base color.",
+  "use_case": "Turn one brand color into a full shade palette",
+  "tags": [
+   "color",
+   "palette"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://epochconverter.com",
+  "title": "Epoch Converter",
+  "category": "developer tools",
+  "description": "Converts Unix epoch timestamps to and from human-readable dates.",
+  "use_case": "Convert a Unix timestamp to a real date",
+  "tags": [
+   "converter",
+   "timestamps"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://browserling.com",
+  "title": "Browserling",
+  "category": "developer tools",
+  "description": "Runs real browsers, including old IE versions, remotely for cross-browser testing.",
+  "use_case": "Test a site in an old browser without installing it",
+  "tags": [
+   "cross-browser",
+   "testing"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://gitignore.io",
+  "title": "gitignore.io",
+  "category": "developer tools",
+  "description": "Generates a ready-made .gitignore file for any combination of languages and tools.",
+  "use_case": "Generate a .gitignore for a new project",
+  "tags": [
+   "config",
+   "git"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://pinokio.computer",
+  "title": "Pinokio",
+  "category": "ai tools",
+  "description": "A one-click launcher that installs and runs local AI apps and models without manual setup.",
+  "use_case": "Install a local AI app with one click",
+  "tags": [
+   "launcher",
+   "local-ai"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://tixy.land",
+  "title": "tixy.land",
+  "category": "design & media",
+  "description": "A tiny creative-coding playground where a one-line JS function animates a grid of dots.",
+  "use_case": "Experiment with generative-art formulas in one line of code",
+  "tags": [
+   "creative-coding",
+   "generative-art"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://quickref.me",
+  "title": "QuickRef.ME",
+  "category": "developer tools",
+  "description": "A collection of visual cheat sheets for languages, frameworks, and dev tools.",
+  "use_case": "Find a quick visual cheat sheet for a language or tool",
+  "tags": [
+   "cheat-sheet",
+   "reference"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://glif.app",
+  "title": "Glif",
+  "category": "ai tools",
+  "description": "A platform for building and sharing small AI-powered mini-apps and workflows.",
+  "use_case": "Build a small AI workflow without code",
+  "tags": [
+   "ai-apps",
+   "workflow"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://phind.com",
+  "title": "Phind",
+  "category": "ai tools",
+  "description": "An AI search engine built for developers, pairing an answer with cited sources and code.",
+  "use_case": "Get a sourced, code-aware answer to a dev question",
+  "tags": [
+   "developer",
+   "search"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://chat.mistral.ai",
+  "title": "Le Chat (Mistral)",
+  "category": "ai tools",
+  "description": "Mistral AI's own chat interface for its open and commercial language models.",
+  "use_case": "Chat with Mistral's AI models directly",
+  "tags": [
+   "chatbot",
+   "llm"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://detexify.kirelabs.org",
+  "title": "Detexify",
+  "category": "developer tools",
+  "description": "Draw a symbol and it identifies the matching LaTeX command.",
+  "use_case": "Find the LaTeX command for a symbol by drawing it",
+  "tags": [
+   "latex",
+   "lookup"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://it-tools.tech",
+  "title": "IT Tools",
+  "category": "developer tools",
+  "description": "A large collection of small browser-based utilities for developers, like hashing and encoding.",
+  "use_case": "Find a quick dev utility like a hash or encoder",
+  "tags": [
+   "toolbox",
+   "utilities"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://lovable.dev",
+  "title": "Lovable",
+  "category": "ai tools",
+  "description": "An AI app builder that turns a text prompt into a working web app.",
+  "use_case": "Generate a working web app from a text prompt",
+  "tags": [
+   "app-builder",
+   "no-code"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://tldraw.com",
+  "title": "tldraw",
+  "category": "productivity",
+  "description": "An infinite collaborative whiteboard for sketching diagrams and ideas.",
+  "use_case": "Sketch a quick diagram with a collaborator",
+  "tags": [
+   "diagramming",
+   "whiteboard"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://websim.com",
+  "title": "Websim",
+  "category": "ai tools",
+  "description": "An AI tool that generates an entire simulated website from a prompt, page by page.",
+  "use_case": "Generate a playable fake website from a prompt",
+  "tags": [
+   "generative",
+   "simulation"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://v0.dev",
+  "title": "v0",
+  "category": "ai tools",
+  "description": "Vercel's AI tool that generates React UI components from a text prompt.",
+  "use_case": "Generate a React component from a description",
+  "tags": [
+   "react",
+   "ui-generation"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://wokwi.com",
+  "title": "Wokwi",
+  "category": "developer tools",
+  "description": "A browser-based simulator for Arduino, ESP32, and other microcontroller circuits.",
+  "use_case": "Test an Arduino circuit without real hardware",
+  "tags": [
+   "electronics",
+   "simulator"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://blueprint.am",
+  "title": "Blueprint.am",
+  "category": "ai tools",
+  "description": "An AI hardware-design tool that turns a project idea into wiring diagrams and a parts list.",
+  "use_case": "Turn a hardware idea into a wiring diagram and parts list",
+  "tags": [
+   "electronics",
+   "hardware"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://animejs.com",
+  "title": "Anime.js",
+  "category": "developer tools",
+  "description": "A lightweight JavaScript animation library for CSS, SVG, and DOM properties.",
+  "use_case": "Add smooth animations to a web page with JS",
+  "tags": [
+   "animation",
+   "javascript"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://app.emergent.sh",
+  "title": "Emergent",
+  "category": "ai tools",
+  "description": "An AI agent that builds and deploys full web apps from a conversation.",
+  "use_case": "Describe an app in chat and get it built and deployed",
+  "tags": [
+   "agent",
+   "app-builder"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://chef.convex.dev",
+  "title": "Chef (Convex)",
+  "category": "ai tools",
+  "description": "An AI app builder paired with Convex's backend, generating full-stack apps from a prompt.",
+  "use_case": "Generate a full-stack app backend from a prompt",
+  "tags": [
+   "app-builder",
+   "backend"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://coddy.tech",
+  "title": "Coddy",
+  "category": "education",
+  "description": "Hands-on coding exercises and mini-courses for practicing programming basics.",
+  "use_case": "Practice coding fundamentals with short exercises",
+  "tags": [
+   "coding-practice",
+   "courses"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://coze.com",
+  "title": "Coze",
+  "category": "ai tools",
+  "description": "A platform for building and publishing custom AI chatbots without code.",
+  "use_case": "Build a custom AI chatbot without code",
+  "tags": [
+   "chatbot-builder",
+   "no-code"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://enzostvs-deepsite.hf.space",
+  "title": "DeepSite",
+  "category": "ai tools",
+  "description": "A Hugging Face Space AI tool that generates a full website from a text prompt.",
+  "use_case": "Generate a website from a text prompt",
+  "tags": [
+   "app-builder",
+   "generative"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://flowith.io",
+  "title": "Flowith",
+  "category": "ai tools",
+  "description": "An AI workspace that chains prompts, documents, and tools into visual workflows.",
+  "use_case": "Chain AI steps together into a visual workflow",
+  "tags": [
+   "agent",
+   "workflow"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://framer.com",
+  "title": "Framer",
+  "category": "design & media",
+  "description": "A no-code website builder with real design tools and built-in animation.",
+  "use_case": "Design and publish a website without code",
+  "tags": [
+   "no-code",
+   "website-builder"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://gptexcel.uk",
+  "title": "GPT Excel",
+  "category": "ai tools",
+  "description": "Generates Excel and Google Sheets formulas from a plain-English description.",
+  "use_case": "Get a spreadsheet formula from a plain description",
+  "tags": [
+   "formulas",
+   "spreadsheets"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://n8n.io",
+  "title": "n8n",
+  "category": "developer tools",
+  "description": "An open-source workflow-automation tool for connecting apps and APIs visually.",
+  "use_case": "Automate a task across multiple apps without code",
+  "tags": [
+   "automation",
+   "workflow"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://natively.dev",
+  "title": "Natively",
+  "category": "developer tools",
+  "description": "An AI-assisted no-code builder for native iOS and Android apps.",
+  "use_case": "Build a native mobile app without writing code",
+  "tags": [
+   "mobile",
+   "no-code"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://ponder.chat",
+  "title": "Ponder",
+  "category": "ai tools",
+  "description": "An AI chat tool for thinking through ideas and decisions in a structured way.",
+  "use_case": "Talk through a decision with an AI",
+  "tags": [
+   "chatbot",
+   "thinking"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://reactbits.dev",
+  "title": "React Bits",
+  "category": "developer tools",
+  "description": "A library of copy-paste animated React UI components and effects.",
+  "use_case": "Grab a ready-made animated React component",
+  "tags": [
+   "components",
+   "react"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://same.new",
+  "title": "Same",
+  "category": "ai tools",
+  "description": "An AI tool that clones or rebuilds a website's design from a URL or prompt.",
+  "use_case": "Rebuild a website's design from a prompt or URL",
+  "tags": [
+   "app-builder",
+   "generative"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://whitescreen.online",
+  "title": "White Screen",
+  "category": "file & web utilities",
+  "description": "Shows a fake Windows or Mac update screen to make a computer look busy.",
+  "use_case": "Fake a software-update screen on a shared computer",
+  "tags": [
+   "prank",
+   "screen"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://khroma.co",
+  "title": "Khroma",
+  "category": "design & media",
+  "description": "An AI color tool that learns your taste and generates palettes you'd actually use.",
+  "use_case": "Generate a color palette matched to your taste",
+  "tags": [
+   "ai",
+   "color"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://shapedivider.app",
+  "title": "Shape Divider",
+  "category": "design & media",
+  "description": "Generates SVG shape dividers (waves, angles, curves) for splitting page sections.",
+  "use_case": "Add a decorative SVG divider between page sections",
+  "tags": [
+   "svg",
+   "web-design"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://fontpair.co",
+  "title": "Fontpair",
+  "category": "design & media",
+  "description": "Curates Google Font pairings that work well together, ready to copy.",
+  "use_case": "Find two fonts that pair well for a design",
+  "tags": [
+   "fonts",
+   "typography"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://photoroom.com",
+  "title": "PhotoRoom",
+  "category": "design & media",
+  "description": "AI photo editing focused on clean product shots and background removal for e-commerce.",
+  "use_case": "Remove a background from a product photo",
+  "tags": [
+   "ai",
+   "photo-editing"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://magnific.com",
+  "title": "Magnific",
+  "category": "design & media",
+  "description": "An AI image upscaler that adds realistic detail while enlarging images.",
+  "use_case": "Upscale an image while adding realistic detail",
+  "tags": [
+   "ai",
+   "upscaling"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://dicebear.com",
+  "title": "DiceBear",
+  "category": "design & media",
+  "description": "Generates free, open-source avatar illustrations in many styles.",
+  "use_case": "Generate placeholder avatars for user profiles",
+  "tags": [
+   "avatars",
+   "illustration"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://clipdrop.co",
+  "title": "Clipdrop",
+  "category": "design & media",
+  "description": "A suite of AI image tools: background removal, relighting, cleanup, and upscaling.",
+  "use_case": "Clean up or relight a photo with one AI tool",
+  "tags": [
+   "ai",
+   "photo-editing"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://vizcom.com",
+  "title": "Vizcom",
+  "category": "design & media",
+  "description": "Converts rough product sketches into photorealistic AI renders.",
+  "use_case": "Turn a product sketch into a realistic render",
+  "tags": [
+   "ai",
+   "rendering"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://colorhunt.co",
+  "title": "Color Hunt",
+  "category": "design & media",
+  "description": "A community-curated gallery of trendy color palettes.",
+  "use_case": "Browse trending color palettes for a design",
+  "tags": [
+   "color",
+   "palette"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://openpeeps.com",
+  "title": "Open Peeps",
+  "category": "design & media",
+  "description": "A free, hand-drawn illustration library of mix-and-match people.",
+  "use_case": "Add free hand-drawn illustrated people to a design",
+  "tags": [
+   "free-assets",
+   "illustration"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://pattern.monster",
+  "title": "Pattern Monster",
+  "category": "design & media",
+  "description": "Generates seamless SVG background patterns, free to copy and customize.",
+  "use_case": "Generate a seamless SVG background pattern",
+  "tags": [
+   "patterns",
+   "svg"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://leonardo.ai",
+  "title": "Leonardo AI",
+  "category": "design & media",
+  "description": "An AI image-generation platform with fine-grained style and model controls.",
+  "use_case": "Generate styled AI images for a project",
+  "tags": [
+   "ai",
+   "image-generation"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://logoipsum.com",
+  "title": "Logoipsum",
+  "category": "design & media",
+  "description": "Free placeholder logos for mockups, in many styles and formats.",
+  "use_case": "Drop a placeholder logo into a mockup",
+  "tags": [
+   "logos",
+   "placeholder"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://perchance.org",
+  "title": "Perchance",
+  "category": "ai tools",
+  "description": "A hub of community-built random generators, from AI image tools to text and name generators.",
+  "use_case": "Find or build a random-content generator",
+  "tags": [
+   "community",
+   "generators"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://uxwing.com",
+  "title": "UXWing",
+  "category": "design & media",
+  "description": "A free icon library with thousands of vector icons for commercial use.",
+  "use_case": "Grab a free vector icon for a project",
+  "tags": [
+   "free-assets",
+   "icons"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://magicpattern.design",
+  "title": "MagicPattern",
+  "category": "design & media",
+  "description": "A set of generators for background and pattern graphics (gradients, grids, blobs, and more).",
+  "use_case": "Generate a background pattern or gradient graphic",
+  "tags": [
+   "backgrounds",
+   "patterns"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://coolbackgrounds.io",
+  "title": "Cool Backgrounds",
+  "category": "design & media",
+  "description": "Generates abstract gradient and pattern backgrounds for download.",
+  "use_case": "Generate an abstract background image",
+  "tags": [
+   "backgrounds",
+   "gradients"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://lummi.ai",
+  "title": "Lummi",
+  "category": "design & media",
+  "description": "A library of free AI-generated stock photos and graphics.",
+  "use_case": "Find free AI-generated stock imagery",
+  "tags": [
+   "ai",
+   "stock-photos"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://screely.com",
+  "title": "Screely",
+  "category": "design & media",
+  "description": "Wraps a screenshot in a clean browser or device frame for presentations.",
+  "use_case": "Put a screenshot in a clean browser mockup frame",
+  "tags": [
+   "mockups",
+   "screenshots"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://pixilart.com",
+  "title": "Pixilart",
+  "category": "design & media",
+  "description": "A free browser-based pixel art editor and community gallery.",
+  "use_case": "Draw pixel art in the browser",
+  "tags": [
+   "editor",
+   "pixel-art"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://method.ac",
+  "title": "Method",
+  "category": "design & media",
+  "description": "Short interactive games that teach core design fundamentals like color and layout.",
+  "use_case": "Practice design fundamentals through a quick game",
+  "tags": [
+   "design-education",
+   "games"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://blobmaker.app",
+  "title": "Blob Maker",
+  "category": "design & media",
+  "description": "Generates random, organic SVG blob shapes for backgrounds and decoration.",
+  "use_case": "Generate an organic blob shape for a design",
+  "tags": [
+   "shapes",
+   "svg"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://getwaves.io",
+  "title": "Get Waves",
+  "category": "design & media",
+  "description": "Generates SVG wave dividers for splitting page sections.",
+  "use_case": "Add a wavy SVG divider between page sections",
+  "tags": [
+   "svg",
+   "web-design"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://weavesilk.com",
+  "title": "Silk",
+  "category": "design & media",
+  "description": "A generative-art tool that turns mouse movement into flowing, symmetric silk-like patterns.",
+  "use_case": "Create flowing generative art by moving the mouse",
+  "tags": [
+   "creative-coding",
+   "generative-art"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://fffuel.co",
+  "title": "fffuel",
+  "category": "design & media",
+  "description": "A collection of free SVG generators: gradients, blobs, patterns, waves, and more.",
+  "use_case": "Generate a free SVG asset for a design",
+  "tags": [
+   "generators",
+   "svg"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://krea.ai",
+  "title": "Krea",
+  "category": "design & media",
+  "description": "An AI creative suite putting many image and video models behind one real-time canvas.",
+  "use_case": "Generate and iterate on AI images in real time",
+  "tags": [
+   "ai",
+   "image-generation"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://ideogram.ai",
+  "title": "Ideogram",
+  "category": "design & media",
+  "description": "An AI image generator known for rendering legible text inside generated images.",
+  "use_case": "Generate an AI image with readable text in it",
+  "tags": [
+   "ai",
+   "image-generation"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://recraft.ai",
+  "title": "Recraft",
+  "category": "design & media",
+  "description": "An AI tool for generating vector graphics, icons, and brand-consistent illustrations.",
+  "use_case": "Generate a vector icon or illustration set with AI",
+  "tags": [
+   "ai",
+   "vector-graphics"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://spline.design",
+  "title": "Spline",
+  "category": "vfx & 3d",
+  "description": "A browser-based 3D design tool for building interactive 3D scenes for the web.",
+  "use_case": "Build an interactive 3D scene for a website",
+  "tags": [
+   "3d",
+   "web-design"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://shots.so",
+  "title": "Shots",
+  "category": "design & media",
+  "description": "Generates polished device mockups from a screenshot.",
+  "use_case": "Put an app screenshot into a device mockup",
+  "tags": [
+   "mockups",
+   "screenshots"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://haikei.app",
+  "title": "Haikei",
+  "category": "design & media",
+  "description": "Generates SVG backgrounds, blobs, patterns, and shape dividers for design projects.",
+  "use_case": "Generate an SVG background or divider asset",
+  "tags": [
+   "generators",
+   "svg"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://vectorizer.ai",
+  "title": "Vectorizer.AI",
+  "category": "design & media",
+  "description": "Converts raster images (JPG/PNG) into clean, editable vector graphics.",
+  "use_case": "Convert a raster logo into an editable vector",
+  "tags": [
+   "conversion",
+   "vector-graphics"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://cadxstudio.in",
+  "title": "CadX Studio",
+  "category": "vfx & 3d",
+  "description": "Generates CAD models from a text description.",
+  "use_case": "Generate a basic CAD model from a text prompt",
+  "tags": [
+   "ai",
+   "cad"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://3dtuning.com",
+  "title": "3DTuning",
+  "category": "vfx & 3d",
+  "description": "Lets car enthusiasts visually customize and modify 3D car models in the browser.",
+  "use_case": "Visualize custom modifications on a 3D car model",
+  "tags": [
+   "cars",
+   "customization"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://dora.run",
+  "title": "Dora",
+  "category": "vfx & 3d",
+  "description": "A browser-based builder for animated, interactive 3D websites.",
+  "use_case": "Build a 3D animated website without code",
+  "tags": [
+   "3d",
+   "website-builder"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://kittl.com",
+  "title": "Kittl",
+  "category": "design & media",
+  "description": "A design tool aimed at print-on-demand sellers, with vector graphics and mockup generation.",
+  "use_case": "Design print-on-demand graphics and mockups",
+  "tags": [
+   "print-on-demand",
+   "vector-graphics"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://meshy.ai",
+  "title": "Meshy",
+  "category": "vfx & 3d",
+  "description": "Generates 3D models and textures from text or images using AI.",
+  "use_case": "Generate a 3D model from a text prompt",
+  "tags": [
+   "3d",
+   "ai"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://napkin.ai",
+  "title": "Napkin",
+  "category": "design & media",
+  "description": "Turns written text into visual diagrams and illustrations automatically.",
+  "use_case": "Turn a paragraph of text into a diagram",
+  "tags": [
+   "ai",
+   "diagrams"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://pacdora.com",
+  "title": "Pacdora",
+  "category": "vfx & 3d",
+  "description": "Generates 3D packaging mockups from flat die-line designs.",
+  "use_case": "Preview flat packaging art as a 3D mockup",
+  "tags": [
+   "mockups",
+   "packaging"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://pngimg.com",
+  "title": "PNGIMG",
+  "category": "design & media",
+  "description": "A searchable database of free transparent-background PNG images.",
+  "use_case": "Find a free transparent PNG for a design",
+  "tags": [
+   "free-assets",
+   "images"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://remove.photos",
+  "title": "Remove.photos",
+  "category": "design & media",
+  "description": "An AI background remover for photos.",
+  "use_case": "Remove the background from a photo",
+  "tags": [
+   "ai",
+   "photo-editing"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://text-to-cad.zoo.dev",
+  "title": "Text-to-CAD",
+  "category": "vfx & 3d",
+  "description": "Generates parametric CAD models directly from a text description.",
+  "use_case": "Generate a CAD model from a text description",
+  "tags": [
+   "ai",
+   "cad"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://topoexport.com",
+  "title": "TopoExport",
+  "category": "vfx & 3d",
+  "description": "Exports real-world terrain data as a 3D model for rendering or 3D printing.",
+  "use_case": "Export real terrain as a 3D model",
+  "tags": [
+   "3d-printing",
+   "terrain"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://anytype.io",
+  "title": "Anytype",
+  "category": "productivity",
+  "description": "A privacy-first, local-storage note-taking and knowledge-base alternative.",
+  "use_case": "Keep notes and a knowledge base fully local",
+  "tags": [
+   "notes",
+   "privacy"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://justdeleteme.xyz",
+  "title": "Just Delete Me",
+  "category": "security & privacy",
+  "description": "A directory of direct links for deleting accounts from popular web services.",
+  "use_case": "Find the direct link to delete an old account",
+  "tags": [
+   "account-deletion",
+   "directory"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://logseq.com",
+  "title": "Logseq",
+  "category": "productivity",
+  "description": "A privacy-first, open-source outliner for networked notes stored as local Markdown.",
+  "use_case": "Keep a networked outline of notes in local Markdown",
+  "tags": [
+   "notes",
+   "outliner"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://pdfgear.com",
+  "title": "PDFgear",
+  "category": "file & web utilities",
+  "description": "A free desktop and online PDF editor, converter, and merger.",
+  "use_case": "Edit, merge, or convert a PDF for free",
+  "tags": [
+   "editor",
+   "pdf"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://wikiwand.com",
+  "title": "Wikiwand",
+  "category": "reference & data",
+  "description": "A cleaner, more readable reader skin for Wikipedia articles.",
+  "use_case": "Read a Wikipedia article in a nicer layout",
+  "tags": [
+   "reader",
+   "wikipedia"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://pairdrop.net",
+  "title": "PairDrop",
+  "category": "file & web utilities",
+  "description": "An open-source, browser-based peer-to-peer file transfer tool, like AirDrop for any device.",
+  "use_case": "Send a file directly between two devices on the same network",
+  "tags": [
+   "file-transfer",
+   "p2p"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://wormhole.app",
+  "title": "Wormhole",
+  "category": "file & web utilities",
+  "description": "Sends end-to-end encrypted files via a link that self-destructs after download or a timer.",
+  "use_case": "Send a large file through a self-destructing link",
+  "tags": [
+   "encryption",
+   "file-transfer"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://12ft.io",
+  "title": "12ft.io",
+  "category": "file & web utilities",
+  "description": "Attempts to strip paywalls and overlays from a linked article.",
+  "use_case": "Try to read a paywalled article",
+  "tags": [
+   "paywall",
+   "proxy"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://archive.ph",
+  "title": "archive.ph",
+  "category": "file & web utilities",
+  "description": "Archives a webpage permanently and gives it a stable, shareable link.",
+  "use_case": "Save a permanent snapshot of a webpage",
+  "tags": [
+   "archiving",
+   "snapshot"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://fakeupdate.net",
+  "title": "fakeupdate.net",
+  "category": "entertainment & social",
+  "description": "Simulates fake OS update and hacking screens for pranks or screensavers.",
+  "use_case": "Prank someone with a fake update or hacking screen",
+  "tags": [
+   "prank",
+   "screen"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://stirlingpdf.io",
+  "title": "Stirling PDF",
+  "category": "file & web utilities",
+  "description": "An open-source, self-hostable Swiss-army-knife for PDF editing and conversion.",
+  "use_case": "Run a full PDF toolkit yourself or in the browser",
+  "tags": [
+   "open-source",
+   "pdf"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://sweezy-cursors.com",
+  "title": "Sweezy Cursors",
+  "category": "design & media",
+  "description": "A library of free animated custom cursors for websites.",
+  "use_case": "Add a custom animated cursor to a website",
+  "tags": [
+   "cursors",
+   "free-assets"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://unpigeon.me",
+  "title": "Unpigeon",
+  "category": "file & web utilities",
+  "description": "Strips tracking parameters out of a pasted URL before you share it.",
+  "use_case": "Clean tracking junk out of a link before sharing",
+  "tags": [
+   "privacy",
+   "url-cleaner"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://betterexplained.com",
+  "title": "BetterExplained",
+  "category": "education",
+  "description": "Teaches math through intuition and analogies first, then the formal details.",
+  "use_case": "Build real intuition for a math concept",
+  "tags": [
+   "intuition",
+   "math"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://setosa.io",
+  "title": "Setosa",
+  "category": "education",
+  "description": "Interactive visual explanations for statistics and probability concepts that are hard to picture.",
+  "use_case": "See a hard-to-picture stats concept visualized",
+  "tags": [
+   "statistics",
+   "visualization"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://ncase.me",
+  "title": "Nicky Case's Explorables",
+  "category": "education",
+  "description": "A collection of interactive explorables and games explaining ideas like trust and complexity.",
+  "use_case": "Learn a concept by playing an interactive explainer",
+  "tags": [
+   "explorables",
+   "interactive"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://mathigon.org",
+  "title": "Mathigon",
+  "category": "education",
+  "description": "A free interactive math textbook that adapts and responds as you work through it.",
+  "use_case": "Work through an interactive, adaptive math textbook",
+  "tags": [
+   "math",
+   "textbook"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://pudding.cool",
+  "title": "The Pudding",
+  "category": "reading & news",
+  "description": "A digital publication that explains cultural debates through deeply researched visual essays.",
+  "use_case": "Read a visually explained deep-dive on a cultural topic",
+  "tags": [
+   "data-journalism",
+   "visual-essays"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://oec.world",
+  "title": "The Observatory of Economic Complexity",
+  "category": "reference & data",
+  "description": "Visualizes international trade data for countries and products.",
+  "use_case": "See what a country imports and exports and to whom",
+  "tags": [
+   "data-visualization",
+   "trade"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://musiclab.chromeexperiments.com",
+  "title": "Chrome Music Lab",
+  "category": "education",
+  "description": "A collection of free, playful browser experiments that make learning music fun.",
+  "use_case": "Explore a music concept through a playful experiment",
+  "tags": [
+   "interactive",
+   "music-theory"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://wheelofnames.com",
+  "title": "Wheel of Names",
+  "category": "productivity",
+  "description": "A free, customizable spinner wheel for randomly picking a name from a list.",
+  "use_case": "Randomly pick a name or winner from a list",
+  "tags": [
+   "randomizer",
+   "spinner"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://ciechanow.ski",
+  "title": "Bartosz Ciechanowski's blog",
+  "category": "education",
+  "description": "Hosts deep, beautifully crafted interactive articles explaining how things actually work.",
+  "use_case": "Read an interactive deep-dive on how something works",
+  "tags": [
+   "explainers",
+   "interactive"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://brilliant.org",
+  "title": "Brilliant",
+  "category": "education",
+  "description": "Teaches STEM subjects through visual, interactive lessons instead of passive video.",
+  "use_case": "Learn a STEM topic through interactive lessons",
+  "tags": [
+   "interactive",
+   "stem"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://chemistry-en.nobook.com",
+  "title": "Nobook Virtual Chemistry Lab",
+  "category": "education",
+  "description": "A virtual chemistry lab offering interactive simulations of real experiments.",
+  "use_case": "Run a chemistry experiment simulation safely",
+  "tags": [
+   "chemistry",
+   "simulation"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://paperme.pixzens.com",
+  "title": "PaperMe",
+  "category": "everyday life",
+  "description": "A free browser-based generator for printable paper templates (notebooks, planners, grids).",
+  "use_case": "Generate a printable paper template",
+  "tags": [
+   "printables",
+   "templates"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://animagraffs.com",
+  "title": "Animagraffs",
+  "category": "education",
+  "description": "Jacob O'Neal's catalog of long-form animated infographics explaining how machines work.",
+  "use_case": "See how a complex machine works, animated step by step",
+  "tags": [
+   "how-things-work",
+   "infographics"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://simulator.electude.com",
+  "title": "Electude Car Simulator",
+  "category": "education",
+  "description": "A browser-based car simulator visualizing core automotive systems through animated cutaways.",
+  "use_case": "See how a car's systems work through an animated simulator",
+  "tags": [
+   "automotive",
+   "simulation"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://imagine.gsfc.nasa.gov",
+  "title": "NASA Imagine the Universe",
+  "category": "education",
+  "description": "NASA's educational site on astrophysics, with tools and explainers for space science.",
+  "use_case": "Learn an astrophysics concept from NASA's own explainers",
+  "tags": [
+   "astronomy",
+   "nasa"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://chemequations.com",
+  "title": "Chem Equations",
+  "category": "education",
+  "description": "Balances chemical equations and shows the step-by-step work.",
+  "use_case": "Balance a chemical equation and see the steps",
+  "tags": [
+   "chemistry",
+   "solver"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://cymath.com",
+  "title": "Cymath",
+  "category": "education",
+  "description": "Solves math problems step by step, from algebra through calculus.",
+  "use_case": "Get a step-by-step solution to a math problem",
+  "tags": [
+   "math",
+   "solver"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://entertrained.app",
+  "title": "Entertrained",
+  "category": "education",
+  "description": "A typing-practice app that has you retype passages from real books as you read them.",
+  "use_case": "Practice typing speed while reading a real book",
+  "tags": [
+   "reading",
+   "typing-practice"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://human.biodigital.com",
+  "title": "BioDigital Human",
+  "category": "education",
+  "description": "An interactive 3D human anatomy platform for exploring the body system by system.",
+  "use_case": "Explore human anatomy in an interactive 3D model",
+  "tags": [
+   "3d",
+   "anatomy"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://kiddoworksheets.com",
+  "title": "Kiddo Worksheets",
+  "category": "education",
+  "description": "Free printable worksheets for early learning subjects.",
+  "use_case": "Print a worksheet for a kid's early learning practice",
+  "tags": [
+   "printables",
+   "worksheets"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://musicca.com",
+  "title": "Musicca",
+  "category": "education",
+  "description": "A free interactive platform for learning music theory and ear training.",
+  "use_case": "Practice music theory or ear training interactively",
+  "tags": [
+   "ear-training",
+   "music-theory"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://smart.servier.com",
+  "title": "Servier Medical Art",
+  "category": "design & media",
+  "description": "Free high-resolution medical and scientific illustrations for reuse.",
+  "use_case": "Find a free medical illustration for a presentation",
+  "tags": [
+   "free-assets",
+   "medical-illustration"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://typelit.io",
+  "title": "TypeLit.io",
+  "category": "education",
+  "description": "Practice typing by retyping passages from classic literature.",
+  "use_case": "Practice typing speed using classic books",
+  "tags": [
+   "literature",
+   "typing-practice"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://typingclub.com",
+  "title": "TypingClub",
+  "category": "education",
+  "description": "Structured, gamified typing lessons used widely by schools and individuals.",
+  "use_case": "Learn to type with structured lessons",
+  "tags": [
+   "courses",
+   "typing-practice"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://zty.pe",
+  "title": "zty.pe",
+  "category": "entertainment & social",
+  "description": "A typing game where you type words to shoot down enemy ships.",
+  "use_case": "Practice typing speed through a shooting game",
+  "tags": [
+   "game",
+   "typing-practice"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://openlibrary.org",
+  "title": "Open Library",
+  "category": "reading & news",
+  "description": "The Internet Archive's catalog for borrowing scanned books online.",
+  "use_case": "Borrow an ebook online for free",
+  "tags": [
+   "ebooks",
+   "library"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://structured.app",
+  "title": "Structured",
+  "category": "productivity",
+  "description": "A daily planner combining a visual timeline with tasks and calendar events.",
+  "use_case": "Plan a day as a visual timeline of tasks and events",
+  "tags": [
+   "planner",
+   "timeline"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://ankiweb.net",
+  "title": "Anki",
+  "category": "education",
+  "description": "A spaced-repetition flashcard app for efficient long-term memorization.",
+  "use_case": "Memorize facts efficiently with spaced-repetition flashcards",
+  "tags": [
+   "flashcards",
+   "spaced-repetition"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://goblin.tools",
+  "title": "Goblin Tools",
+  "category": "productivity",
+  "description": "Small AI helpers that break tasks into steps, designed for neurodivergent users.",
+  "use_case": "Break an overwhelming task into small steps",
+  "tags": [
+   "accessibility",
+   "task-breakdown"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://habitica.com",
+  "title": "Habitica",
+  "category": "productivity",
+  "description": "Gamifies habit and task tracking as an RPG with rewards for real-life progress.",
+  "use_case": "Turn habit tracking into an RPG game",
+  "tags": [
+   "gamification",
+   "habits"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://tweek.so",
+  "title": "Tweek",
+  "category": "productivity",
+  "description": "A minimal weekly planner combining a task list with a calendar view.",
+  "use_case": "Plan a week with a simple task-and-calendar view",
+  "tags": [
+   "planner",
+   "weekly"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://musictheory.net",
+  "title": "musictheory.net",
+  "category": "education",
+  "description": "Free music theory lessons and exercises, from basics through advanced topics.",
+  "use_case": "Learn music theory with free lessons and drills",
+  "tags": [
+   "exercises",
+   "music-theory"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://consensus.app",
+  "title": "Consensus",
+  "category": "ai tools",
+  "description": "An AI search engine that answers questions by summarizing peer-reviewed research.",
+  "use_case": "Get an answer backed by actual scientific papers",
+  "tags": [
+   "ai-search",
+   "research"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://cal.com",
+  "title": "Cal.com",
+  "category": "productivity",
+  "description": "An open-source scheduling tool, a self-hostable alternative to Calendly.",
+  "use_case": "Share a booking link for scheduling meetings",
+  "tags": [
+   "open-source",
+   "scheduling"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://raindrop.io",
+  "title": "Raindrop.io",
+  "category": "productivity",
+  "description": "A bookmark manager with tagging, collections, and sync across devices.",
+  "use_case": "Organize and sync bookmarks across devices",
+  "tags": [
+   "bookmarks",
+   "sync"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://notebooklm.google.com",
+  "title": "NotebookLM",
+  "category": "ai tools",
+  "description": "Google's AI research tool that answers questions grounded only in your uploaded documents.",
+  "use_case": "Ask an AI questions grounded in your own documents",
+  "tags": [
+   "ai",
+   "research"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://pomofocus.io",
+  "title": "Pomofocus",
+  "category": "productivity",
+  "description": "A simple, customizable web-based Pomodoro timer.",
+  "use_case": "Run a Pomodoro focus timer in the browser",
+  "tags": [
+   "pomodoro",
+   "timer"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://resources.skill-lync.com",
+  "title": "Skill-Lync Resources",
+  "category": "college & career",
+  "description": "Engineering career roadmaps and course resources.",
+  "use_case": "Find a roadmap for an engineering career path",
+  "tags": [
+   "engineering",
+   "roadmaps"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://tryrobin.io",
+  "title": "Robin",
+  "category": "college & career",
+  "description": "An AI resume optimizer that tailors a resume to a specific job posting.",
+  "use_case": "Optimize a resume for a specific job listing",
+  "tags": [
+   "ai",
+   "resume"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://learn-anything.xyz",
+  "title": "Learn Anything",
+  "category": "education",
+  "description": "Community-curated learning paths and mind maps for a huge range of topics.",
+  "use_case": "Find a structured learning path for a new topic",
+  "tags": [
+   "community",
+   "learning-paths"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://litsolutions.org",
+  "title": "LitSolutions",
+  "category": "college & career",
+  "description": "Step-by-step homework help and solutions across subjects.",
+  "use_case": "Get step-by-step help on a homework problem",
+  "tags": [
+   "homework-help",
+   "solutions"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://mindluster.com",
+  "title": "Mindluster",
+  "category": "education",
+  "description": "Free online courses with completion certificates across many subjects.",
+  "use_case": "Take a free course and get a certificate",
+  "tags": [
+   "certificates",
+   "free-courses"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://adarkroom.doublespeakgames.com",
+  "title": "A Dark Room",
+  "category": "entertainment & social",
+  "description": "A minimalist text-based survival and crafting game that unfolds entirely in prose.",
+  "use_case": "Play a minimalist text-based survival game",
+  "tags": [
+   "browser-game",
+   "text-based"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://make8bitart.com",
+  "title": "Make 8bit Art",
+  "category": "design & media",
+  "description": "A simple browser-based pixel-art creation tool.",
+  "use_case": "Make 8-bit style pixel art in the browser",
+  "tags": [
+   "creation-tool",
+   "pixel-art"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://drawastickman.com",
+  "title": "Draw a Stickman",
+  "category": "entertainment & social",
+  "description": "An interactive adventure where your own doodles become part of the story.",
+  "use_case": "Draw a stickman and watch it go on an adventure",
+  "tags": [
+   "browser-game",
+   "drawing"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://sporcle.com",
+  "title": "Sporcle",
+  "category": "entertainment & social",
+  "description": "A huge library of trivia quizzes across countless categories.",
+  "use_case": "Take a trivia quiz on almost any topic",
+  "tags": [
+   "quizzes",
+   "trivia"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://jklm.fun",
+  "title": "JKLM.FUN",
+  "category": "entertainment & social",
+  "description": "Hosts Jackbox-style party games playable with friends via a room code.",
+  "use_case": "Play a party game with friends over video call",
+  "tags": [
+   "multiplayer",
+   "party-game"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://sketchtoy.com",
+  "title": "Sketchtoy",
+  "category": "entertainment & social",
+  "description": "A simple shared drawing canvas you can save and replay as an animation.",
+  "use_case": "Sketch something and share a replayable drawing",
+  "tags": [
+   "drawing",
+   "sharing"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://tetr.io",
+  "title": "TETR.IO",
+  "category": "entertainment & social",
+  "description": "A free, fast competitive Tetris clone with ranked online multiplayer.",
+  "use_case": "Play competitive ranked Tetris online",
+  "tags": [
+   "browser-game",
+   "multiplayer"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://littlealchemy2.com",
+  "title": "Little Alchemy 2",
+  "category": "entertainment & social",
+  "description": "A combine-elements puzzle game that starts from the four classical elements.",
+  "use_case": "Combine elements to discover hundreds of items",
+  "tags": [
+   "browser-game",
+   "puzzle"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://linerider.com",
+  "title": "Line Rider",
+  "category": "entertainment & social",
+  "description": "A physics sandbox where you draw a track for a sledder to ride down.",
+  "use_case": "Draw a track and watch a physics-based sled ride it",
+  "tags": [
+   "browser-game",
+   "physics"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://windows93.net",
+  "title": "Windows93",
+  "category": "entertainment & social",
+  "description": "A surreal, glitchy parody of a 90s desktop OS, built as an art project you can click through.",
+  "use_case": "Explore a surreal fake 90s operating system",
+  "tags": [
+   "parody",
+   "web-art"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://smashkarts.io",
+  "title": "Smash Karts",
+  "category": "entertainment & social",
+  "description": "A free browser-based multiplayer kart-battle racing game.",
+  "use_case": "Play a quick multiplayer kart battle in the browser",
+  "tags": [
+   "browser-game",
+   "multiplayer"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://play2048.co",
+  "title": "2048",
+  "category": "entertainment & social",
+  "description": "The classic sliding-tile puzzle where matching numbers double until you reach 2048.",
+  "use_case": "Play a quick round of the 2048 puzzle",
+  "tags": [
+   "browser-game",
+   "puzzle"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://orteil.dashnet.org",
+  "title": "Cookie Clicker",
+  "category": "entertainment & social",
+  "description": "The original idle-clicker game: click cookies, buy upgrades, watch numbers grow forever.",
+  "use_case": "Play the original idle cookie-clicking game",
+  "tags": [
+   "browser-game",
+   "idle-game"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://diep.io",
+  "title": "diep.io",
+  "category": "entertainment & social",
+  "description": "A free multiplayer browser game where tanks shoot shapes and each other to level up.",
+  "use_case": "Play a free multiplayer tank battle game",
+  "tags": [
+   "browser-game",
+   "multiplayer"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://krunker.io",
+  "title": "Krunker.io",
+  "category": "entertainment & social",
+  "description": "A fast, free browser-based first-person shooter with no download required.",
+  "use_case": "Play a free browser-based first-person shooter",
+  "tags": [
+   "browser-game",
+   "multiplayer"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://jacksonpollock.org",
+  "title": "JacksonPollock.org",
+  "category": "entertainment & social",
+  "description": "A one-page toy that lets you splatter paint across the canvas like a Pollock painting.",
+  "use_case": "Make a Jackson-Pollock-style splatter painting",
+  "tags": [
+   "drawing",
+   "web-art"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://territorial.io",
+  "title": "territorial.io",
+  "category": "entertainment & social",
+  "description": "A free browser-based territory-conquest strategy game against AI or other players.",
+  "use_case": "Play a territory-conquest strategy game online",
+  "tags": [
+   "browser-game",
+   "strategy"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://generals.io",
+  "title": "generals.io",
+  "category": "entertainment & social",
+  "description": "A real-time multiplayer strategy game about hidden armies and capturing generals.",
+  "use_case": "Play a real-time hidden-information strategy game",
+  "tags": [
+   "browser-game",
+   "strategy"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://zoomquilt.org",
+  "title": "Zoomquilt",
+  "category": "entertainment & social",
+  "description": "An endlessly, seamlessly zooming collaborative painting.",
+  "use_case": "Watch an endlessly zooming collaborative artwork",
+  "tags": [
+   "animation",
+   "web-art"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://slither.io",
+  "title": "slither.io",
+  "category": "entertainment & social",
+  "description": "A multiplayer browser game where you grow a snake by eating pellets and avoid other players.",
+  "use_case": "Play a multiplayer growing-snake game",
+  "tags": [
+   "browser-game",
+   "multiplayer"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://window-swap.com",
+  "title": "Window Swap",
+  "category": "entertainment & social",
+  "description": "Shows a live window view from a random stranger's home somewhere in the world.",
+  "use_case": "See a stranger's window view from somewhere else in the world",
+  "tags": [
+   "video",
+   "web-art"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://garticphone.com",
+  "title": "Gartic Phone",
+  "category": "entertainment & social",
+  "description": "A multiplayer party game mixing Telephone and Pictionary — draw, guess, repeat.",
+  "use_case": "Play a drawing-and-guessing party game with friends",
+  "tags": [
+   "multiplayer",
+   "party-game"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://airconsole.com",
+  "title": "AirConsole",
+  "category": "entertainment & social",
+  "description": "Turns a phone into a game controller for browser-based party games on a TV or laptop screen.",
+  "use_case": "Use a phone as a controller for a party game",
+  "tags": [
+   "multiplayer",
+   "party-game"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://chunkbase.com",
+  "title": "Chunkbase",
+  "category": "entertainment & social",
+  "description": "A suite of Minecraft map tools: seed maps, biome finders, and structure locators.",
+  "use_case": "Find a Minecraft seed's structures and biomes",
+  "tags": [
+   "map-tools",
+   "minecraft"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://mapgenie.io",
+  "title": "Map Genie",
+  "category": "entertainment & social",
+  "description": "Interactive, trackable maps for collectibles and quests in popular video games.",
+  "use_case": "Track collectibles on an interactive game map",
+  "tags": [
+   "gaming",
+   "interactive-maps"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://slowroads.io",
+  "title": "Slow Roads",
+  "category": "entertainment & social",
+  "description": "A relaxing, procedurally generated endless driving simulator with no goals.",
+  "use_case": "Unwind with a relaxing endless driving simulator",
+  "tags": [
+   "browser-game",
+   "relaxation"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://trace.moe",
+  "title": "trace.moe",
+  "category": "reference & data",
+  "description": "A reverse image search specifically for identifying the anime a screenshot came from.",
+  "use_case": "Find which anime a screenshot is from",
+  "tags": [
+   "anime",
+   "reverse-image-search"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://runwayml.com",
+  "title": "Runway",
+  "category": "audio & video",
+  "description": "An applied AI research company whose models turn text and images into realistic video.",
+  "use_case": "Generate a video clip from a text prompt",
+  "tags": [
+   "ai-video",
+   "generative"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://pika.art",
+  "title": "Pika",
+  "category": "audio & video",
+  "description": "An AI video platform that generates and edits short clips from text or images.",
+  "use_case": "Generate a short AI video clip from text",
+  "tags": [
+   "ai-video",
+   "generative"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://heygen.com",
+  "title": "HeyGen",
+  "category": "audio & video",
+  "description": "Creates AI avatar videos from text, with lip-sync and voiceovers in many languages.",
+  "use_case": "Generate a talking AI avatar video from a script",
+  "tags": [
+   "ai-video",
+   "avatars"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://lottiefiles.com",
+  "title": "LottieFiles",
+  "category": "audio & video",
+  "description": "A hub for creating, editing, and shipping lightweight Lottie animations.",
+  "use_case": "Add a lightweight animation to an app or site",
+  "tags": [
+   "animation",
+   "lottie"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://jitter.video",
+  "title": "Jitter",
+  "category": "audio & video",
+  "description": "A browser-based motion-design tool for creating simple animated graphics.",
+  "use_case": "Create a simple animated motion-design clip",
+  "tags": [
+   "animation",
+   "motion-design"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://vocalremover.org",
+  "title": "Vocal Remover",
+  "category": "audio & video",
+  "description": "An AI tool that separates vocals from instrumentals in any song.",
+  "use_case": "Pull the vocals or instrumental out of a song",
+  "tags": [
+   "ai",
+   "audio-editing"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://splitmysong.com",
+  "title": "SplitMySong",
+  "category": "audio & video",
+  "description": "An AI stem separator that splits a track into clean vocal, drum, bass, and instrumental layers.",
+  "use_case": "Split a song into separate instrument stems",
+  "tags": [
+   "ai",
+   "audio-editing"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://learningsynths.ableton.com",
+  "title": "Learning Synths",
+  "category": "audio & video",
+  "description": "Ableton's free, interactive guide to how synthesizers work.",
+  "use_case": "Learn how a synthesizer works, interactively",
+  "tags": [
+   "interactive",
+   "synthesizers"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://musicforprogramming.net",
+  "title": "Music for Programming",
+  "category": "audio & video",
+  "description": "Hand-curated ambient mixes designed for focused, heads-down work.",
+  "use_case": "Play an ambient mix while doing focused work",
+  "tags": [
+   "ambient",
+   "focus-music"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://udio.com",
+  "title": "Udio",
+  "category": "audio & video",
+  "description": "An AI music generator that composes original songs, including lyrics and vocals, from text prompts.",
+  "use_case": "Generate an original song from a text prompt",
+  "tags": [
+   "ai-music",
+   "generative"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://radiooooo.com",
+  "title": "Radiooooo",
+  "category": "audio & video",
+  "description": "A musical time machine for exploring music by country and decade.",
+  "use_case": "Explore music from a specific country and decade",
+  "tags": [
+   "music-discovery",
+   "radio"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://arcadium3d.com",
+  "title": "Arcadium 3D",
+  "category": "everyday life",
+  "description": "A free browser-based home and interior design tool.",
+  "use_case": "Plan a room's interior design in 3D for free",
+  "tags": [
+   "3d",
+   "interior-design"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://papermau.blogspot.com",
+  "title": "PAPERMAU",
+  "category": "everyday life",
+  "description": "A gloriously dense papercraft blog with free printable paper models of buildings, vehicles, and more.",
+  "use_case": "Print a free papercraft model to build",
+  "tags": [
+   "papercraft",
+   "printables"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://chefgpt.xyz",
+  "title": "ChefGPT",
+  "category": "everyday life",
+  "description": "An AI cooking assistant focused on reducing food waste by suggesting recipes.",
+  "use_case": "Get a recipe idea that reduces food waste",
+  "tags": [
+   "ai",
+   "cooking"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://collov.ai",
+  "title": "Collov AI",
+  "category": "everyday life",
+  "description": "Generates quick, affordable virtual staging photos for real estate listings.",
+  "use_case": "Virtually stage a real-estate listing photo",
+  "tags": [
+   "ai",
+   "real-estate"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://fragrantica.com",
+  "title": "Fragrantica",
+  "category": "everyday life",
+  "description": "A perfume enthusiast resource for researching and comparing fragrances.",
+  "use_case": "Research and compare a perfume before buying",
+  "tags": [
+   "fragrance",
+   "reviews"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://freesewing.eu",
+  "title": "FreeSewing",
+  "category": "everyday life",
+  "description": "Generates custom sewing patterns based on your own measurements.",
+  "use_case": "Generate a sewing pattern fitted to your measurements",
+  "tags": [
+   "patterns",
+   "sewing"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://home.by.me",
+  "title": "Home By Me",
+  "category": "everyday life",
+  "description": "A virtual room-layout and furniture-visualization planner.",
+  "use_case": "Visualize furniture layout in a virtual room",
+  "tags": [
+   "interior-design",
+   "planning"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://layla.ai",
+  "title": "Layla",
+  "category": "everyday life",
+  "description": "An AI-powered trip-planning assistant.",
+  "use_case": "Get an AI-generated trip itinerary",
+  "tags": [
+   "ai",
+   "travel"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://myfridgefood.com",
+  "title": "My Fridge Food",
+  "category": "everyday life",
+  "description": "Suggests recipes based on the ingredients you already have.",
+  "use_case": "Find a recipe using what's already in the fridge",
+  "tags": [
+   "cooking",
+   "recipes"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://newarc.ai",
+  "title": "Newarc",
+  "category": "everyday life",
+  "description": "An AI architecture design and rendering tool for visualizing building concepts.",
+  "use_case": "Generate an architectural rendering from a concept",
+  "tags": [
+   "ai",
+   "architecture"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://nullfake.com",
+  "title": "Fakespot/NullFake",
+  "category": "everyday life",
+  "description": "Analyzes Amazon reviews to flag ones that look fake.",
+  "use_case": "Check whether a product's reviews look fake",
+  "tags": [
+   "reviews",
+   "shopping"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://reimaginehome.ai",
+  "title": "REimagineHome",
+  "category": "everyday life",
+  "description": "Generates AI interior-design ideas from a photo of a real room.",
+  "use_case": "Get AI redesign ideas for a room from a photo",
+  "tags": [
+   "ai",
+   "interior-design"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://tailornova.com",
+  "title": "Tailornova",
+  "category": "everyday life",
+  "description": "A custom sewing-pattern generator for garment makers.",
+  "use_case": "Generate a custom garment sewing pattern",
+  "tags": [
+   "patterns",
+   "sewing"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://thetoymaker.com",
+  "title": "The Toymaker",
+  "category": "everyday life",
+  "description": "Printable paper toy templates to cut out and build.",
+  "use_case": "Print a paper toy template to build with kids",
+  "tags": [
+   "papercraft",
+   "printables"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://versus.com",
+  "title": "Versus",
+  "category": "everyday life",
+  "description": "Compares products, mostly electronics, spec by spec.",
+  "use_case": "Compare two products spec by spec before buying",
+  "tags": [
+   "product-comparison",
+   "shopping"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://wifimap.io",
+  "title": "WiFi Map",
+  "category": "everyday life",
+  "description": "A crowdsourced database of public WiFi network passwords.",
+  "use_case": "Find a public WiFi password nearby",
+  "tags": [
+   "crowdsourced",
+   "wifi"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://lizardpoint.com",
+  "title": "Lizard Point Geography",
+  "category": "education",
+  "description": "Interactive map quizzes for learning world geography.",
+  "use_case": "Quiz yourself on world geography with an interactive map",
+  "tags": [
+   "geography",
+   "quizzes"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://geoguessr.com",
+  "title": "GeoGuessr",
+  "category": "entertainment & social",
+  "description": "A geography game that drops you into Street View and challenges you to guess the location.",
+  "use_case": "Guess a real-world location from a Street View drop",
+  "tags": [
+   "browser-game",
+   "geography"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://worldmonitor.app",
+  "title": "World Monitor",
+  "category": "reference & data",
+  "description": "A live dashboard aggregating global news, markets, and conflict trackers in one view.",
+  "use_case": "Check a live dashboard of global events and markets",
+  "tags": [
+   "dashboard",
+   "news"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://terraink.app",
+  "title": "Terraink",
+  "category": "design & media",
+  "description": "Generates stylized, artistic map prints from real geographic data.",
+  "use_case": "Turn a real place into a stylized map print",
+  "tags": [
+   "art",
+   "maps"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://azgaar.github.io",
+  "title": "Azgaar's Fantasy Map Generator",
+  "category": "design & media",
+  "description": "A free, detailed procedural generator for fantasy world maps.",
+  "use_case": "Generate a detailed fantasy world map",
+  "tags": [
+   "fantasy-maps",
+   "generator"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://dungeonscrawl.com",
+  "title": "Dungeon Scrawl",
+  "category": "design & media",
+  "description": "A free browser tool for drawing tabletop RPG dungeon maps.",
+  "use_case": "Draw a dungeon map for a tabletop RPG session",
+  "tags": [
+   "map-making",
+   "tabletop-rpg"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://watabou.github.io",
+  "title": "Watabou's Generators",
+  "category": "design & media",
+  "description": "A set of procedural generators for fantasy cities, maps, and RPG content.",
+  "use_case": "Procedurally generate a fantasy city or map",
+  "tags": [
+   "fantasy-maps",
+   "generator"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://thetruesize.com",
+  "title": "The True Size Of...",
+  "category": "reference & data",
+  "description": "An interactive map for dragging countries around to compare their true relative size.",
+  "use_case": "Compare two countries' true size, correcting map distortion",
+  "tags": [
+   "geography",
+   "maps"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://1aauto.com",
+  "title": "1A Auto",
+  "category": "everyday life",
+  "description": "Serves DIY automotive enthusiasts with how-to videos and the parts to go with them.",
+  "use_case": "Find a DIY car repair video and the part it needs",
+  "tags": [
+   "car-repair",
+   "diy"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://autocatalogarchive.com",
+  "title": "Auto Catalog Archive",
+  "category": "reference & data",
+  "description": "An archive of original car brochures and catalogs for researching classic vehicle specs.",
+  "use_case": "Look up a classic car's original factory specs",
+  "tags": [
+   "archive",
+   "classic-cars"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://carcarekiosk.com",
+  "title": "Car Care Kiosk",
+  "category": "everyday life",
+  "description": "Provides visual, model-specific guidance for routine DIY car maintenance.",
+  "use_case": "Get maintenance steps specific to your exact car model",
+  "tags": [
+   "car-repair",
+   "diy"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://startmycar.com",
+  "title": "Start My Car",
+  "category": "everyday life",
+  "description": "A step-by-step troubleshooting guide for diagnosing why a car won't start.",
+  "use_case": "Diagnose why a car won't start, step by step",
+  "tags": [
+   "car-repair",
+   "troubleshooting"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://my90stv.com",
+  "title": "My 90s TV",
+  "category": "entertainment & social",
+  "description": "A nostalgic TV simulator randomly playing 1990s TV content.",
+  "use_case": "Watch random nostalgic 90s TV clips",
+  "tags": [
+   "nostalgia",
+   "video"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://driveandlisten.herokuapp.com",
+  "title": "Drive & Listen",
+  "category": "everyday life",
+  "description": "Virtually drives through cities worldwide while streaming that city's local radio.",
+  "use_case": "Virtually drive through a city while listening to its local radio",
+  "tags": [
+   "ambience",
+   "travel"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://findtheinvisiblecow.com",
+  "title": "Find the Invisible Cow",
+  "category": "entertainment & social",
+  "description": "An audio-based game where you locate a hidden cow by following sound clues.",
+  "use_case": "Play a quick audio-clue hidden-object game",
+  "tags": [
+   "audio",
+   "browser-game"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://pranx.com/hacker",
+  "title": "Pranx Hacker Screen",
+  "category": "entertainment & social",
+  "description": "A fake 'hacker' screen simulator for pranks or background ambiance.",
+  "use_case": "Prank someone with a fake hacking-in-progress screen",
+  "tags": [
+   "prank",
+   "screen"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://ocearch.org/tracker",
+  "title": "OCEARCH Shark Tracker",
+  "category": "reference & data",
+  "description": "Real-time tracking data for sharks and other tagged marine animals.",
+  "use_case": "Track a tagged shark's real-time location",
+  "tags": [
+   "tracking",
+   "wildlife"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://boilthefrog.playlistmachinery.com",
+  "title": "Boil the Frog",
+  "category": "audio & video",
+  "description": "Builds a smooth Spotify playlist that transitions gradually between two chosen artists.",
+  "use_case": "Build a playlist that gradually transitions between two artists",
+  "tags": [
+   "playlist",
+   "spotify"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://virtualvacation.us",
+  "title": "Virtual Vacation",
+  "category": "everyday life",
+  "description": "Offers virtual tours of world cities with travel info and highlights.",
+  "use_case": "Take a virtual tour of a city before visiting",
+  "tags": [
+   "travel",
+   "virtual-tour"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://naturalhistory.si.edu/visit/virtual-tour",
+  "title": "Smithsonian Virtual Tour",
+  "category": "education",
+  "description": "A virtual tour of the Smithsonian's natural history exhibits.",
+  "use_case": "Tour a Smithsonian natural history exhibit from home",
+  "tags": [
+   "museum",
+   "virtual-tour"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://framesynthesis.com/drivingsimulator/maps",
+  "title": "Driving Simulator",
+  "category": "entertainment & social",
+  "description": "A web-based driving simulator for exploring real places using Google Street View maps.",
+  "use_case": "Drive a simulated car through real Street View locations",
+  "tags": [
+   "maps",
+   "simulation"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://playphrase.me",
+  "title": "PlayPhrase.me",
+  "category": "entertainment & social",
+  "description": "Searches movies and TV for a spoken phrase and generates a clip of it.",
+  "use_case": "Find a video clip of a specific movie or TV line",
+  "tags": [
+   "movies",
+   "search"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://2050.earth",
+  "title": "2050 Earth",
+  "category": "reference & data",
+  "description": "A crowdsourced collection of predictions and visions for what the year 2050 will look like.",
+  "use_case": "Browse crowdsourced predictions for the year 2050",
+  "tags": [
+   "crowdsourced",
+   "futurism"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://rxresu.me",
+  "title": "Reactive Resume",
+  "category": "college & career",
+  "description": "A free, open-source builder for clean, ATS-friendly resumes.",
+  "use_case": "Build a clean, ATS-friendly resume for free",
+  "tags": [
+   "open-source",
+   "resume"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://jobscan.co",
+  "title": "Jobscan",
+  "category": "college & career",
+  "description": "Scans a resume against a job description and scores how well it matches.",
+  "use_case": "Check how well a resume matches a job posting",
+  "tags": [
+   "ats",
+   "resume"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://copykat.com",
+  "title": "CopyKat Recipes",
+  "category": "everyday life",
+  "description": "Recreates copycat versions of well-known restaurant and brand-name recipes.",
+  "use_case": "Find a homemade copycat version of a restaurant dish",
+  "tags": [
+   "cooking",
+   "recipes"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://classicreload.com",
+  "title": "Classic Reload",
+  "category": "entertainment & social",
+  "description": "An in-browser emulator for classic DOS and early-Windows PC games.",
+  "use_case": "Play a classic DOS or early-Windows PC game in the browser",
+  "tags": [
+   "emulator",
+   "retro-gaming"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://fmhy.net",
+  "title": "FreeMediaHeckYeah (FMHY)",
+  "category": "reference & data",
+  "description": "A massive, meticulously organized directory of free streaming, download, and reading links.",
+  "use_case": "Find a free source for streaming, reading, or downloading something",
+  "tags": [
+   "directory",
+   "free-stuff"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://javalab.org",
+  "title": "Javalab",
+  "category": "education",
+  "description": "A sprawling science-simulation site with physics, electromagnetism, and solar-system labs.",
+  "use_case": "Run a browser-based physics or science simulation",
+  "tags": [
+   "science",
+   "simulation"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://allchans.org",
+  "title": "AllChans",
+  "category": "reference & data",
+  "description": "A long-running directory of anonymous imageboards, with additions, removals, and activity news.",
+  "use_case": "Find an active anonymous imageboard",
+  "tags": [
+   "directory",
+   "forums"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://muted.io",
+  "title": "Muted.io",
+  "category": "education",
+  "description": "An interactive library of music-theory and ear-training tools for visualizing scales and chords.",
+  "use_case": "Practice ear training or visualize a scale or chord",
+  "tags": [
+   "ear-training",
+   "music-theory"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://3dlogolab.io",
+  "title": "3D Logo Lab",
+  "category": "design & media",
+  "description": "Turns a flat logo into a shiny, rotating 3D animation without needing a dedicated 3D app.",
+  "use_case": "Turn a flat logo into a rotating 3D animation",
+  "tags": [
+   "3d",
+   "logos"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://cagematch.net",
+  "title": "Cagematch",
+  "category": "reference & data",
+  "description": "A vast professional wrestling database of wrestlers, events, matches, and championships.",
+  "use_case": "Look up a wrestler's match history or a title's championship history",
+  "tags": [
+   "database",
+   "wrestling"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://loot-drop.io",
+  "title": "Loot Drop",
+  "category": "business & marketing",
+  "description": "Catalogs failed startups as searchable case studies, so founders can learn from others' mistakes.",
+  "use_case": "Read a case study of why a startup failed",
+  "tags": [
+   "case-studies",
+   "startups"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://wiby.org",
+  "title": "Wiby",
+  "category": "reference & data",
+  "description": "A search engine focused on surfacing old-school, lightweight, non-commercial web pages.",
+  "use_case": "Search the indie, old-school corner of the web instead of modern SEO pages",
+  "tags": [
+   "indie-web",
+   "search-engine"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://planecrashinfo.com",
+  "title": "PlaneCrashInfo.com",
+  "category": "reference & data",
+  "description": "A long-running aviation accident reference with crash records, statistics, and reports.",
+  "use_case": "Look up the record and statistics for an aviation accident",
+  "tags": [
+   "aviation",
+   "database"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://orb.farm",
+  "title": "Orb.Farm",
+  "category": "entertainment & social",
+  "description": "A personal aquatic ecosystem where you manage bacteria, algae, and tiny crustaceans in a jar.",
+  "use_case": "Tend a tiny pixel-art aquatic ecosystem",
+  "tags": [
+   "simulation",
+   "web-art"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://r74n.com",
+  "title": "R74n",
+  "category": "entertainment & social",
+  "description": "A sprawling web collective of games, toys, tools, and generators from the maker of Sandboxels.",
+  "use_case": "Fall down a rabbit hole of small web toys and generators",
+  "tags": [
+   "generators",
+   "web-toys"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://cloudgazing.online",
+  "title": "Cloudgazing",
+  "category": "entertainment & social",
+  "description": "A cloud-drawing gallery where people find shapes in cloud photos and draw what they see.",
+  "use_case": "Find and draw a shape hidden in a cloud photo",
+  "tags": [
+   "community",
+   "web-art"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://makewordart.com",
+  "title": "Make WordArt",
+  "category": "design & media",
+  "description": "A browser-based generator for loud, glossy 1990s-style WordArt text effects.",
+  "use_case": "Make retro 90s-style WordArt text",
+  "tags": [
+   "retro",
+   "typography"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://alana314.github.io/lucidia",
+  "title": "Lucidia",
+  "category": "entertainment & social",
+  "description": "A browser-based WebGL visualizer with preset generative patterns and a fullscreen mode.",
+  "use_case": "Watch a generative WebGL visualizer, screensaver-style",
+  "tags": [
+   "generative-art",
+   "visualizer"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://passweird.com",
+  "title": "Passweird",
+  "category": "security & privacy",
+  "description": "Generates secure passwords deliberately disgusting enough that no one would want to type them.",
+  "use_case": "Generate a secure password no one would want to steal or type",
+  "tags": [
+   "humor",
+   "passwords"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
+ },
+ {
+  "link": "https://56k.rip",
+  "title": "56k.rip",
+  "category": "entertainment & social",
+  "description": "A 1996 dial-up internet simulator with a working desktop and a noisy modem connection sound.",
+  "use_case": "Relive the sound and speed of a 1996 dial-up connection",
+  "tags": [
+   "nostalgia",
+   "web-art"
+  ],
+  "source": "capture",
+  "added": "2026-10-15"
  }
 ]
