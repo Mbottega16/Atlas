@@ -4,7 +4,9 @@
 // Words are matched in any order, in any field, after a light stemming pass
 // ("remover", "removes" and "remove" all become "remov"). Every query word must
 // match somewhere; if nothing matches every word, the closest partial matches
-// come back instead, flagged `relaxed`.
+// come back instead, flagged `relaxed`. A word with no exact or prefix hit still
+// matches a field word within a Levenshtein distance of 2 (a typo), but ranks
+// below an exact hit on the same query.
 
 const STOPWORDS = new Set(
   (
@@ -84,8 +86,37 @@ export function indexEntry(entry) {
   return { entry, fields, titleLower: text.title.toLowerCase() };
 }
 
+/** Edit distance between two strings (insert/delete/substitute, each cost 1). */
+function levenshtein(a, b) {
+  if (a === b) return 0;
+  const al = a.length;
+  const bl = b.length;
+  if (al === 0) return bl;
+  if (bl === 0) return al;
+  let prev = new Array(bl + 1);
+  let curr = new Array(bl + 1);
+  for (let j = 0; j <= bl; j++) prev[j] = j;
+  for (let i = 1; i <= al; i++) {
+    curr[0] = i;
+    for (let j = 1; j <= bl; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      curr[j] = Math.min(prev[j] + 1, curr[j - 1] + 1, prev[j - 1] + cost);
+    }
+    [prev, curr] = [curr, prev];
+  }
+  return prev[bl];
+}
+
+const FUZZY_MAX_DISTANCE = 2;
+const FUZZY_MIN_TERM_LENGTH = 4; // below this, a 2-edit typo covers too many unrelated words
+const FUZZY_PENALTY = 0.5; // a typo match still counts, but scores below a real hit in the same field
+
+/** Best field weight for an exact/prefix hit, and separately for a typo (fuzzy)
+ *  hit. A field that matches exactly always wins over one that only matches
+ *  within edit distance 2, so a correct spelling outranks a typo. */
 function termScore(indexed, term, prefix) {
-  let best = 0;
+  let bestExact = 0;
+  let bestFuzzy = 0;
   for (const [name, weight] of FIELDS) {
     const set = indexed.fields[name];
     let hit = set.has(term);
@@ -97,9 +128,25 @@ function termScore(indexed, term, prefix) {
         }
       }
     }
-    if (hit && weight > best) best = weight;
+    if (hit) {
+      if (weight > bestExact) bestExact = weight;
+      continue;
+    }
+    if (term.length >= FUZZY_MIN_TERM_LENGTH && weight > bestFuzzy) {
+      for (const w of set) {
+        if (
+          Math.abs(w.length - term.length) <= FUZZY_MAX_DISTANCE &&
+          levenshtein(term, w) <= FUZZY_MAX_DISTANCE
+        ) {
+          bestFuzzy = weight;
+          break;
+        }
+      }
+    }
   }
-  return best;
+  if (bestExact > 0) return { score: bestExact, fuzzy: false };
+  if (bestFuzzy > 0) return { score: bestFuzzy * FUZZY_PENALTY, fuzzy: true };
+  return { score: 0, fuzzy: false };
 }
 
 function baseOrder(a, b) {
@@ -131,14 +178,18 @@ export function rank(indexed, q) {
   for (const x of indexed) {
     let score = 0;
     let matched = 0;
+    let exactMatched = 0;
     terms.forEach((term, i) => {
-      const s = termScore(x, term, typing && i === terms.length - 1);
-      if (s > 0) matched++;
+      const { score: s, fuzzy } = termScore(x, term, typing && i === terms.length - 1);
+      if (s > 0) {
+        matched++;
+        if (!fuzzy) exactMatched++;
+      }
       score += s;
     });
     if (matched === 0) continue;
     if (phrase.length > 2 && x.titleLower.includes(phrase)) score += 10;
-    scored.push({ ...x, score, matched });
+    scored.push({ ...x, score, matched, exactMatched });
   }
 
   let pool = scored.filter((x) => x.matched === terms.length);
@@ -148,6 +199,14 @@ export function rank(indexed, q) {
     pool = scored.filter((x) => x.matched >= need);
     relaxed = pool.length > 0;
   }
-  pool.sort((a, b) => b.matched - a.matched || b.score - a.score || baseOrder(a, b));
+  // Entries where every term matched exactly outrank ones that needed a typo
+  // match, regardless of which fields scored higher.
+  pool.sort(
+    (a, b) =>
+      b.matched - a.matched ||
+      b.exactMatched - a.exactMatched ||
+      b.score - a.score ||
+      baseOrder(a, b)
+  );
   return { items: pool.map((x) => x.entry), relaxed };
 }
