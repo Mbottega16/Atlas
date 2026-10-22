@@ -16755,5 +16755,603 @@
   ],
   "source": "capture",
   "added": "2026-10-15"
+ },
+ {
+  "link": "https://github.blog",
+  "title": "Home",
+  "category": "reading & news",
+  "description": "Updates, ideas, and inspiration from GitHub to help developers build and design software.",
+  "use_case": "Follow product news and engineering posts from GitHub",
+  "tags": [
+   "engineering-blog",
+   "github"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://free-for.dev",
+  "title": "Free for Developers",
+  "category": "developer tools",
+  "description": "Developers and Open Source authors now have a massive amount of services offering free tiers, but it can be hard to find them all to make informed decisions.",
+  "use_case": "Find services with a free tier for a side project",
+  "tags": [
+   "directory",
+   "free-for",
+   "free-tier"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://trackawesomelist.com",
+  "title": "Track Awesome List Updates Daily",
+  "category": "developer tools",
+  "description": "We track over 500 awesome list updates, and you can also subscribe to daily or weekly updates via RSS or News Letter.",
+  "use_case": "Track new additions to awesome lists",
+  "tags": [
+   "awesome-lists",
+   "directory",
+   "trackawesomelist"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://pulumi.com",
+  "title": "The infrastructure as code platform for the AI era",
+  "category": "hosting & ops",
+  "description": "Pulumi is an open-source infrastructure as code platform that helps humans and agents build and manage cloud infrastructure with real programming languages.",
+  "use_case": "Define cloud infrastructure in real code",
+  "tags": [
+   "cloud",
+   "infrastructure-as-code",
+   "pulumi"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://bitbucket.org",
+  "title": "Git solution for teams using Jira",
+  "category": "developer tools",
+  "description": "Bitbucket Cloud is a Git-based code and CI/CD tool optimized for teams using Jira.",
+  "use_case": "Host Git repos with Jira-linked CI/CD",
+  "tags": [
+   "bitbucket",
+   "ci-cd",
+   "git"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://codeberg.org",
+  "title": "Codeberg.org",
+  "category": "developer tools",
+  "description": "Codeberg is a non-profit community-led organization that aims to help free and open source projects prosper by giving them a safe and friendly home.",
+  "use_case": "Host code on a non-profit Git forge",
+  "tags": [
+   "codeberg",
+   "git",
+   "open-source"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://forgejo.org",
+  "title": "Beyond coding. We forge.",
+  "category": "developer tools",
+  "description": "Forgejo is a self-hosted lightweight software forge. Easy to install and low maintenance, it just does the job.",
+  "use_case": "Self-host a lightweight Git forge",
+  "tags": [
+   "forgejo",
+   "git",
+   "self-hosted"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://about.gitlab.com",
+  "title": "GitLab",
+  "category": "developer tools",
+  "description": "Teams and agents ship trusted software faster with GitLab, the intelligent orchestration platform with context and governance for the entire software lifecycle.",
+  "use_case": "Run Git hosting and CI/CD in one platform",
+  "tags": [
+   "about",
+   "ci-cd",
+   "git"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://apify.com",
+  "title": "Apify: Marketplace of ready-to-run tools for AI",
+  "category": "developer tools",
+  "description": "Thousands of tools to automate your business. Get real-time web data, track competitors, generate leads, and integrate your apps and AI agents.",
+  "use_case": "Run ready-made web scrapers and automations",
+  "tags": [
+   "apify",
+   "automation",
+   "scraping"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://beeceptor.com",
+  "title": "Mock APIs",
+  "category": "developer tools",
+  "description": "Create AI-powered mock servers in seconds. Generate realistic responses from prompts or real traffic for REST, SOAP, GraphQL, and gRPC. No code, no dependencies. Free",
+  "use_case": "Mock a REST API before the backend exists",
+  "tags": [
+   "beeceptor",
+   "mock-api",
+   "testing"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://brave.com",
+  "title": "The browser that puts you first",
+  "category": "security & privacy",
+  "description": "The Brave browser is a fast, private and secure web browser for PC, Mac and mobile. Download now to enjoy a faster ad-free browsing experience that saves data and battery life by blocking tracking software.",
+  "use_case": "Browse with built-in tracker blocking",
+  "tags": [
+   "brave",
+   "browser",
+   "privacy"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://cors.dev",
+  "title": "Free CORS proxy for any public API: prefix the URL with proxy.cors.dev, GET and HEAD with no signup, Pro $5/month",
+  "category": "developer tools",
+  "description": "Get past CORS errors and back to building. Free anonymous GET and HEAD access to any public API, plus Pro for write methods and custom headers: $5/month for 500,000 requests.",
+  "use_case": "Get past CORS errors with a free proxy",
+  "tags": [
+   "cors",
+   "proxy"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://datalore.jetbrains.com",
+  "title": "Datalore: Collaborative Data Science Platform by JetBrains",
+  "category": "developer tools",
+  "description": "Online Jupyter notebooks with smart coding assistance for Python, SQL, R, Scala, and Kotlin. Take advantage of database and cloud storage integrations, real-time collaboration, and interactive report publishing.",
+  "use_case": "Run collaborative Jupyter notebooks online",
+  "tags": [
+   "data-science",
+   "datalore",
+   "notebooks"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://dbdesigner.net",
+  "title": "#1 Database Design & Modeling Tool Online",
+  "category": "developer tools",
+  "description": "FREE fully-featured visual database schema designer. Design database model online & generate SQL script instantly. ✓ MySQL ✓ PostgreSQL ✓ MS SQL ✓ Oracle ✓ SQLite modeling by DbDesigner.net",
+  "use_case": "Design a database schema visually",
+  "tags": [
+   "database",
+   "dbdesigner",
+   "schema"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://comparejson.com",
+  "title": "Online Semantic JSON Diff Tool",
+  "category": "developer tools",
+  "description": "Compare two JSON files online with this semantic JSON diff tool. Semantic comparison understands data structure, not just text — spot value changes, type mismatches, and missing properties with full key-path context.",
+  "use_case": "Compare two JSON files semantically",
+  "tags": [
+   "comparejson",
+   "diff",
+   "json"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://inngest.com",
+  "title": "Durable Execution for Workflows & AI",
+  "category": "developer tools",
+  "description": "Build reliable background jobs, workflows, and AI agents without extra infrastructure. Automatic retries, flow control, and step-level observability.",
+  "use_case": "Run background jobs and workflows reliably",
+  "tags": [
+   "inngest",
+   "jobs",
+   "workflows"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://ip-api.com",
+  "title": "Geolocation API",
+  "category": "developer tools",
+  "description": "Free IP Geolocation API - lookup any IP address",
+  "use_case": "Look up IP geolocation from a free API",
+  "tags": [
+   "api",
+   "geolocation",
+   "ip",
+   "ip-api"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://ipinfo.io",
+  "title": "The Trusted IP Data Provider for Developers & Enterprises",
+  "category": "developer tools",
+  "description": "IPinfo delivers fast, accurate, and reliable IP data to power fraud detection, geolocation, analytics, and more. Trusted by over 500,000 developers.",
+  "use_case": "Look up IP data for fraud checks and geolocation",
+  "tags": [
+   "api",
+   "geolocation",
+   "ip",
+   "ipinfo"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://jsoning.com",
+  "title": "JSONing",
+  "category": "developer tools",
+  "description": "JSONing is an online JSON toolbox that provides a variety of tools, including a JSON formatter, JSON linter, JSON AI fixer, Mock API, JSONL tools, converters, and more.",
+  "use_case": "Format, validate and convert JSON online",
+  "tags": [
+   "formatter",
+   "json",
+   "jsoning"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://mintlify.com",
+  "title": "The documentation platform for agents",
+  "category": "developer tools",
+  "description": "Self-updating documentation for startups, enterprises, and agents.",
+  "use_case": "Host product documentation that updates itself",
+  "tags": [
+   "docs",
+   "documentation",
+   "mintlify"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://mockapi.io",
+  "title": "mockAPI",
+  "category": "developer tools",
+  "description": "MockAPI is a simple tool that lets you easily mock up APIs, generate custom data, and perform operations on it using RESTful interface. MockAPI is meant to be used as a prototyping/testing/learning tool.",
+  "use_case": "Spin up a mock REST API from a schema",
+  "tags": [
+   "mock-api",
+   "mockapi",
+   "testing"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://ip.alstra.ca",
+  "title": "Multi IP Exits Checker",
+  "category": "file & web utilities",
+  "description": "Check what your IP address is as seen by various global regions and top online services with our Multi IP Exits Checker. Effortlessly check your IP across multiple platforms and understand how your IP appears to different places and websites.",
+  "use_case": "Check what IP address websites see for you",
+  "tags": [
+   "ip",
+   "network"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://nasdisks.com",
+  "title": "NAS hard drives",
+  "category": "everyday life",
+  "description": "Filter currently-sold NAS hard drives by CMR/SMR, capacity, class and real-world failure rates (Backblaze AFR). 178 drives.",
+  "use_case": "Pick a NAS hard drive by CMR/SMR and capacity",
+  "tags": [
+   "hardware",
+   "nasdisks",
+   "storage"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://newsapi.org",
+  "title": "Search News and Blog Articles on the Web",
+  "category": "developer tools",
+  "description": "Get JSON search results for global news articles in real-time with our free News API.",
+  "use_case": "Search news articles through a JSON API",
+  "tags": [
+   "api",
+   "news",
+   "newsapi"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://ocr.space",
+  "title": "Free OCR API V2026, Online OCR, Searchable PDF Creator and OCR Software",
+  "category": "file & web utilities",
+  "description": "Free OCR API, Online OCR and Searchable PDF (Sandwich PDF) Service. Web API to extract text from images and convert scans to searchable PDF. Free OCR software as a hosted service and as download.",
+  "use_case": "Run OCR on an image or PDF for free",
+  "tags": [
+   "ocr",
+   "pdf"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://prefect.io",
+  "title": "Workflow Orchestration for Data, ML, and Agents",
+  "category": "developer tools",
+  "description": "Orchestrate workflows with Prefect. Connect AI agents to your tools and data with FastMCP Gateway. Open-source foundations, production-ready platforms.",
+  "use_case": "Orchestrate data and ML workflows",
+  "tags": [
+   "orchestration",
+   "prefect",
+   "workflows"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://svix.com",
+  "title": "Webhooks as a Service",
+  "category": "developer tools",
+  "description": "Svix is the enterprise-ready webhook platform delivering billions of webhooks every month for fast-growth startups and Fortune 500 companies including Brex, Benchling, and Drata. Send and receive webhooks at scale with retries, signature verification, and a managed dashboard.",
+  "use_case": "Send webhooks to customers reliably",
+  "tags": [
+   "api",
+   "svix",
+   "webhooks"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://tavily.com",
+  "title": "Tavily",
+  "category": "ai engineering",
+  "description": "Tavily is the real‑time search engine for AI agents — Fast and secure APIs for web search and content extraction.",
+  "use_case": "Give AI agents live web search",
+  "tags": [
+   "agents",
+   "search-api",
+   "tavily"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://timezone.io",
+  "title": "World Clock & Time Zone Converter",
+  "category": "everyday life",
+  "description": "Check the current local time anywhere in the world — live clocks, a time zone converter, UTC offsets, and daylight saving schedules for every country and city.",
+  "use_case": "Convert times between time zones",
+  "tags": [
+   "clock",
+   "time-zones",
+   "timezone"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://tiny.cloud",
+  "title": "The Most Trusted & Feature-rich WYSIWYG Rich Text Editor",
+  "category": "developer tools",
+  "description": "Elevate your web development with TinyMCE's WYSIWYG Rich Text Editor. Trusted by 1.5M+ developers, with AI-powered tools and seamless integrations.",
+  "use_case": "Add a rich text editor to a web app",
+  "tags": [
+   "editor",
+   "tiny",
+   "wysiwyg"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://githubstatus.com",
+  "title": "GitHub Status",
+  "category": "hosting & ops",
+  "description": "Welcome to GitHub's home for real-time and historical data on system performance.",
+  "use_case": "Check whether GitHub is down",
+  "tags": [
+   "github",
+   "githubstatus",
+   "status-page"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://bsky.app",
+  "title": "Bluesky",
+  "category": "entertainment & social",
+  "description": "Social media as it should be. Find your community among millions of users, unleash your creativity, and have some fun again.",
+  "use_case": "Follow people on an open social network",
+  "tags": [
+   "bsky",
+   "decentralized",
+   "social"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://store.steampowered.com",
+  "title": "Steam Store",
+  "category": "entertainment & social",
+  "description": "Steam is the ultimate destination for playing, discussing, and creating games.",
+  "use_case": "Browse and buy PC games",
+  "tags": [
+   "games",
+   "store"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://paintastreet.com",
+  "title": "paint a street",
+  "category": "entertainment & social",
+  "description": "submit a drawing that will go on the pavement of a san francisco alley",
+  "use_case": "Add a drawing to a real street",
+  "tags": [
+   "art",
+   "community",
+   "paintastreet"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://mastodon.gamedev.place",
+  "title": "Gamedev Mastodon",
+  "category": "game dev",
+  "description": "Mastodon server focused on game development and related topics.",
+  "use_case": "Join a Mastodon server for game developers",
+  "tags": [
+   "community",
+   "mastodon"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://discord.com",
+  "title": "Group Chat That’s All Fun & Games",
+  "category": "entertainment & social",
+  "description": "Discord is great for playing games and chilling with friends, or even building a worldwide community. Customize your own space to talk, play, and hang out.",
+  "use_case": "Chat with friends or a community by voice and text",
+  "tags": [
+   "chat",
+   "community",
+   "discord"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://openprocessing.org",
+  "title": "Creative Coding for the Curious Mind",
+  "category": "design & media",
+  "description": "OpenProcessing - Creative Coding for the Curious Mind",
+  "use_case": "Share and remix creative coding sketches",
+  "tags": [
+   "creative-coding",
+   "openprocessing",
+   "p5js"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://virtualthreads.io",
+  "title": "Free 3D T-Shirt Mockup Generator",
+  "category": "design & media",
+  "description": "Generate free animated 3D t-shirt mockups with your logo.",
+  "use_case": "Generate a 3D t-shirt mockup with your logo",
+  "tags": [
+   "3d",
+   "mockup",
+   "virtualthreads"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://gumroad.com",
+  "title": "Earn your first dollar online with Gumroad",
+  "category": "business & marketing",
+  "description": "Start selling what you know, see what sticks, and get paid. Simple and effective.",
+  "use_case": "Sell digital products with a simple storefront",
+  "tags": [
+   "creators",
+   "gumroad",
+   "selling"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://statcounter.com",
+  "title": "Web Analytics Made Easy",
+  "category": "business & marketing",
+  "description": "A free yet reliable invisible web tracker, highly configurable hit counter and real-time detailed web stats.",
+  "use_case": "Track website visitors with a free counter",
+  "tags": [
+   "analytics",
+   "statcounter",
+   "web-traffic"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://crowdin.com",
+  "title": "Crowdin: Localization Platform to Manage Your Translation",
+  "category": "developer tools",
+  "description": "Crowdin is an all-in-one localization and translation management platform with all the software, tools and integrations you need to localize your content.",
+  "use_case": "Manage app translations and localization",
+  "tags": [
+   "crowdin",
+   "localization",
+   "translation"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://opencollective.com",
+  "title": "Raise, manage and disburse money with full transparency.",
+  "category": "business & marketing",
+  "description": "Open Collective is a legal and financial toolbox for groups. It’s a fundraising + legal status + money management platform for your community. What do you want to do?",
+  "use_case": "Raise and manage money for a group transparently",
+  "tags": [
+   "fundraising",
+   "nonprofit",
+   "opencollective"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
+ },
+ {
+  "link": "https://typeform.com",
+  "title": "Form Builder with AI Automation",
+  "category": "business & marketing",
+  "description": "Build AI-powered forms that get 3.5x more data — then trigger automated workflows to enrich leads, follow up, and grow revenue. No code. Start free.",
+  "use_case": "Build forms and surveys",
+  "tags": [
+   "forms",
+   "surveys",
+   "typeform"
+  ],
+  "source": "harvest",
+  "added": "2026-10-22"
  }
 ]
