@@ -112,6 +112,7 @@ To keep search and file reads fast, **never scan or read inside**:
 ## Session Handoff (Last Worked On · Current State · Next Up)
 
 - **Last Worked On:**
+  - Added a polished responsive Atlas library shell with clear identity, search-oriented introduction, improved nav hierarchy, and calmer card/filter surfaces (2026-10-22; frontend-only).
   - Added Levenshtein typo tolerance to `frontend/src/lib/searchCore.js` (`9344dd3`).
   - Rebuilt Atlas as a fast, free, public static site on Render (`https://atlas-library-znte.onrender.com`, `VITE_STATIC=1`) backed by one tracked seed (`backend/seed/atlas-seed.json`), client-side stemmer search (`frontend/src/lib/searchCore.js`), 20 merged categories (`backend/app/taxonomy.py`), and automated Monday link-health checks (`.github/workflows/link-check.yml`).
   - Repointed 44 off-host redirects (`5e2ee1a`, 2026-09-28).

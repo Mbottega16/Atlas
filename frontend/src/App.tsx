@@ -125,9 +125,23 @@ export default function App() {
   );
 
   return (
-    <div>
-      <h1>Atlas</h1>
-      <nav>
+    <div className="app-shell atlas-shell">
+      <header className="app-header">
+        <a className="brand-lockup" href="#" onClick={(e) => { e.preventDefault(); setTab("find"); }} aria-label="Atlas home">
+          <span className="brand-mark" aria-hidden="true">✳</span>
+          <span className="brand-name">atlas<span className="brand-period">.</span><small>THE PERSONAL WEB INDEX</small></span>
+        </a>
+        <div className="header-note"><span className="status-dot" /> Curated places worth coming back to</div>
+      </header>
+      <section className="welcome-hero atlas-hero">
+        <div className="hero-copy">
+          <p className="eyebrow">A LITTLE LESS SEARCHING</p>
+          <h1>The internet is vast.<br /><em>Your next good find isn't.</em></h1>
+          <p className="tagline">A hand-curated map of useful sites, creative tools, and ideas — gathered in one place, ready when you need them.</p>
+        </div>
+        <div className="hero-art" aria-hidden="true"><span className="atlas-sun">✳</span><span className="atlas-ring ring-a"/><span className="atlas-ring ring-b"/><span className="atlas-spark spark-a">✦</span><span className="atlas-spark spark-b">✦</span></div>
+      </section>
+      <nav className="app-nav">
         {navLink("find", "Find")}
         {navLink("browse", "Browse")}
         {!READ_ONLY && navLink("capture", "Capture")}
