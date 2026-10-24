@@ -48,7 +48,8 @@ Run from `backend/` with the venv (`PYTHONPATH=. .venv/Scripts/python …`):
 The vault's `workflows/library/library.js` finds candidates, filters them for free, and opens
 a review branch. See `my-brain/projects/atlas/snowball-plan.md`.
 
-- It reads roundup pages and outlinks from entries already here, and the Notion inbox.
+- It reads roundup pages and outlinks from entries already here, the Notion inbox, and phone captures (GitHub issues, see below).
+- A quality gate fixes slogan titles and holds back thin records. Each harvest PR lists its entries and remarks. `growth-log.md` in the vault logs every week.
 - `propose --app atlas --apply --push` appends records to `atlas-seed.json` on a
   `harvest/<date>` branch, runs pytest, and pushes the branch. A person merges the PR.
 - Merging to `main` redeploys the public site.
@@ -116,11 +117,11 @@ To keep search and file reads fast, **never scan or read inside**:
   - Added Levenshtein typo tolerance to `frontend/src/lib/searchCore.js` (`9344dd3`).
   - Rebuilt Atlas as a fast, free, public static site on Render (`https://atlas-library-znte.onrender.com`, `VITE_STATIC=1`) backed by one tracked seed (`backend/seed/atlas-seed.json`), client-side stemmer search (`frontend/src/lib/searchCore.js`), 20 merged categories (`backend/app/taxonomy.py`), and automated Monday link-health checks (`.github/workflows/link-check.yml`).
   - Repointed 44 off-host redirects (`5e2ee1a`, 2026-09-28).
-- **Current State (2026-10-22):**
-  - Live with 1,214 curated sites/tools, 38 passing backend pytest tests. 970 links tracked, none failing twice.
-  - Intake engine added in the vault. First harvest: PR #2 (+43 tools) waits for review.
+- **Current State (2026-10-24):**
+  - Live with 1,257 curated sites/tools after harvest PR #2 (+43), 38 passing backend pytest tests.
+  - Phone capture works: in the GitHub phone app, open Atlas > New issue > "Add a site", paste a link. The weekly run queues it and closes the issue with the result.
 - **What Needs To Be Worked On Next:**
   0. Review and merge open `harvest/*` pull requests.
-  1. Run `/deep_curate atlas inbox` (or `/deep_curate atlas [urls]`) whenever new tools/sites land in the Notion inbox.
+  1. Run `/deep_curate atlas inbox` (or `/deep_curate atlas [urls]`) whenever new tools/sites land in the Notion inbox or as `inbox` issues.
   2. Review any twice-failed links surfaced by the weekly Monday GitHub Action (`backend/seed/link-status.json`).
 
