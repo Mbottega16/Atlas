@@ -17353,5 +17353,19 @@
   ],
   "source": "harvest",
   "added": "2026-10-22"
+ },
+ {
+  "link": "https://hn.algolia.com",
+  "title": "HN Search powered by Algolia",
+  "category": "reading & news",
+  "description": "Hacker News Search, millions articles and comments at your fingertips.",
+  "use_case": "Search Hacker News posts and comments",
+  "tags": [
+   "algolia",
+   "hacker-news",
+   "search"
+  ],
+  "source": "harvest",
+  "added": "2026-10-24"
  }
 ]
