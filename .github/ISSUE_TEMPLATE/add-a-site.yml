@@ -1,0 +1,20 @@
+name: Add a site
+description: Send a site or tool to Atlas from your phone. The weekly run picks it up.
+title: "Add: "
+labels: ["inbox"]
+body:
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Paste the address of the site or tool.
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: Note
+      description: Optional. Why you want it, or when you would use it.
+    validations:
+      required: false
