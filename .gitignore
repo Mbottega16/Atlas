@@ -30,4 +30,3 @@ frontend/*.tsbuildinfo
 .idea/
 
 .agents/
-AGENTS.md

@@ -1,0 +1,14 @@
+# Atlas — ignore 9,500+ .venv/node_modules files, local SQLite DB, and 466 KB seed JSON during code search
+.git/
+.agents/
+backend/.venv/
+**/.venv/
+**/__pycache__/
+frontend/node_modules/
+**/node_modules/
+frontend/dist/
+frontend/public/atlas.json
+backend/data/
+backend/seed/atlas-seed.json
+*.db
+*.sqlite
