@@ -988,6 +988,7 @@
   "use_case": "Find where an image came from",
   "tags": [
    "design",
+   "osint",
    "search"
   ],
   "source": "capture",
@@ -1902,10 +1903,19 @@
   "use_case": "View historical snapshots of websites",
   "tags": [
    "archives",
+   "osint",
    "reference & calculators"
   ],
   "source": "capture",
-  "added": "2026-08-26"
+  "added": "2026-08-26",
+  "cost": "free",
+  "price_note": "Free, run by the non-profit Internet Archive. A free login adds screenshots, a personal archive and emailed results.",
+  "access": "no sign-up",
+  "best_for": "Saving a page before it changes, and checking older copies to date when something appeared or disappeared.",
+  "limits": "Not every page or date was captured, some sites block saving, and a copy shows only what the archive's crawler was served.",
+  "last_verified": "2026-10-25",
+  "verification": "Read the Save Page Now page and the Internet Archive's help page on saving pages.",
+  "screenshot": "shots/web.archive.org.jpg"
  },
  {
   "link": "https://lite.cnn.com",
@@ -2652,6 +2662,7 @@
   "description": "Website technology stack identifier.",
   "use_case": "Discover the tech stack of any website",
   "tags": [
+   "osint",
    "web",
    "web utilities"
   ],
@@ -2719,7 +2730,8 @@
   "description": "Email address finder for websites.",
   "use_case": "Find email addresses for business contacts",
   "tags": [
-   "communication"
+   "communication",
+   "osint"
   ],
   "source": "capture",
   "added": "2026-08-26"
@@ -6233,6 +6245,7 @@
   "description": "Checks whether an email/password has appeared in a data breach.",
   "use_case": "Audit personal/business email exposure periodically.",
   "tags": [
+   "osint",
    "privacy",
    "security"
   ],
@@ -6246,6 +6259,7 @@
   "description": "Scans files/URLs against multiple antivirus engines.",
   "use_case": "Check a suspicious file or link before opening it.",
   "tags": [
+   "osint",
    "scanning",
    "security"
   ],
@@ -14895,7 +14909,12 @@
    "snapshot"
   ],
   "source": "capture",
-  "added": "2026-10-15"
+  "added": "2026-10-15",
+  "cost": "free",
+  "access": "no sign-up",
+  "warning": "In January 2026 the site ran code that used visitors' browsers to attack a blog, and some archived pages were found altered. Wikipedia deprecated it in February 2026 and Wikimedia blacklisted it in June. Don't use its copies as evidence.",
+  "last_verified": "2026-10-25",
+  "verification": "Read Wikimedia's archive.today incident page."
  },
  {
   "link": "https://fakeupdate.net",
@@ -17367,5 +17386,96 @@
   ],
   "source": "harvest",
   "added": "2026-10-24"
+ },
+ {
+  "link": "https://shodan.io",
+  "title": "Shodan",
+  "category": "security & privacy",
+  "description": "Search engine for internet-connected devices: indexes the open ports, service banners and software that servers show to the public internet.",
+  "use_case": "See what a server or network exposes to the internet",
+  "tags": [
+   "infrastructure",
+   "osint",
+   "recon",
+   "search"
+  ],
+  "source": "capture",
+  "added": "2026-10-26",
+  "cost": "freemium",
+  "price_note": "Basic search is free with no account; filters need a free login. Membership is a one-time $49; API plans from $69/month.",
+  "access": "no sign-up",
+  "best_for": "A first look at what a known IP, host or organization exposes: open ports, banners, software versions.",
+  "limits": "Each result is a dated observation. It doesn't prove who owns a server, that it was hacked, or that the service is still running.",
+  "last_verified": "2026-10-25",
+  "verification": "Searched shodan.io without an account; read the plans page of the official Shodan book.",
+  "screenshot": "shots/shodan.io.jpg"
+ },
+ {
+  "link": "https://censys.com",
+  "title": "Censys",
+  "category": "security & privacy",
+  "description": "Internet-wide scan data you can search by host, service, domain and TLS certificate, with a history of how each host changed.",
+  "use_case": "Trace a certificate or hostname to the servers behind it",
+  "tags": [
+   "certificates",
+   "infrastructure",
+   "osint",
+   "recon"
+  ],
+  "source": "capture",
+  "added": "2026-10-26",
+  "cost": "freemium",
+  "price_note": "A free account gives basic views of standard ports and services; paid plans are priced through sales.",
+  "access": "free account",
+  "best_for": "Following a certificate or hostname to related hosts, when you need precise queries.",
+  "limits": "Shared IPs, CDNs and wildcard certificates create false links. A shared address is a lead, not proof of a common owner.",
+  "last_verified": "2026-10-25",
+  "verification": "Read Censys's pricing page.",
+  "screenshot": "shots/censys.com.jpg"
+ },
+ {
+  "link": "https://securitytrails.com",
+  "title": "SecurityTrails",
+  "category": "security & privacy",
+  "description": "Current and historical DNS records, subdomains, WHOIS and IP history for any domain.",
+  "use_case": "See how a domain's DNS has changed over time",
+  "tags": [
+   "dns",
+   "infrastructure",
+   "osint",
+   "recon"
+  ],
+  "source": "capture",
+  "added": "2026-10-26",
+  "cost": "freemium",
+  "price_note": "Free account for trying it, with a small monthly query allowance; paid plans from $99/month.",
+  "access": "free account",
+  "best_for": "Seeing how a domain's DNS footprint changed: old IP addresses, nameservers and subdomains.",
+  "limits": "DNS history alone doesn't prove who owns a domain now, who is behind it, or that it was compromised.",
+  "last_verified": "2026-10-25",
+  "verification": "The site blocks automated reading, so its FAQ (free plan) and pricing were read through search results. Confirm the free allowance after signing up."
+ },
+ {
+  "link": "https://maltego.com",
+  "title": "Maltego",
+  "category": "security & privacy",
+  "description": "Link-analysis app that draws how domains, IP addresses, emails, people, companies and social accounts connect, as a graph you can expand.",
+  "use_case": "Map what one domain, email or username connects to",
+  "tags": [
+   "graph",
+   "investigation",
+   "link analysis",
+   "osint"
+  ],
+  "source": "capture",
+  "added": "2026-10-26",
+  "cost": "freemium",
+  "price_note": "Free Basic plan (Community Edition, limited credits); paid plans from €3,000/year.",
+  "access": "download",
+  "best_for": "Mapping many connections at once, when a list of single lookups gets too big to follow.",
+  "limits": "A graph link can look more certain than its source. Check each connection, and the terms of every data source it pulls from.",
+  "last_verified": "2026-10-25",
+  "verification": "Read Maltego's pricing page. osint4all.com lists it as paid only; the free Basic plan is on Maltego's own page.",
+  "screenshot": "shots/maltego.com.jpg"
  }
 ]

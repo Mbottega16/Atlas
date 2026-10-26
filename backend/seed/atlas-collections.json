@@ -1,0 +1,66 @@
+{
+ "stacks": [
+  {
+   "id": "evidence-preservation",
+   "title": "Evidence preservation & web history",
+   "summary": "Save a page before it changes, find its older versions, and record what a server showed, each with a date.",
+   "steps": [
+    {
+     "link": "https://web.archive.org",
+     "do": "Save the page first. Save Page Now makes a dated copy with a permanent link, even if the page later changes or disappears. Then open its calendar of older copies to see when something appeared or changed."
+    },
+    {
+     "link": "https://archive.org",
+     "do": "For context beyond web pages: the wider Internet Archive holds books, newspapers, audio, video and software from the same period."
+    },
+    {
+     "link": "https://shodan.io",
+     "do": "If a server is part of the story, Shodan's records show what it exposed on a given date. Note that date: a record can be stale."
+    }
+   ],
+   "notes": [
+    "Keep the date and the archive link with every copy you save, and say plainly which links you couldn't confirm.",
+    "archive.ph (archive.today) is left out on purpose: in 2026 some of its copies were found altered. See its card."
+   ],
+   "source": {
+    "label": "Adapted from OSINT4ALL's Evidence Preservation and Historical Web Stack",
+    "link": "https://osint4all.com/collection/evidence-preservation-and-historical-web-stack/"
+   },
+   "last_verified": "2026-10-25"
+  }
+ ],
+ "comparisons": [
+  {
+   "id": "shodan-censys-securitytrails",
+   "title": "Shodan, Censys or SecurityTrails?",
+   "question": "Looking up a server, an IP address or a domain",
+   "framing": "Built from each tool's own pages and documentation, not a hands-on accuracy test. Read each tool's limit before trusting a result.",
+   "members": [
+    { "link": "https://shodan.io", "role": "What's running on a host" },
+    { "link": "https://censys.com", "role": "Certificates and hostnames" },
+    { "link": "https://securitytrails.com", "role": "DNS history" }
+   ],
+   "pick": [
+    { "when": "you need to know which services were seen on a specific server or IP address.", "link": "https://shodan.io" },
+    { "when": "your lead is a certificate, or you want to know what answers at a hostname.", "link": "https://censys.com" },
+    { "when": "you need to know how a domain's DNS records changed over time.", "link": "https://securitytrails.com" }
+   ],
+   "steps": [
+    "Write down exactly which domain, server or organization you are allowed to look into.",
+    "Check DNS and domain history first, keeping current records apart from old ones.",
+    "Look up host, service and certificate records, and note the date on each one.",
+    "Confirm anything important with a second source, such as crt.sh for certificates.",
+    "Keep a short record of every source, and say plainly which links you couldn't confirm."
+   ],
+   "notes": [
+    "These tools show what others have already indexed. Scanning or testing a system yourself needs its owner's permission.",
+    "A free web search is not the same as API access. Check query and export limits before planning bulk work."
+   ],
+   "source": {
+    "label": "Adapted from OSINT4ALL's comparison of the same three tools",
+    "link": "https://osint4all.com/comparison/shodan-vs-censys-vs-securitytrails-for-domain-and-infrastructure-reconnaissance/"
+   },
+   "last_verified": "2026-10-25"
+  }
+ ]
+}
