@@ -8,7 +8,7 @@ from app.config import settings
 from app.models.tag import Tag
 from app.taxonomy import CATEGORIES
 from app.schemas.capture import BatchImportRequest, BatchImportResult
-from app.schemas.entry import EntryCreate
+from app.schemas.entry import EntryFields
 from app.services import capture_service, entry_service
 
 router = APIRouter()
@@ -39,7 +39,8 @@ class ResearchRequest(BaseModel):
 
 class ResearchResponse(BaseModel):
     # Draft, UNSAVED entries — review, then POST the keepers to /api/entries/batch.
-    drafts: list[EntryCreate]
+    # No profile fields, so saving a draft never clears an existing profile.
+    drafts: list[EntryFields]
 
 
 @router.get("/capture/enabled")

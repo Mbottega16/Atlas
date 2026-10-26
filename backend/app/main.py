@@ -3,6 +3,7 @@ from pathlib import Path
 
 from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy import inspect
 
 from app.api.deps import require_auth
 from app.api.routes import auth, backup, capture, entries, health, tags
@@ -10,7 +11,7 @@ from app.config import settings
 from app.db.base import Base
 from app.db.seed import load_seed_rows
 from app.db.session import SessionLocal, engine
-from app.models.entry import Entry
+from app.models.entry import PROFILE_FIELDS, Entry
 from app.static_spa import SPAStaticFiles
 
 log = logging.getLogger("atlas.bootstrap")
@@ -25,6 +26,17 @@ Base.metadata.create_all(bind=engine)
 def _bootstrap() -> None:
     # Never let a seeding hiccup take down module import (would 500 every route).
     try:
+        # create_all never adds columns to a table that already exists, so a
+        # working copy made before the profile columns would fail every query.
+        have = {c["name"] for c in inspect(engine).get_columns("entries")}
+        missing = [f for f in PROFILE_FIELDS if f not in have]
+        if missing:
+            log.error(
+                "data/atlas.db predates the entry profile columns (missing %s): "
+                "run `alembic upgrade head`, or rebuild it with scripts/load_seed.py",
+                ", ".join(missing),
+            )
+            return
         with SessionLocal() as db:
             if db.query(Entry).count() == 0:
                 n = load_seed_rows(db)
