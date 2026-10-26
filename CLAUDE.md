@@ -1,8 +1,8 @@
 # Atlas — rules & map (read this first)
 
-A personal library of ~1,250 websites and tools worth reusing (link, category,
-description, use case, tags). Vite + React + TypeScript frontend; FastAPI +
-SQLAlchemy + SQLite backend for local editing. `README.md` has the quickstart.
+A personal library of ~1,260 websites and tools worth reusing (link, category,
+description, use case, tags, and an optional checked profile). Vite + React + TypeScript
+frontend; FastAPI + SQLAlchemy + SQLite backend for local editing. `README.md` has the quickstart.
 
 **History:** [`HISTORY.md`](HISTORY.md), newest first — read it when a task touches past
 work, plus `git log`. **Business side:** the owner's my-brain vault, `projects/atlas/context.md`.
@@ -12,7 +12,9 @@ This file describes how Atlas works **now**. The repo (`Mbottega16/Atlas`; the o
 ## What this is
 - **What:** search, filter, a guided "Find" question tree, and session-assisted capture over
   one curated list of useful sites and tools — so a site found once never has to be
-  re-discovered. It serves the owner's whole portfolio, not one project.
+  re-discovered. It serves the owner's whole portfolio, not one project. Since 2026-10-25
+  (the OSINT4ALL pilot) it also has checked **profiles** on some entries, **Collections**
+  (stacks and comparisons) and a **Tool watch** tab.
 - **For:** the owner, solo. Public only because the contents are public links and a free
   static site can't hold a password.
 - **Platform:** a free Render static site, <https://atlas-library-znte.onrender.com>, built
@@ -41,6 +43,18 @@ This file describes how Atlas works **now**. The repo (`Mbottega16/Atlas`; the o
 - **Alembic owns schema changes** to the local DB (`backend/alembic/`).
   `create_all` still runs on startup for a fresh file.
 - **The Notion inbox is cut (owner, 2026-10-24).** Phone capture uses GitHub issues only.
+- **A profile is a person's dated check of the tool's own pages (2026-10-25).** Every profile
+  carries `last_verified` and `verification` (what was checked); the seed test enforces it.
+  OSINT4ALL or any other directory is where an idea comes from, never the evidence — its
+  Maltego and SecurityTrails "paid" labels were wrong against the tools' own pages.
+  `cost` uses Almanac's words (`free | freemium | paid`).
+- **Live-capture drafts never carry a profile**, and a batch that leaves profile fields out
+  keeps the existing profile (`entry_service.upsert_entry`). Only a field sent explicitly,
+  even as `null`, changes it.
+- **A tool with a trust problem keeps its card and gets a `warning`** (archive.ph, 2026-10-25)
+  rather than being deleted quietly; removing it is the owner's call. A stack never includes a
+  tool with a warning (the collections test enforces it).
+- **Comparisons are built from documentation, not hands-on tests, and say so on the page.**
 
 ## How it's built
 
@@ -70,6 +84,24 @@ This file describes how Atlas works **now**. The repo (`Mbottega16/Atlas`; the o
   per link. `.github/workflows/link-check.yml` runs it every Monday, commits the
   result, and keeps one open "Dead links" issue. A link that fails twice in a row
   gets a "may be dead" badge on the site. One bad night never flags a live link.
+- **Profiles (2026-10-25):** optional seed fields, written only when set — `cost`,
+  `price_note`, `access` (`no sign-up | free account | paid account | download`), `best_for`,
+  `limits`, `warning`, `last_verified`, `verification`, `screenshot`. The list is
+  `PROFILE_FIELDS` in `app/models/entry.py`; the vocabularies are in `app/taxonomy.py`.
+  Cards show cost/access chips, "Best for", "Limit" and the check date; a `warning` adds a red
+  "trust warning" badge. `screenshot` is a 640×400 JPEG of the official page under
+  `frontend/public/shots/<host>.jpg`, captured by hand with `scripts/capture-shots.mjs`.
+- **Collections (2026-10-25):** `backend/seed/atlas-collections.json` holds stacks (tools in
+  order, each step says what to do with it) and comparisons (2–4 profiled entries, "open X
+  when…" rules, a careful order of use). Both point at entries by link; the comparison table
+  is drawn from the members' profiles, so editing a profile updates every comparison.
+  `tests/test_collections.py` fails on a link that isn't in the seed. Tab: `?tab=collections&c=<id>`.
+- **Tool watch (2026-10-25):** `?tab=watch` works out trust warnings, link health, entries
+  added in the last four weeks and profiles older than six months, in the browser, from
+  `atlas.json` and `link-check.json`. No build step of its own.
+- **`build-data.mjs` writes four files** into `public/`: `atlas.json`, `link-flags.json`,
+  `link-check.json` (last weekly check date + link count) and `collections.json` (a member
+  whose entry is gone is dropped with a warning, so a stale stack can't break a deploy).
 - **Growing the library (intake engine, 2026-10-22):** the vault's
   `workflows/library/library.js` finds candidates, filters them for free, and opens a review
   branch (see `my-brain/projects/atlas/snowball-plan.md`). It reads roundup pages, outlinks
@@ -80,7 +112,9 @@ This file describes how Atlas works **now**. The repo (`Mbottega16/Atlas`; the o
 
 ## Commands & Verification
 
-**Changing the library** — run from `backend/` with the venv (`PYTHONPATH=. .venv/Scripts/python …`):
+**Changing the library** — run from `backend/` with the venv (`PYTHONPATH=. .venv/Scripts/python …`
+on the PC, `.venv/bin/python` on the Mac; the Mac's venv is Python 3.12 from `uv`, since the
+system Python 3.9 can't run this code):
 
 1. `git pull`, then `scripts/load_seed.py` — rebuilds `data/atlas.db` from the
    seed so you edit the current library.
@@ -91,7 +125,13 @@ This file describes how Atlas works **now**. The repo (`Mbottega16/Atlas`; the o
 4. Run `pytest` (`tests/test_seed.py` checks the seed), commit, push.
 
 **Tests:** `cd backend && .venv/Scripts/python -m pytest` — auth, backup, capture, entries,
-tags, and the seed. `cd frontend && npm run build` type-checks the frontend.
+tags, profiles (incl. the `0002` migration), collections, and the seed. `cd frontend && npm
+run build` type-checks the frontend.
+
+**Profiling a tool:** read its own pricing/help pages (not a directory's summary), add the
+fields through the batch endpoint or the local Edit form (Profile section), then capture a
+thumbnail: `PLAYWRIGHT=/path/to/node_modules/playwright node frontend/scripts/capture-shots.mjs
+<link>`. Look at the image; a bot check or cookie wall means no `screenshot` field.
 
 **Harvest:** `propose --app atlas --apply --push` (vault `library.js`) appends records to
 `atlas-seed.json` on a `harvest/<date>` branch, runs pytest, and pushes the branch. A person
@@ -119,6 +159,13 @@ To keep search and file reads fast, **never scan or read inside**:
 - Tags never repeat the entry's own category (the seed test enforces it).
 - Project tags: `edusystem`, `little-sprout`, `chegga`, `trading-bot`,
   `almanac`. The Find tab's "Something for a specific project" branch uses them.
+- `osint` tags open-source investigation tools (10 on 2026-10-25); the Find tab's "Research
+  or check something online" branch and its two collections use it. OSINT tools land in the
+  existing `security & privacy` / `reference & data` categories — no OSINT category.
+- **A Find leaf with one search word fuzzy-matches widely** ("breach" is two edits from
+  "each"). Test a new leaf with `searchCore.js` in Node; two words or a tag keep it tight.
+- **A local `data/atlas.db` made before 2026-10-25 lacks the profile columns** and the backend
+  logs an error naming them: run `alembic upgrade head`, or rebuild it with `scripts/load_seed.py`.
 - `essential` marks the hand-picked first choice in an area; it ranks first.
 - **Link checks count only real 4xx failures** — a 401 is a bot block, and a timeout from a
   CI runner proves nothing.
@@ -128,12 +175,17 @@ To keep search and file reads fast, **never scan or read inside**:
 
 *Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
 
-- **Last Worked On (2026-10-24):** harvest PRs #2 (+43 tools, titles checked, plus the phone
-  capture form) and #5 (+1, HN Search) and the discovery-shell polish (#3) are merged and live.
-  Docs restructured (no code change).
-- **Current State (2026-10-24):** live with 1,258 entries; 38 passing backend pytest tests.
+- **Last Worked On (2026-10-25):** the OSINT4ALL pilot on branch `osint4all-pilot` (PR #6, open,
+  not merged): checked profiles, Collections (a stack and a comparison), Tool watch, a research
+  branch in Find. +4 entries (Shodan, Censys, SecurityTrails, Maltego), the Wayback Machine
+  profiled, archive.ph given a trust warning. Details in `HISTORY.md`.
+- **Current State (2026-10-25):** `main` is unchanged and live with 1,258 entries. The branch has
+  1,262 entries (6 profiled) and 51 passing backend tests. The Mac now has a Python 3.12 venv.
 - **Next Up:**
-  1. Review and merge open `harvest/*` pull requests.
-  2. Run `/deep_curate atlas inbox` (or `/deep_curate atlas [urls]`) for links that arrive as `inbox` issues.
-  3. Review any twice-failed links surfaced by the weekly Monday GitHub Action (`backend/seed/link-status.json`).
-  4. Check the first weekly harvest run on the Mac (launchd job `com.mybrain.library-weekly`, Mondays 08:00, installed 2026-10-24).
+  1. Owner: merge PR #6. Monday's 08:00 harvest PR also appends to the seed, so whichever merges
+     second needs a rebase that keeps both blocks of new records.
+  2. Owner's call: keep archive.ph with its trust warning, or remove it.
+  3. Profile the 43 `essential` entries from their own pages, then decide on a cost filter.
+  4. Review the Monday harvest PR and link check (48 entries not checked yet); run
+     `/deep_curate atlas inbox` for phone captures.
+  5. On the PC after pulling: `alembic upgrade head` or `scripts/load_seed.py` before the backend.
