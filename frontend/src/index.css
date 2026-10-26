@@ -105,6 +105,43 @@ body {
   gap: 0.3rem;
 }
 
+.tag-input {
+  position: relative;
+  display: inline-block;
+}
+
+.tag-suggest {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 100%;
+  margin: 0.25rem 0 0;
+  padding: 0.25rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background: Canvas;
+  border: 1px solid #8884;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.tag-suggest-option {
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.tag-suggest-option.active {
+  outline: 2px solid #4a90e2;
+}
+
+.tag-suggest-count {
+  opacity: 0.6;
+}
+
 .entries-grid.view-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

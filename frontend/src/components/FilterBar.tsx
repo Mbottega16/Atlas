@@ -1,7 +1,8 @@
-import { useMemo, useState } from "react";
+import { KeyboardEvent, useMemo, useState } from "react";
 
 import type { TagCount } from "../api/client";
 import type { CategoryGroup } from "../categoryGroups";
+import { matchTags, stepIndex } from "../lib/tagMatch";
 
 export interface Filters {
   q: string;
@@ -139,40 +140,84 @@ function TagInput({
   onPick: (tag: string) => void;
 }) {
   const [draft, setDraft] = useState("");
+  const [open, setOpen] = useState(false);
+  // Index of the highlighted suggestion; -1 until an arrow key moves into the list.
+  const [active, setActive] = useState(-1);
   const names = useMemo(() => new Set(options.map((o) => o.name)), [options]);
+  const matches = useMemo(() => matchTags(options, draft), [options, draft]);
+  const showList = open && !disabled && matches.length > 0;
 
   const commit = (value: string) => {
     const tag = value.trim().toLowerCase();
     if (!names.has(tag)) return;
     onPick(tag);
     setDraft("");
+    setActive(-1);
+    setOpen(false);
+  };
+
+  const onKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      setOpen(true);
+      setActive((i) => stepIndex(i, e.key, matches.length));
+    } else if (e.key === "Enter") {
+      // With a suggestion highlighted, Enter takes it; otherwise it takes what was typed.
+      if (showList && active >= 0 && matches[active]) {
+        e.preventDefault();
+        commit(matches[active].name);
+      } else {
+        commit(draft);
+      }
+    } else if (e.key === "Escape") {
+      setOpen(false);
+      setActive(-1);
+    }
   };
 
   return (
-    <>
+    <div className="tag-input">
       <input
         type="text"
-        list="atlas-tag-options"
+        role="combobox"
         placeholder={scoped ? "Narrow by a tag in these results…" : "Filter by tag…"}
         aria-label="Filter by tag"
+        aria-autocomplete="list"
+        aria-expanded={showList}
+        aria-controls="atlas-tag-suggestions"
+        aria-activedescendant={showList && active >= 0 ? `atlas-tag-option-${active}` : undefined}
         value={draft}
         disabled={disabled}
+        onFocus={() => setOpen(true)}
+        onBlur={() => {
+          setOpen(false);
+          setActive(-1);
+        }}
         onChange={(e) => {
           setDraft(e.target.value);
-          // A pick from the suggestion list commits at once; typed letters wait for Enter,
-          // so "ai" doesn't fire before you can finish typing "ai engineering".
-          const inputType = (e.nativeEvent as InputEvent).inputType;
-          if (!inputType || inputType === "insertReplacementText") commit(e.target.value);
+          setActive(-1);
+          setOpen(true);
         }}
-        onKeyDown={(e) => {
-          if (e.key === "Enter") commit(draft);
-        }}
+        onKeyDown={onKeyDown}
       />
-      <datalist id="atlas-tag-options">
-        {options.map((t) => (
-          <option key={t.name} value={t.name} label={`${t.name} (${t.count}${scoped ? " here" : ""})`} />
-        ))}
-      </datalist>
-    </>
+      {showList && (
+        <ul id="atlas-tag-suggestions" role="listbox" aria-label="Matching tags" className="tag-suggest">
+          {matches.map((t, i) => (
+            <li
+              key={t.name}
+              id={`atlas-tag-option-${i}`}
+              role="option"
+              aria-selected={i === active}
+              className={`tag-pill tag-suggest-option${i === active ? " active" : ""}`}
+              title={`${t.count}${scoped ? " here" : ""} entries`}
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => commit(t.name)}
+            >
+              {t.name} <span className="tag-suggest-count">{t.count}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
