@@ -4,6 +4,7 @@ import { Entry, TagCount, fetchCategories, fetchTags, searchEntries } from "../a
 import { resolveGroups } from "../categoryGroups";
 import EntryCard from "../components/EntryCard";
 import FilterBar, { EMPTY_FILTERS, Filters } from "../components/FilterBar";
+import { downloadText, toBookmarkHtml, toJson } from "../lib/exportCore";
 
 type ViewMode = "grid" | "list" | "large";
 const VIEW_STORAGE_KEY = "atlas.viewMode";
@@ -47,6 +48,7 @@ export default function BrowsePage({
   const [showAll, setShowAll] = useState(false);
   // Bumped after an inline edit/delete so the current page refetches.
   const [reloadKey, setReloadKey] = useState(0);
+  const [exporting, setExporting] = useState(false);
 
   const changeView = (next: ViewMode) => {
     setView(next);
@@ -127,6 +129,22 @@ export default function BrowsePage({
 
   // Order comes from the server, so an appended page never reshuffles the rows
   // already on screen.
+  // Exports every match of the current filters, not just the pages on screen.
+  const exportAs = (format: "html" | "json") => {
+    setExporting(true);
+    searchEntries({ ...query, limit: total, offset: 0 })
+      .then((res) => {
+        const date = new Date().toISOString().slice(0, 10);
+        if (format === "html") {
+          downloadText(`atlas-${date}.html`, "text/html", toBookmarkHtml(res.items));
+        } else {
+          downloadText(`atlas-${date}.json`, "application/json", toJson(res.items));
+        }
+      })
+      .catch(() => setError("Couldn't export — try again."))
+      .finally(() => setExporting(false));
+  };
+
   const loadMore = () => {
     setLoadingMore(true);
     searchEntries({ ...query, limit: PAGE_SIZE, offset: entries.length })
@@ -236,6 +254,24 @@ export default function BrowsePage({
               >
                 {blank ? "Back to areas" : "Clear"}
               </button>
+              <div className="export-buttons" role="group" aria-label="Export these results">
+                <button
+                  type="button"
+                  onClick={() => exportAs("html")}
+                  disabled={exporting || loading || total === 0}
+                  title="Download these results as a bookmarks file for any browser"
+                >
+                  Bookmarks
+                </button>
+                <button
+                  type="button"
+                  onClick={() => exportAs("json")}
+                  disabled={exporting || loading || total === 0}
+                  title="Download these results as JSON"
+                >
+                  JSON
+                </button>
+              </div>
               <div className="view-toggle" role="group" aria-label="View">
                 <button
                   className={view === "list" ? "active" : ""}
