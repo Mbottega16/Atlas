@@ -142,15 +142,23 @@ body {
   opacity: 0.6;
 }
 
+/* The grid is a container, so cards can respond to the width the grid really has
+   (a phone, or a grid squeezed beside a sidebar), not the window width. */
+.entries-grid {
+  container: cards / inline-size;
+}
+
+/* min(100%, …) lets one column shrink below the minimum when the grid is narrower
+   than it, and minmax(0, …) stops a long unbroken word from widening the column. */
 .entries-grid.view-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
   gap: 1rem;
 }
 
 .entries-grid.view-large {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr));
   gap: 1.25rem;
 }
 
@@ -238,9 +246,21 @@ body {
   flex: 1;
 }
 
+.entry-card {
+  min-width: 0;
+}
+
 .entry-card h3 {
   margin: 0 1.75rem 0.25rem 0;
   font-size: 1.05rem;
+}
+
+/* Long unbroken words (URLs, compound names) wrap instead of pushing past the card edge. */
+.entry-card h3,
+.entry-card p,
+.entry-card .meta,
+.entry-card .tag-pill {
+  overflow-wrap: anywhere;
 }
 
 /* List view: logo + title/meta inline in a single row, details collapse */
@@ -264,7 +284,8 @@ body {
 
 .entry-card.view-list h3 {
   margin: 0;
-  flex-shrink: 0;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .entry-card.view-list .meta {
@@ -314,6 +335,24 @@ body {
   font-size: 0.85rem;
   opacity: 0.7;
   margin-bottom: 0.5rem;
+}
+
+/* Narrow grids: tighter cards, and list rows stack their text under the logo
+   instead of trying to sit beside it. */
+@container cards (max-width: 420px) {
+  .entry-card {
+    padding: 0.8rem;
+  }
+
+  .entry-card.view-list .entry-card-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .entry-card.view-list .tag-row {
+    margin-left: 0;
+  }
 }
 
 .entry-card p {
@@ -964,7 +1003,7 @@ button.tag-pill:hover,
   .entries-grid.view-grid,
   .entries-grid.view-large,
   .group-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .entry-card.view-list .entry-card-body {
