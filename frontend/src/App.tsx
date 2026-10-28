@@ -5,17 +5,23 @@ import FavoritesPanel from "./components/FavoritesPanel";
 import { EMPTY_FILTERS, Filters } from "./components/FilterBar";
 import BrowsePage from "./pages/BrowsePage";
 import CapturePage from "./pages/CapturePage";
+import CollectionsPage from "./pages/CollectionsPage";
 import GuidePage from "./pages/GuidePage";
+import WatchPage from "./pages/WatchPage";
 
-type Tab = "find" | "browse" | "capture";
+type Tab = "find" | "browse" | "collections" | "watch" | "capture";
 
 // The public site is read-only, so it has no Capture tab.
-const TABS: Tab[] = READ_ONLY ? ["find", "browse"] : ["find", "browse", "capture"];
+const TABS: Tab[] = READ_ONLY
+  ? ["find", "browse", "collections", "watch"]
+  : ["find", "browse", "collections", "watch", "capture"];
 const FILTER_KEYS = ["group", "category", "tag", "q"] as const;
 
 interface View {
   tab: Tab;
   filters: Filters;
+  /** The open stack or comparison on the Collections tab (?c=), or "". */
+  collection: string;
 }
 
 function readUrl(): View {
@@ -23,15 +29,16 @@ function readUrl(): View {
   const tab = params.get("tab") as Tab | null;
   const filters = { ...EMPTY_FILTERS };
   for (const key of FILTER_KEYS) filters[key] = params.get(key) ?? "";
-  return { tab: tab && TABS.includes(tab) ? tab : "find", filters };
+  return { tab: tab && TABS.includes(tab) ? tab : "find", filters, collection: params.get("c") ?? "" };
 }
 
-function toSearch({ tab, filters }: View): string {
+function toSearch({ tab, filters, collection }: View): string {
   const params = new URLSearchParams();
   if (tab !== "find") params.set("tab", tab);
   if (tab === "browse") {
     for (const key of FILTER_KEYS) if (filters[key]) params.set(key, filters[key]);
   }
+  if (tab === "collections" && collection) params.set("c", collection);
   const search = params.toString();
   return search ? `?${search}` : "";
 }
@@ -66,8 +73,10 @@ export default function App() {
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
 
-  const setTab = (next: Tab) => setView((v) => ({ ...v, tab: next }));
+  // A tab picked from the nav opens on its start page, so Collections shows the list.
+  const setTab = (next: Tab) => setView((v) => ({ ...v, tab: next, collection: "" }));
   const setFilters = (next: Filters) => setView((v) => ({ ...v, filters: next }));
+  const openCollection = (id: string) => setView((v) => ({ ...v, tab: "collections", collection: id }));
 
   const [authRequired, setAuthRequired] = useState(false);
   useEffect(() => {
@@ -109,7 +118,7 @@ export default function App() {
   };
 
   // The guide hands Browse a preset filter and switches tabs to it.
-  const handleSeeAll = (next: Filters) => setView({ tab: "browse", filters: next });
+  const handleSeeAll = (next: Filters) => setView({ tab: "browse", filters: next, collection: "" });
 
   const navLink = (t: Tab, label: string) => (
     <a
@@ -144,6 +153,8 @@ export default function App() {
       <nav className="app-nav">
         {navLink("find", "Find")}
         {navLink("browse", "Browse")}
+        {navLink("collections", "Collections")}
+        {navLink("watch", "Tool watch")}
         {!READ_ONLY && navLink("capture", "Capture")}
         <a
           href="#"
@@ -183,9 +194,22 @@ export default function App() {
       {tab === "find" && (
         <GuidePage
           onSeeAll={handleSeeAll}
+          onOpenCollection={openCollection}
           onVisit={handleVisit}
           onFavoriteToggle={handleFavoriteToggle}
         />
+      )}
+      {tab === "collections" && (
+        <CollectionsPage
+          openId={view.collection}
+          onOpen={openCollection}
+          onSeeAll={handleSeeAll}
+          onVisit={handleVisit}
+          onFavoriteToggle={handleFavoriteToggle}
+        />
+      )}
+      {tab === "watch" && (
+        <WatchPage onSeeAll={handleSeeAll} onVisit={handleVisit} onFavoriteToggle={handleFavoriteToggle} />
       )}
       {tab === "browse" && (
         <BrowsePage

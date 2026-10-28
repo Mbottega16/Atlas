@@ -79,7 +79,8 @@ export function indexEntry(entry) {
     tags: [...entry.tags, entry.category].join(" "),
     use_case: entry.use_case || "",
     host: hostOf(entry.link),
-    description: entry.description || "",
+    // A profile's "best for" line counts like the description.
+    description: [entry.description, entry.best_for].filter(Boolean).join(" "),
   };
   const fields = {};
   for (const [name] of FIELDS) fields[name] = new Set(words(text[name]).map(stem));

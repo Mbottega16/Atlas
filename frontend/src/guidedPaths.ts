@@ -5,7 +5,8 @@
 // link, and use_case) or a category instead.
 //
 // Shape: a node asks one question; each option either drills into a `next`
-// node or ends at a `filter` leaf. Nothing here touches the backend.
+// node, ends at a `filter` leaf, or `open`s a stack or comparison by its id in
+// backend/seed/atlas-collections.json. Nothing here touches the backend.
 
 export interface GuideFilter {
   /** Human label for the results screen, e.g. "Hosting & deploying an app". */
@@ -20,6 +21,8 @@ export interface GuideOption {
   hint?: string;
   filter?: GuideFilter;
   next?: GuideNode;
+  /** A stack or comparison id; the option opens it on the Collections tab. */
+  open?: string;
 }
 
 export interface GuideNode {
@@ -138,6 +141,38 @@ const learn: GuideNode = {
     {
       label: "Academic research & papers",
       filter: { label: "Research tools", tag: "research" },
+    },
+  ],
+};
+
+const research: GuideNode = {
+  question: "What are you checking?",
+  options: [
+    {
+      label: "Save a web page, or find an old version",
+      hint: "Dated copies you can cite later",
+      open: "evidence-preservation",
+    },
+    {
+      label: "Look up a server, IP address, or domain",
+      hint: "Shodan, Censys and SecurityTrails side by side",
+      open: "shodan-censys-securitytrails",
+    },
+    // A lone word fuzzy-matches far too widely ("breach" is two edits from
+    // "each"), so these two use two words inside the osint tag. Each lands on
+    // exactly one tool today.
+    {
+      label: "Check an email address for data breaches",
+      filter: { label: "Breach lookups", tag: "osint", q: "email breach" },
+    },
+    {
+      label: "Find where an image came from",
+      filter: { label: "Reverse image search", tag: "osint", q: "reverse image" },
+    },
+    {
+      label: "All open-source investigation tools",
+      hint: "Everything tagged OSINT",
+      filter: { label: "Open-source investigation (OSINT) tools", tag: "osint" },
     },
   ],
 };
@@ -271,6 +306,7 @@ export const GUIDE_ROOT: GuideNode = {
     { label: "Design a UI or a web page", next: design },
     { label: "Write or publish something", next: writePublish },
     { label: "Learn something or look it up", next: learn },
+    { label: "Research or check something online", next: research },
     { label: "Market, launch, or grow a product", next: market },
     { label: "Handle business, legal, or taxes", next: businessLegal },
     { label: "Run day-to-day life & work", next: runLife },

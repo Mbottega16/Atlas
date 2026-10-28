@@ -30,3 +30,9 @@ services:
       - path: /link-flags.json
         name: Cache-Control
         value: no-cache
+      - path: /link-check.json
+        name: Cache-Control
+        value: no-cache
+      - path: /collections.json
+        name: Cache-Control
+        value: no-cache

@@ -1,7 +1,27 @@
 import { CATEGORY_MOVES } from "../categoryGroups";
 import { ESSENTIAL_TAG, Indexed, indexEntry, rank } from "../lib/searchCore";
 
-export interface Entry {
+// Words a profile may use — backend/app/taxonomy.py COSTS and ACCESS.
+export type Cost = "free" | "freemium" | "paid";
+export type Access = "no sign-up" | "free account" | "paid account" | "download";
+
+// An entry's optional profile: what a person checked on the tool's own pages,
+// and when. The public build only carries the fields that are set; the local
+// API sends null for the rest.
+export interface Profile {
+  cost?: Cost | null;
+  price_note?: string | null;
+  access?: Access | null;
+  best_for?: string | null;
+  limits?: string | null;
+  warning?: string | null;
+  last_verified?: string | null;
+  verification?: string | null;
+  // A thumbnail of the official page, under public/.
+  screenshot?: string | null;
+}
+
+export interface Entry extends Profile {
   id: number;
   link: string;
   title: string | null;
@@ -66,14 +86,18 @@ interface ApiEntry extends Omit<Entry, "added"> {
 
 let libraryPromise: Promise<Indexed<Entry>[]> | null = null;
 
-async function fetchFlags(): Promise<Record<string, Entry["flag"]>> {
+// The small build outputs from scripts/build-data.mjs, in both modes. A missing
+// file just means "nothing to show", never an error screen.
+async function fetchPublic<T>(path: string, fallback: T): Promise<T> {
   try {
-    const resp = await fetch("/link-flags.json");
-    return resp.ok ? await resp.json() : {};
+    const resp = await fetch(path);
+    return resp.ok ? await resp.json() : fallback;
   } catch {
-    return {};
+    return fallback;
   }
 }
+
+const fetchFlags = () => fetchPublic<Record<string, Entry["flag"]>>("/link-flags.json", {});
 
 async function fetchEntries(): Promise<Entry[]> {
   if (READ_ONLY) {
@@ -155,6 +179,61 @@ export async function randomEntry(): Promise<Entry> {
   return all[Math.floor(Math.random() * all.length)].entry;
 }
 
+/** The whole library in seed order, for views that work over all of it. */
+export async function allEntries(): Promise<Entry[]> {
+  return (await library()).map((x) => x.entry);
+}
+
+export async function entriesByLink(): Promise<Map<string, Entry>> {
+  return new Map((await library()).map((x) => [x.entry.link, x.entry]));
+}
+
+// --- stacks, comparisons, link-check date ------------------------------------
+// From backend/seed/atlas-collections.json and link-status.json, via the build.
+
+export interface Source {
+  label: string;
+  link: string;
+}
+
+export interface Stack {
+  id: string;
+  title: string;
+  summary: string;
+  steps: { link: string; do: string }[];
+  notes?: string[];
+  source?: Source;
+  last_verified: string;
+}
+
+export interface Comparison {
+  id: string;
+  title: string;
+  question: string;
+  framing: string;
+  members: { link: string; role: string }[];
+  pick: { when: string; link: string }[];
+  steps?: string[];
+  notes?: string[];
+  source?: Source;
+  last_verified: string;
+}
+
+export interface Collections {
+  stacks: Stack[];
+  comparisons: Comparison[];
+}
+
+export const fetchCollections = () =>
+  fetchPublic<Collections>("/collections.json", { stacks: [], comparisons: [] });
+
+export interface LinkCheck {
+  checked: string | null;
+  links: number;
+}
+
+export const fetchLinkCheck = () => fetchPublic<LinkCheck>("/link-check.json", { checked: null, links: 0 });
+
 // --- favorites and visits: kept in this browser -----------------------------
 // Per viewer, keyed by link so they survive the library being rebuilt.
 
@@ -217,7 +296,7 @@ export function logout(): Promise<AuthStatus> {
 
 // --- writing entries (local backend only) -----------------------------------
 
-export interface EntryInput {
+export interface EntryInput extends Profile {
   link: string;
   title?: string | null;
   category: string;

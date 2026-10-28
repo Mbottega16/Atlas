@@ -20,6 +20,8 @@ frontend/dist/
 # Built from backend/seed/ by frontend/scripts/build-data.mjs.
 frontend/public/atlas.json
 frontend/public/link-flags.json
+frontend/public/collections.json
+frontend/public/link-check.json
 frontend/*.tsbuildinfo
 
 # Local env overrides
