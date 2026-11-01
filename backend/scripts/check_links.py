@@ -18,6 +18,9 @@ Options:
   --limit N        only check the first N entries (for a quick sample)
   --json           emit a JSON array [{link, title, status, detail}]
   --write-status   update seed/link-status.json
+  --repoint        rewrite seed/atlas-seed.json links that answer a permanent 301
+                   (same site, landing ok) to their new address. Not run by the
+                   weekly job; review the printed list, then commit the seed.
 """
 import concurrent.futures
 import datetime
@@ -60,30 +63,74 @@ def _domain(url: str) -> str:
     return ".".join(labels[-2:]) if len(labels) >= 2 else ".".join(labels)
 
 
-def classify(link: str, timeout: int) -> tuple[str, str]:
-    """Return (status, detail). status in ok/dead/redirect/bounced/unreachable."""
+class _Hops(urllib.request.HTTPRedirectHandler):
+    """Records the status code of each redirect hop, so a permanent 301 move can
+    be told apart from a temporary 302/307 bounce."""
+
+    def __init__(self) -> None:
+        self.codes: list[int] = []
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):  # noqa: ANN001
+        self.codes.append(code)
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+def classify(link: str, timeout: int) -> tuple[str, str, str]:
+    """Return (status, detail, moved_to). status in ok/dead/redirect/bounced/unreachable.
+    moved_to is the final URL when the link answers 301 (permanent) and lands ok on
+    the same site; otherwise ""."""
     req = urllib.request.Request(link, method="GET", headers={"User-Agent": UA})
     last_exc_name = ""
     for attempt in range(_RETRIES):
+        hops = _Hops()
+        opener = urllib.request.build_opener(hops, urllib.request.HTTPSHandler(context=_SSL_CONTEXT))
         try:
-            with urllib.request.urlopen(req, timeout=timeout, context=_SSL_CONTEXT) as resp:
+            with opener.open(req, timeout=timeout) as resp:
                 final = resp.geturl()
                 if _domain(final) != _domain(link):
-                    return "redirect", f"-> {final}"
+                    return "redirect", f"-> {final}", ""
                 if urlsplit(link).path.strip("/") and not urlsplit(final).path.strip("/"):
-                    return "bounced", f"-> {final}"
-                return "ok", ""
+                    return "bounced", f"-> {final}", ""
+                moved = final if hops.codes[:1] == [301] and final != link else ""
+                return "ok", "", moved
         except urllib.error.HTTPError as e:
             if e.code in _ANTIBOT or _domain(link) in _ANTIBOT_HOSTS:
-                return "ok", f"HTTP {e.code} (anti-bot, treated as ok)"
+                return "ok", f"HTTP {e.code} (anti-bot, treated as ok)", ""
             if e.code >= 500:
-                return "unreachable", f"HTTP {e.code}"
-            return "dead", f"HTTP {e.code}"
+                return "unreachable", f"HTTP {e.code}", ""
+            return "dead", f"HTTP {e.code}", ""
         except Exception as e:  # noqa: BLE001 — timeout, DNS, SSL, connection reset
             last_exc_name = type(e).__name__
             if attempt + 1 < _RETRIES:
                 time.sleep(1)
-    return "unreachable", last_exc_name
+    return "unreachable", last_exc_name, ""
+
+
+def repoint(rows: list[dict], moves: dict[str, str]) -> tuple[list[str], list[str]]:
+    """Swap each moved link in `rows` (in place) for its canonical target.
+    Returns (done, skipped) as readable lines. A target that another entry already
+    has is skipped, so the canonical-link uniqueness rule still holds. Needs
+    app.services.links, so run it with PYTHONPATH=. (not in the weekly CI job)."""
+    from app.services.links import canonical_link
+
+    taken = {canonical_link(r["link"]) for r in rows}
+    done: list[str] = []
+    skipped: list[str] = []
+    for r in rows:
+        if r["link"] not in moves:
+            continue
+        old = r["link"]
+        target = canonical_link(moves[old])
+        if target == canonical_link(old):
+            continue
+        if target in taken:
+            skipped.append(f"{old} -> {target} (already in the library)")
+            continue
+        taken.discard(canonical_link(old))
+        taken.add(target)
+        r["link"] = target
+        done.append(f"{old} -> {target}")
+    return done, skipped
 
 
 SEED_DIR = pathlib.Path(__file__).resolve().parent.parent / "seed"
@@ -122,20 +169,35 @@ def main() -> None:
     rows = _rows(limit)
     results: list[dict] = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=16) as pool:
-        statuses = pool.map(lambda r: classify(r[0], timeout), rows)
-        for (link, title), (status, detail) in zip(rows, statuses):
-            results.append({"link": link, "title": title, "status": status, "detail": detail})
+        checked = pool.map(lambda r: classify(r[0], timeout), rows)
+        for (link, title), (status, detail, moved_to) in zip(rows, checked):
+            results.append(
+                {"link": link, "title": title, "status": status, "detail": detail, "moved_to": moved_to}
+            )
 
     if "--write-status" in sys.argv:
         write_status(results)
+
+    if "--repoint" in sys.argv:
+        seed_path = SEED_DIR / "atlas-seed.json"
+        seed = json.loads(seed_path.read_text(encoding="utf-8"))
+        moves = {r["link"]: r["moved_to"] for r in results if r["moved_to"]}
+        done, skipped = repoint(seed, moves)
+        if done:
+            seed_path.write_text(json.dumps(seed, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+        print(f"{seed_path.name}: repointed {len(done)} permanent redirect(s), skipped {len(skipped)}")
+        for line in done + [f"skipped: {s}" for s in skipped]:
+            print(f"    {line}")
 
     if as_json:
         print(json.dumps(results, indent=1))
         return
 
-    bad = [r for r in results if r["status"] != "ok"]
+    bad = [r for r in results if r["status"] != "ok" or r["moved_to"]]
     for r in bad:
-        print(f'[{r["status"]}] {r["title"] or ""}\n    {r["link"]}  {r["detail"]}')
+        note = f'moved (301) -> {r["moved_to"]}' if r["moved_to"] else r["detail"]
+        status = "moved" if r["moved_to"] else r["status"]
+        print(f'[{status}] {r["title"] or ""}\n    {r["link"]}  {note}')
     counts: dict[str, int] = {}
     for r in results:
         counts[r["status"]] = counts.get(r["status"], 0) + 1
