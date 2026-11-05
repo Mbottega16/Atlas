@@ -32,3 +32,6 @@ frontend/*.tsbuildinfo
 .idea/
 
 .agents/
+
+# Node.js downloaded by run_atlas.py when the computer has none
+.tools/

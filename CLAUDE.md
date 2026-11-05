@@ -1,6 +1,6 @@
 # Atlas — rules & map (read this first)
 
-A personal library of ~1,260 websites and tools worth reusing (link, category,
+A personal library of ~1,800 websites and tools worth reusing (link, category,
 description, use case, tags, and an optional checked profile). Vite + React + TypeScript
 frontend; FastAPI + SQLAlchemy + SQLite backend for local editing. `README.md` has the quickstart.
 
@@ -69,9 +69,26 @@ This file describes how Atlas works **now**. The repo (`Mbottega16/Atlas`; the o
   locally. No server means no cold start, no password, and nothing to lose.
   Pushing to `main` redeploys it (the "AtlasBlue" blueprint auto-syncs).
 - **Editing happens locally.** Run the backend and frontend on this machine
-  and the same UI shows a Capture tab plus Edit / Delete on every card. The
+  and the same UI shows a Capture tab plus Edit / Delete on every card.
+- **Running it on the Mac and the PC (2026-11-05):** `start-atlas.command` (Mac) or
+  `start-atlas.bat` (PC) finds Python 3.10+ (or installs it: uv on the Mac, the python.org
+  installer per-user on the PC) and runs `run_atlas.py`, which downloads Node.js LTS into `.tools/`
+  when the computer has none: venv + requirements
+  (only when they change), `npm ci` + `npm run build` (only when the frontend or seed is newer
+  than `frontend/dist`), `scripts/sync_seed.py`, then one uvicorn server for site + API on
+  `0.0.0.0:8000`, so each computer can open the other's at `http://<name>:8000`. Each machine
+  has its own `data/atlas.db`; they meet through the seed in git (export, commit, pull).
+  `sync_seed.py` only adds links the DB lacks; `load_seed.py` is still the full reset. The
   local SQLite file (`backend/data/atlas.db`, git-ignored) is only a working
   copy.
+- **The Dashboard is the front page (2026-11-05).** With no `?tab=`, the site opens
+  `pages/DashboardPage.tsx`: the whole library as one start.me / OSINT4ALL-style board
+  (dark, 48px panel headers, 22px rows, favicons; `dashboard.css`, scoped to `.dash`).
+  `dashboardPanels.ts` groups it: `osint` entries by topic tag (`OSINT_TOPICS`, OSINT4ALL
+  order; no topic tag → "OSINT Toolkit"), every other entry by category; rows in seed order,
+  essentials first, 40 per panel before "Show all". Search uses `searchCore`. "Library view"
+  opens the Find / Browse / Collections / Tool watch / Capture tabs (`?tab=find`), and their nav
+  has a Dashboard link back. A new topic tag needs a line in `OSINT_TOPICS` to get a panel.
 - **Favorites and "visited" live in each browser's `localStorage`**, keyed by
   link. They are not part of the library.
 - **Search is `frontend/src/lib/searchCore.js`** — plain JS so the vault's
@@ -159,7 +176,8 @@ To keep search and file reads fast, **never scan or read inside**:
 - Tags never repeat the entry's own category (the seed test enforces it).
 - Project tags: `edusystem`, `little-sprout`, `chegga`, `trading-bot`,
   `almanac`. The Find tab's "Something for a specific project" branch uses them.
-- `osint` tags open-source investigation tools (10 on 2026-10-25); the Find tab's "Research
+- `osint` tags open-source investigation tools (10 on 2026-10-25; 567 after the 2026-11-05
+  OSINT4ALL/SOCMINT import, which also added topic tags and `socmint`); the Find tab's "Research
   or check something online" branch and its two collections use it. OSINT tools land in the
   existing `security & privacy` / `reference & data` categories — no OSINT category.
 - **A Find leaf with one search word fuzzy-matches widely** ("breach" is two edits from
@@ -175,17 +193,15 @@ To keep search and file reads fast, **never scan or read inside**:
 
 *Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
 
-- **Last Worked On (2026-10-25):** the OSINT4ALL pilot on branch `osint4all-pilot` (PR #6, open,
-  not merged): checked profiles, Collections (a stack and a comparison), Tool watch, a research
-  branch in Find. +4 entries (Shodan, Censys, SecurityTrails, Maltego), the Wayback Machine
-  profiled, archive.ph given a trust warning. Details in `HISTORY.md`.
-- **Current State (2026-10-25):** `main` is unchanged and live with 1,258 entries. The branch has
-  1,262 entries (6 profiled) and 51 passing backend tests. The Mac now has a Python 3.12 venv.
+- **Last Worked On (2026-11-05):** merged the OSINT4ALL + SOCMINT link lists into the one
+  library (+544, 1,806 entries, no per-list split); made an OSINT4ALL-style Dashboard the front
+  page; added one-click launchers that run the full site and API on the Mac and the PC,
+  reachable from the other computer. See `HISTORY.md`.
+- **Current State (2026-11-05):** branch `claude/atlas-nst-site-links-76dgvu`; 51 backend tests
+  pass. Merging to `main` also redeploys the public site with all 1,806 entries.
 - **Next Up:**
-  1. Owner: merge PR #6. Monday's 08:00 harvest PR also appends to the seed, so whichever merges
-     second needs a rebase that keeps both blocks of new records.
-  2. Owner's call: keep archive.ph with its trust warning, or remove it.
-  3. Profile the 43 `essential` entries from their own pages, then decide on a cost filter.
-  4. Review the Monday harvest PR and link check (48 entries not checked yet); run
-     `/deep_curate atlas inbox` for phone captures.
-  5. On the PC after pulling: `alembic upgrade head` or `scripts/load_seed.py` before the backend.
+  1. Owner: on each computer, pull and double-click the launcher; allow the firewall prompt.
+  2. Write real descriptions for the 544 `source: "import"` entries (placeholders now), from
+     each tool's own page; drop dead ones the link check flags.
+  3. Owner's call: keep archive.ph with its trust warning, or remove it.
+  4. Profile the 43 `essential` entries from their own pages, then decide on a cost filter.
