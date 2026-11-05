@@ -1,5 +1,9 @@
 {
   "mcpServers": {
+    "atlas": {
+      "command": "node",
+      "args": ["mcp/atlas-mcp.mjs"]
+    },
     "notion": {
       "type": "http",
       "url": "https://mcp.notion.com/mcp"
