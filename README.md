@@ -8,6 +8,9 @@ The public site is a read-only static build on Render (`render.yaml`). The
 library itself is `backend/seed/atlas-seed.json`; you change it locally. How
 it all fits, and the edit workflow: see `CLAUDE.md`.
 
+The front page is a dashboard of link panels (OSINT4ALL style) with every site in the
+library; "Library view" opens search, Collections, Tool watch and editing.
+
 ## Run it on your Mac or PC
 
 Nothing to install first: if Python 3.10+ or Node.js is missing, the launcher downloads it

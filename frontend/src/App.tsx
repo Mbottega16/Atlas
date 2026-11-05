@@ -4,17 +4,18 @@ import { READ_ONLY, authStatus, logout, markVisited, randomEntry } from "./api/c
 import FavoritesPanel from "./components/FavoritesPanel";
 import { EMPTY_FILTERS, Filters } from "./components/FilterBar";
 import BrowsePage from "./pages/BrowsePage";
+import DashboardPage from "./pages/DashboardPage";
 import CapturePage from "./pages/CapturePage";
 import CollectionsPage from "./pages/CollectionsPage";
 import GuidePage from "./pages/GuidePage";
 import WatchPage from "./pages/WatchPage";
 
-type Tab = "find" | "browse" | "collections" | "watch" | "capture";
+type Tab = "dashboard" | "find" | "browse" | "collections" | "watch" | "capture";
 
-// The public site is read-only, so it has no Capture tab.
+// The Dashboard is the front page (no ?tab=). The public site is read-only, so it has no Capture tab.
 const TABS: Tab[] = READ_ONLY
-  ? ["find", "browse", "collections", "watch"]
-  : ["find", "browse", "collections", "watch", "capture"];
+  ? ["dashboard", "find", "browse", "collections", "watch"]
+  : ["dashboard", "find", "browse", "collections", "watch", "capture"];
 const FILTER_KEYS = ["group", "category", "tag", "q"] as const;
 
 interface View {
@@ -29,12 +30,12 @@ function readUrl(): View {
   const tab = params.get("tab") as Tab | null;
   const filters = { ...EMPTY_FILTERS };
   for (const key of FILTER_KEYS) filters[key] = params.get(key) ?? "";
-  return { tab: tab && TABS.includes(tab) ? tab : "find", filters, collection: params.get("c") ?? "" };
+  return { tab: tab && TABS.includes(tab) ? tab : "dashboard", filters, collection: params.get("c") ?? "" };
 }
 
 function toSearch({ tab, filters, collection }: View): string {
   const params = new URLSearchParams();
-  if (tab !== "find") params.set("tab", tab);
+  if (tab !== "dashboard") params.set("tab", tab);
   if (tab === "browse") {
     for (const key of FILTER_KEYS) if (filters[key]) params.set(key, filters[key]);
   }
@@ -120,6 +121,15 @@ export default function App() {
   // The guide hands Browse a preset filter and switches tabs to it.
   const handleSeeAll = (next: Filters) => setView({ tab: "browse", filters: next, collection: "" });
 
+  if (tab === "dashboard") {
+    return (
+      <DashboardPage
+        onOpenLibrary={() => setTab("find")}
+        onBrowse={(f) => setView({ tab: "browse", filters: { ...EMPTY_FILTERS, ...f }, collection: "" })}
+      />
+    );
+  }
+
   const navLink = (t: Tab, label: string) => (
     <a
       href="#"
@@ -136,7 +146,7 @@ export default function App() {
   return (
     <div className="app-shell atlas-shell">
       <header className="app-header">
-        <a className="brand-lockup" href="#" onClick={(e) => { e.preventDefault(); setTab("find"); }} aria-label="Atlas home">
+        <a className="brand-lockup" href="#" onClick={(e) => { e.preventDefault(); setTab("dashboard"); }} aria-label="Atlas home: the dashboard">
           <span className="brand-mark" aria-hidden="true">✳</span>
           <span className="brand-name">atlas<span className="brand-period">.</span><small>THE PERSONAL WEB INDEX</small></span>
         </a>
@@ -151,6 +161,7 @@ export default function App() {
         <div className="hero-art" aria-hidden="true"><span className="atlas-sun">✳</span><span className="atlas-ring ring-a"/><span className="atlas-ring ring-b"/><span className="atlas-spark spark-a">✦</span><span className="atlas-spark spark-b">✦</span></div>
       </section>
       <nav className="app-nav">
+        {navLink("dashboard", "Dashboard")}
         {navLink("find", "Find")}
         {navLink("browse", "Browse")}
         {navLink("collections", "Collections")}

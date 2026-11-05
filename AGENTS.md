@@ -81,6 +81,14 @@ This file describes how Atlas works **now**. The repo (`Mbottega16/Atlas`; the o
   `sync_seed.py` only adds links the DB lacks; `load_seed.py` is still the full reset. The
   local SQLite file (`backend/data/atlas.db`, git-ignored) is only a working
   copy.
+- **The Dashboard is the front page (2026-11-05).** With no `?tab=`, the site opens
+  `pages/DashboardPage.tsx`: the whole library as one start.me / OSINT4ALL-style board
+  (dark, 48px panel headers, 22px rows, favicons; `dashboard.css`, scoped to `.dash`).
+  `dashboardPanels.ts` groups it: `osint` entries by topic tag (`OSINT_TOPICS`, OSINT4ALL
+  order; no topic tag → "OSINT Toolkit"), every other entry by category; rows in seed order,
+  essentials first, 40 per panel before "Show all". Search uses `searchCore`. "Library view"
+  opens the Find / Browse / Collections / Tool watch / Capture tabs (`?tab=find`), and their nav
+  has a Dashboard link back. A new topic tag needs a line in `OSINT_TOPICS` to get a panel.
 - **Favorites and "visited" live in each browser's `localStorage`**, keyed by
   link. They are not part of the library.
 - **Search is `frontend/src/lib/searchCore.js`** — plain JS so the vault's
@@ -186,8 +194,9 @@ To keep search and file reads fast, **never scan or read inside**:
 *Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
 
 - **Last Worked On (2026-11-05):** merged the OSINT4ALL + SOCMINT link lists into the one
-  library (+544, 1,806 entries, no per-list split) and added one-click launchers that run the
-  full site and API on the Mac and the PC, reachable from the other computer. See `HISTORY.md`.
+  library (+544, 1,806 entries, no per-list split); made an OSINT4ALL-style Dashboard the front
+  page; added one-click launchers that run the full site and API on the Mac and the PC,
+  reachable from the other computer. See `HISTORY.md`.
 - **Current State (2026-11-05):** branch `claude/atlas-nst-site-links-76dgvu`; 51 backend tests
   pass. Merging to `main` also redeploys the public site with all 1,806 entries.
 - **Next Up:**
