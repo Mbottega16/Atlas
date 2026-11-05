@@ -19,6 +19,21 @@ This repo is public, so private planning notes stay in the owner's vault, not he
 
 ---
 
+## 2026-11-05 — one library of 1,806 entries; run the full site on the Mac and the PC
+
+*cloud · Claude · branch `claude/atlas-nst-site-links-76dgvu`*
+- **Changed:** +544 entries from the OSINT4ALL and SOCMINT link lists (the 1,820-tool `board.html` of `672d8f5` plus 11 links only in the 568-tool board), `source: "import"`. They sit in the existing categories (`security & privacy` 381, `reference & data` 163) with an `osint` tag, a topic tag (`phone lookup`, `username search`, `facebook`, …) and `socmint` on social-platform tools. 13 links already in the library only gained those tags. New `run_atlas.py` with `start-atlas.command` (Mac) and `start-atlas.bat` (PC): one server on port 8000 for the site and the API, reachable from the other computer; new `scripts/sync_seed.py` adds pulled seed entries to the local DB on every start without touching local edits.
+- **Why:** the owner wanted the ~1,800-link version as a real website, not one HTML file, with no OSINT4ALL / SOCMINT / Atlas Library split, runnable on the Mac and the desktop with a server on each.
+- **Verified:** pytest 51 pass; seed load → export byte-identical; launcher run from a fresh checkout (venv, npm ci, build, server) served 1,806 entries over the LAN address; sync on a 1,262-entry DB added 544, a second run added 0. NOT checked: a real Mac or PC, the Windows `.bat`.
+- **Left open:** the 544 imported entries have placeholder descriptions ("Not checked by hand yet"); none has a profile. The board's lists carry no descriptions, so each needs a real one from the tool's own page.
+
+## 2026-10-25 — the handoff that session left (OSINT4ALL pilot)
+
+*Mac · Claude*
+- **Last Worked On (2026-10-25):** the OSINT4ALL pilot on branch `osint4all-pilot` (PR #6, since merged): profiles, Collections, Tool watch, a research branch in Find.
+- **Current State (2026-10-25):** `main` live with 1,258 entries; the branch had 1,262 (6 profiled) and 51 passing backend tests. The Mac has a Python 3.12 venv.
+- **Next Up (then):** merge PR #6; archive.ph keep-or-remove; profile the 43 essentials; review the Monday harvest PR; `alembic upgrade head` or `load_seed.py` on the PC.
+
 ## 2026-10-25 — OSINT4ALL pilot: profiles, Collections, Tool watch (PR #6, not merged)
 
 *Mac · Claude · commits `95877c1` `0a7f944` `87de649` + docs, branch `osint4all-pilot`*
