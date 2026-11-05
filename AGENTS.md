@@ -71,7 +71,9 @@ This file describes how Atlas works **now**. The repo (`Mbottega16/Atlas`; the o
 - **Editing happens locally.** Run the backend and frontend on this machine
   and the same UI shows a Capture tab plus Edit / Delete on every card.
 - **Running it on the Mac and the PC (2026-11-05):** `start-atlas.command` (Mac) or
-  `start-atlas.bat` (PC) finds Python 3.10+ and runs `run_atlas.py`: venv + requirements
+  `start-atlas.bat` (PC) finds Python 3.10+ (or installs it: uv on the Mac, the python.org
+  installer per-user on the PC) and runs `run_atlas.py`, which downloads Node.js LTS into `.tools/`
+  when the computer has none: venv + requirements
   (only when they change), `npm ci` + `npm run build` (only when the frontend or seed is newer
   than `frontend/dist`), `scripts/sync_seed.py`, then one uvicorn server for site + API on
   `0.0.0.0:8000`, so each computer can open the other's at `http://<name>:8000`. Each machine

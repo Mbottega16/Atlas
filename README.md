@@ -10,7 +10,8 @@ it all fits, and the edit workflow: see `CLAUDE.md`.
 
 ## Run it on your Mac or PC
 
-You need Python 3.10 or newer (python.org) and, for the first build, Node.js LTS (nodejs.org).
+Nothing to install first: if Python 3.10+ or Node.js is missing, the launcher downloads it
+(for your user only, no admin password). The first start takes a few minutes.
 
 1. Get the latest copy: `git pull`.
 2. Start it:
@@ -20,6 +21,10 @@ You need Python 3.10 or newer (python.org) and, for the first build, Node.js LTS
    From your other computer or phone on the same network: `http://<computer-name>:8000`
    (the window lists the exact addresses).
 4. Allow the firewall prompt the first time, so the other computer can connect.
+
+If the computer blocks the launcher the first time (it came from the internet):
+- **Mac:** System Settings > Privacy & Security > "Open Anyway" next to start-atlas.command.
+- **Windows:** "Windows protected your PC" > More info > Run anyway.
 
 Run it on both computers to have a server on each. Each one keeps its own working copy of
 the library; new links you `git pull` are added on the next start, and your local edits stay.

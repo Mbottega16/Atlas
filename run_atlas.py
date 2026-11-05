@@ -1,6 +1,7 @@
 """Run the full Atlas website on this computer, reachable from your other devices.
 
-Start it with the launcher for your system (they find a suitable Python):
+Start it with the launcher for your system. It finds Python 3.10+, or installs it
+(Mac: Python 3.12 through uv; Windows: the python.org installer, for this user only):
   Mac:      double-click start-atlas.command   (or: ./start-atlas.command)
   Windows:  double-click start-atlas.bat
 Or directly, with Python 3.10 or newer:  python run_atlas.py
@@ -8,6 +9,7 @@ Or directly, with Python 3.10 or newer:  python run_atlas.py
 What it does, every start:
   1. Makes backend/.venv and installs backend/requirements.txt (only when that file changes).
   2. Builds the website into frontend/dist (only when the frontend or the seed changed).
+     No Node.js on the computer? It downloads the current LTS from nodejs.org into .tools/.
   3. Adds new seed entries to the local DB (backend/scripts/sync_seed.py). Local edits are kept.
   4. Serves the website and its API from one server on port 8000, on every network
      interface, so the other computer can open http://<this-computer>:8000.
@@ -34,6 +36,7 @@ ROOT = Path(__file__).resolve().parent
 BACKEND = ROOT / "backend"
 FRONTEND = ROOT / "frontend"
 VENV = BACKEND / ".venv"
+TOOLS = ROOT / ".tools"  # Node.js downloaded by this script, when the computer has none
 WINDOWS = os.name == "nt"
 VENV_PY = VENV / ("Scripts/python.exe" if WINDOWS else "bin/python")
 
@@ -82,21 +85,99 @@ def newest_mtime(paths: list) -> float:
     return newest
 
 
+def download(url: str, dest: Path) -> None:
+    """Download with the system curl when there is one (it uses the computer's own
+    certificates), else with Python."""
+    curl = shutil.which("curl")
+    if curl and subprocess.call([curl, "-fsSL", "-o", str(dest), url]) == 0:
+        return
+    import urllib.request
+
+    with urllib.request.urlopen(url) as r, open(dest, "wb") as f:
+        shutil.copyfileobj(r, f)
+
+
+def node_platform() -> tuple[str, str]:
+    """(nodejs.org platform name, archive extension) for this computer."""
+    machine = platform.machine().lower()
+    arch = "arm64" if machine in ("arm64", "aarch64") else "x64"
+    system = platform.system()
+    if system == "Darwin":
+        return f"darwin-{arch}", "tar.gz"
+    if system == "Windows":
+        return f"win-{arch}", "zip"
+    return f"linux-{arch}", "tar.gz"
+
+
+def local_node_bin() -> Path | None:
+    """The bin folder of a Node.js that run_atlas.py downloaded earlier, if any."""
+    for d in sorted(TOOLS.glob("node-*"), reverse=True):
+        bindir = d if WINDOWS else d / "bin"
+        if (bindir / ("npm.cmd" if WINDOWS else "npm")).exists():
+            return bindir
+    return None
+
+
+def install_node() -> Path:
+    """Download the current LTS Node.js from nodejs.org into .tools/ (no admin rights)."""
+    import json
+
+    TOOLS.mkdir(exist_ok=True)
+    print("Node.js not found: downloading it from nodejs.org (one time, about 50 MB)")
+    index = TOOLS / "node-index.json"
+    download("https://nodejs.org/dist/index.json", index)
+    releases = json.loads(index.read_text(encoding="utf-8"))
+    index.unlink()
+    version = next(r["version"] for r in releases if r.get("lts"))
+    plat, ext = node_platform()
+    name = f"node-{version}-{plat}"
+    archive = TOOLS / f"{name}.{ext}"
+    download(f"https://nodejs.org/dist/{version}/{name}.{ext}", archive)
+    print(f"Unpacking Node.js {version}")
+    if ext == "zip":
+        import zipfile
+
+        with zipfile.ZipFile(archive) as z:
+            z.extractall(TOOLS)
+    else:
+        import tarfile
+
+        with tarfile.open(archive) as t:
+            try:
+                t.extractall(TOOLS, filter="data")
+            except TypeError:  # Python without extraction filters
+                t.extractall(TOOLS)
+    archive.unlink()
+    bindir = local_node_bin()
+    if bindir is None:
+        fail(f"Node.js download unpacked, but npm is missing in {TOOLS}")
+    return bindir
+
+
 def ensure_frontend(skip_build: bool) -> None:
     step("Frontend: website build")
     dist_index = FRONTEND / "dist" / "index.html"
-    npm = shutil.which("npm")
     if skip_build:
         if not dist_index.exists():
             fail("--no-build was given, but frontend/dist does not exist yet")
         print("Skipping the build (--no-build)")
         return
+    env = dict(os.environ)
+    env.pop("VITE_STATIC", None)  # the local build is the full read-write app
+    npm = shutil.which("npm")
     if npm is None:
-        if dist_index.exists():
-            print("Node.js (npm) not found: using the existing build in frontend/dist")
-            return
-        fail("Node.js is needed once to build the website. Install the LTS version from "
-             "https://nodejs.org, then start Atlas again.")
+        bindir = local_node_bin()
+        if bindir is None:
+            try:
+                bindir = install_node()
+            except Exception as exc:  # noqa: BLE001
+                if dist_index.exists():
+                    print(f"Could not get Node.js ({exc}): using the existing build")
+                    return
+                fail(f"Could not download Node.js ({exc}). Install the LTS version from "
+                     "https://nodejs.org, then start Atlas again.")
+        env["PATH"] = str(bindir) + os.pathsep + env.get("PATH", "")
+        npm = str(bindir / ("npm.cmd" if WINDOWS else "npm"))
     sources = [FRONTEND / "src", FRONTEND / "index.html", FRONTEND / "package-lock.json",
                FRONTEND / "vite.config.ts", FRONTEND / "scripts", BACKEND / "seed"]
     if dist_index.exists() and dist_index.stat().st_mtime >= newest_mtime(sources):
@@ -104,10 +185,8 @@ def ensure_frontend(skip_build: bool) -> None:
         return
     if not (FRONTEND / "node_modules").exists():
         print("Installing frontend packages (first start)")
-        run([npm, "ci"], FRONTEND)
+        run([npm, "ci"], FRONTEND, env)
     print("Building the website")
-    env = dict(os.environ)
-    env.pop("VITE_STATIC", None)  # the local build is the full read-write app
     run([npm, "run", "build"], FRONTEND, env)
 
 
@@ -168,6 +247,7 @@ def serve(port: int, local_only: bool) -> None:
 
 
 def main() -> None:
+    sys.stdout.reconfigure(line_buffering=True)  # keep messages in order with npm/pip output
     if sys.version_info < (3, 10):
         fail(f"Atlas needs Python 3.10 or newer; this is {platform.python_version()}. "
              "Install it from https://www.python.org/downloads/ and start Atlas again.")
