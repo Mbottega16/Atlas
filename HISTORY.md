@@ -19,6 +19,14 @@ This repo is public, so private planning notes stay in the owner's vault, not he
 
 ---
 
+## 2026-11-08 — board redesign (collapsible sidebar, favorites, recent), 544 descriptions written, dead dropped, archive.ph removed
+
+*Mac · Antigravity*
+- **Changed:** removed `archive.ph` from the seed, collections, and link status per owner decision. Researched and replaced all 544 imported entry placeholders with verified titles, descriptions, and use cases from each tool's own pages; dropped 84 verified dead entries and 4 duplicates (now 1,717 entries in the library). Board redesign: replaced gray panel/link count lettering and caption lines with a clean layout; added collapsible left category sidebar with deep links (#g=..., #c=...); added browser favorites (starring) and recently visited tracking (stored in localStorage, synced across tabs). Built board as the front page (`dist/index.html` and `dist/board.html`) with the full React app accessible via "Library view" (`dist/library.html`).
+- **Why:** owner requested removing archive.ph, writing real descriptions for imported entries, dropping dead entries, board UI cleanup (less noise, collapsible category drawer/sidebar, favorites and recently visited), and preparing for merge to main.
+- **Verified:** 51 backend tests pass (pytest); 14 frontend unit tests pass (`node --test scripts/board-core.test.mjs`); full production build succeeds (`npm run build`); seed loads and exports cleanly into SQLite (`data/atlas.db`).
+- **Left open:** profiling the 43 `essential` entries from their own pages; testing the PC launcher (`start-atlas.bat`) when the owner is at their PC.
+
 ## 2026-11-05 — one library of 1,806 entries as an OSINT4ALL-style dashboard; run it on the Mac and the PC
 
 *cloud · Claude · branch `claude/atlas-nst-site-links-76dgvu`*

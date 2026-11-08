@@ -35,3 +35,6 @@ frontend/*.tsbuildinfo
 
 # Node.js downloaded by run_atlas.py when the computer has none
 .tools/
+
+# macOS folder metadata
+.DS_Store
