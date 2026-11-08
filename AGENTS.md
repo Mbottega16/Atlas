@@ -51,9 +51,10 @@ This file describes how Atlas works **now**. The repo (`Mbottega16/Atlas`; the o
 - **Live-capture drafts never carry a profile**, and a batch that leaves profile fields out
   keeps the existing profile (`entry_service.upsert_entry`). Only a field sent explicitly,
   even as `null`, changes it.
-- **A tool with a trust problem keeps its card and gets a `warning`** (archive.ph, 2026-10-25)
-  rather than being deleted quietly; removing it is the owner's call. A stack never includes a
-  tool with a warning (the collections test enforces it).
+- **A tool with a trust problem keeps its card and gets a `warning`**
+  rather than being deleted quietly; removing it is the owner's call. (archive.ph was removed
+  2026-11-08 by owner decision). A stack never includes a tool with a warning (the collections
+  test enforces it).
 - **Comparisons are built from documentation, not hands-on tests, and say so on the page.**
 
 ## How it's built
@@ -193,15 +194,11 @@ To keep search and file reads fast, **never scan or read inside**:
 
 *Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
 
-- **Last Worked On (2026-11-05):** merged the OSINT4ALL + SOCMINT link lists into the one
-  library (+544, 1,806 entries, no per-list split); made an OSINT4ALL-style Dashboard the front
-  page; added one-click launchers that run the full site and API on the Mac and the PC,
-  reachable from the other computer. See `HISTORY.md`.
-- **Current State (2026-11-05):** branch `claude/atlas-nst-site-links-76dgvu`; 51 backend tests
-  pass. Merging to `main` also redeploys the public site with all 1,806 entries.
+- **Last Worked On (2026-11-08):** board redesign (collapsible sidebar, favorites, recent
+  visits, noise/line reduction); replaced 544 import placeholders with researched titles,
+  descriptions and use cases; dropped 84 verified dead entries and 4 dupes; removed `archive.ph`.
+- **Current State (2026-11-08):** 1,717 library entries; 51 backend tests pass; 14 frontend
+  tests pass; frontend build succeeds (`dist/index.html` board, `dist/library.html` app).
 - **Next Up:**
-  1. Owner: on each computer, pull and double-click the launcher; allow the firewall prompt.
-  2. Write real descriptions for the 544 `source: "import"` entries (placeholders now), from
-     each tool's own page; drop dead ones the link check flags.
-  3. Owner's call: keep archive.ph with its trust warning, or remove it.
-  4. Profile the 43 `essential` entries from their own pages, then decide on a cost filter.
+  1. Profile the 43 `essential` entries from their own pages, then decide on a cost filter.
+  2. Owner: test launchers on PC (`start-atlas.bat`) when at the computer.

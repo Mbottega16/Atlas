@@ -6,7 +6,9 @@
   "scripts": {
     "data": "node scripts/build-data.mjs",
     "dev": "npm run data && vite",
-    "build": "npm run data && tsc -b && vite build",
+    "build": "npm run data && tsc -b && vite build && npm run board",
+    "board": "node scripts/build-atlas-board.mjs",
+    "test": "node --test scripts/board-core.test.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

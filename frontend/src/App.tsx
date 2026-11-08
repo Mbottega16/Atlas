@@ -12,7 +12,10 @@ import WatchPage from "./pages/WatchPage";
 
 type Tab = "dashboard" | "find" | "browse" | "collections" | "watch" | "capture";
 
-// The Dashboard is the front page (no ?tab=). The public site is read-only, so it has no Capture tab.
+// On the built site this app is library.html: the front page is the board
+// (scripts/build-atlas-board.mjs), and "Dashboard" links back to it. With no ?tab= this
+// app still opens its own dashboard (the `npm run dev` front page).
+// The public site is read-only, so it has no Capture tab.
 const TABS: Tab[] = READ_ONLY
   ? ["dashboard", "find", "browse", "collections", "watch"]
   : ["dashboard", "find", "browse", "collections", "watch", "capture"];
@@ -146,7 +149,7 @@ export default function App() {
   return (
     <div className="app-shell atlas-shell">
       <header className="app-header">
-        <a className="brand-lockup" href="#" onClick={(e) => { e.preventDefault(); setTab("dashboard"); }} aria-label="Atlas home: the dashboard">
+        <a className="brand-lockup" href="./" aria-label="Atlas home: the board">
           <span className="brand-mark" aria-hidden="true">✳</span>
           <span className="brand-name">atlas<span className="brand-period">.</span><small>THE PERSONAL WEB INDEX</small></span>
         </a>
@@ -161,7 +164,7 @@ export default function App() {
         <div className="hero-art" aria-hidden="true"><span className="atlas-sun">✳</span><span className="atlas-ring ring-a"/><span className="atlas-ring ring-b"/><span className="atlas-spark spark-a">✦</span><span className="atlas-spark spark-b">✦</span></div>
       </section>
       <nav className="app-nav">
-        {navLink("dashboard", "Dashboard")}
+        <a href="./" style={{ opacity: 0.5 }}>Dashboard</a>
         {navLink("find", "Find")}
         {navLink("browse", "Browse")}
         {navLink("collections", "Collections")}
