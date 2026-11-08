@@ -141,7 +141,6 @@ body.side-closed .side { display: none; }
 .side .cats a { min-height: 32px; font-size: 13px; color: var(--muted); }
 .side .cats a:hover { color: var(--text); }
 .side .cats a[aria-current="page"] { color: var(--accent); }
-.side .lib { margin-top: 18px; color: var(--muted); font-size: 13px; }
 .backdrop { position: fixed; inset: 0; z-index: 30; background: rgba(0, 0, 0, 0.45); }
 
 .board { flex: 1; min-width: 0; padding: 16px 18px 40px; outline: none; }
@@ -248,7 +247,6 @@ body.side-closed .side { display: none; }
   .controls { flex-basis: 100%; order: 3; }
   .search { flex: 1 1 auto; }
   .search input { font-size: 16px; }
-  .top .lib-btn { display: none; }
   .side {
     position: fixed; top: 0; left: 0; bottom: 0; z-index: 40;
     width: min(86vw, 320px); height: 100%;

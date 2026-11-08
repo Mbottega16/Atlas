@@ -1,10 +1,8 @@
-// Builds the Atlas board, the site's front page, from backend/seed/atlas-seed.json.
-// `npm run build` runs it after vite build. It writes into dist/:
+// Builds the Atlas board, the site's complete interface, from backend/seed/atlas-seed.json.
+// `npm run build` writes into dist/:
 //   index.html    the board: every entry in category panels, a sidebar of groups and
 //                 their categories, favorites and recently visited
 //   board.html    the same page, so older /board.html links keep working
-//   library.html  the React app vite just built (Find, Browse, Collections, Tool watch,
-//                 and Capture when run locally), moved out of index.html
 // The page is board.css + board-core.mjs + board-page.js, put inline, under a
 // Content-Security-Policy that allows exactly those inline blocks and images from
 // this site only. Favicons come from frontend/public/icons/; a host with none gets
@@ -113,12 +111,6 @@ if (window.top !== window.self) {
   return;
 }
 ${core}
-// Old links to the Library view ("?tab=browse&category=cooking") open it in library.html.
-const libraryUrl = libraryRedirect(location.search);
-if (libraryUrl) {
-  location.replace(libraryUrl + location.hash);
-  return;
-}
 const GROUPS = ${safeJson(groups)};
 ${page}
 })();
@@ -169,7 +161,6 @@ const html = `<!doctype html>
     </label>
     <button id="az" class="btn" type="button" aria-pressed="false" title="Show the panels in A&ndash;Z order">A&ndash;Z</button>
     <button id="toggle-all" class="btn" type="button">Collapse all</button>
-    <a class="btn lib-btn" href="library.html?tab=find">Library view</a>
   </div>
 </header>
 <div class="layout">
@@ -181,7 +172,6 @@ const html = `<!doctype html>
       </button>
     </div>
     <ul id="side-list"></ul>
-    <a class="lib" href="library.html?tab=find">Library view: Find, Browse, Collections, Tool watch</a>
   </nav>
   <div id="backdrop" class="backdrop" hidden></div>
   <main id="board" class="board" tabindex="-1">
@@ -207,20 +197,12 @@ const html = `<!doctype html>
 
 const indexFile = path.join(DIST, "index.html");
 const libraryFile = path.join(DIST, "library.html");
-if (!fs.existsSync(indexFile)) {
-  console.error("dist/index.html is missing: run `npm run build` (vite build, then this script).");
-  process.exit(1);
-}
-const built = fs.readFileSync(indexFile, "utf8");
-if (built.includes('id="root"')) fs.writeFileSync(libraryFile, built);
-else if (!fs.existsSync(libraryFile)) {
-  console.error("dist/index.html isn't the React app and dist/library.html is missing: run `npm run build`.");
-  process.exit(1);
-}
+if (fs.existsSync(libraryFile)) fs.unlinkSync(libraryFile);
+
 fs.writeFileSync(indexFile, html);
 fs.writeFileSync(path.join(DIST, "board.html"), html);
 fs.writeFileSync(path.join(ROOT, "public/board.html"), html);
 console.log(
   `Board: ${fmt(total)} links in ${panelCount} panels and ${groups.length} groups (${noIcon} without a saved icon) ` +
-    `-> dist/index.html and dist/board.html; the React app -> dist/library.html (${(html.length / 1024).toFixed(0)} KB)`,
+    `-> dist/index.html, dist/board.html, and public/board.html (${(html.length / 1024).toFixed(0)} KB)`,
 );

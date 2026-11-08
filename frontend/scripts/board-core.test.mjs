@@ -6,7 +6,6 @@ import {
   RECENT_LIMIT,
   addRecent,
   label,
-  libraryRedirect,
   matches,
   panelsFor,
   parseView,
@@ -152,11 +151,4 @@ test("search needs every word", () => {
   assert.equal(matches("merge and split pdf files", terms), true);
   assert.equal(matches("split pdf files", terms), false);
   assert.equal(matches("anything", searchTerms("")), true);
-});
-
-test("old Library view links are sent to library.html", () => {
-  assert.equal(libraryRedirect("?tab=browse&category=cooking"), "library.html?tab=browse&category=cooking");
-  assert.equal(libraryRedirect("?q=pdf"), "library.html?q=pdf");
-  assert.equal(libraryRedirect("?utm_source=newsletter"), null);
-  assert.equal(libraryRedirect(""), null);
 });

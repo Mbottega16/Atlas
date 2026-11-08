@@ -19,6 +19,14 @@ This repo is public, so private planning notes stay in the owner's vault, not he
 
 ---
 
+## 2026-11-08 — delete library view entirely; export Qwen reference catalogs & search tool
+
+*Mac · Antigravity*
+- **Changed:** removed "Library view" entirely from Atlas board UI, sidebar navigation, build scripts (`build-atlas-board.mjs`), styles, and tests (`board-core.test.mjs`); stopped building `dist/library.html` so Atlas is strictly the fast, responsive standalone board dashboard. Added `backend/scripts/export_qwen_references.py` in Atlas and generated full offline Markdown/JSON catalogs and standalone CLI search utility (`search.py`, `search_atlas.py`) in `projects/mosaic/qwen/references/atlas/` and `projects/atlas/app/library/` for Qwen tasks in `tasks.md`.
+- **Why:** owner requested deleting the library view entirely and providing Qwen bot with either direct access or a dedicated folder of all links with metadata/tags to be used in offline tasks.
+- **Verified:** 55 backend tests pass (pytest); 13 frontend tests pass (`board-core.test.mjs`); full production build succeeds (`dist/index.html` board compiled at 542 KB, no `dist/library.html`); `export_qwen_references.py` tested across targets; `search_atlas.py` verified working on query lookups.
+- **Left open:** owner: test launchers on PC (`start-atlas.bat`) when at the computer; profile 43 essential entries when time permits.
+
 ## 2026-11-08 — board redesign (collapsible sidebar, favorites, recent), 544 descriptions written, dead dropped, archive.ph removed
 
 *Mac · Antigravity*

@@ -194,11 +194,8 @@ To keep search and file reads fast, **never scan or read inside**:
 
 *Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
 
-- **Last Worked On (2026-11-08):** board redesign (collapsible sidebar, favorites, recent
-  visits, noise/line reduction); replaced 544 import placeholders with researched titles,
-  descriptions and use cases; dropped 84 verified dead entries and 4 dupes; removed `archive.ph`.
-- **Current State (2026-11-08):** 1,717 library entries; 51 backend tests pass; 14 frontend
-  tests pass; frontend build succeeds (`dist/index.html` board, `dist/library.html` app).
+- **Last Worked On (2026-11-08):** deleted Library view entirely from Atlas board and build pipeline; created Qwen references exporter (`export_qwen_references.py`) generating offline Markdown/JSON catalogs (`catalog.md`, `by-category/`) and local CLI search tool (`search_atlas.py`).
+- **Current State (2026-11-08):** 1,717 library entries; standalone board is the sole front page (`dist/index.html`); 55 backend tests pass; 13 frontend tests pass; frontend build succeeds; Qwen has full offline catalog at `projects/mosaic/qwen/references/atlas/`.
 - **Next Up:**
   1. Profile the 43 `essential` entries from their own pages, then decide on a cost filter.
   2. Owner: test launchers on PC (`start-atlas.bat`) when at the computer.

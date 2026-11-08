@@ -4,16 +4,13 @@
 // build-atlas-board.mjs copies this file into the board page (dropping the `export`
 // words), and board-core.test.mjs tests it: `npm test` in frontend/.
 
-/** Shared with the Library view (src/api/client.ts): a JSON array of links. */
+/** A JSON array of favorite links stored in this browser. */
 export const FAVORITES_KEY = "atlas.favorites";
-/** Shared with the Library view: a JSON array of every link opened from Atlas. */
+/** A JSON array of every link opened from Atlas in this browser. */
 export const VISITED_KEY = "atlas.visited";
 /** The board's own list, newest first: a JSON array of { link, at } with an ISO time. */
 export const RECENT_KEY = "atlas.recent";
 export const RECENT_LIMIT = 15;
-
-/** Query words that belong to the Library view, so old links like "?tab=browse" still land there. */
-const LIBRARY_PARAMS = ["tab", "group", "category", "tag", "q", "c"];
 
 /** "Build & Code" -> "build-code". */
 export function slug(text) {
@@ -166,10 +163,4 @@ export function searchTerms(raw) {
 /** A row matches when every search word appears somewhere in its text. */
 export function matches(hay, terms) {
   return terms.every((t) => hay.includes(t));
-}
-
-/** Old links to the Library view ("?tab=browse&category=cooking") now open library.html. */
-export function libraryRedirect(search) {
-  const params = new URLSearchParams(search || "");
-  return LIBRARY_PARAMS.some((k) => params.has(k)) ? "library.html?" + params.toString() : null;
 }
