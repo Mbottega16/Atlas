@@ -7,6 +7,7 @@ export interface Searchable {
   use_case: string | null;
   tags: string[];
   added?: string;
+  best_for?: string | null;
 }
 
 export interface Indexed<T extends Searchable> {

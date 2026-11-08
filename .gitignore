@@ -20,6 +20,8 @@ frontend/dist/
 # Built from backend/seed/ by frontend/scripts/build-data.mjs.
 frontend/public/atlas.json
 frontend/public/link-flags.json
+frontend/public/collections.json
+frontend/public/link-check.json
 frontend/*.tsbuildinfo
 
 # Local env overrides
@@ -30,3 +32,6 @@ frontend/*.tsbuildinfo
 .idea/
 
 .agents/
+
+# Node.js downloaded by run_atlas.py when the computer has none
+.tools/

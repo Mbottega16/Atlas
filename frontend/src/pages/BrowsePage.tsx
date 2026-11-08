@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 
-import { Entry, TagCount, fetchCategories, fetchTags, searchEntries } from "../api/client";
+import { Entry, TagCount, fetchCategories, fetchLinkCheck, fetchTags, searchEntries } from "../api/client";
 import { resolveGroups } from "../categoryGroups";
 import EntryCard from "../components/EntryCard";
 import FilterBar, { EMPTY_FILTERS, Filters } from "../components/FilterBar";
+import { formatDay } from "../lib/display";
 import { downloadText, toBookmarkHtml, toJson } from "../lib/exportCore";
 
 type ViewMode = "grid" | "list" | "large";
@@ -37,6 +38,7 @@ export default function BrowsePage({
   const [total, setTotal] = useState(0);
   const [relaxed, setRelaxed] = useState(false);
   const [grandTotal, setGrandTotal] = useState<number | null>(null);
+  const [linksChecked, setLinksChecked] = useState<string | null>(null);
   const [categories, setCategories] = useState<TagCount[]>([]);
   const [tags, setTags] = useState<TagCount[]>([]);
   const [loading, setLoading] = useState(true);
@@ -65,6 +67,7 @@ export default function BrowsePage({
     searchEntries({ limit: 1 })
       .then((res) => setGrandTotal(res.total))
       .catch(() => {});
+    fetchLinkCheck().then((check) => setLinksChecked(check.checked));
   }, []);
 
   const blank = isBlank(filters);
@@ -243,6 +246,12 @@ export default function BrowsePage({
                 : relaxed
                   ? `Nothing matched every word — ${total} close matches`
                   : `${entries.length} of ${total} shown`}
+              {!loading && linksChecked && (
+                <span className="results-checked" title="Every link is checked each Monday; see Tool watch">
+                  {" "}
+                  · links checked {formatDay(linksChecked)}
+                </span>
+              )}
             </p>
             <div className="results-row-right">
               <button

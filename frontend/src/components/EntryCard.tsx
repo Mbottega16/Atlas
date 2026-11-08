@@ -1,6 +1,8 @@
 import { FormEvent, useState } from "react";
 
 import {
+  Access,
+  Cost,
   Entry,
   READ_ONLY,
   deleteEntry,
@@ -10,14 +12,24 @@ import {
   setFavorite,
   updateEntry,
 } from "../api/client";
+import { ACCESS_LABEL, COST_LABEL, faviconUrl, formatDay } from "../lib/display";
 
-function faviconUrl(link: string): string | null {
-  try {
-    const { hostname } = new URL(link);
-    return `https://www.google.com/s2/favicons?sz=64&domain=${hostname}`;
-  } catch {
-    return null;
-  }
+/** Cost, access and the check date — the short form of a profile. */
+export function ProfileChips({ entry }: { entry: Entry }) {
+  if (!entry.last_verified) return null;
+  return (
+    <div className="profile-chips">
+      {entry.cost && (
+        <span className="profile-chip" title={entry.price_note ?? undefined}>
+          {COST_LABEL[entry.cost] ?? entry.cost}
+        </span>
+      )}
+      {entry.access && <span className="profile-chip">{ACCESS_LABEL[entry.access] ?? entry.access}</span>}
+      <span className="profile-checked" title={entry.verification ?? undefined}>
+        ✓ Checked {formatDay(entry.last_verified)}
+      </span>
+    </div>
+  );
 }
 
 export default function EntryCard({
@@ -82,9 +94,22 @@ export default function EntryCard({
   }
 
   const favicon = faviconUrl(entry.link);
+  const name = entry.title || entry.link;
+  const shot = entry.screenshot && view !== "list" ? entry.screenshot : null;
 
   return (
-    <div className={`entry-card view-${view}${visited ? " visited" : ""}`}>
+    <div className={`entry-card view-${view}${visited ? " visited" : ""}${shot ? " has-shot" : ""}`}>
+      {shot && (
+        <img
+          className="entry-card-shot"
+          src={`/${shot}`}
+          alt={`The ${name} home page`}
+          title={`The official page as it looked when checked${
+            entry.last_verified ? ` on ${formatDay(entry.last_verified)}` : ""
+          }`}
+          loading="lazy"
+        />
+      )}
       <button
         className={`favorite-btn${favorite ? " active" : ""}`}
         onClick={handleFavoriteClick}
@@ -116,6 +141,11 @@ export default function EntryCard({
             ⚠ may be dead
           </span>
         )}
+        {entry.warning && (
+          <span className="flag-badge warning-badge" title={entry.warning}>
+            ⚠ trust warning
+          </span>
+        )}
         <h3>
           <a href={entry.link} target="_blank" rel="noreferrer" onClick={handleOpen}>
             {entry.title || entry.link}
@@ -137,6 +167,18 @@ export default function EntryCard({
           {entry.use_case ? ` · ${entry.use_case}` : ""}
         </div>
         {entry.description && <p>{entry.description}</p>}
+        {entry.warning && <p className="entry-warning">{entry.warning}</p>}
+        {entry.best_for && (
+          <p className="entry-profile-line">
+            <strong>Best for</strong> {entry.best_for}
+          </p>
+        )}
+        {entry.limits && (
+          <p className="entry-profile-line">
+            <strong>Limit</strong> {entry.limits}
+          </p>
+        )}
+        <ProfileChips entry={entry} />
         <div className="tag-row">
           {entry.tags.map((t) =>
             onTagClick ? (
@@ -171,6 +213,20 @@ export default function EntryCard({
   );
 }
 
+// The profile fields the edit form shows, in order, with their placeholders.
+const PROFILE_INPUTS = [
+  ["cost", "cost"],
+  ["access", "access"],
+  ["price_note", "price note — what the money buys"],
+  ["best_for", "best for — when to pick this one"],
+  ["limits", "limit — what it can't tell you"],
+  ["warning", "trust warning (rare)"],
+  ["last_verified", "checked on"],
+  ["verification", "what you checked"],
+  ["screenshot", "screenshot — shots/host.jpg"],
+] as const;
+type ProfileInput = (typeof PROFILE_INPUTS)[number][0];
+
 function EditForm({
   entry,
   onCancel,
@@ -186,6 +242,9 @@ function EditForm({
   const [useCase, setUseCase] = useState(entry.use_case ?? "");
   const [description, setDescription] = useState(entry.description ?? "");
   const [tagText, setTagText] = useState(entry.tags.join(", "));
+  const [profile, setProfile] = useState<Record<ProfileInput, string>>(() =>
+    Object.fromEntries(PROFILE_INPUTS.map(([f]) => [f, entry[f] ?? ""])) as Record<ProfileInput, string>
+  );
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -193,6 +252,8 @@ function EditForm({
     e.preventDefault();
     setBusy(true);
     setError(null);
+    // A blank profile field is sent as null, so clearing it really clears it.
+    const value = (f: ProfileInput) => profile[f].trim() || null;
     try {
       await updateEntry(entry.id, {
         link,
@@ -201,6 +262,15 @@ function EditForm({
         use_case: useCase,
         description,
         tags: tagText.split(",").map((t) => t.trim()).filter(Boolean),
+        cost: value("cost") as Cost | null,
+        access: value("access") as Access | null,
+        price_note: value("price_note"),
+        best_for: value("best_for"),
+        limits: value("limits"),
+        warning: value("warning"),
+        last_verified: value("last_verified"),
+        verification: value("verification"),
+        screenshot: value("screenshot"),
       });
       onSaved();
     } catch {
@@ -217,6 +287,35 @@ function EditForm({
       <input value={useCase} onChange={(e) => setUseCase(e.target.value)} placeholder="use case" />
       <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="description" />
       <input value={tagText} onChange={(e) => setTagText(e.target.value)} placeholder="tags, comma, separated" />
+      <details className="entry-card-profile-edit" open={!!entry.last_verified}>
+        <summary>Profile (what you checked on the tool's own pages)</summary>
+        <select value={profile.cost} onChange={(e) => setProfile({ ...profile, cost: e.target.value })} aria-label="cost">
+          <option value="">cost —</option>
+          {(Object.keys(COST_LABEL) as Cost[]).map((c) => (
+            <option key={c} value={c}>
+              {COST_LABEL[c]}
+            </option>
+          ))}
+        </select>
+        <select value={profile.access} onChange={(e) => setProfile({ ...profile, access: e.target.value })} aria-label="access">
+          <option value="">access —</option>
+          {(Object.keys(ACCESS_LABEL) as Access[]).map((a) => (
+            <option key={a} value={a}>
+              {ACCESS_LABEL[a]}
+            </option>
+          ))}
+        </select>
+        {PROFILE_INPUTS.filter(([f]) => f !== "cost" && f !== "access").map(([f, placeholder]) => (
+          <input
+            key={f}
+            type={f === "last_verified" ? "date" : "text"}
+            value={profile[f]}
+            onChange={(e) => setProfile({ ...profile, [f]: e.target.value })}
+            placeholder={placeholder}
+            aria-label={placeholder}
+          />
+        ))}
+      </details>
       <div className="entry-card-admin">
         <button type="submit" disabled={busy}>
           {busy ? "Saving…" : "Save"}

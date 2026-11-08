@@ -12,7 +12,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
-from app.models.entry import Entry
+from app.models.entry import PROFILE_FIELDS, Entry
 from app.schemas.entry import EntryCreate
 from app.services import entry_service
 
@@ -53,6 +53,7 @@ def export_library(db: Session = Depends(get_db)):
             is_favorite=e.is_favorite,
             visited_at=e.visited_at,
             created_at=e.created_at,
+            **{f: getattr(e, f) for f in PROFILE_FIELDS},
         )
         for e in rows
     ]

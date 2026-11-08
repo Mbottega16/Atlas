@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 from sqlalchemy import case, func, select
 from sqlalchemy.orm import Session
 
-from app.models.entry import Entry
+from app.models.entry import PROFILE_FIELDS, Entry
 from app.models.tag import Tag
 from app.services.links import canonical_link
 
@@ -111,6 +111,7 @@ def create_entry(db: Session, data, source: str = "manual", commit: bool = True)
         description=data.description,
         use_case=data.use_case,
         source=source,
+        **{f: getattr(data, f, None) for f in PROFILE_FIELDS},
     )
     entry.tags = _get_or_create_tags(db, data.tags)
     db.add(entry)
@@ -166,6 +167,12 @@ def upsert_entry(db: Session, data, source: str = "capture", commit: bool = True
     existing.description = data.description
     existing.use_case = data.use_case
     existing.tags = _get_or_create_tags(db, data.tags)
+    # A profile is a dated check of the tool's own pages. A later batch that
+    # leaves those fields out (a re-capture, a harvest refresh) keeps it; only
+    # fields the batch actually sends are changed.
+    for f in PROFILE_FIELDS:
+        if f in data.model_fields_set:
+            setattr(existing, f, getattr(data, f))
     if commit:
         db.commit()
         db.refresh(existing)

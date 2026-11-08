@@ -17,11 +17,14 @@ function isEmpty(f: GuideFilter): boolean {
 
 export default function GuidePage({
   onSeeAll,
+  onOpenCollection,
   onVisit,
   onFavoriteToggle,
 }: {
   /** Hand a filter to the Browse tab and switch to it. */
   onSeeAll: (filters: Filters) => void;
+  /** Open a stack or comparison on the Collections tab. */
+  onOpenCollection: (id: string) => void;
   onVisit: () => void;
   onFavoriteToggle: () => void;
 }) {
@@ -143,7 +146,9 @@ export default function GuidePage({
               <button
                 key={opt.label}
                 className="guide-option"
-                onClick={() => choose(opt.label, opt.next, opt.filter)}
+                onClick={() =>
+                  opt.open ? onOpenCollection(opt.open) : choose(opt.label, opt.next, opt.filter)
+                }
               >
                 <span className="guide-option-label">{opt.label}</span>
                 {opt.hint && <span className="guide-option-hint">{opt.hint}</span>}

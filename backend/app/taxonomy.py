@@ -31,6 +31,12 @@ CATEGORIES: list[str] = [
     "writing & publishing",
 ]
 
+# The words an entry's profile may use (2026-10-25). `cost` is Almanac's own
+# vocabulary, so the two libraries describe price the same way. `access` is
+# what you need before the tool is useful.
+COSTS: list[str] = ["free", "freemium", "paid"]
+ACCESS: list[str] = ["no sign-up", "free account", "paid account", "download"]
+
 # The 2026-09-19 consolidation: 34 categories -> 20. Kept so old links such as
 # ?category=cooking and old capture notes still resolve to the right place.
 CATEGORY_MOVES: dict[str, str] = {

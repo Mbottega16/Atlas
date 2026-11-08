@@ -19,6 +19,43 @@ This repo is public, so private planning notes stay in the owner's vault, not he
 
 ---
 
+## 2026-11-05 — one library of 1,806 entries as an OSINT4ALL-style dashboard; run it on the Mac and the PC
+
+*cloud · Claude · branch `claude/atlas-nst-site-links-76dgvu`*
+- **Changed:** +544 entries from the OSINT4ALL and SOCMINT link lists (the 1,820-tool `board.html` of `672d8f5` plus 11 links only in the 568-tool board), `source: "import"`. They sit in the existing categories (`security & privacy` 381, `reference & data` 163) with an `osint` tag, a topic tag (`phone lookup`, `username search`, `facebook`, …) and `socmint` on social-platform tools. 13 links already in the library only gained those tags. New front page: a Dashboard in the OSINT4ALL board style with all 1,806 entries in 46 panels (OSINT topics, then categories); the old tabs sit behind "Library view". New `run_atlas.py` with `start-atlas.command` (Mac) and `start-atlas.bat` (PC): one server on port 8000 for the site and the API, reachable from the other computer; new `scripts/sync_seed.py` adds pulled seed entries to the local DB on every start without touching local edits.
+- **Why:** the owner wanted the ~1,800-link version as a real website in the OSINT4ALL dashboard style, not one HTML file, with no OSINT4ALL / SOCMINT / Atlas Library split, runnable on the Mac and the desktop with a server on each.
+- **Verified:** pytest 51 pass; seed load → export byte-identical; launcher run from a fresh checkout (venv, npm ci, build, server) served 1,806 entries over the LAN address; sync on a 1,262-entry DB added 544, a second run added 0; the Dashboard at 1440 and 390 px, local and static builds, search, Library view and back, no console errors or sideways scroll; with no Node.js, the launcher downloaded it and built. NOT checked: favicons (blocked in the sandbox), the Python auto-install, a real Mac or PC, the Windows `.bat`.
+- **Left open:** the 544 imported entries have placeholder descriptions ("Not checked by hand yet"); none has a profile. The board's lists carry no descriptions, so each needs a real one from the tool's own page.
+
+## 2026-10-25 — the handoff that session left (OSINT4ALL pilot)
+
+*Mac · Claude*
+- **Last Worked On (2026-10-25):** the OSINT4ALL pilot on branch `osint4all-pilot` (PR #6, since merged): profiles, Collections, Tool watch, a research branch in Find.
+- **Current State (2026-10-25):** `main` live with 1,258 entries; the branch had 1,262 (6 profiled) and 51 passing backend tests. The Mac has a Python 3.12 venv.
+- **Next Up (then):** merge PR #6; archive.ph keep-or-remove; profile the 43 essentials; review the Monday harvest PR; `alembic upgrade head` or `load_seed.py` on the PC.
+
+## 2026-10-25 — OSINT4ALL pilot: profiles, Collections, Tool watch (PR #6, not merged)
+
+*Mac · Claude · commits `95877c1` `0a7f944` `87de649` + docs, branch `osint4all-pilot`*
+- **Changed:** entries can carry a checked profile (cost, access, best for, limit, trust warning, date and what was checked, an official-page thumbnail); Alembic `0002`. New Collections tab (one stack, one comparison, from `backend/seed/atlas-collections.json`), Tool watch tab, a "Research or check something online" branch in Find, and the last link-check date in Browse. Library: +4 (Shodan, Censys, SecurityTrails, Maltego), the Wayback Machine profiled, archive.ph given a trust warning, `osint` tag on 10 entries.
+- **Why:** the owner approved the OSINT4ALL adaptation (trust layer, comparisons, stacks, task paths, a tool watch) on 2026-10-25 and asked for it now. Landing as approved: existing categories plus an `osint` tag, no new category.
+- **Verified:** pytest 51 pass (38 before); each key new test failed with its fix removed; seed load → export byte-identical before and after the change; static build; screenshots of every new view at 1280 and 390 px wide, no console errors or sideways scroll; a profile edit in local mode reached the seed through `export_seed.py`. Every profile fact was re-checked on the tool's own pages: osint4all.com had Maltego and SecurityTrails as paid-only, and both have free plans. NOT checked: the PC, Safari, a real phone.
+- **Left open:** merging PR #6 (before Monday's harvest PR if possible); keep or remove archive.ph; profile the 43 essentials before any cost filter.
+
+## 2026-10-24 — the handoff that session left
+
+*From `CLAUDE.md`'s Session Handoff, word for word:*
+
+- **Last Worked On (2026-10-24):** harvest PRs #2 (+43 tools, titles checked, plus the phone
+  capture form) and #5 (+1, HN Search) and the discovery-shell polish (#3) are merged and live.
+  Docs restructured (no code change).
+- **Current State (2026-10-24):** live with 1,258 entries; 38 passing backend pytest tests.
+- **Next Up:**
+  1. Review and merge open `harvest/*` pull requests.
+  2. Run `/deep_curate atlas inbox` (or `/deep_curate atlas [urls]`) for links that arrive as `inbox` issues.
+  3. Review any twice-failed links surfaced by the weekly Monday GitHub Action (`backend/seed/link-status.json`).
+  4. Check the first weekly harvest run on the Mac (launchd job `com.mybrain.library-weekly`, Mondays 08:00, installed 2026-10-24).
+
 ## 2026-10-24 — docs restructured to the uniform standard
 
 *Mac · Claude · docs only, no code touched*

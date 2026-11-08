@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
-from app.models.entry import Entry
+from app.models.entry import PROFILE_FIELDS, Entry
 from app.schemas.entry import EntryCreate, EntryListOut, EntryOut, EntryUpdate
 from app.services import entry_service
 
@@ -23,6 +23,7 @@ def _to_out(entry: Entry) -> EntryOut:
         visited_at=entry.visited_at,
         created_at=entry.created_at,
         updated_at=entry.updated_at,
+        **{f: getattr(entry, f) for f in PROFILE_FIELDS},
     )
 
 
