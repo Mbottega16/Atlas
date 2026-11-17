@@ -97,6 +97,20 @@ export default function CollectionsPage({ openId, onOpen, onSeeAll, onVisit, onF
           </button>
         ))}
       </div>
+
+      <h2 className="collections-heading">
+        Boards <span>interactive full-collection views</span>
+      </h2>
+      <div className="collection-cards">
+        <a href="/board.html" className="collection-card">
+          <span className="collection-kind">Standalone board · 568 tools</span>
+          <strong>OSINT Mega-Board</strong>
+          <span className="collection-summary">
+            A standalone interactive board organizing 568 open-source intelligence and investigation tools into searchable panels.
+          </span>
+          {icons(["https://shodan.io", "https://censys.com", "https://securitytrails.com"])}
+        </a>
+      </div>
     </div>
   );
 }

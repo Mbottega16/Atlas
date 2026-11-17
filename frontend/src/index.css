@@ -548,6 +548,8 @@ nav a {
   background: none;
   cursor: pointer;
   font: inherit;
+  color: inherit;
+  text-decoration: none;
   transition: border-color 0.12s ease, background 0.12s ease;
 }
 
@@ -1090,7 +1092,7 @@ button,input,select{font:inherit}
 .collections-heading{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin:26px 0 12px;color:#273747;font:600 21px/1.2 Georgia,serif;letter-spacing:-.3px}
 .collections-heading span{color:#74808c;font:500 13px/1.3 ui-sans-serif,system-ui;letter-spacing:0}
 .collection-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
-.collection-card{display:flex;flex-direction:column;gap:6px;padding:18px 18px 16px;border:1px solid var(--line);border-radius:15px;background:#fafbfc;box-shadow:0 2px 8px #26394b08;color:inherit;text-align:left;cursor:pointer;transition:border-color .15s,box-shadow .15s}
+.collection-card{display:flex;flex-direction:column;gap:6px;padding:18px 18px 16px;border:1px solid var(--line);border-radius:15px;background:#fafbfc;box-shadow:0 2px 8px #26394b08;color:inherit;text-align:left;text-decoration:none;cursor:pointer;transition:border-color .15s,box-shadow .15s}
 .collection-card:hover{border-color:#a9bccf;box-shadow:0 12px 30px #26394b12}
 .collection-card strong{color:#273747;font:600 18px/1.25 Georgia,serif;letter-spacing:-.2px}
 .collection-kind{margin:0;color:#657c94;font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase}

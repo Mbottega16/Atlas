@@ -23,6 +23,9 @@ export interface GuideOption {
   next?: GuideNode;
   /** A stack or comparison id; the option opens it on the Collections tab. */
   open?: string;
+  /** Direct link to a standalone page or tool (e.g. "/board.html"). */
+  href?: string;
+  url?: string;
 }
 
 export interface GuideNode {
@@ -173,6 +176,12 @@ const research: GuideNode = {
       label: "All open-source investigation tools",
       hint: "Everything tagged OSINT",
       filter: { label: "Open-source investigation (OSINT) tools", tag: "osint" },
+    },
+    {
+      label: "OSINT mega-board (standalone)",
+      hint: "All 568 investigation tools on one interactive board",
+      href: "/board.html",
+      url: "/board.html",
     },
   ],
 };

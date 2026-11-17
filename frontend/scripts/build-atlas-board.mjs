@@ -97,9 +97,9 @@ const PS = String.fromCharCode(0x2029);
 const safeJson = (value) =>
   JSON.stringify(value).replace(/</g, "\\u003c").split(LS).join("\\u2028").split(PS).join("\\u2029");
 
-const css = fs.readFileSync(path.join(HERE, "board.css"), "utf8");
-const core = fs.readFileSync(path.join(HERE, "board-core.mjs"), "utf8").replace(/^export\s+/gm, "");
-const page = fs.readFileSync(path.join(HERE, "board-page.js"), "utf8");
+const css = fs.readFileSync(path.join(HERE, "board.css"), "utf8").replace(/\r\n/g, "\n");
+const core = fs.readFileSync(path.join(HERE, "board-core.mjs"), "utf8").replace(/^export\s+/gm, "").replace(/\r\n/g, "\n");
+const page = fs.readFileSync(path.join(HERE, "board-page.js"), "utf8").replace(/\r\n/g, "\n");
 if (/^\s*import\s/m.test(core)) throw new Error("board-core.mjs can't import anything: it is pasted into the page");
 
 const script = `
@@ -161,6 +161,7 @@ const html = `<!doctype html>
     </label>
     <button id="az" class="btn" type="button" aria-pressed="false" title="Show the panels in A&ndash;Z order">A&ndash;Z</button>
     <button id="toggle-all" class="btn" type="button">Collapse all</button>
+    <a class="btn home-btn" href="./" title="Return to Atlas home">← Atlas Home</a>
   </div>
 </header>
 <div class="layout">
@@ -172,6 +173,7 @@ const html = `<!doctype html>
       </button>
     </div>
     <ul id="side-list"></ul>
+    <a class="side-home" href="./">← Return to Atlas home</a>
   </nav>
   <div id="backdrop" class="backdrop" hidden></div>
   <main id="board" class="board" tabindex="-1">
@@ -194,6 +196,8 @@ const html = `<!doctype html>
 </body>
 </html>
 `;
+
+if (!fs.existsSync(DIST)) fs.mkdirSync(DIST, { recursive: true });
 
 const indexFile = path.join(DIST, "index.html");
 const libraryFile = path.join(DIST, "library.html");

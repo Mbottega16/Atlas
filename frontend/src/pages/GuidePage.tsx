@@ -46,16 +46,16 @@ export default function GuidePage({
   // whole tree is answerable from the keyboard.
   useEffect(() => {
     if (!leaf) {
-      optionsRef.current?.querySelector<HTMLButtonElement>("button")?.focus();
+      optionsRef.current?.querySelector<HTMLElement>(".guide-option")?.focus();
     }
   }, [node, leaf]);
 
   const onOptionsKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
     const btns = Array.from(
-      optionsRef.current?.querySelectorAll<HTMLButtonElement>("button.guide-option") ?? []
+      optionsRef.current?.querySelectorAll<HTMLElement>(".guide-option") ?? []
     );
-    const i = btns.indexOf(document.activeElement as HTMLButtonElement);
+    const i = btns.indexOf(document.activeElement as HTMLElement);
     const next = e.key === "ArrowDown" ? i + 1 : i - 1;
     if (btns[next]) {
       e.preventDefault();
@@ -142,19 +142,31 @@ export default function GuidePage({
         <div className="guide-question">
           <h2>{node.question}</h2>
           <div className="guide-options" ref={optionsRef} onKeyDown={onOptionsKeyDown}>
-            {node.options.map((opt) => (
-              <button
-                key={opt.label}
-                className="guide-option"
-                onClick={() =>
-                  opt.open ? onOpenCollection(opt.open) : choose(opt.label, opt.next, opt.filter)
-                }
-              >
-                <span className="guide-option-label">{opt.label}</span>
-                {opt.hint && <span className="guide-option-hint">{opt.hint}</span>}
-                <span className="guide-option-arrow">{opt.next ? "›" : "→"}</span>
-              </button>
-            ))}
+            {node.options.map((opt) => {
+              const link = opt.href || opt.url;
+              if (link) {
+                return (
+                  <a key={opt.label} className="guide-option" href={link}>
+                    <span className="guide-option-label">{opt.label}</span>
+                    {opt.hint && <span className="guide-option-hint">{opt.hint}</span>}
+                    <span className="guide-option-arrow">↗</span>
+                  </a>
+                );
+              }
+              return (
+                <button
+                  key={opt.label}
+                  className="guide-option"
+                  onClick={() =>
+                    opt.open ? onOpenCollection(opt.open) : choose(opt.label, opt.next, opt.filter)
+                  }
+                >
+                  <span className="guide-option-label">{opt.label}</span>
+                  {opt.hint && <span className="guide-option-hint">{opt.hint}</span>}
+                  <span className="guide-option-arrow">{opt.next ? "›" : "→"}</span>
+                </button>
+              );
+            })}
           </div>
           {(stack.length > 1 || crumbs.length > 0) && (
             <button className="guide-back" onClick={back}>
